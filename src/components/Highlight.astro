@@ -1,0 +1,5 @@
+---
+interface Props { variant?: 'underline' | 'marker' | 'circle'; }
+const { variant = 'underline' } = Astro.props;
+---
+<span class:list={['editorial-highlight', variant]}><slot /><svg viewBox="0 0 200 50" preserveAspectRatio="none" aria-hidden="true" data-ink><path d={variant === 'circle' ? 'M193 25C206-8 7-10 5 25C3 58 197 54 194 23' : 'M5 39Q61 33 101 38T195 37'} pathLength="1" fill="none" stroke="currentColor" stroke-width={variant === 'marker' ? '10' : '2.8'} stroke-linecap="round" /></svg></span>

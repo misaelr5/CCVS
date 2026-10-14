@@ -1,0 +1,16 @@
+---
+import PhotoSection from './PhotoSection.astro';
+import EditorialMark from './EditorialMark.astro';
+import type { Photo } from '../data/site';
+interface Props { photos: (Photo | null)[]; label: string; }
+const { photos, label } = Astro.props;
+---
+<div class="photo-collage" data-reveal="collage" role="group" aria-label={label}>
+ <div class="collage-layer collage-primary" data-layer><PhotoSection photo={photos[0]} label={label} /></div>
+ <div class="collage-layer collage-secondary" data-layer><PhotoSection photo={photos[1]} label="Otro encuentro de la comunidad" /></div>
+ <div class="collage-layer collage-detail" data-layer><PhotoSection photo={photos[2]} label="Un momento compartido" /></div>
+ <span class="collage-tape" aria-hidden="true"></span>
+ <EditorialMark kind="curve" class="collage-arrow" />
+ <EditorialMark kind="x" class="collage-x" />
+ <span class="collage-note" data-layer>La vida se comparte.</span>
+</div>

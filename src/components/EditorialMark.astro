@@ -1,0 +1,13 @@
+---
+interface Props { kind?: 'curve' | 'horizontal' | 'diagonal' | 'long' | 'x' | 'circle'; class?: string; }
+const { kind = 'curve', class: className = '' } = Astro.props;
+const paths = {
+ curve: ['M8 78C26 13 87 10 112 50C131 78 103 100 87 77', 'M89 75l-2 22 24-6'],
+ horizontal: ['M8 50C48 44 89 58 145 49', 'M124 34l23 15-24 17'],
+ diagonal: ['M12 87C43 72 73 42 113 15', 'M92 15l23-2-3 24'],
+ long: ['M6 60C37 58 83 46 152 50', 'M133 33l21 17-25 16'],
+ x: ['M48 20l39 63M88 17L44 82', 'M52 20l36 63'],
+ circle: ['M143 63C160 14 28 2 12 50C-4 103 133 112 145 65', 'M24 36C52 9 120 12 141 37'],
+};
+---
+<svg class:list={['editorial-mark', className, kind]} viewBox="0 0 164 112" fill="none" aria-hidden="true" focusable="false" data-ink>{paths[kind].map(path => <path d={path} pathLength="1" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" />)}</svg>

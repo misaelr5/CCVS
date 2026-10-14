@@ -1,0 +1,7 @@
+---
+interface Props { type?: 'instagram' | 'facebook' | 'youtube' | 'map' | 'arrow'; }
+const { type = 'arrow' } = Astro.props;
+---
+<svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+ {type === 'instagram' ? <><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></> : type === 'facebook' ? <path d="M14 21v-8h3l.5-4H14V7c0-1 .5-2 2-2h2V2h-3c-3 0-5 2-5 5v2H7v4h3v8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/> : type === 'youtube' ? <><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="m10 9 6 3-6 3Z" fill="currentColor"/></> : type === 'map' ? <><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="1.6"/></> : <path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>}
+</svg>

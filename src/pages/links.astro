@@ -2,8 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
-import { hubLinks, externalLinks, isHttpsUrl } from '../data/links';
+import { hubLinks, externalLinks, mapUrl, isHttpsUrl, type Link } from '../data/links';
+import SocialIcon from '../components/SocialIcon.astro';
+const links: Link[] = [...hubLinks.slice(0,2), ...(mapUrl ? [{label:'Cómo llegar — Google Maps',href:mapUrl,icon:'map' as const}] : []), ...externalLinks.filter(link=>isHttpsUrl(link.href)), ...hubLinks.slice(2)];
 ---
-<BaseLayout title="Enlaces" description="Inicio, horarios, visita, historia y actividades. Todos los enlaces de Comunidad Cristiana Villa Sarmiento." compact>
-<section class="links-hub"><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana" width={106} height={106} format="webp" loading="eager" /><h1>Comunidad Cristiana<br /><span>Villa Sarmiento</span></h1><p>Una comunidad. Una misma fe.</p><nav aria-label="Enlaces de la iglesia">{[...hubLinks,...externalLinks.filter(link => isHttpsUrl(link.href))].map(link => <a href={link.href} class="link-button"><span>{link.label}</span><span aria-hidden="true">↗</span></a>)}</nav><address>{site.address}</address></section>
+<BaseLayout title="Enlaces" description="Horarios, visita, historia, actividades y redes oficiales de Comunidad Cristiana Villa Sarmiento." compact>
+<section class="links-hub"><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana" width={106} height={106} format="webp" loading="eager" /><h1>Comunidad Cristiana<br /><span>Villa Sarmiento</span></h1><p>Conocé nuestra comunidad,<br />sus encuentros y actividades.</p><nav aria-label="Enlaces de la iglesia">{links.map(link => <a href={link.href} class="link-button" target={isHttpsUrl(link.href)?'_blank':undefined} rel={isHttpsUrl(link.href)?'noopener noreferrer':undefined} data-astro-reload={isHttpsUrl(link.href)}><SocialIcon type={link.icon} /><span>{link.label}</span>{isHttpsUrl(link.href) && <span class="sr-only"> (abre en una pestaña nueva)</span>}</a>)}</nav><address>{site.address}</address><a class="hub-legal" href="/terminos-y-condiciones/">Términos y condiciones · borrador</a></section>
 </BaseLayout>

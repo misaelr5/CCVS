@@ -1,6 +1,6 @@
 # CCVS — reconstrucción V3
 
-Sitio estático de Comunidad Cristiana Villa Sarmiento. La consigna vigente es `PROMPT_MAESTRO_V3.md`; el material anterior queda como histórico. La versión V3 fue aprobada visualmente por el usuario para commit y push a `main`. No se desplegó.
+Sitio estático de Comunidad Cristiana Villa Sarmiento. La base aprobada es V3; la evolución vigente se describe en `FASE_4.md` y `FASE_4_RESULTADO.md`. El usuario autorizó implementación, commit y push de Fase 4. No se desplegó.
 
 ## Arranque
 
@@ -35,6 +35,7 @@ Fuentes reales: **Archivo Variable** (peso y ancho variables) + **Bodoni Moda Va
 | `/ministerios/` | Actividades locales en bloques alternados |
 | `/visitanos/` | Horarios, dirección y primera visita |
 | `/links/` | Enlaces propios para teléfonos |
+| `/terminos-y-condiciones/` | Borrador pendiente de revisión institucional y jurídica |
 
 Anclas: `/nosotros/#historia`, `/nosotros/#creencias`, `/visitanos/#horarios`, y actividades en Ministerios.
 
@@ -49,7 +50,7 @@ Datos tipados en `src/data/`:
 - `ministries.ts`: grupos de actividades, sin inventar estructuras formales.
 - `links.ts`: navegación y URLs oficiales. Las redes y el mapa faltantes no generan botones.
 
-Los mensajes de `editorial` son propuestas del prompt, no misión ni lemas oficiales. Deben aprobarse junto con la historia y doctrina.
+Los mensajes de `editorial` son propuestas del prompt, no misión ni lemas oficiales. Deben aprobarse junto con la historia y doctrina. `legal.ts` contiene el borrador legal. Instagram de jóvenes, Facebook y YouTube están confirmados por el usuario; Maps conserva su URL facilitada pero no se habilita hasta verificar el pin.
 
 ## Fotos y logos
 
@@ -72,7 +73,7 @@ hero: {
 },
 ```
 
-El componente genera derivados WebP, dimensiones y srcset. El recorte mobile puede usar una foto independiente. Revalidar contraste y rostros después de incorporar fotos reales.
+El componente genera derivados WebP, dimensiones y srcset. El recorte mobile puede usar una foto independiente. Revalidar contraste y rostros después de incorporar fotos reales. Los nuevos recursos de collage, reunión y banner se documentan con sus proporciones en `FASE_4_RESULTADO.md`.
 
 `referencias/`, `videos/` y `qa-artifacts/` son de estudio local, están ignorados por Git y no se importan al sitio. Nunca copiarlos a `public/`. Las comparativas que contienen material ajeno tampoco deben publicarse.
 
@@ -112,7 +113,7 @@ Después de aprobación institucional, elegir dominio y alojamiento, configurar 
 
 `public/_headers` prepara encabezados para proveedores compatibles; en otros hosts se necesita configuración equivalente. Ningún encabezado de producción fue probado porque no hubo despliegue.
 
-Revisar `PENDIENTES_PUBLICACION.md` antes de pedir despliegue. El repositorio remoto incluye V3; la rama local de respaldo conserva la implementación anterior.
+Revisar `PENDIENTES_PUBLICACION.md` antes de pedir despliegue. La rama `backup/antes-fase4-20261014` conserva V3. Fase 4 usa ClientRouter con navegación completa de fallback y un ciclo de inicialización/limpieza de interacciones; no añade dependencias. Ver `FASE_4_RESULTADO.md` para las 52 pruebas, cambios y límites.
 
 ## Referencias
 

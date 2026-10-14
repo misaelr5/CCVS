@@ -8,7 +8,7 @@ export const site = {
   locality: 'Villa Sarmiento', region: 'Córdoba', country: 'Argentina',
   description: 'Conocé la historia, las creencias, las actividades y los horarios de Comunidad Cristiana Villa Sarmiento, Córdoba.',
   logos: { mother, local },
-  photos: { hero: null, about: null, community: null, history: null, children: null, youth: null, service: null } as Record<'hero' | 'about' | 'community' | 'history' | 'children' | 'youth' | 'service', Photo | null>,
+  photos: { hero: null, about: null, community: null, history: null, children: null, youth: null, service: null, welcome: null, gathering: null, banner: null, collageSecondary: null, collageDetail: null } as Record<'hero' | 'about' | 'community' | 'history' | 'children' | 'youth' | 'service' | 'welcome' | 'gathering' | 'banner' | 'collageSecondary' | 'collageDetail', Photo | null>,
   publicationApproved: false,
 };
 // Propuestas del encargo V3: no constituyen misión o lemas oficiales.
@@ -19,4 +19,4 @@ export const editorial = {
   aboutIntro: 'Somos Comunidad Cristiana Villa Sarmiento, una congregación que busca compartir el evangelio de Jesucristo, crecer en la fe y servir a nuestra comunidad.',
   welcome: 'La fe se vive en comunidad.',
 };
-export const pending = ['Fotografías propias autorizadas', 'Logos oficiales transparentes', 'Mapa y contactos oficiales', 'Aprobación de copy y doctrina', 'Dominio y alojamiento'];
+export const pending = ['Fotografías propias autorizadas', 'Logos oficiales transparentes', 'Pin de ubicación confirmado', 'Email/WhatsApp institucional', 'Aprobación de copy, doctrina y términos', 'Dominio y alojamiento'];

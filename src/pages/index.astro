@@ -4,12 +4,19 @@ import EditorialHero from '../components/EditorialHero.astro';
 import TextImageBlock from '../components/TextImageBlock.astro';
 import PhotoSection from '../components/PhotoSection.astro';
 import Schedule from '../components/Schedule.astro';
-import { site, editorial } from '../data/site';
+import { site } from '../data/site';
+import PhotoCollage from '../components/PhotoCollage.astro';
+import EditorialMark from '../components/EditorialMark.astro';
+import Highlight from '../components/Highlight.astro';
+import { schedule } from '../data/schedule';
+const principal = schedule[0];
 ---
 <BaseLayout title="Inicio">
 <EditorialHero />
-<section class="welcome shell section-gap"><h2>{editorial.welcome}</h2><div><p class="large-serif">Crecer en la fe.<br />Compartir la vida.</p><p>Pertenecemos a Comunidad Cristiana. Desde 2005, nuestra congregación comparte el evangelio y desarrolla una labor espiritual y social en Villa Sarmiento.</p><a class="inline-link" href="/nosotros/">Conocé nuestra iglesia</a></div></section>
-<section class="gatherings shell section-gap" id="horarios"><div class="sunday"><p class="kicker">Reunión principal</p><h2>Domingo<span>19:30 <small>hs</small></span></h2><a class="pill" href="/visitanos/">Planeá tu visita</a></div><div><p class="serif-label">Nos encontramos.</p><Schedule /></div></section>
+<section class="home-welcome shell section-gap"><div class="welcome-collage"><PhotoCollage photos={[site.photos.welcome, site.photos.collageSecondary, site.photos.collageDetail]} label="La comunidad de Villa Sarmiento" /></div><div class="welcome-copy"><h2>La fe se vive en <Highlight>comunidad.</Highlight></h2><p class="large-serif">Crecer en la fe.<br />Compartir la vida.</p><p>Pertenecemos a Comunidad Cristiana. Desde 2005, nuestra congregación comparte el evangelio y desarrolla una labor espiritual y social en Villa Sarmiento.</p><a class="inline-link" href="/nosotros/">Conocé nuestra iglesia</a><EditorialMark kind="horizontal" class="welcome-pointer" /></div></section>
+<section class="home-principal shell section-gap"><div class="principal-copy"><p class="kicker">NOS ENCONTRAMOS</p><h2>{principal.title}</h2><p class="principal-day">{principal.day}</p><p class="principal-time">{principal.time} <small>hs</small></p><a class="pill" href="/visitanos/">Planeá tu visita</a></div><PhotoSection photo={site.photos.gathering} label="Nuestra reunión principal" kind="principal-photo" /></section>
+<section class="home-banner shell section-gap" aria-label="La comunidad reunida"><PhotoSection photo={site.photos.banner} label="Un encuentro de nuestra congregación" kind="banner-photo" /><span class="banner-note">Compartimos la vida.</span><EditorialMark kind="x" class="banner-mark" /></section>
+<section class="home-schedule shell section-gap" id="horarios"><h2>Nos encontramos.</h2><Schedule /></section>
 <TextImageBlock title="Nuestra comunidad." eyebrow="Una historia compartida" photo={site.photos.community}><p>En 2005 comenzamos a reunirnos para orar en la casa de Esther Mercado. El deseo de crecer espiritualmente y compartir la fe dio lugar a una historia que continúa hoy.</p><a class="inline-link" href="/nosotros/#historia">Nuestra historia</a></TextImageBlock>
 <section class="community-features shell section-gap"><h2>Compartir la fe.<br /><span class="serif">En cada encuentro.</span></h2><div class="feature-pair"><a href="/ministerios/#ninos"><PhotoSection photo={site.photos.children} label="Niños" /><h3>Niños <span aria-hidden="true">↗</span></h3><p>Sábado · 16:30 hs</p></a><a href="/ministerios/#jovenes"><PhotoSection photo={site.photos.youth} label="Jóvenes" /><h3>Jóvenes <span aria-hidden="true">↗</span></h3><p>Sábado · 21:00 hs</p></a></div><a class="inline-link" href="/ministerios/">Todas nuestras actividades</a></section>
 <TextImageBlock title="Servir cerca." eyebrow="Servicio a la comunidad" photo={site.photos.service} reverse><p>Ropero solidario, merendero y ayuda social. Compartimos también el evangelio a través de nuestras actividades de evangelismo.</p><a class="inline-link" href="/ministerios/#servicio">Conocé estas actividades</a></TextImageBlock>

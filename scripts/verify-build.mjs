@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 
 const root = resolve('dist');
-const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/'];
+const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
 const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
 const pageFile = (pathname) => pathname.endsWith('/') ? resolve(root, `.${pathname}`, 'index.html') : resolve(root, `.${pathname}`);
 let checkedLinks = 0;

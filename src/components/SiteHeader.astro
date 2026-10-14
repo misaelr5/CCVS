@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import { site } from '../data/site';
 import { groups, externalLinks, isHttpsUrl } from '../data/links';
 ---
-<header class="site-header shell">
+<header class="site-header shell" transition:name="institution-header">
   <a class="institution" href="/" aria-label={`${site.name} — Inicio`}><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana: cruz y paloma" width={58} height={58} format="webp" loading="eager" /><span>Comunidad Cristiana<small>Villa Sarmiento</small></span></a>
   <div class="header-actions"><a class="header-visit" href="/visitanos/">Visitarnos</a><button class="menu-open" type="button" aria-label="Abrir menú" aria-haspopup="dialog" aria-controls="navigation-dialog" aria-expanded="false"><span></span><span></span><span></span></button></div>
 </header>
@@ -11,40 +11,3 @@ import { groups, externalLinks, isHttpsUrl } from '../data/links';
   <div class="menu-inner shell"><div class="menu-top"><p id="menu-title">Comunidad Cristiana<br /><span>Villa Sarmiento</span></p><button class="menu-close" type="button" aria-label="Cerrar menú"><span aria-hidden="true">×</span></button></div><nav aria-label="Navegación principal" class="menu-groups">{groups.map(group => <div><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</div>)}{externalLinks.filter(link => isHttpsUrl(link.href)).length > 0 && <div><h2>Redes oficiales</h2>{externalLinks.filter(link => isHttpsUrl(link.href)).map(link => <a href={link.href} rel="noopener noreferrer">{link.label}</a>)}</div>}</nav><p class="menu-address">{site.address}</p></div>
 </dialog>
 <noscript><style>.menu-open { display:none; }</style><nav class="nojs-navigation shell" aria-label="Navegación sin JavaScript">{groups.flatMap(group => group.links).map(link => <a href={link.href}>{link.label}</a>)}</nav></noscript>
-<script>
-  const dialog = document.querySelector<HTMLDialogElement>('#navigation-dialog');
-  const openButton = document.querySelector<HTMLButtonElement>('.menu-open');
-  const closeButton = document.querySelector<HTMLButtonElement>('.menu-close');
-  if (dialog && openButton && closeButton) {
-    let scrollPosition = 0;
-    let locked = false;
-    const previous = { position: '', top: '', width: '' };
-    const restore = () => {
-      if (!locked) return;
-      locked = false;
-      document.body.style.position = previous.position; document.body.style.top = previous.top; document.body.style.width = previous.width;
-      window.scrollTo(0, scrollPosition); openButton.setAttribute('aria-expanded', 'false'); openButton.focus({ preventScroll: true });
-    };
-    const close = () => { dialog.close(); restore(); };
-    openButton.addEventListener('click', () => {
-      scrollPosition = window.scrollY;
-      previous.position = document.body.style.position; previous.top = document.body.style.top; previous.width = document.body.style.width;
-      dialog.showModal(); openButton.setAttribute('aria-expanded', 'true');
-      locked = true;
-      document.body.style.position = 'fixed'; document.body.style.top = `-${scrollPosition}px`; document.body.style.width = '100%';
-      closeButton.focus();
-    });
-    closeButton.addEventListener('click', close);
-    dialog.addEventListener('close', restore);
-    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
-    dialog.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
-    dialog.addEventListener('click', event => { if (event.target === dialog) close(); });
-    dialog.addEventListener('keydown', event => {
-      if (event.key !== 'Tab') return;
-      const controls = [...dialog.querySelectorAll<HTMLAnchorElement | HTMLButtonElement>('a, button')];
-      const first = controls[0]; const last = controls[controls.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
-    });
-  }
-</script>

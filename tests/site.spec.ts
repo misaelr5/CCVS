@@ -1,11 +1,14 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/'];
+const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
 for (const width of [360, 375, 390, 430, 768, 1024, 1440]) {
   for (const route of routes) {
     test(`${route} · ${width}px: carga, layout y recursos`, async ({ page }) => {
       await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 });
+      // Auditar el estado legible final, no el fotograma semitransparente de una entrada.
+      // El movimiento se prueba por separado en phase4.spec.ts.
+      await page.emulateMedia({ reducedMotion:'reduce' });
       const failures: string[] = [];
       page.on('pageerror', error => failures.push(error.message));
       expect((await page.goto(route))?.status()).toBe(200);

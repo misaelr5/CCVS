@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { legal } from '../data/legal';
+---
+<BaseLayout title="Términos y condiciones — borrador" description="Borrador de términos de uso del sitio de Comunidad Cristiana Villa Sarmiento, pendiente de revisión institucional y jurídica.">
+<section class="legal-page shell"><p class="kicker">DOCUMENTO EN REVISIÓN</p><h1>Términos y<br /><span class="serif">condiciones.</span></h1><p class="legal-notice">Borrador pendiente de revisión institucional y jurídica. No constituye un documento aprobado para la publicación definitiva del sitio.</p><p class="legal-updated">Actualización: {legal.updated}</p>{legal.sections.map((section,index)=><section><h2>{index+1}. {section.title}</h2><p>{section.text}</p></section>)}<a class="inline-link" href="/links/">Canales de la comunidad</a></section>
+</BaseLayout>

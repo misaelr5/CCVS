@@ -36,3 +36,18 @@ Se corrigieron ancho del título desktop, rótulo Nosotros, proporción de su im
 ## Respaldo
 
 Rama backup/antes-v3-20261014 y copia D:\CCVS-respaldos\antes-v3-con-pack-completo con 65 archivos, manifest SHA-256 y bundle Git verificado. La versión anterior se conserva en el historial Git; después de la reconstrucción el usuario autorizó commit y push de V3 a main, sin despliegue.
+
+## Fase 4 — validación posterior
+
+La V3 se conserva en backup/antes-fase4-20261014. Detalle vigente en FASE_4_RESULTADO.md.
+
+- Astro check y build correctos; seis páginas estáticas.
+- 52 pruebas aprobadas: rutas en siete anchos, navegación forward/back/forward, navegación repetida, fallback sin API, motion y teclado.
+- Axe sobre las seis rutas a 390/1440, en estado final con reduced motion: sin infracciones reportadas en reglas A/AA evaluadas. El motion se verifica por separado.
+- Análisis estático: 168 enlaces/anclas y 30 referencias a recursos.
+- Código de los módulos inferiores de Inicio idéntico al commit V3.
+- Capturas antes/después y por bloque en qa-artifacts/antes-fase4 y qa-artifacts/fase4.
+- Instagram, Facebook y YouTube respondieron HTTP 200. El nombre de destino de Google coincide, pero la ficha/pin no se pudo validar por un bloqueo antirobot; Maps queda pendiente.
+- No se agregaron dependencias, trackers, formularios ni datos institucionales ficticios.
+- Términos es un borrador; fotos propias, revisión jurídica/institucional e iPhone físico siguen pendientes.
+- Correcciones durante QA: inicialización del menú en carga completa sin API, manejo de cancelación normal de ViewTransition.ready y auditoría sobre el estado final en vez de fotogramas intermedios.

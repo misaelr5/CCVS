@@ -7,7 +7,9 @@
 - [ ] Reconfirmar los cuatro horarios y la dirección para producción.
 - [ ] Recibir fotos originales autorizadas: hero horizontal/vertical, reuniones, jóvenes, niños, servicio y edificio. Confirmar permisos de personas y menores.
 - [ ] Recibir logos institucionales finales transparentes y confirmar bordó exacto.
-- [ ] Recibir URL exacta del mapa y contactos/redes oficiales. No hay botones ficticios.
+- [x] Recibir Instagram Jóvenes CCVS, Facebook y YouTube; incorporar las URLs proporcionadas y comprobar HTTP 200.
+- [ ] Validar el pin del enlace de Google proporcionado. La ficha fue bloqueada por control antirobot; no se habilita Maps todavía.
+- [ ] Confirmar email/WhatsApp institucional; no se inventan contactos.
 - [ ] Incorporar liderazgo solo si se decide hacerlo y llegan datos aprobados.
 
 ## Operación
@@ -27,6 +29,8 @@
 - [ ] Revisar fotos y object-position en 360/375/390/430/768/1024/1440.
 - [ ] Revalidar contraste y texto sobre fotografías.
 - [ ] Probar dispositivos reales (incluyendo Safari/iPhone), zoom 200% y lector de pantalla.
+- [ ] Revisar y aprobar el borrador `/terminos-y-condiciones/` antes de producción.
+- [ ] Incorporar fotografías nuevas de bienvenida, reunión, banner y capas de collage según `FASE_4_RESULTADO.md`.
 - [ ] Medir Core Web Vitals/Lighthouse con fotos finales y alojamiento real.
 - [ ] Revisar diferencias tipográficas con responsables; si se facilita GT America/Saol con licencia, evaluar su integración.
 - [ ] Verificar rutas públicas, dominio, sitemap, robots y headers después del despliegue autorizado.
