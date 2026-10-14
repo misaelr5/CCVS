@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+# Material ajeno de estudio privado: nunca subir al repositorio público.
+referencias/
+qa-artifacts/
+*.log

@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import { site, isHttpsUrl } from '../data/site';
+import Arrow from './Arrow.astro';
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top"><p>Comunidad Cristiana<br /><em>Villa Sarmiento.</em></p><a class="round-link" href="/visitanos/" aria-label="Consultar dirección y horarios"><Arrow diagonal /></a></div>
+    <div class="footer-grid">
+      <div class="footer-identity"><span class="mother-mark"><Image src={site.logos.mother} alt="Comunidad Cristiana" width={64} height={64} format="webp" /></span><p>{site.address}<br />Argentina</p><span class="local-mark"><Image src={site.logos.local} alt="CCVS — identidad local" width={110} height={110} format="webp" /></span></div>
+      <nav aria-label="Navegación del pie"><span class="eyebrow">Conocenos</span>{site.nav.map(item => <a href={item.href}>{item.label}</a>)}<a href="/links/">Enlaces</a>{site.externalLinks.filter(item => isHttpsUrl(item.url)).map(item => <a href={item.url} rel="noopener noreferrer">{item.label}</a>)}</nav>
+      <div><span class="eyebrow">Nos encontramos</span>{site.schedules.map(item => <p class="footer-schedule">{item.name}<small>{item.day} · {item.time}</small></p>)}</div>
+    </div>
+    <div class="footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><span>Villa Sarmiento · Córdoba</span></div>
+  </div>
+</footer>

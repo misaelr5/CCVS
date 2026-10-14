@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import FaithAccordion from '../components/FaithAccordion.astro';
+import Invitation from '../components/Invitation.astro';
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+---
+<BaseLayout title="Nosotros" description="Conocé la historia de Comunidad Cristiana Villa Sarmiento desde 2005, nuestra identidad y nuestras creencias.">
+  <section class="page-intro wrap"><div><p class="eyebrow">Nosotros · Comunidad Cristiana</p><h1>{site.about.title}<br /><em>{site.about.accent}</em></h1><p class="intro-text">{site.about.text}</p></div><div class="about-art" aria-hidden="true"><span class="art-caption">Villa Sarmiento</span><span class="art-year">2005</span><span class="art-caption">El comienzo de una historia compartida.</span></div></section>
+  <section class="wrap section-space" id="historia"><SectionHeading eyebrow="Nuestro recorrido" title="Una historia de fe." accent="Paso a paso." /><ol class="timeline">{site.history.map(item => <li><span class="timeline-year">{item.year}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></li>)}</ol></section>
+  <section class="faith-section wrap section-space"><SectionHeading eyebrow="Lo que creemos" title="La Biblia como" accent="única autoridad." /><FaithAccordion /></section>
+  <section class="identity-section wrap section-space"><div><p class="eyebrow">Nuestra identidad</p><h2>Comunidad Cristiana.<br /><em>Villa Sarmiento.</em></h2><p>{site.about.identityText}</p></div><div class="identity-logos"><Image src={site.logos.mother} alt="Emblema madre de Comunidad Cristiana" width={160} height={160} format="webp" /><span class="identity-rule" aria-hidden="true"></span><Image src={site.logos.local} alt="CCVS — identidad de la congregación local" width={200} height={200} format="webp" /></div></section>
+  <Invitation />
+</BaseLayout>

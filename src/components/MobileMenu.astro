@@ -1,0 +1,33 @@
+---
+import { site } from '../data/site';
+const current = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<details class="mobile-menu">
+  <summary aria-label="Abrir menú de navegación"><span class="menu-lines" aria-hidden="true"></span><span class="menu-word">Menú</span></summary>
+  <nav aria-label="Navegación móvil" class="menu-panel">
+    {site.nav.map((item, index) => <a href={item.href} aria-current={current === (item.href.replace(/\/$/, '') || '/') ? 'page' : undefined}><span class="menu-number">0{index + 1}</span>{item.label}<span aria-hidden="true">↗</span></a>)}
+    <a href="/links/">Todos los enlaces <span aria-hidden="true">↗</span></a>
+    <p>{site.location}</p>
+  </nav>
+</details>
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+  const trigger = menu?.querySelector('summary');
+  if (menu && trigger) {
+    const close = (restoreFocus = false) => { menu.open = false; if (restoreFocus) trigger.focus(); };
+    document.addEventListener('keydown', (event) => {
+      if (!menu.open) return;
+      if (event.key === 'Escape') { event.preventDefault(); close(true); }
+      if (event.key === 'Tab') {
+        const items = [trigger, ...menu.querySelectorAll<HTMLAnchorElement>('nav a')];
+        const first = items[0]; const last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    });
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => close()));
+    document.addEventListener('click', (event) => { if (event.target instanceof Node && !menu.contains(event.target)) close(); });
+    window.matchMedia('(min-width: 900px)').addEventListener('change', (event) => { if (event.matches) close(); });
+    menu.addEventListener('toggle', () => trigger.setAttribute('aria-label', menu.open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'));
+  }
+</script>

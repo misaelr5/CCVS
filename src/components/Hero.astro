@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+import Arrow from './Arrow.astro';
+---
+<section class:list={['hero', 'wrap', { 'hero-with-photo': !!site.photos.hero }]} aria-labelledby="hero-title">
+  {site.photos.hero && <Image class="hero-photo" src={site.photos.hero.src} alt={site.photos.hero.alt} widths={[480, 800, 1280, 1920]} sizes="(max-width: 800px) 100vw, 1280px" format="webp" loading="eager" fetchpriority="high" style={`object-position:${site.photos.hero.position ?? 'center'}`} />}
+  <div class="hero-top"><span class="eyebrow">{site.home.eyebrow}</span><span class="hero-coordinate">Córdoba, Argentina</span></div>
+  <div class="hero-content"><h1 id="hero-title">{site.home.title}<br /><em>{site.home.accent}</em></h1><p>{site.home.text}</p><a class="button" href="/visitanos/">Vení a conocernos <Arrow diagonal /></a></div>
+  {!site.photos.hero && <div class="hero-art" aria-hidden="true"><span></span><span></span><span></span></div>}
+  <div class="hero-bottom"><span>Fe · Encuentro · Comunidad</span><a href="#encuentros">Nuestros encuentros <span aria-hidden="true">↓</span></a></div>
+</section>

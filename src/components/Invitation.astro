@@ -1,0 +1,5 @@
+---
+import { site } from '../data/site';
+import Arrow from './Arrow.astro';
+---
+<section class="invitation wrap"><div><span class="eyebrow">Te invitamos</span><h2>{site.invitation.title}</h2><p>{site.invitation.text}</p></div><a class="button" href="/visitanos/">{site.invitation.label}<Arrow diagonal /></a></section>

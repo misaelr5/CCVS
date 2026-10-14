@@ -1,0 +1,6 @@
+---
+import type { Activity } from '../data/site';
+interface Props { activity: Activity; index: number; }
+const { activity, index } = Astro.props;
+---
+<article class="activity-card"><div class="card-top"><span class="eyebrow">{activity.category}</span><span class="card-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span></div><h3>{activity.name}</h3><p>{activity.description}</p>{activity.schedule && <p class="activity-time">{activity.schedule} hs</p>}</article>

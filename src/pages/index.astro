@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import EditorialSplit from '../components/EditorialSplit.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ScheduleList from '../components/ScheduleList.astro';
+import ActivityCard from '../components/ActivityCard.astro';
+import Invitation from '../components/Invitation.astro';
+import Arrow from '../components/Arrow.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title="Inicio">
+  <Hero />
+  <section class="welcome wrap section-space"><p class="eyebrow">Bienvenidos a nuestra comunidad</p><div><h2>{site.home.welcomeTitle}</h2><p>{site.home.welcomeText}</p><a class="text-link" href="/nosotros/">Conocé nuestra historia <Arrow diagonal /></a></div></section>
+  <section class="schedule-section wrap section-space" id="encuentros"><SectionHeading eyebrow="Un tiempo para encontrarnos" title="Nos reunimos." accent="Te esperamos." /><div><ScheduleList /><a class="text-link" href="/visitanos/">Cómo llegar y primera visita <Arrow diagonal /></a></div></section>
+  <EditorialSplit eyebrow="Vida en comunidad" title={site.home.communityTitle} text={site.home.communityText} href="/ministerios/" label="Explorar los ministerios" photo={site.photos.community} />
+  <section class="wrap section-space"><div class="section-top"><SectionHeading eyebrow="Compartir y acompañar" title="Cada encuentro cuenta." /><a class="text-link" href="/ministerios/">Todas las actividades <Arrow diagonal /></a></div><div class="activity-grid">{[site.activities[3], site.activities[4], site.activities[6]].map((activity, index) => <ActivityCard activity={activity} index={index} />)}</div></section>
+  <section class="history-preview wrap section-space"><span class="history-year">2005</span><div><p class="eyebrow">Así comenzó nuestra historia</p><h2>De un encuentro de oración<br /><em>a una vida en comunidad.</em></h2><p>{site.history[0].text}</p><a class="text-link" href="/nosotros/#historia">Recorrer nuestra historia <Arrow diagonal /></a></div></section>
+  <Invitation />
+</BaseLayout>

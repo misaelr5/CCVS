@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+import MobileMenu from './MobileMenu.astro';
+import Arrow from './Arrow.astro';
+const current = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header class="site-header wrap">
+  <a class="brand" href="/" aria-label={`${site.name} — Inicio`}>
+    <span class="mother-mark"><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana: cruz y paloma" width={64} height={64} format="webp" loading="eager" /></span>
+    <span>Comunidad Cristiana<small>Villa Sarmiento</small></span>
+  </a>
+  <nav class="desktop-nav" aria-label="Navegación principal">
+    {site.nav.filter(item => item.href !== '/').map(item => <a href={item.href} class:list={{ 'nav-visit': item.href === '/visitanos/' }} aria-current={current === item.href.replace(/\/$/, '') ? 'page' : undefined}>{item.label}{item.href === '/visitanos/' && <Arrow diagonal />}</a>)}
+  </nav>
+  <MobileMenu />
+</header>
