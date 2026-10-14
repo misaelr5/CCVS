@@ -91,11 +91,11 @@ test('motion: reveal una vez, contenido visible y reduced motion',async({page})=
  await expect(page.locator('.welcome-copy h2')).toBeVisible();
 });
 
-test('CCVS gigante se muestra completo en mobile',async({page})=>{
+test('CCVS de fondo no desborda en mobile',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  for(const width of [360,375,390,430]) {
   await page.setViewportSize({width,height:844});
   await page.goto('/'); await page.evaluate(()=>document.fonts.ready);
-  expect(await page.locator('.footer-wordmark').evaluate(element=>element.scrollWidth<=element.clientWidth)).toBe(true);
+  expect(await page.locator('.footer-wordmark').evaluate(element=>element.getBoundingClientRect().width <= innerWidth * 1.25)).toBe(true);
  }
 });

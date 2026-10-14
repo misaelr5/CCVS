@@ -1,0 +1,9 @@
+---
+import { externalLinks, isHttpsUrl } from '../data/links';
+import SocialIcon from './SocialIcon.astro';
+interface Props { label?: string; }
+const { label = 'Redes de la comunidad' } = Astro.props;
+---
+<nav class="social-links" aria-label={label}>
+ {externalLinks.filter(link => isHttpsUrl(link.href)).map(link => <a href={link.href} target="_blank" rel="noopener noreferrer" data-astro-reload aria-label={link.label} title={link.label}><SocialIcon type={link.icon} /><span class="sr-only">Abre en una pestaña nueva</span></a>)}
+</nav>

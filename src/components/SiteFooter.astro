@@ -1,7 +1,19 @@
 ---
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
-import { groups, externalLinks, isHttpsUrl } from '../data/links';
-import SocialIcon from './SocialIcon.astro';
+import { groups } from '../data/links';
+import SocialLinks from './SocialLinks.astro';
 ---
-<footer class="site-footer"><div class="shell footer-grid"><div class="footer-identity"><Image src={site.logos.mother} alt="Comunidad Cristiana" width={72} height={72} format="webp" /><p>{site.name}</p><Image class="secondary-logo" src={site.logos.local} alt="CCVS — identidad local" width={104} height={104} format="webp" /></div>{groups.slice(0, 2).map(group => <nav aria-label={group.title}><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</nav>)}<div class="footer-contact"><h2>Encontranos</h2><address>{site.address}</address><a href="/links/">Nuestros enlaces</a>{externalLinks.filter(link => isHttpsUrl(link.href)).map(link => <a class="footer-social" href={link.href} target="_blank" rel="noopener noreferrer" data-astro-reload><SocialIcon type={link.icon} /><span>{link.label}</span></a>)}</div></div><div class="shell footer-bottom"><p>© {new Date().getFullYear()} CCVS</p><a href="/terminos-y-condiciones/">Términos y condiciones · borrador</a><p>Comunidad Cristiana Villa Sarmiento</p></div><p class="footer-wordmark" aria-hidden="true">CCVS</p></footer>
+<footer class="site-footer">
+ <Image class="footer-wordmark" src={site.logos.local} alt="" width={900} height={900} format="webp" loading="lazy" aria-hidden="true" />
+ <div class="shell footer-grid">
+  <div class="footer-identity">
+   <Image src={site.logos.mother} alt="Comunidad Cristiana" width={64} height={64} format="webp" />
+   <p>Comunidad Cristiana<br /><span>Villa Sarmiento</span></p>
+   <Image class="secondary-logo" src={site.logos.local} alt="CCVS — identidad local" width={64} height={64} format="webp" />
+  </div>
+  {groups.slice(0, 2).map(group => <nav aria-label={group.title}><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</nav>)}
+  <div class="footer-contact"><h2>Encontranos</h2><address>{site.address}</address><a class="footer-visit" href="/visitanos/">Planeá tu visita <span aria-hidden="true">↗</span></a><a href="/links/">Nuestros enlaces</a><SocialLinks label="Redes sociales del footer" /></div>
+ </div>
+ <div class="shell footer-bottom"><p>© {new Date().getFullYear()} CCVS</p><a href="/terminos-y-condiciones/">Términos y condiciones · borrador</a><p>Villa Sarmiento · Córdoba, Argentina</p></div>
+</footer>

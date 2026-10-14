@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ScrollAccent from '../components/ScrollAccent.astro';
 import MinistryFeature from '../components/MinistryFeature.astro';
 import { ministries } from '../data/ministries';
 ---
 <BaseLayout title="Ministerios y actividades" description="Oración, estudios bíblicos, niños, jóvenes, encuentros y ayuda social en Comunidad Cristiana Villa Sarmiento.">
-<section class="page-heading shell"><h1>Compartir la fe.<br /><span class="serif">Servir a los demás.</span></h1><p>Conocé las actividades de nuestra congregación. Espacios para crecer espiritualmente, encontrarnos y acompañar a la comunidad.</p><nav class="section-navigation" aria-label="Actividades">{ministries.map(item => <a href={`#${item.id}`}>{item.title.replace(/\.$/, '')}</a>)}</nav></section>
+<section class="page-heading shell"><h1>Compartir la fe.<br /><span class="serif">Servir a los demás.</span></h1><p>Conocé las actividades de nuestra congregación. Espacios para crecer espiritualmente, encontrarnos y acompañar a la comunidad.</p><ScrollAccent kind="horizontal" /><nav class="section-navigation" aria-label="Actividades">{ministries.map(item => <a href={`#${item.id}`}>{item.title.replace(/\.$/, '')}</a>)}</nav></section>
 {ministries.map((ministry,index) => <MinistryFeature ministry={ministry} index={index} />)}
 </BaseLayout>

@@ -1,0 +1,12 @@
+# Subir solo lo necesario para construir el sitio. El pack privado queda local.
+/*
+!src
+!identidad
+!public
+!scripts
+!package.json
+!package-lock.json
+!astro.config.mjs
+!tsconfig.json
+!vercel.json
+scripts/capture.mjs

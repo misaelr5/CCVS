@@ -33,34 +33,31 @@ for (const width of [360, 375, 390, 430, 768, 1024, 1440]) {
 }
 
 for (const width of [390, 1440]) {
-  test(`menú modal · ${width}px: foco, Escape, scroll y enlaces`, async ({ page }) => {
-    await page.setViewportSize({ width, height:844 });
-    await page.goto('/');
-    const trigger = page.getByRole('button', { name:'Abrir menú' });
-    await trigger.focus();
-    await page.keyboard.press('Enter');
-    await expect(page.getByRole('dialog')).toBeVisible();
-    await expect(page.getByRole('button', { name:'Cerrar menú' })).toBeFocused();
-    await expect(trigger).toHaveAttribute('aria-expanded', 'true');
-    expect(await page.evaluate(() => document.body.style.position)).toBe('fixed');
-    await page.keyboard.press('Shift+Tab');
-    await expect(page.getByRole('dialog').getByRole('link').last()).toBeFocused();
-    await page.keyboard.press('Tab');
-    await expect(page.getByRole('button', { name:'Cerrar menú' })).toBeFocused();
-    await page.keyboard.press('Escape');
-    await expect(page.getByRole('dialog')).not.toBeVisible();
-    await expect(trigger).toBeFocused();
-    expect(await page.evaluate(() => document.body.style.position)).toBe('');
-    await page.evaluate(() => window.scrollTo(0, 600));
-    await trigger.evaluate(element => (element as HTMLButtonElement).click());
-    await page.getByRole('button', { name:'Cerrar menú' }).click();
-    expect(await page.evaluate(() => scrollY)).toBe(600);
-    await page.evaluate(() => window.scrollTo(0, 0));
-    await trigger.click();
-    await page.getByRole('dialog').getByRole('link', { name:'Qué creemos', exact:true }).click();
-    await expect(page).toHaveURL(/nosotros\/#creencias$/);
-    await expect(page.getByRole('dialog')).not.toBeVisible();
-  });
+ test(`menú tarjeta · ${width}px: página estable, Escape y anclas`, async ({ page }) => {
+  await page.setViewportSize({ width, height:844 });
+  await page.goto('/');
+  const trigger = page.locator('.menu-open');
+  const heroBefore = await page.locator('.editorial-hero').boundingBox();
+  await trigger.focus(); await page.keyboard.press('Enter');
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page.getByRole('button', { name:'Cerrar menú', exact:true })).toBeFocused();
+  await expect(trigger).toHaveAttribute('aria-expanded','true');
+  expect(await page.evaluate(()=>document.body.style.position)).toBe('');
+  expect(await page.evaluate(()=>document.querySelector('dialog')!.matches(':modal'))).toBe(false);
+  expect(await page.locator('.editorial-hero').boundingBox()).toEqual(heroBefore);
+  await page.keyboard.press('Shift+Tab'); await expect(trigger).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog')).not.toBeVisible(); await expect(trigger).toBeFocused();
+  await page.evaluate(()=>scrollTo(0,600));
+  await trigger.evaluate(element=>(element as HTMLButtonElement).click());
+  await page.getByRole('button',{name:'Cerrar menú',exact:true}).evaluate(element=>(element as HTMLButtonElement).click());
+  await expect(page.getByRole('dialog')).not.toBeVisible();
+  expect(await page.evaluate(()=>scrollY)).toBe(600);
+  await page.evaluate(()=>scrollTo(0,0));await trigger.click();
+  await page.getByRole('dialog').getByRole('link',{name:'Qué creemos',exact:true}).click();
+  await expect(page).toHaveURL(/nosotros\/#creencias$/);
+  await expect(page.getByRole('dialog')).not.toBeVisible();
+ });
 }
 
 test('acordeón: teclado y estados ARIA', async ({ page }) => {

@@ -1,13 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
-import { groups, externalLinks, isHttpsUrl } from '../data/links';
+import { groups } from '../data/links';
+import SocialLinks from './SocialLinks.astro';
 ---
 <header class="site-header shell" transition:name="institution-header">
   <a class="institution" href="/" aria-label={`${site.name} — Inicio`}><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana: cruz y paloma" width={58} height={58} format="webp" loading="eager" /><span>Comunidad Cristiana<small>Villa Sarmiento</small></span></a>
-  <div class="header-actions"><a class="header-visit" href="/visitanos/">Visitarnos</a><button class="menu-open" type="button" aria-label="Abrir menú" aria-haspopup="dialog" aria-controls="navigation-dialog" aria-expanded="false"><span></span><span></span><span></span></button></div>
-</header>
+  <div class="header-actions"><a class="header-visit" href="/visitanos/">Visitarnos</a><button class="menu-open" type="button" aria-label="Abrir menú" aria-haspopup="dialog" aria-controls="navigation-dialog" aria-expanded="false"><span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button></div>
 <dialog id="navigation-dialog" class="navigation-dialog" aria-labelledby="menu-title">
-  <div class="menu-inner shell"><div class="menu-top"><p id="menu-title">Comunidad Cristiana<br /><span>Villa Sarmiento</span></p><button class="menu-close" type="button" aria-label="Cerrar menú"><span aria-hidden="true">×</span></button></div><nav aria-label="Navegación principal" class="menu-groups">{groups.map(group => <div><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</div>)}{externalLinks.filter(link => isHttpsUrl(link.href)).length > 0 && <div><h2>Redes oficiales</h2>{externalLinks.filter(link => isHttpsUrl(link.href)).map(link => <a href={link.href} rel="noopener noreferrer">{link.label}</a>)}</div>}</nav><p class="menu-address">{site.address}</p></div>
+ <div class="menu-inner">
+  <div class="menu-top"><p id="menu-title">Comunidad Cristiana<br /><span>Villa Sarmiento</span></p><button class="menu-close" type="button" aria-label="Cerrar menú"><span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button></div>
+  <nav aria-label="Navegación principal" class="menu-groups">{groups.map(group => <div><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</div>)}</nav>
+  <div class="menu-tail"><p class="menu-address">{site.address}</p><section class="menu-social" aria-labelledby="follow-title"><h2 id="follow-title">Seguinos</h2><SocialLinks label="Redes sociales del menú" /></section></div>
+ </div>
 </dialog>
+</header>
 <noscript><style>.menu-open { display:none; }</style><nav class="nojs-navigation shell" aria-label="Navegación sin JavaScript">{groups.flatMap(group => group.links).map(link => <a href={link.href}>{link.label}</a>)}</nav></noscript>

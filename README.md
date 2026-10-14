@@ -1,6 +1,6 @@
 # CCVS — reconstrucción V3
 
-Sitio estático de Comunidad Cristiana Villa Sarmiento. La base aprobada es V3; la evolución vigente se describe en `FASE_4.md` y `FASE_4_RESULTADO.md`. El usuario autorizó implementación, commit y push de Fase 4. No se desplegó.
+Sitio estático de Comunidad Cristiana Villa Sarmiento. La base aprobada es V3/Fase 4. Fase 4.2 incorporó redes y motion. El último ajuste está documentado en `AJUSTES_NAVEGACION_RESULTADO.md`: menú en tarjeta, navegación desde arriba, objetos al scroll y footer compacto con CCVS de fondo. Versión de revisión publicada por autorización del usuario en **https://ccvs-sigma.vercel.app/**. Detalle de publicación en `DESPLIEGUE_VERCEL.md`; los cambios de Git siguen pendientes de commit y push.
 
 ## Arranque
 
@@ -24,7 +24,7 @@ La vista compilada queda en http://127.0.0.1:4322/.
 
 ## Arquitectura
 
-Astro 7, TypeScript estricto, Tailwind CSS 4 con integración Vite oficial y `astro:assets`. HTML estático y CSS editorial; JavaScript únicamente para menú y acordeón. Sin backend, React, trackers, carruseles pesados ni formularios.
+Astro 7, TypeScript estricto, Tailwind CSS 4 con integración Vite oficial y `astro:assets`. HTML estático y CSS editorial; JavaScript para menú, acordeón, transiciones y motion progresivo. Sin backend, React, trackers, carruseles pesados ni formularios. Menú no modal: permite interactuar con la página. Las rutas sin fragmento empiezan arriba incluso al retroceder; las anclas conservan su destino. Motion se desactiva con `prefers-reduced-motion`.
 
 Fuentes reales: **Archivo Variable** (peso y ancho variables) + **Bodoni Moda Variable**, alojadas localmente mediante Fontsource. Son alternativas libres, no copias exactas de GT America/Saol. No se extrajeron fuentes comerciales ni activos de Passion City.
 

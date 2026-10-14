@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ScrollAccent from '../components/ScrollAccent.astro';
 import Schedule from '../components/Schedule.astro';
 import { site } from '../data/site';
 import { mapUrl, isHttpsUrl } from '../data/links';
 ---
 <BaseLayout title="Visitarnos" description="Reunión principal: domingo 19:30. Dirección, horarios y primera visita en Vélez Sarsfield s/n, Villa Sarmiento, Córdoba.">
-<section class="page-heading shell visit-heading"><h1>Nos encontramos.<br /><span class="serif">En Villa Sarmiento.</span></h1><div class="visit-essential"><p>Reunión principal<br /><strong>Domingo · 19:30 hs</strong></p><address>{site.address}</address></div></section>
+<section class="page-heading shell visit-heading"><h1>Nos encontramos.<br /><span class="serif">En Villa Sarmiento.</span></h1><div class="visit-essential"><p>Reunión principal<br /><strong>Domingo · 19:30 hs</strong></p><address>{site.address}</address></div><ScrollAccent kind="diagonal" /></section>
 <section class="visit-layout shell section-gap" id="horarios"><div><h2>Horarios.</h2><Schedule /></div><div class="first-visit"><p class="serif-label">Tu primera visita.</p><p>Podés acercarte a una de nuestras reuniones. Al llegar, podés presentarte y consultar sobre las actividades que te interesan.</p><a class="pill" href="/links/">Nuestros enlaces</a></div></section>
 <section class="location shell section-gap"><div><h2>Acercate.<br /><span class="serif">Compartamos un encuentro.</span></h2><address>{site.address}</address>{mapUrl && isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} rel="noopener noreferrer">Cómo llegar</a>}</div><div class="map-reserve"><p>Villa Sarmiento<br /><span>Córdoba, Argentina</span></p><small>El pin exacto de ubicación está pendiente de confirmación.</small></div></section>
 </BaseLayout>

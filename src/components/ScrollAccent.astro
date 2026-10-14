@@ -1,0 +1,6 @@
+---
+import EditorialMark from './EditorialMark.astro';
+interface Props { kind?: 'curve' | 'horizontal' | 'diagonal' | 'circle'; class?: string; }
+const { kind = 'curve', class: className = '' } = Astro.props;
+---
+<div class:list={['scroll-accent', className]} data-scroll-object aria-hidden="true"><EditorialMark kind={kind} /></div>

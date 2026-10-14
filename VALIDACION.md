@@ -51,3 +51,22 @@ La V3 se conserva en backup/antes-fase4-20261014. Detalle vigente en FASE_4_RESU
 - No se agregaron dependencias, trackers, formularios ni datos institucionales ficticios.
 - Términos es un borrador; fotos propias, revisión jurídica/institucional e iPhone físico siguen pendientes.
 - Correcciones durante QA: inicialización del menú en carga completa sin API, manejo de cancelación normal de ViewTransition.ready y auditoría sobre el estado final en vez de fotogramas intermedios.
+
+## Fase 4.2 — validación posterior
+
+- Tipos: 39 archivos, cero errores, advertencias o hints. Build de seis páginas correcto.
+- 63 pruebas aprobadas, incluyendo las seis rutas en siete anchos y el menú en 360×640.
+- Animación hamburguesa/X, cierre progresivo, foco/Escape/Tab y scroll; enlaces/sociales al final; iconos de menú y footer con la misma fuente de URLs.
+- Entrada de las seis páginas y reduced motion, navegación repetida con Astro y fallback normal.
+- Axe: sin infracciones en las reglas evaluadas, sobre estados finales legibles; no constituye certificación.
+- 168 enlaces/anclas y 36 referencias a recursos verificados.
+- Capturas antes/después y límites en FASE_4_2_RESULTADO.md.
+- Rama de respaldo backup/antes-fase4-2-20261014. Sin push ni deploy.
+
+## Ajustes posteriores — tarjeta, navegación, scroll y footer
+
+Detalle vigente en `AJUSTES_NAVEGACION_RESULTADO.md`. Typecheck sin errores (42 archivos), build de seis páginas, 173 enlaces/anclas y 36 recursos verificados; **72 pruebas aprobadas**. Menú no modal sin fades ni cambio de scroll/layout, navegación desde arriba salvo anclas explícitas, entradas en seis rutas, objetos al scroll y footer con CCVS de fondo. Capturas antes/después revisadas en 390/1440 y menú/footer también en 360/768. Respaldo completo del trabajo local anterior en `D:\CCVS-respaldos\antes-menu-tarjeta-20261014`. Sin commit, push ni deploy.
+
+## Publicación posterior autorizada — 14/10/2026
+
+El usuario pidió después publicar en Vercel. Estado **READY / production** en https://ccvs-sigma.vercel.app/. Se repitieron los checks locales y las 72 pruebas; las seis rutas públicas se verificaron en 390/1440 con HTTP 200, sin errores, con los ajustes actuales y headers de seguridad. Referencias, videos, capturas y credenciales excluidos. Sin commit ni push. Evidencia y límites en `DESPLIEGUE_VERCEL.md`.

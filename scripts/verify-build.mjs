@@ -41,7 +41,9 @@ for (const route of routes) {
     if (url.origin !== 'https://ccvs.invalid') continue;
     assert.ok((await stat(pageFile(url.pathname))).size > 0, `${route}: recurso ausente ${src}`);
     if (tag.startsWith('<img')) {
-      assert.ok(attribute(tag, 'alt'), `${route}: imagen sin descripción`);
+      const alt = attribute(tag, 'alt');
+      const decorative = /\baria-hidden="true"/.test(tag) && /\balt(?:=""|(?=\s|>))/.test(tag);
+      assert.ok(alt?.trim() || decorative, `${route}: imagen sin descripción`);
       assert.ok(Number(attribute(tag, 'width')) > 0 && Number(attribute(tag, 'height')) > 0);
     }
     checkedAssets++;
