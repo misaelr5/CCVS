@@ -1,11 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ActivityCard from '../components/ActivityCard.astro';
-import Invitation from '../components/Invitation.astro';
-import { site } from '../data/site';
+import MinistryFeature from '../components/MinistryFeature.astro';
+import { ministries } from '../data/ministries';
 ---
-<BaseLayout title="Ministerios" description="Oración, estudio bíblico, niños, jóvenes y servicio comunitario en Comunidad Cristiana Villa Sarmiento.">
-  <section class="page-intro simple-intro wrap"><p class="eyebrow">Ministerios y actividades</p><h1>{site.ministries.title}<br /><em>{site.ministries.accent}</em></h1><p class="intro-text">{site.ministries.text}</p></section>
-  <section class="wrap activity-section" aria-label="Actividades de la comunidad"><div class="activity-grid ministries-grid">{site.activities.map((activity, index) => <ActivityCard activity={activity} index={index} />)}</div></section>
-  <Invitation />
+<BaseLayout title="Ministerios y actividades" description="Oración, estudios bíblicos, niños, jóvenes, encuentros y ayuda social en Comunidad Cristiana Villa Sarmiento.">
+<section class="page-heading shell"><h1>Compartir la fe.<br /><span class="serif">Servir a los demás.</span></h1><p>Conocé las actividades de nuestra congregación. Espacios para crecer espiritualmente, encontrarnos y acompañar a la comunidad.</p><nav class="section-navigation" aria-label="Actividades">{ministries.map(item => <a href={`#${item.id}`}>{item.title.replace(/\.$/, '')}</a>)}</nav></section>
+{ministries.map((ministry,index) => <MinistryFeature ministry={ministry} index={index} />)}
 </BaseLayout>

@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import LinksHub from '../components/LinksHub.astro';
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+import { hubLinks, externalLinks, isHttpsUrl } from '../data/links';
 ---
-<BaseLayout title="Enlaces" description="Todos los enlaces de Comunidad Cristiana Villa Sarmiento: reuniones, visita, historia y ministerios." compact><LinksHub /></BaseLayout>
+<BaseLayout title="Enlaces" description="Inicio, horarios, visita, historia y actividades. Todos los enlaces de Comunidad Cristiana Villa Sarmiento." compact>
+<section class="links-hub"><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana" width={106} height={106} format="webp" loading="eager" /><h1>Comunidad Cristiana<br /><span>Villa Sarmiento</span></h1><p>Una comunidad. Una misma fe.</p><nav aria-label="Enlaces de la iglesia">{[...hubLinks,...externalLinks.filter(link => isHttpsUrl(link.href))].map(link => <a href={link.href} class="link-button"><span>{link.label}</span><span aria-hidden="true">↗</span></a>)}</nav><address>{site.address}</address></section>
+</BaseLayout>

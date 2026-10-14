@@ -1,89 +1,119 @@
-# CCVS — Comunidad Cristiana Villa Sarmiento
+# CCVS — reconstrucción V3
 
-Sitio institucional estático en español argentino. Astro + TypeScript estricto + Tailwind CSS 4 (plugin oficial de Vite). Sin backend, formularios, rastreadores ni conexiones con servicios de terceros en el MVP.
+Sitio estático de Comunidad Cristiana Villa Sarmiento. La consigna vigente es `PROMPT_MAESTRO_V3.md`; el material anterior queda como histórico. La versión V3 fue aprobada visualmente por el usuario para commit y push a `main`. No se desplegó.
 
-## Desarrollo
+## Arranque
 
-Requisito: Node.js 22.12 o superior (ver `package.json`).
+Node.js 22.12 o superior. Entorno verificado con Node 24.15.0.
 
 ```powershell
 npm ci
 npm run dev
 ```
 
-Abrir http://127.0.0.1:4321. Para verificar y revisar el resultado compilado:
+Abrir http://127.0.0.1:4321/. Para ver la salida compilada:
 
 ```powershell
 npm run check
 npm run build
 npm run verify:static
-npm run preview
+npm run preview -- --port 4322
 ```
 
-`check` valida TypeScript y plantillas Astro. No hay un script de lint configurado. La revisión visual y de teclado sigue siendo una verificación independiente: un build exitoso no prueba el diseño responsive.
+La vista compilada queda en http://127.0.0.1:4322/.
 
-`verify:static` inspecciona el HTML compilado: rutas, enlaces y anclas, recursos, metadatos, datos estructurados, identidad y ausencia de capturas ajenas. No simula un navegador ni verifica el layout.
+## Arquitectura
 
-## Rutas
+Astro 7, TypeScript estricto, Tailwind CSS 4 con integración Vite oficial y `astro:assets`. HTML estático y CSS editorial; JavaScript únicamente para menú y acordeón. Sin backend, React, trackers, carruseles pesados ni formularios.
+
+Fuentes reales: **Archivo Variable** (peso y ancho variables) + **Bodoni Moda Variable**, alojadas localmente mediante Fontsource. Son alternativas libres, no copias exactas de GT America/Saol. No se extrajeron fuentes comerciales ni activos de Passion City.
 
 | Ruta | Contenido |
 | --- | --- |
-| `/` | Inicio, bienvenida, reuniones, actividades e historia |
-| `/nosotros/` | Historia, identidad y creencias en acordeón |
-| `/ministerios/` | Actividades y únicamente horarios confirmados |
+| `/` | Hero, bienvenida, horarios, comunidad, actividades, servicio y visita |
+| `/nosotros/` | Portada editorial, historia, creencias e identidad |
+| `/ministerios/` | Actividades locales en bloques alternados |
 | `/visitanos/` | Horarios, dirección y primera visita |
-| `/links/` | Enlaces táctiles para usar desde Instagram |
-| `/404.html` | Página de error para configurar en el alojamiento |
+| `/links/` | Enlaces propios para teléfonos |
 
-## Actualizar contenido
+Anclas: `/nosotros/#historia`, `/nosotros/#creencias`, `/visitanos/#horarios`, y actividades en Ministerios.
 
-La fuente de datos institucionales y recursos es `src/data/site.ts`. Usar `BRIEF_IGLESIA.md` como evidencia de los datos facilitados; no inventar contenido faltante. La redacción editorial propuesta requiere revisión de la iglesia.
+## Contenido editable
 
-- **Horarios e historia:** editar `schedules` e `history`.
-- **Creencias:** editar `faith` solo con aprobación institucional.
-- **Ministerios:** editar `activities`. La propiedad opcional `schedule` se omite cuando no hay horario confirmado.
-- **Enlaces:** cargar `externalLinks` como `{ label, url }` y `mapUrl` solo con URLs oficiales HTTPS. Los valores ausentes o inválidos no crean botones. No cargar `#` ni números/contactos no autorizados.
-- **Textos principales:** editar `home`, `about`, `ministries`, `visit` e `invitation`.
+Datos tipados en `src/data/`:
+
+- `site.ts`: identidad, dirección, fotos, copy editorial provisional y estado de aprobación.
+- `schedule.ts`: los cuatro horarios confirmados.
+- `history.ts`: cronología vigente según V3; donación anterior al período del salón alquilado, sin fecha inventada.
+- `beliefs.ts`: cinco creencias y orientación informada.
+- `ministries.ts`: grupos de actividades, sin inventar estructuras formales.
+- `links.ts`: navegación y URLs oficiales. Las redes y el mapa faltantes no generan botones.
+
+Los mensajes de `editorial` son propuestas del prompt, no misión ni lemas oficiales. Deben aprobarse junto con la historia y doctrina.
 
 ## Fotos y logos
 
-Los originales de `identidad/` se conservan sin alteraciones. Astro genera derivados WebP con tamaño explícito; el encabezado solo usa el emblema madre, sin recolorearlo. El logo local aparece en nosotros y footer.
+Los originales de `identidad/` se conservan sin recolorear ni remover fondos. El header muestra solo el emblema madre. CCVS limpio aparece después en Nosotros y footer. Los archivos siguen siendo provisionales.
 
-Para reemplazarlos, agregar los archivos finales e importar sus rutas en `src/data/site.ts`. Preferir PNG transparente o SVG oficial. Mantener texto alternativo descriptivo y la jerarquía de `IDENTIDAD_VISUAL.md`.
+No hay fotografías propias recibidas. Las reservas neutras mantienen proporciones de las futuras imágenes y señalan ese pendiente. No se usan fotografías ajenas, generadas ni de stock como si fueran CCVS.
 
-Para agregar fotos, crear `src/assets/`, importar imágenes propias autorizadas en `site.ts` y sustituir `null`:
+Para incorporar imágenes propias autorizadas, crear `src/assets/`, importar los archivos desde `site.ts` y reemplazar un valor `null`:
 
 ```ts
-import fotoPropia from '../assets/foto-autorizada.jpg';
-// Dentro de photos:
-hero: { src: fotoPropia, alt: 'Descripción real de la imagen', position: 'center' },
+import heroDesktop from '../assets/hero-autorizado.jpg';
+import heroMobile from '../assets/hero-mobile-autorizado.jpg';
+// Dentro de site.photos:
+hero: {
+  src: heroDesktop,
+  mobile: heroMobile,
+  alt: 'Descripción real de la fotografía',
+  position: 'center',
+  mobilePosition: 'center',
+},
 ```
 
-`hero` y `community` tienen composiciones tipográficas de reserva. El hero prepara recorte adaptable y contraste con degradado; comprobar que las fotos finales no tapen rostros ni reduzcan legibilidad. No presentar fotos de stock como la congregación.
+El componente genera derivados WebP, dimensiones y srcset. El recorte mobile puede usar una foto independiente. Revalidar contraste y rostros después de incorporar fotos reales.
 
-`referencias/` contiene material ajeno de estudio privado. Está excluido de Git y nunca se importa a `src/` ni se copia a `public/` o `dist/`. `index.php` estaba vacío y se conserva; no forma parte del sitio Astro.
+`referencias/`, `videos/` y `qa-artifacts/` son de estudio local, están ignorados por Git y no se importan al sitio. Nunca copiarlos a `public/`. Las comparativas que contienen material ajeno tampoco deben publicarse.
 
-## Publicación (requiere autorización adicional)
+## Verificación
 
-El repositorio público es https://github.com/misaelr5/CCVS. Subir código a GitHub no despliega el sitio. No hay GitHub Pages, workflow de despliegue ni proveedor configurado.
+```powershell
+npx playwright install chromium
+npm run build
+npm run test:e2e
+npm run capture -- final
+```
 
-1. Completar `PENDIENTES_PUBLICACION.md` y obtener aprobación institucional.
-2. Elegir proveedor estático y dominio. Configurar Node compatible, comando `npm run build` y directorio de salida `dist`.
-3. Configurar `SITE_URL` con el dominio definitivo HTTPS. Astro genera canonical y `og:url` solo cuando existe esa variable; el sitemap se genera con ese dominio. No se usa un dominio de ejemplo como dato público.
-4. Configurar página 404 y encabezados HTTP en el proveedor. `public/_headers` aplica en hosts que soportan ese formato (por ejemplo Netlify o Cloudflare Pages); otros proveedores requieren su configuración equivalente.
-5. Comprobar las rutas públicas, recursos, sitemap y enlaces tras el despliegue autorizado.
+Playwright y axe son dependencias de desarrollo: no se envían al visitante. Las pruebas usan un worker para limitar RAM y levantan preview en 4322 si hace falta. Para capturar contra ese preview:
 
-Las fuentes Manrope e Instrument Serif se alojan localmente con Fontsource (OFL-1.1). Astro y Tailwind usan licencia MIT. El contenido y logos institucionales no se licencian como material de terceros reutilizable.
+```powershell
+$env:CCVS_BASE_URL = 'http://127.0.0.1:4322'
+npm run capture -- final
+Remove-Item Env:CCVS_BASE_URL
+```
 
-Para un build local con dominio confirmado, definir `$env:SITE_URL` en PowerShell antes de ejecutar `npm run build` y retirarlo al finalizar. `astro.config.mjs` lee la variable del proceso; no alcanza con copiar `.env.example`.
+Las capturas por defecto usan el servidor de desarrollo en 4321. Resultados reales en `VALIDACION.md`; observaciones visuales en `COMPARACION_VISUAL.md`. No hay script de lint configurado. Las pruebas automáticas no sustituyen revisión con dispositivos o lectores de pantalla.
 
-## Arquitectura y decisiones
+## Respaldo
 
-Astro genera HTML por página; los componentes comparten datos tipados. Tailwind 4 se integra mediante Vite y el diseño editorial se define en `src/styles/global.css`. Menú y acordeón usan elementos nativos `<details>`: funcionan sin JavaScript. El menú añade Escape, retorno de foco, ciclo de Tab, cierre al navegar y al pasar a escritorio con un script pequeño. No se agregaron React, carruseles ni librerías de animación.
+- Rama local `backup/antes-v3-20261014`: implementación anterior, commit `4b28277`.
+- Copia externa completa `D:\CCVS-respaldos\antes-v3-con-pack-completo`: 65 archivos incluyendo el pack, videos, originales y bundle Git.
+- `MANIFIESTO_SHA256.csv` documenta hashes; `repositorio.bundle` contiene historial completo y fue verificado.
+- Dependencias, salida compilada y cachés no están en el respaldo: son regenerables.
 
-## Fuentes técnicas
+Para recuperar archivos puntuales, copiarlos desde el respaldo a una carpeta separada y revisar antes de reemplazar el trabajo nuevo. No usar un reset destructivo sobre la reconstrucción.
 
-- [Instalación oficial de Astro](https://docs.astro.build/en/install-and-setup/)
-- [Tailwind CSS 4 con Astro](https://tailwindcss.com/docs/installation/framework-guides/astro)
+## Publicación futura
 
-El MVP evita almacenar datos personales y usar secretos. Si se agregan formularios, donaciones o CMS, habrá que diseñar y validar esos flujos por separado.
+El prototipo tiene `noindex, nofollow` y `robots.txt` bloquea rastreo. No se fuerza indexación de contenido sin aprobación.
+
+Después de aprobación institucional, elegir dominio y alojamiento, configurar `SITE_URL` como variable del proceso y cambiar `site.publicationApproved` a `true`. Canonical, og:url y sitemap solo se generan con un dominio configurado; el sitemap contiene únicamente las cinco rutas. No hay dominio ficticio ni imagen Open Graph ajena.
+
+`public/_headers` prepara encabezados para proveedores compatibles; en otros hosts se necesita configuración equivalente. Ningún encabezado de producción fue probado porque no hubo despliegue.
+
+Revisar `PENDIENTES_PUBLICACION.md` antes de pedir despliegue. El repositorio remoto incluye V3; la rama local de respaldo conserva la implementación anterior.
+
+## Referencias
+
+La geometría se estudió con capturas locales de [la portada global](https://passioncitychurch.com/) y [US](https://passioncitychurch.com/us/). La investigación DC aportó organización funcional únicamente. [El catálogo tipográfico citado por V3](https://maxibestof.one/websites/28852-passion-city-church) es evidencia de terceros, no una medición de los archivos CSS.

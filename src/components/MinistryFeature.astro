@@ -1,0 +1,10 @@
+---
+import PhotoSection from './PhotoSection.astro';
+import type { MinistryGroup } from '../data/ministries';
+import { site } from '../data/site';
+import { schedule } from '../data/schedule';
+interface Props { ministry: MinistryGroup; index: number; }
+const { ministry, index } = Astro.props;
+const gathering = schedule.find(item => item.id === ministry.scheduleId);
+---
+<section class:list={['ministry-feature', 'text-image', 'shell', 'section-gap', { reverse: index % 2 === 1 }]} id={ministry.id}><PhotoSection photo={site.photos[ministry.photo]} label={ministry.title} /><div class="text-image-copy"><p class="kicker">Actividades de la comunidad</p><h2>{ministry.title}</h2><p>{ministry.intro}</p><ul class="activity-names">{ministry.activities.map(name => <li>{name}</li>)}</ul>{gathering && <p class="confirmed-time">{gathering.day} · {gathering.time} hs</p>}<a class="inline-link" href="/visitanos/">Horarios y visita</a></div></section>

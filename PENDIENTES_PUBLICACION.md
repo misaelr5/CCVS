@@ -1,47 +1,44 @@
-# Pendientes de publicación
+# Pendientes de publicación — V3
 
-La implementación local y la publicación del repositorio público no equivalen a aprobación del sitio institucional ni despliegue.
+## Aprobación y material propio
 
-## Contenido indispensable
-
-- [ ] Aprobar textos editoriales, historia y creencias con responsables de la iglesia.
-- [ ] Reconfirmar los cuatro horarios y la dirección antes de publicar.
-- [ ] Recibir logos oficiales SVG/PNG transparente y confirmar bordó exacto.
-- [ ] Recibir fotos propias autorizadas (8–12, incluyendo horizontales y verticales). Confirmar permisos de imagen, especialmente de menores.
-- [ ] Cargar pin exacto y URL oficial de Google Maps si se desea el mapa.
-- [ ] Confirmar WhatsApp, email y redes. Actualmente no hay botones externos ni contactos inventados.
-- [ ] Incorporar liderazgo únicamente si se facilitan nombre, cargo y material aprobado. La página actual no requiere ese bloque.
+- [ ] Aprobar el copy editorial provisional; no constituye un lema o misión oficial.
+- [ ] Aprobar historia y doctrina conforme a V3, especialmente la cronología del terreno.
+- [ ] Reconfirmar los cuatro horarios y la dirección para producción.
+- [ ] Recibir fotos originales autorizadas: hero horizontal/vertical, reuniones, jóvenes, niños, servicio y edificio. Confirmar permisos de personas y menores.
+- [ ] Recibir logos institucionales finales transparentes y confirmar bordó exacto.
+- [ ] Recibir URL exacta del mapa y contactos/redes oficiales. No hay botones ficticios.
+- [ ] Incorporar liderazgo solo si se decide hacerlo y llegan datos aprobados.
 
 ## Operación
 
-- [ ] Elegir dominio, alojamiento y titular de las cuentas.
-- [ ] Definir responsable de cambios de contenido.
-- [ ] Configurar `SITE_URL`: habilita canonical, `og:url` y sitemap con el dominio real.
-- [ ] Agregar imagen Open Graph aprobada; no se publica una imagen institucional no autorizada.
-- [ ] Configurar encabezados HTTP y página de error según proveedor.
-- [ ] Evaluar analítica y consentimiento si se solicitan; actualmente no se rastrea a visitantes.
-- [ ] Autorizar el despliegue del sitio. La autorización de GitHub no incluye hosting.
+- [ ] Elegir dominio, alojamiento y titular de cuentas.
+- [ ] Definir responsable de actualización.
+- [x] Commit y push de V3 autorizados por el usuario el 14 de octubre de 2026.
+- [ ] Autorizar explícitamente el despliegue: subir el repositorio no publica el sitio.
+- [ ] Configurar SITE_URL con dominio real; canonical, og:url y sitemap dependen de él.
+- [ ] Agregar imagen Open Graph propia aprobada.
+- [ ] Después de aprobación institucional, cambiar publicationApproved a true. Mientras tanto hay noindex y robots Disallow.
+- [ ] Adaptar encabezados HTTP y errores al proveedor elegido.
+- [ ] Decidir analítica solo si se necesita; actualmente no hay trackers.
 
-## QA visual pendiente
+## QA con material final
 
-No había un navegador conectado en la sesión de implementación. No marcar estas pruebas como realizadas a partir de una lectura de CSS.
+- [ ] Revisar fotos y object-position en 360/375/390/430/768/1024/1440.
+- [ ] Revalidar contraste y texto sobre fotografías.
+- [ ] Probar dispositivos reales (incluyendo Safari/iPhone), zoom 200% y lector de pantalla.
+- [ ] Medir Core Web Vitals/Lighthouse con fotos finales y alojamiento real.
+- [ ] Revisar diferencias tipográficas con responsables; si se facilita GT America/Saol con licencia, evaluar su integración.
+- [ ] Verificar rutas públicas, dominio, sitemap, robots y headers después del despliegue autorizado.
 
-- [ ] Revisar `/` y `/nosotros/` a 390 y 1440 px.
-- [ ] Revisar todas las rutas a 360, 375, 390, 430, 768, 1024 y 1440 px: sin desbordes ni texto cortado.
-- [ ] Verificar header: logo madre exclusivo y legible en móvil y escritorio.
-- [ ] Menú: abrir/cerrar, Tab/Shift+Tab, Escape, retorno de foco, cierre al navegar y al pasar a escritorio.
-- [ ] Acordeón: abrir/cerrar con teclado; enlaces de `/links/` navegables.
-- [ ] Navegar con JavaScript desactivado (menú nativo y acordeón).
-- [ ] Revisar contraste AA, zoom 200%, foco visible y reducción de movimiento.
-- [ ] Revisar recortes y rendimiento con fotos finales; medir Core Web Vitals en el sitio final.
+## Hecho en esta entrega
 
-## Validación reproducible
-
-```powershell
-npm ci
-npm run check
-npm run build
-npm run preview
-```
-
-Las verificaciones concretas de esta entrega se registran en `VALIDACION.md`.
+- [x] Respaldo externo completo y rama de la versión anterior.
+- [x] Cinco rutas reconstruidas; datos tipados separados.
+- [x] Comparación visual en dos pasadas de Inicio/Nosotros, capturas finales de todas las páginas.
+- [x] Emblema madre exclusivo en header, bordó y fuentes locales.
+- [x] Pruebas de siete anchos sin overflow horizontal.
+- [x] Menú: teclado, Escape, foco, bloqueo/restauración de scroll y navegación.
+- [x] Acordeón: teclado y estados ARIA; contenido disponible sin JavaScript.
+- [x] Astro check, build, enlaces estáticos, auditoría de dependencias y 40 pruebas en Chromium.
+- [x] Axe sin infracciones detectadas en criterios WCAG A/AA evaluados en cinco rutas a 390/1440.

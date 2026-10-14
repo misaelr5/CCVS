@@ -1,0 +1,7 @@
+---
+import PhotoSection from './PhotoSection.astro';
+import type { Photo } from '../data/site';
+interface Props { title: string; eyebrow?: string; photo?: Photo | null; reverse?: boolean; }
+const { title, eyebrow, photo, reverse = false } = Astro.props;
+---
+<section class:list={['text-image shell section-gap', { 'reverse': reverse }]}><PhotoSection photo={photo} label={title} /><div class="text-image-copy">{eyebrow && <p class="kicker">{eyebrow}</p>}<h2>{title}</h2><slot /></div></section>

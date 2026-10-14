@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import ScheduleList from '../components/ScheduleList.astro';
-import Arrow from '../components/Arrow.astro';
-import { site, isHttpsUrl } from '../data/site';
+import Schedule from '../components/Schedule.astro';
+import { site } from '../data/site';
+import { mapUrl, isHttpsUrl } from '../data/links';
 ---
-<BaseLayout title="Visitarnos" description={`Dirección y horarios de Comunidad Cristiana Villa Sarmiento. ${site.address}. Reunión principal: domingo 19:30.`}>
-  <section class="page-intro simple-intro wrap"><p class="eyebrow">Vení a conocernos</p><h1>{site.visit.title}<br /><em>{site.visit.accent}</em></h1><p class="intro-text">{site.visit.text}</p></section>
-  <section class="schedule-section wrap section-space" id="horarios"><SectionHeading eyebrow="Horarios de reunión" title="Un espacio" accent="para encontrarnos." /><ScheduleList /></section>
-  <section class="visit-address wrap section-space"><div><span class="eyebrow">Dónde estamos</span><h2>Villa Sarmiento.<br /><em>Córdoba, Argentina.</em></h2><address>{site.address}</address>{site.mapUrl && isHttpsUrl(site.mapUrl) && <a class="button" href={site.mapUrl} rel="noopener noreferrer">Ver ubicación en el mapa <Arrow diagonal /></a>}</div><div class="first-visit"><p class="eyebrow">Tu primera visita</p><h3>Podés acercarte.</h3><p>{site.visit.firstVisit}</p><a class="text-link" href="/nosotros/">Conocé un poco más <Arrow diagonal /></a></div></section>
+<BaseLayout title="Visitarnos" description="Reunión principal: domingo 19:30. Dirección, horarios y primera visita en Vélez Sarsfield s/n, Villa Sarmiento, Córdoba.">
+<section class="page-heading shell visit-heading"><h1>Nos encontramos.<br /><span class="serif">En Villa Sarmiento.</span></h1><div class="visit-essential"><p>Reunión principal<br /><strong>Domingo · 19:30 hs</strong></p><address>{site.address}</address></div></section>
+<section class="visit-layout shell section-gap" id="horarios"><div><h2>Horarios.</h2><Schedule /></div><div class="first-visit"><p class="serif-label">Tu primera visita.</p><p>Podés acercarte a una de nuestras reuniones. Al llegar, podés presentarte y consultar sobre las actividades que te interesan.</p><a class="pill" href="/links/">Nuestros enlaces</a></div></section>
+<section class="location shell section-gap"><div><h2>Acercate.<br /><span class="serif">Compartamos un encuentro.</span></h2><address>{site.address}</address>{mapUrl && isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} rel="noopener noreferrer">Cómo llegar</a>}</div><div class="map-reserve"><p>Villa Sarmiento<br /><span>Córdoba, Argentina</span></p><small>El pin exacto de ubicación está pendiente de confirmación.</small></div></section>
 </BaseLayout>

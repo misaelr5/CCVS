@@ -1,0 +1,4 @@
+---
+import { schedule } from '../data/schedule';
+---
+<ul class="schedule">{schedule.map(item => <li><span>{item.day}</span><h3>{item.title}</h3><p>{item.time}<small> hs</small></p></li>)}</ul>

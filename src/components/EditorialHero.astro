@@ -1,0 +1,5 @@
+---
+import PhotoSection from './PhotoSection.astro';
+import { site, editorial } from '../data/site';
+---
+<section class="editorial-hero shell"><PhotoSection photo={site.photos.hero} label="Nuestra comunidad en Villa Sarmiento" kind="hero-media" eager /><div class="hero-copy"><h1>{editorial.hero.map(line => <span>{line}</span>)}</h1><p>{editorial.heroIntro}</p><a class="pill" href="/nosotros/">Conocenos</a></div></section>

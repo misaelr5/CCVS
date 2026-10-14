@@ -6,5 +6,8 @@ dist/
 !.env.example
 # Material ajeno de estudio privado: nunca subir al repositorio público.
 referencias/
+videos/
 qa-artifacts/
+playwright-report/
+test-results/
 *.log

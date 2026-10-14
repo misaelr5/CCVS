@@ -14,6 +14,8 @@ for (const route of routes) {
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1, `${route}: un solo h1`);
   assert.match(html, /<meta name="description" content="[^"]+"/);
   assert.doesNotMatch(html, /referencias\/|passioncitychurch|#08B9E5/i);
+  assert.doesNotMatch(html, /Ã|Â|â€/);
+  assert.match(html, /name="robots" content="noindex, nofollow"/);
   const schema = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
   assert.equal(JSON.parse(schema)['@type'], 'Church');
   if (route !== '/links/') {
@@ -48,7 +50,9 @@ for (const route of routes) {
 const visit = await readFile(pageFile('/visitanos/'), 'utf8');
 for (const value of ['19:30', '21:00', '16:30', 'Vélez Sarsfield s/n']) assert.ok(visit.includes(value));
 const about = await readFile(pageFile('/nosotros/'), 'utf8');
-assert.equal((about.match(/<details>/g) ?? []).length, 5, 'cinco temas doctrinales nativos');
+assert.equal((about.match(/class="belief-trigger"/g) ?? []).length, 5, 'cinco temas doctrinales');
+assert.ok(about.includes('id="creencias"'));
+assert.ok(about.indexOf('Un terreno para la comunidad.') < about.indexOf('Una etapa de crecimiento.'));
 async function verifyDirectory(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     assert.doesNotMatch(entry.name, /referencias|desktop_inicio|mobile_referencia/i);
@@ -56,4 +60,5 @@ async function verifyDirectory(directory) {
   }
 }
 await verifyDirectory(root);
+assert.match(await readFile(resolve(root, 'robots.txt'), 'utf8'), /Disallow: \//);
 console.log(`PASS: ${routes.length} rutas, ${checkedLinks} enlaces internos/anclas y ${checkedAssets} recursos. Identidad, metadatos, horarios y ausencia de referencias verificados.`);

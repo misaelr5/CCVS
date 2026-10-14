@@ -1,20 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import EditorialSplit from '../components/EditorialSplit.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import ScheduleList from '../components/ScheduleList.astro';
-import ActivityCard from '../components/ActivityCard.astro';
-import Invitation from '../components/Invitation.astro';
-import Arrow from '../components/Arrow.astro';
-import { site } from '../data/site';
+import EditorialHero from '../components/EditorialHero.astro';
+import TextImageBlock from '../components/TextImageBlock.astro';
+import PhotoSection from '../components/PhotoSection.astro';
+import Schedule from '../components/Schedule.astro';
+import { site, editorial } from '../data/site';
 ---
 <BaseLayout title="Inicio">
-  <Hero />
-  <section class="welcome wrap section-space"><p class="eyebrow">Bienvenidos a nuestra comunidad</p><div><h2>{site.home.welcomeTitle}</h2><p>{site.home.welcomeText}</p><a class="text-link" href="/nosotros/">Conocé nuestra historia <Arrow diagonal /></a></div></section>
-  <section class="schedule-section wrap section-space" id="encuentros"><SectionHeading eyebrow="Un tiempo para encontrarnos" title="Nos reunimos." accent="Te esperamos." /><div><ScheduleList /><a class="text-link" href="/visitanos/">Cómo llegar y primera visita <Arrow diagonal /></a></div></section>
-  <EditorialSplit eyebrow="Vida en comunidad" title={site.home.communityTitle} text={site.home.communityText} href="/ministerios/" label="Explorar los ministerios" photo={site.photos.community} />
-  <section class="wrap section-space"><div class="section-top"><SectionHeading eyebrow="Compartir y acompañar" title="Cada encuentro cuenta." /><a class="text-link" href="/ministerios/">Todas las actividades <Arrow diagonal /></a></div><div class="activity-grid">{[site.activities[3], site.activities[4], site.activities[6]].map((activity, index) => <ActivityCard activity={activity} index={index} />)}</div></section>
-  <section class="history-preview wrap section-space"><span class="history-year">2005</span><div><p class="eyebrow">Así comenzó nuestra historia</p><h2>De un encuentro de oración<br /><em>a una vida en comunidad.</em></h2><p>{site.history[0].text}</p><a class="text-link" href="/nosotros/#historia">Recorrer nuestra historia <Arrow diagonal /></a></div></section>
-  <Invitation />
+<EditorialHero />
+<section class="welcome shell section-gap"><h2>{editorial.welcome}</h2><div><p class="large-serif">Crecer en la fe.<br />Compartir la vida.</p><p>Pertenecemos a Comunidad Cristiana. Desde 2005, nuestra congregación comparte el evangelio y desarrolla una labor espiritual y social en Villa Sarmiento.</p><a class="inline-link" href="/nosotros/">Conocé nuestra iglesia</a></div></section>
+<section class="gatherings shell section-gap" id="horarios"><div class="sunday"><p class="kicker">Reunión principal</p><h2>Domingo<span>19:30 <small>hs</small></span></h2><a class="pill" href="/visitanos/">Planeá tu visita</a></div><div><p class="serif-label">Nos encontramos.</p><Schedule /></div></section>
+<TextImageBlock title="Nuestra comunidad." eyebrow="Una historia compartida" photo={site.photos.community}><p>En 2005 comenzamos a reunirnos para orar en la casa de Esther Mercado. El deseo de crecer espiritualmente y compartir la fe dio lugar a una historia que continúa hoy.</p><a class="inline-link" href="/nosotros/#historia">Nuestra historia</a></TextImageBlock>
+<section class="community-features shell section-gap"><h2>Compartir la fe.<br /><span class="serif">En cada encuentro.</span></h2><div class="feature-pair"><a href="/ministerios/#ninos"><PhotoSection photo={site.photos.children} label="Niños" /><h3>Niños <span aria-hidden="true">↗</span></h3><p>Sábado · 16:30 hs</p></a><a href="/ministerios/#jovenes"><PhotoSection photo={site.photos.youth} label="Jóvenes" /><h3>Jóvenes <span aria-hidden="true">↗</span></h3><p>Sábado · 21:00 hs</p></a></div><a class="inline-link" href="/ministerios/">Todas nuestras actividades</a></section>
+<TextImageBlock title="Servir cerca." eyebrow="Servicio a la comunidad" photo={site.photos.service} reverse><p>Ropero solidario, merendero y ayuda social. Compartimos también el evangelio a través de nuestras actividades de evangelismo.</p><a class="inline-link" href="/ministerios/#servicio">Conocé estas actividades</a></TextImageBlock>
+<section class="visit-invitation shell section-gap"><p class="kicker">Vení a conocernos</p><h2>Villa Sarmiento.<br /><span class="serif">Te esperamos.</span></h2><address>{site.address}</address><a class="pill" href="/visitanos/">Horarios y primera visita</a></section>
 </BaseLayout>

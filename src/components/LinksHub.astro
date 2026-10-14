@@ -1,6 +1,0 @@
----
-import { Image } from 'astro:assets';
-import { site, isHttpsUrl } from '../data/site';
-import Arrow from './Arrow.astro';
----
-<section class="links-hub"><a href="/" class="hub-logo" aria-label="Ir al inicio"><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana" width={112} height={112} format="webp" loading="eager" /></a><p class="eyebrow">Comunidad Cristiana</p><h1>Villa <em>Sarmiento.</em></h1><p class="hub-intro">Encuentros, fe y comunidad.<br />Villa Sarmiento, Córdoba, Argentina.</p><nav aria-label="Enlaces de la comunidad">{site.links.map(item => <a class="hub-link" href={item.href}><span>{item.label}<small>{item.detail}</small></span><Arrow diagonal /></a>)}{site.externalLinks.filter(item => isHttpsUrl(item.url)).map(item => <a class="hub-link" href={item.url} rel="noopener noreferrer"><span>{item.label}</span><Arrow diagonal /></a>)}</nav><p class="hub-address">{site.address}</p></section>
