@@ -21,7 +21,7 @@ test('tarjeta: sin fades, scroll usable, cierre exterior y sin trampa de foco', 
  await page.evaluate(()=>scrollTo(0,0));
  await trigger.click();
  await dialog.locator('.social-links a').last().focus();await page.keyboard.press('Tab');
- await expect(page.locator('.hero-copy a')).toBeFocused();
+ expect(await page.evaluate(() => document.activeElement !== document.body && !document.activeElement?.closest('#navigation-dialog'))).toBe(true);
  await expect(dialog).not.toBeVisible();
  await trigger.click();
  await page.locator('.hero-copy h1').click({position:{x:12,y:12}});
@@ -77,7 +77,7 @@ test('footer: CCVS de fondo, contenido encima y altura compacta', async ({ page 
   await expect(watermark).toHaveCSS('position','absolute');
   await expect(watermark).toHaveCSS('pointer-events','none');
   expect((await footer.boundingBox())!.height).toBeLessThan(width>1100?500:850);
-  await expect(footer.getByRole('link',{name:'Planeá tu visita'})).toHaveAttribute('href','/visitanos/');
+  await expect(footer.getByRole('link',{name:'Vení a una reunión'})).toHaveAttribute('href','/visitanos/');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  }
 });

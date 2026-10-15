@@ -10,3 +10,6 @@
 !tsconfig.json
 !vercel.json
 scripts/capture.mjs
+src/assets/videos/
+src/assets/photos/*.MOV
+src/assets/photos/*.HEIC

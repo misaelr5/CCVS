@@ -1,4 +1,5 @@
 import { initializeScrollMotion } from './scroll-motion';
+import { initializeHeroVideo } from './hero-video';
 let pageController: AbortController | undefined;
 let observer: IntersectionObserver | undefined;
 let restoreMenu: (() => void) | undefined;
@@ -24,6 +25,7 @@ function initialize(force = false) {
  initializedBody = document.body;
  pageController = new AbortController();
  const { signal } = pageController;
+ initializeHeroVideo(signal, motion.matches);
  const dialog = document.querySelector<HTMLDialogElement>('#navigation-dialog');
  const open = document.querySelector<HTMLButtonElement>('.menu-open');
  const closeButton = document.querySelector<HTMLButtonElement>('.menu-close');
@@ -135,6 +137,10 @@ function initialize(force = false) {
   if (element.matches('.about-cover')) return [...element.querySelectorAll<HTMLElement>('.about-media, .about-copy > h1, .editorial-statement, .about-intro')];
   if (element.matches('.legal-page')) return [...element.querySelectorAll<HTMLElement>(':scope > .kicker, :scope > h1, :scope > .legal-notice, :scope > .legal-updated')];
   if (element.matches('.history-section')) return [...element.querySelectorAll<HTMLElement>('.history-heading .photo-frame, .history-heading h2, .history-heading .kicker')];
+  if (element.matches('.beliefs')) return [...element.querySelectorAll<HTMLElement>(':scope > .beliefs-heading > h2, :scope > .beliefs-intro, :scope > .belief-list > article')];
+  if (element.matches('.ministries-showcase')) return [...element.querySelectorAll<HTMLElement>(':scope > h2')];
+  if (element.matches('.ministry-feature')) return [...element.querySelectorAll<HTMLElement>(':scope > .photo-frame, :scope > .text-image-copy > *')];
+  if (element.matches('.home-schedule')) return [...element.querySelectorAll<HTMLElement>(':scope > h2, .schedule-feature, .schedule-showcase-intro, .schedule--interactive li')];
   return [...element.querySelectorAll<HTMLElement>(':scope > h1, :scope > h2, :scope > h3, :scope > p, :scope > .photo-frame, :scope > .map-reserve, :scope > .identity-marks, :scope > a, :scope > .schedule > li, :scope > .belief-list > article, :scope > .section-navigation > a, :scope > .visit-essential, :scope > .text-image-copy > *, :scope > .welcome-copy > h2, :scope > .welcome-copy > p, :scope > .welcome-copy > a, :scope > .principal-copy > *, :scope > .visit-layout-copy > *')].filter(item=>!item.hidden);
  };
  const targets = [...document.querySelectorAll<HTMLElement>('main > section:not(.editorial-hero), [data-reveal], .legal-page > section, .history-chapter, .feature-pair > a')];

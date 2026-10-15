@@ -1,11 +1,19 @@
 ---
 import PhotoSection from './PhotoSection.astro';
 import type { MinistryGroup } from '../data/ministries';
-import { site } from '../data/site';
+import { site, ministryPhotos } from '../data/site';
 import { schedule } from '../data/schedule';
-import PhotoCollage from './PhotoCollage.astro';
 interface Props { ministry: MinistryGroup; index: number; }
 const { ministry, index } = Astro.props;
 const gathering = schedule.find(item => item.id === ministry.scheduleId);
 ---
-<section class:list={['ministry-feature', 'text-image', 'shell', 'section-gap', { reverse: index % 2 === 1 }]} id={ministry.id}>{ministry.id === 'jovenes' ? <div class="ministry-collage"><PhotoCollage photos={[site.photos.youth, null, null]} label="Encuentros de jóvenes" /></div> : <PhotoSection photo={site.photos[ministry.photo]} label={ministry.title} />}<div class="text-image-copy"><p class="kicker">Actividades de la comunidad</p><h2>{ministry.title}</h2><p>{ministry.intro}</p><ul class="activity-names">{ministry.activities.map(name => <li>{name}</li>)}</ul>{gathering && <p class="confirmed-time">{gathering.day} · {gathering.time} hs</p>}<a class="inline-link" href="/visitanos/">Horarios y visita</a></div></section>
+<section class:list={['ministry-feature', 'text-image', 'shell', 'section-gap', { reverse: index % 2 === 1, 'with-photo-gallery': ministry.id === 'jovenes' }]} id={ministry.id}>
+ {ministry.id === 'jovenes' ? (
+  <div class="ministry-gallery" role="group" aria-label="Encuentros de jóvenes">
+   <div data-reveal="photo"><PhotoSection photo={ministryPhotos.youth[1]} label="Grupo de jóvenes" /></div>
+   <div class="ministry-gallery-main" data-reveal="photo"><PhotoSection photo={ministryPhotos.youth[2]} label="Oración compartida" /></div>
+   <div class="ministry-gallery-detail" data-reveal="photo"><PhotoSection photo={ministryPhotos.youth[0]} label="Lectura en comunidad" /></div>
+  </div>
+ ) : <PhotoSection photo={ministry.id === 'ninos' ? ministryPhotos.children : site.photos[ministry.photo]} label={ministry.title} />}
+ <div class="text-image-copy"><h2>{ministry.title}</h2><p>{ministry.intro}</p><ul class="activity-names">{ministry.activities.map(name => <li>{name}</li>)}</ul>{gathering && <p class="confirmed-time">{gathering.day} · {gathering.time} hs</p>}<a class="inline-link" href="/visitanos/">{gathering ? 'Ver horarios y visita' : 'Cómo visitarnos'}</a></div>
+</section>

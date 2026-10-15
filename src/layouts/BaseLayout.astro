@@ -11,8 +11,8 @@ const { title, description = site.description, compact = false } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : null;
 const schema = { '@context': 'https://schema.org', '@type': 'Church', name: site.name, address: { '@type': 'PostalAddress', streetAddress: 'Vélez Sarsfield s/n', addressLocality: site.locality, addressRegion: site.region, addressCountry: 'AR' }, ...(Astro.site ? { url: Astro.site.href } : {}) };
 const pageMotion = {
-  forwards: { old: { name: 'page-out-left', duration: '350ms', easing: 'cubic-bezier(.22,1,.36,1)' }, new: { name: 'page-in-right', duration: '350ms', easing: 'cubic-bezier(.22,1,.36,1)' } },
-  backwards: { old: { name: 'page-out-right', duration: '350ms', easing: 'cubic-bezier(.22,1,.36,1)' }, new: { name: 'page-in-left', duration: '350ms', easing: 'cubic-bezier(.22,1,.36,1)' } },
+  forwards: { old: { name: 'page-wipe-out', duration: '650ms', easing: 'linear' }, new: { name: 'page-wipe-in', duration: '650ms', easing: 'linear' } },
+  backwards: { old: { name: 'page-wipe-out-reverse', duration: '650ms', easing: 'linear' }, new: { name: 'page-wipe-in-reverse', duration: '650ms', easing: 'linear' } },
 };
 ---
 <!doctype html>

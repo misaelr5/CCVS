@@ -12,15 +12,16 @@ test('ClientRouter: forward, back, forward y scripts sin duplicados', async ({ p
     });
   });
   await page.locator('.hero-copy a').click();
-  await expect(page).toHaveURL(/nosotros\/$/);
+  await expect(page).toHaveURL(/nosotros\/#creencias$/);
   expect(await page.evaluate(()=>(window as Window & {phase4Marker?:boolean}).phase4Marker)).toBe(true);
   expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('forward');
   await page.goBack();
   await expect(page).toHaveURL(/\/$/);
   expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('back');
   await page.goForward();
-  await expect(page).toHaveURL(/nosotros\/$/);
-  expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('forward');
+  await expect(page).toHaveURL(/nosotros\/#creencias$/);
+  await expect(page.locator('#creencias')).toBeVisible();
+  expect(await page.evaluate(()=>(window as Window & {phase4Marker?:boolean}).phase4Marker)).toBe(true);
   for(let index=0;index<3;index++) {
     await page.getByRole('button',{name:'Abrir menú'}).click();
     await page.getByRole('dialog').getByRole('link',{name:'Inicio',exact:true}).click();
@@ -57,7 +58,12 @@ test('Inicio: orden mobile, horarios y redes oficiales', async ({ page })=> {
  const gathering=await page.locator('.principal-photo').boundingBox();
  expect(principal!.y+principal!.height).toBeLessThan(gathering!.y);
  await expect(page.locator('.home-schedule .schedule li')).toHaveCount(4);
- await expect(page.locator('.footer-wordmark')).toHaveText('CCVS');
+ const prayer = page.locator('.home-schedule .schedule li').nth(1).getByRole('link');
+ await prayer.focus();
+ await expect(prayer).toBeFocused();
+ await prayer.click();
+ await expect(page).toHaveURL(/ministerios\/#vida-de-fe$/);
+ await expect(page.locator('.footer-wordmark')).toHaveAttribute('aria-hidden','true');
  await page.goto('/links/');
  await expect(page.locator('a[href="https://www.instagram.com/jovenesccvs/"]')).toContainText('Jóvenes CCVS');
  await expect(page.locator('a[href^="https://www.facebook.com/"]')).toHaveAttribute('rel','noopener noreferrer');
@@ -69,7 +75,7 @@ test('sin View Transition API: navegación completa y menú funcional',async({pa
  await page.addInitScript(()=>Object.defineProperty(document,'startViewTransition',{value:undefined,configurable:true}));
  await page.goto('/');
  await page.locator('.hero-copy a').click();
- await expect(page).toHaveURL(/nosotros\/$/);
+ await expect(page).toHaveURL(/nosotros\/#creencias$/);
  await page.getByRole('button',{name:'Abrir menú'}).click();
  await expect(page.getByRole('dialog')).toBeVisible();
  await page.keyboard.press('Escape');

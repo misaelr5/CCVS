@@ -13,7 +13,7 @@ import SocialLinks from './SocialLinks.astro';
    <Image class="secondary-logo" src={site.logos.local} alt="CCVS — identidad local" width={64} height={64} format="webp" />
   </div>
   {groups.slice(0, 2).map(group => <nav aria-label={group.title}><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</nav>)}
-  <div class="footer-contact"><h2>Encontranos</h2><address>{site.address}</address><a class="footer-visit" href="/visitanos/">Planeá tu visita <span aria-hidden="true">↗</span></a><a href="/links/">Nuestros enlaces</a><SocialLinks label="Redes sociales del footer" /></div>
+  <div class="footer-contact"><h2>Encontranos</h2><address>{site.address}</address><a class="footer-visit" href="/visitanos/">Vení a una reunión <span aria-hidden="true">↗</span></a><a href="/links/">Canales de la congregación</a><SocialLinks label="Redes sociales del footer" /></div>
  </div>
  <div class="shell footer-bottom"><p>© {new Date().getFullYear()} CCVS</p><a href="/terminos-y-condiciones/">Términos y condiciones · borrador</a><p>Villa Sarmiento · Córdoba, Argentina</p></div>
 </footer>

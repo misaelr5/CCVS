@@ -20,7 +20,11 @@ for (const width of [360, 375, 390, 430, 768, 1024, 1440]) {
         return rect.width > 0 && (rect.right > innerWidth + 1 || rect.left < -1);
       }).map(element => element.textContent));
       expect(outside).toEqual([]);
-      const images = await page.locator('img').evaluateAll(elements => elements.filter(image => !image.getAttribute('alt') || !image.getAttribute('width') || !image.getAttribute('height')).length);
+      const images = await page.locator('img').evaluateAll(elements => elements.filter(image =>
+        !image.hasAttribute('alt') ||
+        (!image.getAttribute('alt')?.trim() && image.getAttribute('aria-hidden') !== 'true') ||
+        !image.getAttribute('width') || !image.getAttribute('height')
+      ).length);
       expect(images).toBe(0);
       await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
       if (width === 390 || width === 1440) {

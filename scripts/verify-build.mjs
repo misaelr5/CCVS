@@ -5,7 +5,10 @@ import assert from 'node:assert/strict';
 const root = resolve('dist');
 const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
 const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
-const pageFile = (pathname) => pathname.endsWith('/') ? resolve(root, `.${pathname}`, 'index.html') : resolve(root, `.${pathname}`);
+const pageFile = (pathname) => {
+  const decoded = decodeURIComponent(pathname);
+  return decoded.endsWith('/') ? resolve(root, `.${decoded}`, 'index.html') : resolve(root, `.${decoded}`);
+};
 let checkedLinks = 0;
 let checkedAssets = 0;
 for (const route of routes) {
@@ -48,13 +51,23 @@ for (const route of routes) {
     }
     checkedAssets++;
   }
+  for (const tag of html.match(/<video\b[^>]*>/g) ?? []) {
+    for (const name of ['poster', 'data-video-src', 'data-video-mobile']) {
+      const src = attribute(tag, name);
+      assert.ok(src, `${route}: video sin ${name}`);
+      assert.ok((await stat(pageFile(new URL(src, 'https://ccvs.invalid').pathname))).size > 0, `${route}: recurso de video ausente ${src}`);
+      checkedAssets++;
+    }
+    assert.match(tag, /\bmuted\b/);
+    assert.match(tag, /\bplaysinline\b/);
+  }
 }
 const visit = await readFile(pageFile('/visitanos/'), 'utf8');
 for (const value of ['19:30', '21:00', '16:30', 'Vélez Sarsfield s/n']) assert.ok(visit.includes(value));
 const about = await readFile(pageFile('/nosotros/'), 'utf8');
 assert.equal((about.match(/class="belief-trigger"/g) ?? []).length, 5, 'cinco temas doctrinales');
 assert.ok(about.includes('id="creencias"'));
-assert.ok(about.indexOf('Un terreno para la comunidad.') < about.indexOf('Una etapa de crecimiento.'));
+assert.ok(about.indexOf('Un terreno para la comunidad.') < about.indexOf('Crecimos como congregación.'));
 async function verifyDirectory(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     assert.doesNotMatch(entry.name, /referencias|desktop_inicio|mobile_referencia/i);
