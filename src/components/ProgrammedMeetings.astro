@@ -11,14 +11,13 @@ const { anchorIds = false } = Astro.props;
   <p>También compartimos espacios de encuentro y formación que organizamos en fechas específicas. Anunciamos cada reunión con anticipación a través de nuestros canales oficiales.</p>
  </div>
  <div class="programmed-list">
-  {programmedMinistries.map((meeting, index) => <article class="programmed-item" id={anchorIds ? meeting.id : undefined}>
+  {programmedMinistries.map(meeting => <article class="programmed-item" id={anchorIds ? meeting.id : undefined}>
    <div class="programmed-copy">
-    <span class="programmed-index" aria-hidden="true">0{index + 1}</span>
     <h3>{meeting.title}</h3>
     <p>{meeting.intro}</p>
     <ul class="programmed-activities">{meeting.activities.map(activity => <li>{activity}</li>)}</ul>
-    <p class="programmed-status">{meeting.nextDate ?? 'Fechas a anunciar'}</p>
-    <a class="inline-link" href={anchorIds ? '/links/' : `/ministerios/#${meeting.id}`}>{anchorIds ? 'Canales oficiales' : 'Conocé el espacio'}</a>
+    <p class="programmed-status">{meeting.nextDate ?? 'Se anuncia por nuestros canales'}</p>
+    <a class="ministry-card-link" href={anchorIds ? '/links/' : `/ministerios/#${meeting.id}`}>{anchorIds ? 'Canales oficiales' : 'Conocé el espacio'} <span aria-hidden="true">↗</span></a>
    </div>
    <PhotoSection photo={site.photos[meeting.photo]} label={meeting.title} />
   </article>)}

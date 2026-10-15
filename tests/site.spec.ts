@@ -6,13 +6,18 @@ const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/
 test('reuniones regulares y encuentros programados quedan separados', async ({ page }) => {
   for (const route of ['/ministerios/', '/visitanos/']) {
     await page.goto(route);
-    const weekly = route === '/ministerios/' ? page.locator('.ministries-weekly-agenda') : page.locator('.visit-layout');
-    await expect(weekly.locator('.schedule li')).toHaveCount(4);
-    await expect(weekly.locator('.schedule h3')).toHaveText(['Reunión general', 'Oración', 'Jóvenes', 'Niños']);
+    if (route === '/ministerios/') {
+      await expect(page.locator('.ministries-showcase .schedule')).toHaveCount(0);
+      await expect(page.locator('.ministries-showcase-list .ministry-feature')).toHaveCount(3);
+    } else {
+      const weekly = page.locator('.visit-layout');
+      await expect(weekly.locator('.schedule li')).toHaveCount(4);
+      await expect(weekly.locator('.schedule h3')).toHaveText(['Reunión general', 'Oración', 'Jóvenes', 'Niños']);
+    }
     const programmed = page.locator('.programmed-meetings');
     await expect(programmed.getByRole('heading', { name: 'Encuentros programados' })).toBeVisible();
     await expect(programmed.locator('.programmed-item h3')).toHaveText(['Servir al prójimo.', 'Caminar juntos en la fe.']);
-    await expect(programmed.locator('.programmed-status')).toHaveText(['Fechas a anunciar', 'Fechas a anunciar']);
+    await expect(programmed.locator('.programmed-status')).toHaveText(['Se anuncia por nuestros canales', 'Se anuncia por nuestros canales']);
     await expect(programmed.locator('time')).toHaveCount(0);
   }
   await page.locator('.programmed-item').first().getByRole('link', { name: 'Conocé el espacio' }).click();

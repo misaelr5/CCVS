@@ -19,9 +19,8 @@ const gathering = schedule.find(item => item.id === ministry.scheduleId);
   <h2>{ministry.title}</h2>
   <div class="ministry-info-card">
    {gathering && <div class="ministry-info-when"><span class="ministry-info-day">{gathering.day}</span><time class="ministry-info-time" datetime={gathering.time}>{gathering.time}<small> hs</small></time></div>}
-   <p class="ministry-info-intro">{ministry.intro}</p>
-   <ul class="ministry-info-activities">{ministry.activities.map(name => <li>{name}</li>)}</ul>
-   <a class="ministry-card-link" href="/visitanos/">{gathering ? 'Ver horarios y visita' : 'Cómo visitarnos'} <span aria-hidden="true">↗</span></a>
+   {ministry.description.map(paragraph => <p class="ministry-info-intro">{paragraph}</p>)}
+   <a class="ministry-card-link" href="/visitanos/">{ministry.buttonLabel} <span aria-hidden="true">↗</span></a>
   </div>
  </div>
 </section>

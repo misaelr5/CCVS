@@ -1,14 +1,24 @@
 import type { RegularGatheringId } from './schedule';
-interface MinistryBase { id: string; title: string; intro: string; activities: string[]; photo: 'children' | 'youth' | 'service' | 'community' | 'prayerWord'; }
+interface MinistryBase { id: string; title: string; photo: 'children' | 'youth' | 'service' | 'community' | 'prayerWord'; }
 export type MinistryGroup =
-  | (MinistryBase & { periodicity: 'regular'; scheduleId: Exclude<RegularGatheringId, 'principal'> })
-  | (MinistryBase & { periodicity: 'programada'; nextDate?: string });
+  | (MinistryBase & { periodicity: 'regular'; scheduleId: Exclude<RegularGatheringId, 'principal'>; description: string[]; buttonLabel: string })
+  | (MinistryBase & { periodicity: 'programada'; nextDate?: string; intro: string; activities: string[] });
 export type RegularMinistry = Extract<MinistryGroup, { periodicity: 'regular' }>;
 export type ProgrammedMinistry = Extract<MinistryGroup, { periodicity: 'programada' }>;
 export const ministries: MinistryGroup[] = [
-  { id: 'ninos', periodicity: 'regular', title: 'Niños', intro: 'Acompañamos a los niños en las actividades de nuestra congregación.', activities: ['Actividades para niños'], photo: 'children', scheduleId: 'ninos' },
-  { id: 'jovenes', periodicity: 'regular', title: 'Jóvenes', intro: 'Los jóvenes se reúnen para compartir la fe y crecer en el conocimiento de Jesús.', activities: ['Reuniones de jóvenes'], photo: 'youth', scheduleId: 'jovenes' },
-  { id: 'vida-de-fe', periodicity: 'regular', title: 'Oración y Palabra.', intro: 'Nos reunimos para orar, estudiar la Biblia y acompañarnos en la fe.', activities: ['Oración', 'Estudios bíblicos', 'Consejería espiritual'], photo: 'prayerWord', scheduleId: 'oracion' },
+  // Propuestas editoriales del usuario: actividades específicas pendientes de validación institucional.
+  { id: 'ninos', periodicity: 'regular', title: 'Escuela Bíblica Infantil', photo: 'children', scheduleId: 'ninos', buttonLabel: 'Conocé nuestra Escuela Bíblica', description: [
+    'Un espacio especialmente preparado para que los más pequeños conozcan a Jesús y descubran las enseñanzas de la Biblia desde sus primeros años.',
+    'A través de historias bíblicas, juegos, canciones y actividades, buscamos sembrar la Palabra de Dios en sus corazones y acompañarlos en su crecimiento espiritual.',
+  ] },
+  { id: 'jovenes', periodicity: 'regular', title: 'Jóvenes y Adolescentes', photo: 'youth', scheduleId: 'jovenes', buttonLabel: 'Sumate a nuestros encuentros', description: [
+    'Un espacio para encontrarnos, compartir la Palabra de Dios y crecer juntos en nuestra relación con Jesucristo.',
+    'A través de estudios bíblicos, conversaciones, juegos y actividades, buscamos fortalecer nuestra fe, construir amistades y aprender a vivir conforme a las enseñanzas de Jesús.',
+  ] },
+  { id: 'vida-de-fe', periodicity: 'regular', title: 'Oración y Palabra', photo: 'prayerWord', scheduleId: 'oracion', buttonLabel: 'Conocé nuestras reuniones', description: [
+    'Cada miércoles nos reunimos como iglesia para buscar a Dios en oración, estudiar las Escrituras y compartir nuestras necesidades delante del Señor.',
+    'Un tiempo de comunión en el que nos fortalecemos mutuamente en la fe y profundizamos nuestro conocimiento de la Palabra de Dios.',
+  ] },
   { id: 'servicio', periodicity: 'programada', title: 'Servir al prójimo.', intro: 'Compartimos el evangelio y ayudamos a nuestros vecinos mediante las actividades de la congregación.', activities: ['Ropero solidario', 'Merendero y ayuda social', 'Evangelismo'], photo: 'service' },
   { id: 'encuentros', periodicity: 'programada', title: 'Caminar juntos en la fe.', intro: 'También hay encuentros para matrimonios, varones y mujeres.', activities: ['Matrimonios', 'Varones', 'Mujeres'], photo: 'community' },
 ];
