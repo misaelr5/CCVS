@@ -8,6 +8,8 @@ dist/
 # Material ajeno de estudio privado: nunca subir al repositorio público.
 referencias/
 videos/
+# Videos fuente locales: el sitio publica las conversiones optimizadas de public/media/.
+src/assets/photos/*.MOV
 qa-artifacts/
 playwright-report/
 test-results/

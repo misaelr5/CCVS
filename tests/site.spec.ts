@@ -92,7 +92,9 @@ test('reducción de movimiento y orden mobile de Nosotros', async ({ page }) => 
   await page.goto('/nosotros/');
   const photo = await page.locator('.about-media').boundingBox();
   const title = await page.locator('h1').boundingBox();
-  expect(photo!.y + photo!.height).toBeLessThan(title!.y);
+  expect(title!.y).toBeLessThan(photo!.y + photo!.height);
+  expect(title!.y).toBeGreaterThan(photo!.y + photo!.height - 30);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
   expect(await page.locator('.pill').count()).toBe(0);
   expect(await page.locator('html').evaluate(element => getComputedStyle(element).scrollBehavior)).toBe('auto');
 });

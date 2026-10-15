@@ -11,6 +11,10 @@ import ministryChildren from '../assets/photos/niniosss.jpg';
 import youthReading from '../assets/photos/WhatsApp Image 2026-10-14 at 19.57.29.jpeg';
 import youthTeam from '../assets/photos/WhatsApp Image 2026-10-11 at 00.31.47.jpeg';
 import youthPrayer from '../assets/photos/WhatsApp Image 20aaa26-10-14 at 19.57.29.jpeg';
+import aboutGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.20.07.jpeg';
+import communityGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.18.40.jpeg';
+import historyCross from '../assets/photos/WhatsApp Image 2026-10-14 at 21.32.51.jpeg';
+import serviceActivity from '../assets/photos/WhatsApp Image 2026-10-03 at 22.18.52.jpeg';
 import type { ImageMetadata } from 'astro';
 export interface Photo { src: ImageMetadata; alt: string; mobile?: ImageMetadata; position?: string; mobilePosition?: string; }
 export const ministryPhotos = {
@@ -46,9 +50,24 @@ export const site = {
   logos: { mother, local },
   photos: {
     hero: null,
-    about: null,
-    community: null,
-    history: null,
+    about: {
+      src: aboutGathering,
+      alt: 'La congregación reunida durante una celebración en el salón de Villa Sarmiento',
+      position: 'center 52%',
+      mobilePosition: 'center 58%',
+    },
+    community: {
+      src: communityGathering,
+      alt: 'La comunidad reunida para adorar y compartir en el salón',
+      position: 'center 52%',
+      mobilePosition: 'center 55%',
+    },
+    history: {
+      src: historyCross,
+      alt: 'La cruz iluminada en el salón de la comunidad',
+      position: 'center 64%',
+      mobilePosition: 'center 63%',
+    },
     children: {
       src: childrenGroup,
       alt: 'Encuentro de niños con sus coordinadores en una actividad grupal',
@@ -61,7 +80,12 @@ export const site = {
       position: 'center 52%',
       mobilePosition: 'center 52%',
     },
-    service: null,
+    service: {
+      src: serviceActivity,
+      alt: 'Voluntarios acompañando a niños durante una actividad comunitaria',
+      position: 'center 48%',
+      mobilePosition: 'center 50%',
+    },
     welcome: {
       src: welcomeCommunity,
       alt: 'Persona con una gorra bordada durante un encuentro de la comunidad',
