@@ -5,12 +5,16 @@ let observer: IntersectionObserver | undefined;
 let restoreMenu: (() => void) | undefined;
 let initializedBody: HTMLElement | undefined;
 const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let pageTransition: ViewTransition | undefined;
 // La cancelación de una transición rechaza ready aunque el cambio de página sea válido.
 // Consumir únicamente AbortError; otros fallos siguen reportándose.
 const nativeTransition = document.startViewTransition?.bind(document);
 if (nativeTransition) {
  document.startViewTransition = (callback) => {
   const transition = nativeTransition(callback);
+  pageTransition = transition;
+  const release = () => { if (pageTransition === transition) pageTransition = undefined; };
+  void transition.finished.then(release, release);
   void transition.ready.catch((error: unknown) => {
    if (!(error instanceof DOMException && error.name === 'AbortError')) console.error('Error al preparar la transición visual', error);
   });
@@ -115,6 +119,9 @@ function initialize(force = false) {
  // Visibles por defecto: las animaciones no son necesarias para mostrar contenido.
  const animateItem = (item: HTMLElement, index: number, layered = false) => {
   if (item.dataset.entryMotion) return;
+  // The page itself is already entering. Keep its text/photos settled rather
+  // than layering another entrance over the live destination snapshot.
+  if (pageTransition) { item.dataset.entryMotion = 'settled'; return; }
   const rect = item.getBoundingClientRect();
   const image = item.matches('.photo-frame, .about-media, .identity-marks, .map-reserve');
   const horizontal = image && innerWidth > 700;

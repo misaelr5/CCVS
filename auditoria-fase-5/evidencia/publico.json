@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-15",
+  "publicRows": [
+    {
+      "route": "/",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "273",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:43 GMT",
+        "etag": "W/\"ccb9c9adf899003b2e44d4b5a093129c\"",
+        "last-modified": "Thu, 15 Oct 2026 21:49:09 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "gru1::sckpv-1792101223041-e7a8b7beba82"
+      },
+      "title": "Jesucristo, el camino al Padre | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null,
+      "ogImage": null,
+      "video": "/media/portada-ccvs.mp4",
+      "schema": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Church\",\"name\":\"Comunidad Cristiana Villa Sarmiento\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Vélez Sarsfield s/n\",\"addressLocality\":\"Villa Sarmiento\",\"addressRegion\":\"Córdoba\",\"addressCountry\":\"AR\"}}"
+      ]
+    },
+    {
+      "route": "/nosotros/",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/nosotros/",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "75218",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"nosotros\"",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:43 GMT",
+        "etag": "W/\"6282d04280fe2149528eb54677483822\"",
+        "last-modified": "Thu, 15 Oct 2026 01:00:05 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "gru1::mq6nx-1792101223625-c3855ceccc48"
+      },
+      "title": "Nuestra fe en Jesucristo | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null,
+      "ogImage": null,
+      "video": null,
+      "schema": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Church\",\"name\":\"Comunidad Cristiana Villa Sarmiento\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Vélez Sarsfield s/n\",\"addressLocality\":\"Villa Sarmiento\",\"addressRegion\":\"Córdoba\",\"addressCountry\":\"AR\"}}"
+      ]
+    },
+    {
+      "route": "/ministerios/",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/ministerios/",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"ministerios\"",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:44 GMT",
+        "etag": "W/\"ea972842d536839e11add8770bd1c12f\"",
+        "last-modified": "Thu, 15 Oct 2026 21:53:44 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "gru1::mq6nx-1792101224063-3b20fdcc09ce"
+      },
+      "title": "Oración, Palabra y servicio | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null,
+      "ogImage": null,
+      "video": null,
+      "schema": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Church\",\"name\":\"Comunidad Cristiana Villa Sarmiento\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Vélez Sarsfield s/n\",\"addressLocality\":\"Villa Sarmiento\",\"addressRegion\":\"Córdoba\",\"addressCountry\":\"AR\"}}"
+      ]
+    },
+    {
+      "route": "/visitanos/",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/visitanos/",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "75218",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"visitanos\"",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:45 GMT",
+        "etag": "W/\"0bfd44a799e299a4bf2ac7e62b8b455c\"",
+        "last-modified": "Thu, 15 Oct 2026 01:00:07 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "gru1::6rzpp-1792101225675-2fadaefd9019"
+      },
+      "title": "Vení a una reunión | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null,
+      "ogImage": null,
+      "video": null,
+      "schema": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Church\",\"name\":\"Comunidad Cristiana Villa Sarmiento\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Vélez Sarsfield s/n\",\"addressLocality\":\"Villa Sarmiento\",\"addressRegion\":\"Córdoba\",\"addressCountry\":\"AR\"}}"
+      ]
+    },
+    {
+      "route": "/links/",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/links/",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "75068",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"links\"",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:45 GMT",
+        "etag": "W/\"3fabec49d1e17634710dc4a71012f6a2\"",
+        "last-modified": "Thu, 15 Oct 2026 01:02:37 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "gru1::6rzpp-1792101225772-833284b325bc"
+      },
+      "title": "Enlaces de la congregación | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null,
+      "ogImage": null,
+      "video": null,
+      "schema": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Church\",\"name\":\"Comunidad Cristiana Villa Sarmiento\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Vélez Sarsfield s/n\",\"addressLocality\":\"Villa Sarmiento\",\"addressRegion\":\"Córdoba\",\"addressCountry\":\"AR\"}}"
+      ]
+    },
+    {
+      "route": "/terminos-y-condiciones/",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/terminos-y-condiciones/",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"terminos-y-condiciones\"",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:46 GMT",
+        "etag": "W/\"f7e57ed6ce85bd92ab92a7fdd9ac5b82\"",
+        "last-modified": "Thu, 15 Oct 2026 21:53:46 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "gru1::75p7b-1792101225855-9e656f124ce5"
+      },
+      "title": "Términos y condiciones — borrador | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null,
+      "ogImage": null,
+      "video": null,
+      "schema": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Church\",\"name\":\"Comunidad Cristiana Villa Sarmiento\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Vélez Sarsfield s/n\",\"addressLocality\":\"Villa Sarmiento\",\"addressRegion\":\"Córdoba\",\"addressCountry\":\"AR\"}}"
+      ]
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/robots.txt",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"robots.txt\"",
+        "content-length": "26",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:46 GMT",
+        "etag": "\"f71d20196d4caf35b6a670db8c70b03d\"",
+        "last-modified": "Thu, 15 Oct 2026 21:53:46 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "gru1::kx7vx-1792101226114-0c15e0025c26"
+      },
+      "body": "User-agent: *\nDisallow: /\n"
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 404,
+      "url": "https://ccvs-sigma.vercel.app/sitemap.xml",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:46 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-error": "NOT_FOUND",
+        "x-vercel-id": "gru1::kx7vx-1792101226350-cbb3fec34ce4"
+      },
+      "body": "<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content=\"width=device-width,initial-scale=1\"><meta name=theme-color content=#0a0a0a media=\"(prefers-color-scheme: dark)\"><meta name=theme-color content=#ffffff media=\"(prefers-color-scheme: light)\"><title>404: NOT_FOUND</title><sty"
+    },
+    {
+      "route": "/ruta-inexistente-fase5/",
+      "status": 404,
+      "url": "https://ccvs-sigma.vercel.app/ruta-inexistente-fase5/",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 21:53:46 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vercel-error": "NOT_FOUND",
+        "x-vercel-id": "gru1::kx7vx-1792101226433-e4d8a416dfc0"
+      },
+      "title": "404: NOT_FOUND",
+      "canonical": null,
+      "ogImage": null,
+      "video": null,
+      "schema": []
+    },
+    {
+      "route": "/visitanos",
+      "status": 200,
+      "url": "https://ccvs-sigma.vercel.app/visitanos/",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "date": "Thu, 15 Oct 2026 21:53:46 GMT",
+        "etag": "\"0bfd44a799e299a4bf2ac7e62b8b455c\"",
+        "server": "Vercel",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "gru1::6rzpp-1792101226550-1e06c8c32231"
+      },
+      "title": "Vení a una reunión | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null,
+      "ogImage": null,
+      "video": null,
+      "schema": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Church\",\"name\":\"Comunidad Cristiana Villa Sarmiento\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Vélez Sarsfield s/n\",\"addressLocality\":\"Villa Sarmiento\",\"addressRegion\":\"Córdoba\",\"addressCountry\":\"AR\"}}"
+      ]
+    },
+    {
+      "map": "Google Search: kgmid=/g/11g2w747g4; blocked by anti-bot challenge",
+      "title": "Google unusual traffic challenge",
+      "text": "Destination could not be visually verified. Network and session details redacted."
+    }
+  ]
+}

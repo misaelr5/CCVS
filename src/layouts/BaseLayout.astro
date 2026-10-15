@@ -11,12 +11,12 @@ const { title, description = site.description, compact = false } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : null;
 const schema = { '@context': 'https://schema.org', '@type': 'Church', name: site.name, address: { '@type': 'PostalAddress', streetAddress: 'Vélez Sarsfield s/n', addressLocality: site.locality, addressRegion: site.region, addressCountry: 'AR' }, ...(Astro.site ? { url: Astro.site.href } : {}) };
 const pageMotion = {
-  forwards: { old: { name: 'page-wipe-out', duration: '650ms', easing: 'linear' }, new: { name: 'page-wipe-in', duration: '650ms', easing: 'linear' } },
-  backwards: { old: { name: 'page-wipe-out-reverse', duration: '650ms', easing: 'linear' }, new: { name: 'page-wipe-in-reverse', duration: '650ms', easing: 'linear' } },
+  forwards: { old: { name: 'page-slide-out', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' }, new: { name: 'page-slide-in', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' } },
+  backwards: { old: { name: 'page-slide-out-back', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' }, new: { name: 'page-slide-in-back', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' } },
 };
 ---
 <!doctype html>
-<html lang="es-AR">
+<html lang="es-AR" transition:name="root" transition:animate={pageMotion}>
 <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>{title} | {site.name}</title><meta name="description" content={description} /><meta name="theme-color" content="#F7F6F3" /><meta name="robots" content={site.publicationApproved ? 'index, follow' : 'noindex, nofollow'} /><meta property="og:title" content={`${title} | ${site.name}`} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:locale" content="es_AR" /><meta property="og:site_name" content={site.name} />{canonical && <><link rel="canonical" href={canonical} /><meta property="og:url" content={canonical} /></>}<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} /><ClientRouter fallback="none" /></head>
-<body><a class="skip-link" href="#contenido">Saltar al contenido</a>{!compact && <SiteHeader />}<main id="contenido" tabindex="-1" transition:name="page" transition:animate={pageMotion}><slot /></main>{!compact && <SiteFooter />}<script>import '../scripts/ui';</script></body>
+<body><a class="skip-link" href="#contenido">Saltar al contenido</a>{!compact && <SiteHeader />}<main id="contenido" tabindex="-1"><slot /></main>{!compact && <SiteFooter />}<script>import '../scripts/ui';</script></body>
 </html>

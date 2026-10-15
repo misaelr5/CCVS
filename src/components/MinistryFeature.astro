@@ -1,9 +1,9 @@
 ---
 import PhotoSection from './PhotoSection.astro';
-import type { MinistryGroup } from '../data/ministries';
+import type { RegularMinistry } from '../data/ministries';
 import { site, ministryPhotos } from '../data/site';
 import { schedule } from '../data/schedule';
-interface Props { ministry: MinistryGroup; index: number; }
+interface Props { ministry: RegularMinistry; index: number; }
 const { ministry, index } = Astro.props;
 const gathering = schedule.find(item => item.id === ministry.scheduleId);
 ---
@@ -15,5 +15,13 @@ const gathering = schedule.find(item => item.id === ministry.scheduleId);
    <div class="ministry-gallery-detail" data-reveal="photo"><PhotoSection photo={ministryPhotos.youth[0]} label="Lectura en comunidad" /></div>
   </div>
  ) : <PhotoSection photo={ministry.id === 'ninos' ? ministryPhotos.children : site.photos[ministry.photo]} label={ministry.title} />}
- <div class="text-image-copy"><h2>{ministry.title}</h2><p>{ministry.intro}</p><ul class="activity-names">{ministry.activities.map(name => <li>{name}</li>)}</ul>{gathering && <p class="confirmed-time">{gathering.day} · {gathering.time} hs</p>}<a class="inline-link" href="/visitanos/">{gathering ? 'Ver horarios y visita' : 'Cómo visitarnos'}</a></div>
+ <div class="text-image-copy">
+  <h2>{ministry.title}</h2>
+  <div class="ministry-info-card">
+   {gathering && <div class="ministry-info-when"><span class="ministry-info-day">{gathering.day}</span><time class="ministry-info-time" datetime={gathering.time}>{gathering.time}<small> hs</small></time></div>}
+   <p class="ministry-info-intro">{ministry.intro}</p>
+   <ul class="ministry-info-activities">{ministry.activities.map(name => <li>{name}</li>)}</ul>
+   <a class="ministry-card-link" href="/visitanos/">{gathering ? 'Ver horarios y visita' : 'Cómo visitarnos'} <span aria-hidden="true">↗</span></a>
+  </div>
+ </div>
 </section>

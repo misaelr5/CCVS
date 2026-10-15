@@ -1,0 +1,2786 @@
+{
+  "date": "2026-10-15",
+  "browser": "156.0.8078.4",
+  "lab": [
+    {
+      "route": "/",
+      "mobile": true,
+      "repetition": 1,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp",
+          "bytes": 13504
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "bytes": 39812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_czfoI.webp",
+          "bytes": 42502
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_Z1biXu6.webp",
+          "bytes": 44328
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_26jAWf.webp",
+          "bytes": 34812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/general.Dj628B6V_AOfjh.webp",
+          "bytes": 20410
+        },
+        {
+          "url": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4",
+          "bytes": 1835250
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "1.6 Mbps down, 750 kbps up, 150 ms latency",
+      "cpu": "4x",
+      "lcpMs": 3160,
+      "cls": 0.00044719605095607434,
+      "ttfbMs": 3.3999999999068677,
+      "observed": {
+        "lcp": [
+          {
+            "time": 1496,
+            "size": 18600,
+            "element": "",
+            "url": ""
+          },
+          {
+            "time": 1572,
+            "size": 129600,
+            "element": "hero-video-poster",
+            "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp"
+          },
+          {
+            "time": 3160,
+            "size": 196650,
+            "element": "",
+            "url": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4"
+          }
+        ],
+        "shifts": [
+          {
+            "time": 1806,
+            "value": 0.00044719605095607434
+          }
+        ],
+        "longtasks": []
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3158.100000000093,
+        "navigationId": 8346,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999999972060323,
+        "domainLookupStart": 1.8999999999068677,
+        "domainLookupEnd": 3.7999999998137355,
+        "connectStart": 3.7999999998137355,
+        "secureConnectionStart": 0,
+        "connectEnd": 5.100000000093132,
+        "requestStart": 5.2999999998137355,
+        "responseStart": 8.699999999720603,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 8.699999999720603,
+        "responseEnd": 183.60000000009313,
+        "transferSize": 5918,
+        "encodedBodySize": 5618,
+        "decodedBodySize": 26846,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 233.1999999997206,
+        "domContentLoadedEventStart": 1539.1999999997206,
+        "domContentLoadedEventEnd": 1539.6000000000931,
+        "domComplete": 3157.2999999998137,
+        "loadEventStart": 3157.399999999907,
+        "loadEventEnd": 3158.100000000093,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 1496,
+          "duration": 0,
+          "navigationId": 8346,
+          "paintTime": 1432.5,
+          "presentationTime": 1496
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 1496,
+          "duration": 0,
+          "navigationId": 8346,
+          "paintTime": 1432.5,
+          "presentationTime": 1496
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 263.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 397.10000000009313
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 209.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp",
+          "type": "img",
+          "transfer": 13804,
+          "encoded": 13504,
+          "duration": 418.39999999990687
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "type": "video",
+          "transfer": 40112,
+          "encoded": 39812,
+          "duration": 552.7000000001863
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 258.39999999990687
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 744.6000000000931
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 420.40000000037253
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_czfoI.webp",
+          "type": "img",
+          "transfer": 42802,
+          "encoded": 42502,
+          "duration": 1050.6999999997206
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_Z1biXu6.webp",
+          "type": "img",
+          "transfer": 44628,
+          "encoded": 44328,
+          "duration": 1074
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_26jAWf.webp",
+          "type": "img",
+          "transfer": 35112,
+          "encoded": 34812,
+          "duration": 943.8999999999069
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/general.Dj628B6V_AOfjh.webp",
+          "type": "img",
+          "transfer": 20710,
+          "encoded": 20410,
+          "duration": 650.5999999996275
+        }
+      ],
+      "video": [
+        {
+          "src": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4",
+          "paused": false,
+          "readyState": 4
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "mobile": true,
+      "repetition": 2,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp",
+          "bytes": 13504
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "bytes": 39812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_czfoI.webp",
+          "bytes": 42502
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_Z1biXu6.webp",
+          "bytes": 44328
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_26jAWf.webp",
+          "bytes": 34812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/general.Dj628B6V_AOfjh.webp",
+          "bytes": 20410
+        },
+        {
+          "url": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4",
+          "bytes": 1245750
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "1.6 Mbps down, 750 kbps up, 150 ms latency",
+      "cpu": "4x",
+      "lcpMs": 3060,
+      "cls": 0.00044719605095607434,
+      "ttfbMs": 5.5,
+      "observed": {
+        "lcp": [
+          {
+            "time": 1464,
+            "size": 18600,
+            "element": "",
+            "url": ""
+          },
+          {
+            "time": 1520,
+            "size": 129600,
+            "element": "hero-video-poster",
+            "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp"
+          },
+          {
+            "time": 3060,
+            "size": 196650,
+            "element": "",
+            "url": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4"
+          }
+        ],
+        "shifts": [
+          {
+            "time": 1756.5,
+            "value": 0.00044719605095607434
+          }
+        ],
+        "longtasks": []
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3035.899999999907,
+        "navigationId": 1756,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999999962747097,
+        "domainLookupStart": 0.8999999999068677,
+        "domainLookupEnd": 1.2999999998137355,
+        "connectStart": 1.2999999998137355,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.8999999999068677,
+        "requestStart": 1.8999999999068677,
+        "responseStart": 7.399999999906868,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 7.399999999906868,
+        "responseEnd": 177.89999999990687,
+        "transferSize": 5918,
+        "encodedBodySize": 5618,
+        "decodedBodySize": 26846,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 215,
+        "domContentLoadedEventStart": 1498,
+        "domContentLoadedEventEnd": 1498.2999999998137,
+        "domComplete": 3035.2999999998137,
+        "loadEventStart": 3035.2999999998137,
+        "loadEventEnd": 3035.899999999907,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 1464,
+          "duration": 0,
+          "navigationId": 1756,
+          "paintTime": 1404,
+          "presentationTime": 1464
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 1464,
+          "duration": 0,
+          "navigationId": 1756,
+          "paintTime": 1404,
+          "presentationTime": 1464
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 253.70000000018626
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 393.89999999990687
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 205.39999999990687
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp",
+          "type": "img",
+          "transfer": 13804,
+          "encoded": 13504,
+          "duration": 415.8000000002794
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "type": "video",
+          "transfer": 40112,
+          "encoded": 39812,
+          "duration": 549.6999999997206
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 263.20000000018626
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 737.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 414.10000000009313
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_czfoI.webp",
+          "type": "img",
+          "transfer": 42802,
+          "encoded": 42502,
+          "duration": 1049
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_Z1biXu6.webp",
+          "type": "img",
+          "transfer": 44628,
+          "encoded": 44328,
+          "duration": 1070.1999999997206
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_26jAWf.webp",
+          "type": "img",
+          "transfer": 35112,
+          "encoded": 34812,
+          "duration": 949.3999999999069
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/general.Dj628B6V_AOfjh.webp",
+          "type": "img",
+          "transfer": 20710,
+          "encoded": 20410,
+          "duration": 648.3000000002794
+        }
+      ],
+      "video": [
+        {
+          "src": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4",
+          "paused": false,
+          "readyState": 4
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "mobile": true,
+      "repetition": 3,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp",
+          "bytes": 13504
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "bytes": 39812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_czfoI.webp",
+          "bytes": 42502
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_Z1biXu6.webp",
+          "bytes": 44328
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_26jAWf.webp",
+          "bytes": 34812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/general.Dj628B6V_AOfjh.webp",
+          "bytes": 20410
+        },
+        {
+          "url": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4",
+          "bytes": 1344750
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "1.6 Mbps down, 750 kbps up, 150 ms latency",
+      "cpu": "4x",
+      "lcpMs": 3048,
+      "cls": 0.00044719605095607434,
+      "ttfbMs": 3.7999999998137355,
+      "observed": {
+        "lcp": [
+          {
+            "time": 1476,
+            "size": 18600,
+            "element": "",
+            "url": ""
+          },
+          {
+            "time": 1528,
+            "size": 129600,
+            "element": "hero-video-poster",
+            "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp"
+          },
+          {
+            "time": 3048,
+            "size": 196650,
+            "element": "",
+            "url": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4"
+          }
+        ],
+        "shifts": [
+          {
+            "time": 1775.6000000000931,
+            "value": 0.00044719605095607434
+          }
+        ],
+        "longtasks": []
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3048.2000000001863,
+        "navigationId": 2976,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.20000000018626451,
+        "domainLookupStart": 0.900000000372529,
+        "domainLookupEnd": 1.3000000002793968,
+        "connectStart": 1.3000000002793968,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.900000000372529,
+        "requestStart": 1.900000000372529,
+        "responseStart": 5.7000000001862645,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5.7000000001862645,
+        "responseEnd": 176,
+        "transferSize": 5918,
+        "encodedBodySize": 5618,
+        "decodedBodySize": 26846,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 216.3000000002794,
+        "domContentLoadedEventStart": 1508.6000000000931,
+        "domContentLoadedEventEnd": 1509,
+        "domComplete": 3047.600000000093,
+        "loadEventStart": 3047.7000000001863,
+        "loadEventEnd": 3048.2000000001863,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 1476,
+          "duration": 0,
+          "navigationId": 2976,
+          "paintTime": 1405.1000000000931,
+          "presentationTime": 1476
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 1476,
+          "duration": 0,
+          "navigationId": 2976,
+          "paintTime": 1405.1000000000931,
+          "presentationTime": 1476
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 245.90000000037253
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 394.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 204.89999999990687
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__3tCaS.webp",
+          "type": "img",
+          "transfer": 13804,
+          "encoded": 13504,
+          "duration": 414.60000000009313
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "type": "video",
+          "transfer": 40112,
+          "encoded": 39812,
+          "duration": 548.2000000001863
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 261.10000000009313
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 738.7999999998137
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 415.60000000009313
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_czfoI.webp",
+          "type": "img",
+          "transfer": 42802,
+          "encoded": 42502,
+          "duration": 1045.8999999999069
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_Z1biXu6.webp",
+          "type": "img",
+          "transfer": 44628,
+          "encoded": 44328,
+          "duration": 1075.2999999998137
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_26jAWf.webp",
+          "type": "img",
+          "transfer": 35112,
+          "encoded": 34812,
+          "duration": 947.1000000000931
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/general.Dj628B6V_AOfjh.webp",
+          "type": "img",
+          "transfer": 20710,
+          "encoded": 20410,
+          "duration": 653.2000000001863
+        }
+      ],
+      "video": [
+        {
+          "src": "http://127.0.0.1:4322/media/portada-ccvs-mobile.mp4",
+          "paused": false,
+          "readyState": 4
+        }
+      ]
+    },
+    {
+      "route": "/visitanos/",
+      "mobile": true,
+      "repetition": 1,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/visitanos/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "bytes": 996
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "1.6 Mbps down, 750 kbps up, 150 ms latency",
+      "cpu": "4x",
+      "lcpMs": 1088,
+      "cls": 0.0016126788913788308,
+      "ttfbMs": 3,
+      "observed": {
+        "lcp": [
+          {
+            "time": 1088,
+            "size": 34239,
+            "element": "",
+            "url": ""
+          }
+        ],
+        "shifts": [
+          {
+            "time": 1164.0999999996275,
+            "value": 0.0016126788913788308
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 1119.5,
+            "duration": 53
+          },
+          {
+            "time": 1256.6999999997206,
+            "duration": 127
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/visitanos/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1257.7999999998137,
+        "navigationId": 5817,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999999972060323,
+        "domainLookupStart": 1.1999999997206032,
+        "domainLookupEnd": 1.6999999997206032,
+        "connectStart": 1.6999999997206032,
+        "secureConnectionStart": 0,
+        "connectEnd": 2.5,
+        "requestStart": 2.599999999627471,
+        "responseStart": 5.599999999627471,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5.599999999627471,
+        "responseEnd": 176.09999999962747,
+        "transferSize": 3505,
+        "encodedBodySize": 3205,
+        "decodedBodySize": 15170,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 220.39999999990687,
+        "domContentLoadedEventStart": 1099.6999999997206,
+        "domContentLoadedEventEnd": 1099.8999999999069,
+        "domComplete": 1256.6999999997206,
+        "loadEventStart": 1256.6999999997206,
+        "loadEventEnd": 1257.7999999998137,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 1088,
+          "duration": 0,
+          "navigationId": 5817,
+          "paintTime": 1046.2999999998137,
+          "presentationTime": 1088
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 1088,
+          "duration": 0,
+          "navigationId": 5817,
+          "paintTime": 1046.2999999998137,
+          "presentationTime": 1088
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 234.20000000018626
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 276.79999999981374
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 198
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 218.79999999981374
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 741
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 416.70000000018626
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "type": "img",
+          "transfer": 1296,
+          "encoded": 996,
+          "duration": 163.90000000037253
+        }
+      ],
+      "video": []
+    },
+    {
+      "route": "/visitanos/",
+      "mobile": true,
+      "repetition": 2,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/visitanos/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "bytes": 996
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "1.6 Mbps down, 750 kbps up, 150 ms latency",
+      "cpu": "4x",
+      "lcpMs": 1004,
+      "cls": 0.0016126788913788308,
+      "ttfbMs": 3.1000000000931323,
+      "observed": {
+        "lcp": [
+          {
+            "time": 1004,
+            "size": 34239,
+            "element": "",
+            "url": ""
+          }
+        ],
+        "shifts": [
+          {
+            "time": 1087.2000000001863,
+            "value": 0.0016126788913788308
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 1039.8000000002794,
+            "duration": 60
+          },
+          {
+            "time": 1229,
+            "duration": 131
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/visitanos/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1234.7000000001863,
+        "navigationId": 6967,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.20000000018626451,
+        "domainLookupStart": 1,
+        "domainLookupEnd": 1.3000000002793968,
+        "connectStart": 1.3000000002793968,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.900000000372529,
+        "requestStart": 2.1000000000931323,
+        "responseStart": 5.2000000001862645,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5.2000000001862645,
+        "responseEnd": 169.20000000018626,
+        "transferSize": 3505,
+        "encodedBodySize": 3205,
+        "decodedBodySize": 15170,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 201.5,
+        "domContentLoadedEventStart": 1014.9000000003725,
+        "domContentLoadedEventEnd": 1015.3000000002794,
+        "domComplete": 1233.9000000003725,
+        "loadEventStart": 1233.9000000003725,
+        "loadEventEnd": 1234.7000000001863,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 1004,
+          "duration": 0,
+          "navigationId": 6967,
+          "paintTime": 958.9000000003725,
+          "presentationTime": 1004
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 1004,
+          "duration": 0,
+          "navigationId": 6967,
+          "paintTime": 958.9000000003725,
+          "presentationTime": 1004
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 215.60000000009313
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 274.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 192.20000000018626
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 213
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 746.2000000001863
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 415.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "type": "img",
+          "transfer": 1296,
+          "encoded": 996,
+          "duration": 164.39999999990687
+        }
+      ],
+      "video": []
+    },
+    {
+      "route": "/visitanos/",
+      "mobile": true,
+      "repetition": 3,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/visitanos/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "bytes": 996
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "1.6 Mbps down, 750 kbps up, 150 ms latency",
+      "cpu": "4x",
+      "lcpMs": 1028,
+      "cls": 0.0016126788913788308,
+      "ttfbMs": 4.399999999906868,
+      "observed": {
+        "lcp": [
+          {
+            "time": 1028,
+            "size": 34239,
+            "element": "",
+            "url": ""
+          }
+        ],
+        "shifts": [
+          {
+            "time": 1120.6000000000931,
+            "value": 0.0016126788913788308
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 1068.3000000002794,
+            "duration": 62
+          },
+          {
+            "time": 1236.3000000002794,
+            "duration": 165
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/visitanos/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1243.2000000001863,
+        "navigationId": 7824,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.3000000002793968,
+        "domainLookupStart": 1,
+        "domainLookupEnd": 1.400000000372529,
+        "connectStart": 1.400000000372529,
+        "secureConnectionStart": 0,
+        "connectEnd": 2.1000000000931323,
+        "requestStart": 2.3000000002793968,
+        "responseStart": 6.7000000001862645,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 6.7000000001862645,
+        "responseEnd": 174.40000000037253,
+        "transferSize": 3505,
+        "encodedBodySize": 3205,
+        "decodedBodySize": 15170,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 204.70000000018626,
+        "domContentLoadedEventStart": 1045.7000000001863,
+        "domContentLoadedEventEnd": 1045.9000000003725,
+        "domComplete": 1242.3000000002794,
+        "loadEventStart": 1242.3000000002794,
+        "loadEventEnd": 1243.2000000001863,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 1028,
+          "duration": 0,
+          "navigationId": 7824,
+          "paintTime": 990.9000000003725,
+          "presentationTime": 1028
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 1028,
+          "duration": 0,
+          "navigationId": 7824,
+          "paintTime": 990.9000000003725,
+          "presentationTime": 1028
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 216.90000000037253
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 275.3000000002794
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 185.79999999981374
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 214.20000000018626
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 745.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 414
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "type": "img",
+          "transfer": 1296,
+          "encoded": 996,
+          "duration": 166.20000000018626
+        }
+      ],
+      "video": []
+    },
+    {
+      "route": "/",
+      "mobile": false,
+      "repetition": 1,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "bytes": 39812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_Z1M1SVw.webp",
+          "bytes": 71754
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "bytes": 58384
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad-grupo.CLJJmu7N_Z2umuix.webp",
+          "bytes": 150810
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "bytes": 94602
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "bytes": 101912
+        },
+        {
+          "url": "http://127.0.0.1:4322/media/portada-ccvs.mp4",
+          "bytes": 6291456
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "unthrottled localhost",
+      "cpu": "1x",
+      "lcpMs": 280,
+      "cls": 0.0007635337630744171,
+      "ttfbMs": 4.399999999906868,
+      "observed": {
+        "lcp": [
+          {
+            "time": 280,
+            "size": 921600,
+            "element": "hero-video-poster",
+            "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp"
+          }
+        ],
+        "shifts": [
+          {
+            "time": 284,
+            "value": 0.0001499235093021262
+          },
+          {
+            "time": 352.1999999997206,
+            "value": 0.0006136102537722908
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 36.5,
+            "duration": 204
+          },
+          {
+            "time": 292.6999999997206,
+            "duration": 57
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 380.29999999981374,
+        "navigationId": 1129,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999999972060323,
+        "domainLookupStart": 1.1999999997206032,
+        "domainLookupEnd": 1.6000000000931323,
+        "connectStart": 1.6000000000931323,
+        "secureConnectionStart": 0,
+        "connectEnd": 2.3999999999068677,
+        "requestStart": 2.5,
+        "responseStart": 6.899999999906868,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 6.899999999906868,
+        "responseEnd": 7.5,
+        "transferSize": 5918,
+        "encodedBodySize": 5618,
+        "decodedBodySize": 26846,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 27.5,
+        "domContentLoadedEventStart": 265.1999999997206,
+        "domContentLoadedEventEnd": 265.1999999997206,
+        "domComplete": 380,
+        "loadEventStart": 380,
+        "loadEventEnd": 380.29999999981374,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 280,
+          "duration": 0,
+          "navigationId": 1129,
+          "paintTime": 243.29999999981374,
+          "presentationTime": 280
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 280,
+          "duration": 0,
+          "navigationId": 1129,
+          "paintTime": 243.29999999981374,
+          "presentationTime": 280
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 11.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 17.600000000093132
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 20.600000000093132
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "type": "img",
+          "transfer": 40112,
+          "encoded": 39812,
+          "duration": 22
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 16.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 4.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 4.800000000279397
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "type": "img",
+          "transfer": 102212,
+          "encoded": 101912,
+          "duration": 18.700000000186265
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "type": "img",
+          "transfer": 58684,
+          "encoded": 58384,
+          "duration": 7.399999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_Z1M1SVw.webp",
+          "type": "img",
+          "transfer": 72054,
+          "encoded": 71754,
+          "duration": 7.399999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "type": "img",
+          "transfer": 94902,
+          "encoded": 94602,
+          "duration": 17.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad-grupo.CLJJmu7N_Z2umuix.webp",
+          "type": "img",
+          "transfer": 151110,
+          "encoded": 150810,
+          "duration": 8.100000000093132
+        }
+      ],
+      "video": [
+        {
+          "src": "http://127.0.0.1:4322/media/portada-ccvs.mp4",
+          "paused": false,
+          "readyState": 4
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "mobile": false,
+      "repetition": 2,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "bytes": 39812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12567
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "bytes": 101912
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad-grupo.CLJJmu7N_Z2umuix.webp",
+          "bytes": 150810
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "bytes": 58384
+        },
+        {
+          "url": "http://127.0.0.1:4322/media/portada-ccvs.mp4",
+          "bytes": 5832704
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "bytes": 94602
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_Z1M1SVw.webp",
+          "bytes": 71754
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "unthrottled localhost",
+      "cpu": "1x",
+      "lcpMs": 352,
+      "cls": 0.0007635337630744171,
+      "ttfbMs": 3.599999999627471,
+      "observed": {
+        "lcp": [
+          {
+            "time": 352,
+            "size": 921600,
+            "element": "hero-video-poster",
+            "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp"
+          }
+        ],
+        "shifts": [
+          {
+            "time": 342.09999999962747,
+            "value": 0.0001499235093021262
+          },
+          {
+            "time": 410.5,
+            "value": 0.0006136102537722908
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 33,
+            "duration": 260
+          },
+          {
+            "time": 352.6999999997206,
+            "duration": 63
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 625,
+        "navigationId": 4534,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999999962747097,
+        "domainLookupStart": 1.1999999997206032,
+        "domainLookupEnd": 1.8999999999068677,
+        "connectStart": 1.8999999999068677,
+        "secureConnectionStart": 0,
+        "connectEnd": 3.5,
+        "requestStart": 3.5,
+        "responseStart": 7.099999999627471,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 7.099999999627471,
+        "responseEnd": 7.7999999998137355,
+        "transferSize": 5918,
+        "encodedBodySize": 5618,
+        "decodedBodySize": 26846,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 25.399999999906868,
+        "domContentLoadedEventStart": 327.6999999997206,
+        "domContentLoadedEventEnd": 327.6999999997206,
+        "domComplete": 624.7999999998137,
+        "loadEventStart": 624.7999999998137,
+        "loadEventEnd": 625,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 352,
+          "duration": 0,
+          "navigationId": 4534,
+          "paintTime": 295.29999999981374,
+          "presentationTime": 352
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 352,
+          "duration": 0,
+          "navigationId": 4534,
+          "paintTime": 295.29999999981374,
+          "presentationTime": 352
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 6.900000000372529
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 12.599999999627471
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 13.200000000186265
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "type": "img",
+          "transfer": 40112,
+          "encoded": 39812,
+          "duration": 12.899999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 11.299999999813735
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 3.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 4
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "type": "img",
+          "transfer": 102212,
+          "encoded": 101912,
+          "duration": 20.600000000093132
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "type": "img",
+          "transfer": 58684,
+          "encoded": 58384,
+          "duration": 64.09999999962747
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_Z1M1SVw.webp",
+          "type": "img",
+          "transfer": 72054,
+          "encoded": 71754,
+          "duration": 290.20000000018626
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "type": "img",
+          "transfer": 94902,
+          "encoded": 94602,
+          "duration": 279.39999999990687
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad-grupo.CLJJmu7N_Z2umuix.webp",
+          "type": "img",
+          "transfer": 151110,
+          "encoded": 150810,
+          "duration": 19.399999999906868
+        }
+      ],
+      "video": [
+        {
+          "src": "http://127.0.0.1:4322/media/portada-ccvs.mp4",
+          "paused": false,
+          "readyState": 4
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "mobile": false,
+      "repetition": 3,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3430
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12572
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "bytes": 39812
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "bytes": 101912
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "bytes": 94602
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/comunidad-grupo.CLJJmu7N_Z2umuix.webp",
+          "bytes": 150810
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_Z1M1SVw.webp",
+          "bytes": 71754
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "bytes": 58384
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/media/portada-ccvs.mp4",
+          "bytes": 6291456
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "unthrottled localhost",
+      "cpu": "1x",
+      "lcpMs": 244,
+      "cls": 0.0007635337630744171,
+      "ttfbMs": 3.2999999998137355,
+      "observed": {
+        "lcp": [
+          {
+            "time": 244,
+            "size": 921600,
+            "element": "hero-video-poster",
+            "url": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp"
+          }
+        ],
+        "shifts": [
+          {
+            "time": 238.60000000009313,
+            "value": 0.0001499235093021262
+          },
+          {
+            "time": 312.39999999990687,
+            "value": 0.0006136102537722908
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 25.399999999906868,
+            "duration": 181
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 378.60000000009313,
+        "navigationId": 8484,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999999972060323,
+        "domainLookupStart": 1.1000000000931323,
+        "domainLookupEnd": 1.6000000000931323,
+        "connectStart": 1.6000000000931323,
+        "secureConnectionStart": 0,
+        "connectEnd": 2.2999999998137355,
+        "requestStart": 2.3999999999068677,
+        "responseStart": 5.699999999720603,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5.699999999720603,
+        "responseEnd": 6.199999999720603,
+        "transferSize": 5918,
+        "encodedBodySize": 5618,
+        "decodedBodySize": 26846,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 21.799999999813735,
+        "domContentLoadedEventStart": 227.5,
+        "domContentLoadedEventEnd": 227.5,
+        "domComplete": 378.39999999990687,
+        "loadEventStart": 378.39999999990687,
+        "loadEventEnd": 378.60000000009313,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 244,
+          "duration": 0,
+          "navigationId": 8484,
+          "paintTime": 207.89999999990687,
+          "presentationTime": 244
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 244,
+          "duration": 0,
+          "navigationId": 8484,
+          "paintTime": 207.89999999990687,
+          "presentationTime": 244
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 3.8999999999068677
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 9.299999999813735
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 9.900000000372529
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "type": "img",
+          "transfer": 40112,
+          "encoded": 39812,
+          "duration": 9.700000000186265
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 7.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 3.8999999999068677
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 4.300000000279397
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "type": "img",
+          "transfer": 102212,
+          "encoded": 101912,
+          "duration": 9
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "type": "img",
+          "transfer": 58684,
+          "encoded": 58384,
+          "duration": 20.09999999962747
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/reunion.CXnlimBy_Z1M1SVw.webp",
+          "type": "img",
+          "transfer": 72054,
+          "encoded": 71754,
+          "duration": 15.900000000372529
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "type": "img",
+          "transfer": 94902,
+          "encoded": 94602,
+          "duration": 8.699999999720603
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/comunidad-grupo.CLJJmu7N_Z2umuix.webp",
+          "type": "img",
+          "transfer": 151110,
+          "encoded": 150810,
+          "duration": 13.300000000279397
+        }
+      ],
+      "video": [
+        {
+          "src": "http://127.0.0.1:4322/media/portada-ccvs.mp4",
+          "paused": false,
+          "readyState": 4
+        }
+      ]
+    },
+    {
+      "route": "/visitanos/",
+      "mobile": false,
+      "repetition": 1,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/visitanos/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12567
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "bytes": 19010
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "bytes": 996
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "unthrottled localhost",
+      "cpu": "1x",
+      "lcpMs": 164,
+      "cls": 0.0018791795267489712,
+      "ttfbMs": 2.7999999998137355,
+      "observed": {
+        "lcp": [
+          {
+            "time": 164,
+            "size": 141450,
+            "element": "",
+            "url": ""
+          }
+        ],
+        "shifts": [
+          {
+            "time": 191.89999999990687,
+            "value": 0.0018791795267489712
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 21.600000000093132,
+            "duration": 113
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/visitanos/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 162.20000000018626,
+        "navigationId": 1203,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.20000000018626451,
+        "domainLookupStart": 0.8999999999068677,
+        "domainLookupEnd": 1.3999999999068677,
+        "connectStart": 1.3999999999068677,
+        "secureConnectionStart": 0,
+        "connectEnd": 2.1000000000931323,
+        "requestStart": 2.2000000001862645,
+        "responseStart": 5,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5,
+        "responseEnd": 5.399999999906868,
+        "transferSize": 3505,
+        "encodedBodySize": 3205,
+        "decodedBodySize": 15170,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 17.5,
+        "domContentLoadedEventStart": 145,
+        "domContentLoadedEventEnd": 145.10000000009313,
+        "domComplete": 161.89999999990687,
+        "loadEventStart": 161.89999999990687,
+        "loadEventEnd": 162.20000000018626,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 164,
+          "duration": 0,
+          "navigationId": 1203,
+          "paintTime": 135.60000000009313,
+          "presentationTime": 164
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 164,
+          "duration": 0,
+          "navigationId": 1203,
+          "paintTime": 135.60000000009313,
+          "presentationTime": 164
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 3.599999999627471
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 7.399999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 7.899999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 6.399999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 5.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 4.899999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "type": "img",
+          "transfer": 19310,
+          "encoded": 19010,
+          "duration": 4.600000000093132
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "type": "img",
+          "transfer": 1296,
+          "encoded": 996,
+          "duration": 6.600000000093132
+        }
+      ],
+      "video": []
+    },
+    {
+      "route": "/visitanos/",
+      "mobile": false,
+      "repetition": 2,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/visitanos/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12567
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3435
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "bytes": 19010
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "bytes": 996
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "unthrottled localhost",
+      "cpu": "1x",
+      "lcpMs": 164,
+      "cls": 0.0018791795267489712,
+      "ttfbMs": 3.099999999627471,
+      "observed": {
+        "lcp": [
+          {
+            "time": 164,
+            "size": 141450,
+            "element": "",
+            "url": ""
+          }
+        ],
+        "shifts": [
+          {
+            "time": 193.1999999997206,
+            "value": 0.0018791795267489712
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 22.600000000093132,
+            "duration": 111
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/visitanos/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 163.60000000009313,
+        "navigationId": 2518,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999999972060323,
+        "domainLookupStart": 0.8999999999068677,
+        "domainLookupEnd": 1.3999999999068677,
+        "connectStart": 1.3999999999068677,
+        "secureConnectionStart": 0,
+        "connectEnd": 2,
+        "requestStart": 2.1000000000931323,
+        "responseStart": 5.199999999720603,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5.199999999720603,
+        "responseEnd": 5.699999999720603,
+        "transferSize": 3505,
+        "encodedBodySize": 3205,
+        "decodedBodySize": 15170,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 17.899999999906868,
+        "domContentLoadedEventStart": 145.1999999997206,
+        "domContentLoadedEventEnd": 145.29999999981374,
+        "domComplete": 163.39999999990687,
+        "loadEventStart": 163.5,
+        "loadEventEnd": 163.60000000009313,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 164,
+          "duration": 0,
+          "navigationId": 2518,
+          "paintTime": 135.10000000009313,
+          "presentationTime": 164
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 164,
+          "duration": 0,
+          "navigationId": 2518,
+          "paintTime": 135.10000000009313,
+          "presentationTime": 164
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 4
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 8.100000000093132
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 8
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 6.7999999998137355
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 3.2000000001862645
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 3.7999999998137355
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "type": "img",
+          "transfer": 19310,
+          "encoded": 19010,
+          "duration": 5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "type": "img",
+          "transfer": 1296,
+          "encoded": 996,
+          "duration": 5.400000000372529
+        }
+      ],
+      "video": []
+    },
+    {
+      "route": "/visitanos/",
+      "mobile": false,
+      "repetition": 3,
+      "networkPayload": [
+        {
+          "url": "http://127.0.0.1:4322/visitanos/",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "bytes": 5593
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "bytes": 874
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "bytes": 3430
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "bytes": 12567
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "bytes": 25884
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "bytes": 996
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "bytes": 19010
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "bytes": 90104
+        }
+      ],
+      "windowSeconds": 10,
+      "network": "unthrottled localhost",
+      "cpu": "1x",
+      "lcpMs": 188,
+      "cls": 0.0018791795267489712,
+      "ttfbMs": 2.8000000002793968,
+      "observed": {
+        "lcp": [
+          {
+            "time": 188,
+            "size": 141450,
+            "element": "",
+            "url": ""
+          }
+        ],
+        "shifts": [
+          {
+            "time": 198.1999999997206,
+            "value": 0.0018791795267489712
+          }
+        ],
+        "longtasks": [
+          {
+            "time": 28.600000000093132,
+            "duration": 126
+          }
+        ]
+      },
+      "navigation": {
+        "name": "http://127.0.0.1:4322/visitanos/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 233.10000000009313,
+        "navigationId": 8887,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000000009313226,
+        "domainLookupStart": 0.8999999999068677,
+        "domainLookupEnd": 1.3999999999068677,
+        "connectStart": 1.3999999999068677,
+        "secureConnectionStart": 0,
+        "connectEnd": 2.1999999997206032,
+        "requestStart": 2.2999999998137355,
+        "responseStart": 5.100000000093132,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5.100000000093132,
+        "responseEnd": 5.5,
+        "transferSize": 3505,
+        "encodedBodySize": 3205,
+        "decodedBodySize": 15170,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 20.699999999720603,
+        "domContentLoadedEventStart": 167.79999999981374,
+        "domContentLoadedEventEnd": 167.89999999990687,
+        "domComplete": 232.89999999990687,
+        "loadEventStart": 232.89999999990687,
+        "loadEventEnd": 233.10000000009313,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "paint": [
+        {
+          "name": "first-paint",
+          "entryType": "paint",
+          "startTime": 188,
+          "duration": 0,
+          "navigationId": 8887,
+          "paintTime": 155.60000000009313,
+          "presentationTime": 188
+        },
+        {
+          "name": "first-contentful-paint",
+          "entryType": "paint",
+          "startTime": 188,
+          "duration": 0,
+          "navigationId": 8887,
+          "paintTime": 155.60000000009313,
+          "presentationTime": 188
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4322/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+          "type": "script",
+          "transfer": 5875,
+          "encoded": 5575,
+          "duration": 5.800000000279397
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/ScrollAccent.DqZHkgNF.css",
+          "type": "link",
+          "transfer": 12854,
+          "encoded": 12554,
+          "duration": 13.400000000372529
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "type": "img",
+          "transfer": 1174,
+          "encoded": 874,
+          "duration": 10.899999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DwgYc042.js",
+          "type": "script",
+          "transfer": 3718,
+          "encoded": 3418,
+          "duration": 10.800000000279397
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+          "type": "css",
+          "transfer": 90404,
+          "encoded": 90104,
+          "duration": 6.5
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+          "type": "css",
+          "transfer": 26184,
+          "encoded": 25884,
+          "duration": 5.199999999720603
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "type": "img",
+          "transfer": 19310,
+          "encoded": 19010,
+          "duration": 25.399999999906868
+        },
+        {
+          "name": "http://127.0.0.1:4322/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "type": "img",
+          "transfer": 1296,
+          "encoded": 996,
+          "duration": 23.299999999813735
+        }
+      ],
+      "video": []
+    }
+  ]
+}

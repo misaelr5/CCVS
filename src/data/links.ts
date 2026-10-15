@@ -1,5 +1,5 @@
 export interface Link { label: string; href: string; icon?: 'instagram' | 'facebook' | 'youtube' | 'map'; }
-export const navigation: Link[] = [{ label: 'Inicio', href: '/' }, { label: 'Nosotros', href: '/nosotros/' }, { label: 'Ministerios', href: '/ministerios/' }, { label: 'Visitarnos', href: '/visitanos/' }];
+export const navigation: Link[] = [{ label: 'Inicio', href: '/' }, { label: 'Nosotros', href: '/nosotros/' }, { label: 'Reuniones', href: '/ministerios/' }, { label: 'Visitarnos', href: '/visitanos/' }];
 export const groups = [
   { title: 'La iglesia', links: [navigation[0], navigation[1], { label: 'Historia', href: '/nosotros/#historia' }, { label: 'Qué creemos', href: '/nosotros/#creencias' }] },
   { title: 'Participá', links: [navigation[2], { label: 'Horarios', href: '/visitanos/#horarios' }, navigation[3]] },

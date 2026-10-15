@@ -17,6 +17,9 @@ test('ClientRouter: forward, back, forward y scripts sin duplicados', async ({ p
   expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('forward');
   await page.goBack();
   await expect(page).toHaveURL(/\/$/);
+  // History changes the address before Astro finishes swapping the document.
+  // Verify the destination before requesting the next traversal.
+  await expect(page.locator('.editorial-hero')).toBeVisible();
   expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('back');
   await page.goForward();
   await expect(page).toHaveURL(/nosotros\/#creencias$/);

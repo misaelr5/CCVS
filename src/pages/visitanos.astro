@@ -2,11 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ScrollAccent from '../components/ScrollAccent.astro';
 import Schedule from '../components/Schedule.astro';
+import ProgrammedMeetings from '../components/ProgrammedMeetings.astro';
 import { site } from '../data/site';
+import { schedule } from '../data/schedule';
 import { mapUrl, isHttpsUrl } from '../data/links';
+const principal = schedule[0];
 ---
 <BaseLayout title="Vení a una reunión" description="Sumate a una reunión de Comunidad Cristiana Villa Sarmiento. Consultá horarios y dirección para tu primera visita.">
-<section class="page-heading shell visit-heading"><h1>Nos reunimos.<br /><span class="serif">Para buscar a Dios.</span></h1><p class="scripture-note">Inspirado en Mateo 6:33</p><div class="visit-essential"><p>Reunión principal<br /><strong>Domingo · 19:30 hs</strong></p><address>{site.address}</address></div><ScrollAccent kind="diagonal" /></section>
-<section class="visit-layout shell section-gap" id="horarios"><div><h2>Horarios de reunión.</h2><Schedule /></div><div class="first-visit"><p class="serif-label">Tu primera visita.</p><p>Podés venir a una de nuestras reuniones. Allí podrás conocernos y consultar sobre los espacios para orar, estudiar la Biblia y compartir la fe.</p><a class="pill" href="/links/">Canales de la congregación</a></div></section>
+<section class="page-heading shell visit-heading"><h1>Nos reunimos.<br /><span class="serif">Para buscar a Dios.</span></h1><p class="scripture-note">Inspirado en Mateo 6:33</p><div class="visit-essential"><p>{principal.title}<br /><strong>{principal.day} · {principal.time} hs</strong></p><address>{site.address}</address></div><ScrollAccent kind="diagonal" /></section>
+<section class="visit-layout shell section-gap" id="horarios"><div><h2>Reuniones semanales</h2><Schedule /></div><div class="first-visit"><p class="serif-label">Tu primera visita.</p><p>Podés venir a una de nuestras reuniones. Allí podrás conocernos y consultar sobre los espacios para orar, estudiar la Biblia y compartir la fe.</p><a class="pill" href="/links/">Canales de la congregación</a></div></section>
+<ProgrammedMeetings />
 <section class="location shell section-gap"><div><h2>Nos reunimos en<br /><span class="serif">Villa Sarmiento.</span></h2><address>{site.address}</address>{mapUrl && isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} rel="noopener noreferrer">Cómo llegar</a>}</div><div class="map-reserve"><p>Villa Sarmiento<br /><span>Córdoba, Argentina</span></p><small>El pin exacto de ubicación está pendiente de confirmación.</small></div></section>
 </BaseLayout>

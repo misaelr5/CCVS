@@ -14,6 +14,7 @@ import youthPrayer from '../assets/photos/WhatsApp Image 20aaa26-10-14 at 19.57.
 import aboutGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.20.07.jpeg';
 import communityGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.18.40.jpeg';
 import historyCross from '../assets/photos/WhatsApp Image 2026-10-14 at 21.32.51.jpeg';
+import prayerWord from '../assets/photos/Screenshot 2026-10-14 212933.jpg';
 import serviceActivity from '../assets/photos/WhatsApp Image 2026-10-03 at 22.18.52.jpeg';
 import type { ImageMetadata } from 'astro';
 export interface Photo { src: ImageMetadata; alt: string; mobile?: ImageMetadata; position?: string; mobilePosition?: string; }
@@ -41,7 +42,7 @@ export const ministryPhotos = {
     },
   ],
 } satisfies { children: Photo; youth: Photo[] };
-type PhotoKey = 'hero' | 'about' | 'community' | 'history' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'banner';
+type PhotoKey = 'hero' | 'about' | 'community' | 'history' | 'prayerWord' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'banner';
 export const site = {
   name: 'Comunidad Cristiana Villa Sarmiento', shortName: 'CCVS',
   address: 'Vélez Sarsfield s/n, Villa Sarmiento, Córdoba, Argentina',
@@ -67,6 +68,12 @@ export const site = {
       alt: 'La cruz iluminada en el salón de la comunidad',
       position: 'center 64%',
       mobilePosition: 'center 63%',
+    },
+    prayerWord: {
+      src: prayerWord,
+      alt: 'Una mujer comparte la Palabra junto a la cruz iluminada',
+      position: 'center 52%',
+      mobilePosition: 'center 48%',
     },
     children: {
       src: childrenGroup,

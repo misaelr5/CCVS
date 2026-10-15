@@ -1,0 +1,26 @@
+---
+import PhotoSection from './PhotoSection.astro';
+import { programmedMinistries } from '../data/ministries';
+import { site } from '../data/site';
+interface Props { anchorIds?: boolean; }
+const { anchorIds = false } = Astro.props;
+---
+<section class="programmed-meetings shell section-gap" id="encuentros-programados">
+ <div class="programmed-heading">
+  <h2>Encuentros <span class="serif">programados</span></h2>
+  <p>También compartimos espacios de encuentro y formación que organizamos en fechas específicas. Anunciamos cada reunión con anticipación a través de nuestros canales oficiales.</p>
+ </div>
+ <div class="programmed-list">
+  {programmedMinistries.map((meeting, index) => <article class="programmed-item" id={anchorIds ? meeting.id : undefined}>
+   <div class="programmed-copy">
+    <span class="programmed-index" aria-hidden="true">0{index + 1}</span>
+    <h3>{meeting.title}</h3>
+    <p>{meeting.intro}</p>
+    <ul class="programmed-activities">{meeting.activities.map(activity => <li>{activity}</li>)}</ul>
+    <p class="programmed-status">{meeting.nextDate ?? 'Fechas a anunciar'}</p>
+    <a class="inline-link" href={anchorIds ? '/links/' : `/ministerios/#${meeting.id}`}>{anchorIds ? 'Canales oficiales' : 'Conocé el espacio'}</a>
+   </div>
+   <PhotoSection photo={site.photos[meeting.photo]} label={meeting.title} />
+  </article>)}
+ </div>
+</section>

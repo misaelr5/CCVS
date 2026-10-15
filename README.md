@@ -32,12 +32,12 @@ Fuentes reales: **Archivo Variable** (peso y ancho variables) + **Bodoni Moda Va
 | --- | --- |
 | `/` | Hero, bienvenida, horarios, comunidad, actividades, servicio y visita |
 | `/nosotros/` | Portada editorial, historia, creencias e identidad |
-| `/ministerios/` | Actividades locales en bloques alternados |
+| `/ministerios/` | Reuniones locales en bloques alternados |
 | `/visitanos/` | Horarios, dirección y primera visita |
 | `/links/` | Enlaces propios para teléfonos |
 | `/terminos-y-condiciones/` | Borrador pendiente de revisión institucional y jurídica |
 
-Anclas: `/nosotros/#historia`, `/nosotros/#creencias`, `/visitanos/#horarios`, y actividades en Ministerios.
+Anclas: `/nosotros/#historia`, `/nosotros/#creencias`, `/visitanos/#horarios`, y reuniones en `/ministerios/`.
 
 ## Contenido editable
 

@@ -1,0 +1,106 @@
+diff --git a/README.md b/README.md
+index 994a87c..0f35ab7 100644
+--- a/README.md
++++ b/README.md
+@@ -32,12 +32,12 @@ Fuentes reales: **Archivo Variable** (peso y ancho variables) + **Bodoni Moda Va
+ | --- | --- |
+ | `/` | Hero, bienvenida, horarios, comunidad, actividades, servicio y visita |
+ | `/nosotros/` | Portada editorial, historia, creencias e identidad |
+-| `/ministerios/` | Actividades locales en bloques alternados |
++| `/ministerios/` | Reuniones locales en bloques alternados |
+ | `/visitanos/` | Horarios, dirección y primera visita |
+ | `/links/` | Enlaces propios para teléfonos |
+ | `/terminos-y-condiciones/` | Borrador pendiente de revisión institucional y jurídica |
+ 
+-Anclas: `/nosotros/#historia`, `/nosotros/#creencias`, `/visitanos/#horarios`, y actividades en Ministerios.
++Anclas: `/nosotros/#historia`, `/nosotros/#creencias`, `/visitanos/#horarios`, y reuniones en `/ministerios/`.
+ 
+ ## Contenido editable
+ 
+diff --git a/src/data/links.ts b/src/data/links.ts
+index f13d9b2..eefd6f8 100644
+--- a/src/data/links.ts
++++ b/src/data/links.ts
+@@ -1,5 +1,5 @@
+ export interface Link { label: string; href: string; icon?: 'instagram' | 'facebook' | 'youtube' | 'map'; }
+-export const navigation: Link[] = [{ label: 'Inicio', href: '/' }, { label: 'Nosotros', href: '/nosotros/' }, { label: 'Ministerios', href: '/ministerios/' }, { label: 'Visitarnos', href: '/visitanos/' }];
++export const navigation: Link[] = [{ label: 'Inicio', href: '/' }, { label: 'Nosotros', href: '/nosotros/' }, { label: 'Reuniones', href: '/ministerios/' }, { label: 'Visitarnos', href: '/visitanos/' }];
+ export const groups = [
+   { title: 'La iglesia', links: [navigation[0], navigation[1], { label: 'Historia', href: '/nosotros/#historia' }, { label: 'Qué creemos', href: '/nosotros/#creencias' }] },
+   { title: 'Participá', links: [navigation[2], { label: 'Horarios', href: '/visitanos/#horarios' }, navigation[3]] },
+diff --git a/src/data/ministries.ts b/src/data/ministries.ts
+index 9d478c4..9af6c4e 100644
+--- a/src/data/ministries.ts
++++ b/src/data/ministries.ts
+@@ -1,8 +1,8 @@
+-export interface MinistryGroup { id: string; title: string; intro: string; activities: string[]; photo: 'children' | 'youth' | 'service' | 'community'; scheduleId?: string; }
++export interface MinistryGroup { id: string; title: string; intro: string; activities: string[]; photo: 'children' | 'youth' | 'service' | 'community' | 'prayerWord'; scheduleId?: string; }
+ export const ministries: MinistryGroup[] = [
+   { id: 'ninos', title: 'Niños', intro: 'Acompañamos a los niños en las actividades de nuestra congregación.', activities: ['Actividades para niños'], photo: 'children', scheduleId: 'ninos' },
+   { id: 'jovenes', title: 'Jóvenes', intro: 'Los jóvenes se reúnen para compartir la fe y crecer en el conocimiento de Jesús.', activities: ['Reuniones de jóvenes'], photo: 'youth', scheduleId: 'jovenes' },
+-  { id: 'vida-de-fe', title: 'Oración y Palabra.', intro: 'Nos reunimos para orar, estudiar la Biblia y acompañarnos en la fe.', activities: ['Oración', 'Estudios bíblicos', 'Consejería espiritual'], photo: 'community', scheduleId: 'oracion' },
++  { id: 'vida-de-fe', title: 'Oración y Palabra.', intro: 'Nos reunimos para orar, estudiar la Biblia y acompañarnos en la fe.', activities: ['Oración', 'Estudios bíblicos', 'Consejería espiritual'], photo: 'prayerWord', scheduleId: 'oracion' },
+   { id: 'servicio', title: 'Servir al prójimo.', intro: 'Compartimos el evangelio y ayudamos a nuestros vecinos mediante las actividades de la congregación.', activities: ['Ropero solidario', 'Merendero y ayuda social', 'Evangelismo'], photo: 'service' },
+   { id: 'encuentros', title: 'Caminar juntos en la fe.', intro: 'También hay encuentros para matrimonios, varones y mujeres.', activities: ['Matrimonios', 'Varones', 'Mujeres'], photo: 'community' },
+ ];
+diff --git a/src/data/site.ts b/src/data/site.ts
+index b0d4ce1..f2eab79 100644
+--- a/src/data/site.ts
++++ b/src/data/site.ts
+@@ -14,6 +14,7 @@ import youthPrayer from '../assets/photos/WhatsApp Image 20aaa26-10-14 at 19.57.
+ import aboutGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.20.07.jpeg';
+ import communityGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.18.40.jpeg';
+ import historyCross from '../assets/photos/WhatsApp Image 2026-10-14 at 21.32.51.jpeg';
++import prayerWord from '../assets/photos/Screenshot 2026-10-14 212933.jpg';
+ import serviceActivity from '../assets/photos/WhatsApp Image 2026-10-03 at 22.18.52.jpeg';
+ import type { ImageMetadata } from 'astro';
+ export interface Photo { src: ImageMetadata; alt: string; mobile?: ImageMetadata; position?: string; mobilePosition?: string; }
+@@ -41,7 +42,7 @@ export const ministryPhotos = {
+     },
+   ],
+ } satisfies { children: Photo; youth: Photo[] };
+-type PhotoKey = 'hero' | 'about' | 'community' | 'history' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'banner';
++type PhotoKey = 'hero' | 'about' | 'community' | 'history' | 'prayerWord' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'banner';
+ export const site = {
+   name: 'Comunidad Cristiana Villa Sarmiento', shortName: 'CCVS',
+   address: 'Vélez Sarsfield s/n, Villa Sarmiento, Córdoba, Argentina',
+@@ -68,6 +69,12 @@ export const site = {
+       position: 'center 64%',
+       mobilePosition: 'center 63%',
+     },
++    prayerWord: {
++      src: prayerWord,
++      alt: 'Una mujer comparte la Palabra junto a la cruz iluminada',
++      position: 'center 52%',
++      mobilePosition: 'center 48%',
++    },
+     children: {
+       src: childrenGroup,
+       alt: 'Encuentro de niños con sus coordinadores en una actividad grupal',
+diff --git a/src/pages/index.astro b/src/pages/index.astro
+index 1e1b83e..dbcc7eb 100644
+--- a/src/pages/index.astro
++++ b/src/pages/index.astro
+@@ -18,6 +18,6 @@ const principal = schedule[0];
+ <section class="home-banner shell section-gap" aria-label="La comunidad reunida"><PhotoSection photo={site.photos.banner} label="Un encuentro de nuestra congregación" kind="banner-photo" /><span class="banner-note">Cristo, cabeza de la iglesia · Colosenses 1:18</span><EditorialMark kind="x" class="banner-mark" /></section>
+ <section class="home-schedule shell section-gap" id="horarios"><h2>Reuniones.</h2><div class="schedule-showcase"><article class="schedule-feature"><PhotoSection photo={site.photos.gathering} label="Nuestra reunión principal" kind="schedule-feature-photo" /><div class="schedule-feature-copy"><p class="kicker">Para orar y crecer en la fe</p><h3>Reunión principal</h3><p>{principal.day} · {principal.time} hs</p><a class="pill" href="/visitanos/">Cómo visitarnos</a></div></article><div class="schedule-showcase-list"><p class="schedule-showcase-intro">Compartimos la fe en cada encuentro. Conocé los horarios de nuestra congregación.</p><Schedule interactive /></div></div></section>
+ <TextImageBlock title="Una historia de oración y fe." eyebrow="Desde 2005, en Villa Sarmiento" photo={site.photos.community}><p>En 2005 comenzamos a reunirnos para orar en la casa de Esther Mercado. Aquel deseo de crecer espiritualmente y compartir el evangelio sigue siendo parte de nuestra historia.</p><a class="inline-link" href="/nosotros/#historia">Conocé nuestra historia</a></TextImageBlock>
+-<section class="community-features shell section-gap"><h2>La fe se comparte.<br /><span class="serif">De una generación a otra.</span></h2><div class="feature-pair"><a href="/ministerios/#ninos"><PhotoSection photo={site.photos.children} label="Niños" /><h3>Niños <span aria-hidden="true">↗</span></h3><p>Sábado · 16:30 hs</p></a><a href="/ministerios/#jovenes"><PhotoSection photo={site.photos.youth} label="Jóvenes" /><h3>Jóvenes <span aria-hidden="true">↗</span></h3><p>Sábado · 21:00 hs</p></a></div><a class="inline-link" href="/ministerios/">Conocé las actividades</a></section>
++<section class="community-features shell section-gap"><h2>La fe se comparte.<br /><span class="serif">De una generación a otra.</span></h2><div class="feature-pair"><a href="/ministerios/#ninos"><PhotoSection photo={site.photos.children} label="Niños" /><h3>Niños <span aria-hidden="true">↗</span></h3><p>Sábado · 16:30 hs</p></a><a href="/ministerios/#jovenes"><PhotoSection photo={site.photos.youth} label="Jóvenes" /><h3>Jóvenes <span aria-hidden="true">↗</span></h3><p>Sábado · 21:00 hs</p></a></div><a class="inline-link" href="/ministerios/">Conocé las reuniones</a></section>
+ <section class="visit-invitation shell section-gap"><p class="kicker">Vení a una reunión</p><h2>Nos reunimos para adorar a Dios.<br /><span class="serif">Hay lugar para vos.</span></h2><address>{site.address}</address><a class="pill" href="/visitanos/">Horarios y primera visita</a></section>
+ </BaseLayout>
+diff --git a/src/pages/ministerios.astro b/src/pages/ministerios.astro
+index d5f8e6e..0c8771f 100644
+--- a/src/pages/ministerios.astro
++++ b/src/pages/ministerios.astro
+@@ -4,7 +4,7 @@ import ScrollAccent from '../components/ScrollAccent.astro';
+ import MinistryFeature from '../components/MinistryFeature.astro';
+ import { ministries } from '../data/ministries';
+ ---
+-<BaseLayout title="Oración, Palabra y servicio" description="Conocé las actividades de Comunidad Cristiana Villa Sarmiento: oración, estudios bíblicos, niños, jóvenes, evangelismo y ayuda social.">
+-<section class="page-heading shell"><h1>Crecer en Cristo.<br /><span class="serif">Servir al prójimo.</span></h1><p>Jesús llamó a sus seguidores a hacer discípulos. En nuestra congregación compartimos la fe mediante la oración, el estudio de la Biblia y el servicio a nuestros vecinos.</p><p class="scripture-note">Inspirado en Mateo 28:19–20</p><ScrollAccent kind="horizontal" /><nav class="section-navigation" aria-label="Actividades">{ministries.map(item => <a href={`#${item.id}`}>{item.title.replace(/\.$/, '')}</a>)}</nav></section>
+-<div class="ministries-showcase shell section-gap"><h2>Ministerios.</h2><div class="ministries-showcase-list">{ministries.map((ministry,index) => <MinistryFeature ministry={ministry} index={index} />)}</div></div>
++<BaseLayout title="Reuniones" description="Conocé las reuniones y espacios de Comunidad Cristiana Villa Sarmiento: oración, estudios bíblicos, niños, jóvenes, evangelismo y ayuda social.">
++<section class="page-heading shell"><h1>Crecer en Cristo.<br /><span class="serif">Servir al prójimo.</span></h1><p>Jesús llamó a sus seguidores a hacer discípulos. En nuestra congregación compartimos la fe mediante la oración, el estudio de la Biblia y el servicio a nuestros vecinos.</p><p class="scripture-note">Inspirado en Mateo 28:19–20</p><ScrollAccent kind="horizontal" /><nav class="section-navigation" aria-label="Reuniones">{ministries.map(item => <a href={`#${item.id}`}>{item.title.replace(/\.$/, '')}</a>)}</nav></section>
++<div class="ministries-showcase shell section-gap"><h2>Nos reunimos:</h2><div class="ministries-showcase-list">{ministries.map((ministry,index) => <MinistryFeature ministry={ministry} index={index} />)}</div></div>
+ </BaseLayout>

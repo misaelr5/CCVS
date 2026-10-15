@@ -31,7 +31,7 @@ test('tarjeta: sin fades, scroll usable, cierre exterior y sin trampa de foco', 
  await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();
 });
 
-test('navegación y retroceso empiezan arriba y reinician la entrada del título', async ({ page }) => {
+test('navegación y retroceso empiezan arriba sin sumar una segunda entrada al título', async ({ page }) => {
  await page.goto('/');
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
  for (const route of routes.slice(1)) {
@@ -41,9 +41,8 @@ test('navegación y retroceso empiezan arriba y reinician la entrada del título
   },route);
   await expect(page).toHaveURL(new RegExp(`${route}$`));
   await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(0);
-  await expect(page.locator('h1')).toHaveAttribute('data-entry-motion','up');
-  expect(await page.locator('h1').evaluate(element=>element.getAnimations().some(animation=>
-   (animation.effect as KeyframeEffect).getKeyframes().some(frame=>typeof frame.translate==='string')))).toBe(true);
+  await expect(page.locator('h1')).toHaveAttribute('data-entry-motion','settled');
+  expect(await page.locator('h1').evaluate(element=>element.getAnimations().length)).toBe(0);
  }
  for (let index=0;index<routes.length-1;index++) {
   await page.evaluate(()=>scrollTo(0,400));await page.goBack();
