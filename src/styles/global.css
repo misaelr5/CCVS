@@ -566,8 +566,7 @@ h2 { font-size:44px; }
 .about-cover:hover .about-media img,.history-heading:hover .photo-frame img { transform:scale(1.035); }
 
 .ministries-showcase { display:flow-root; position:relative; border-radius:22px; background:#e8e8df; padding:0 clamp(24px,4vw,62px) clamp(52px,6vw,90px); }
-.ministries-showcase > h2 { position:relative; z-index:1; width:fit-content; max-width:100%; margin-top:-.55em; margin-bottom:clamp(30px,3vw,52px); font-size:clamp(80px,11vw,160px); line-height:1; letter-spacing:-.09em; }
-.ministries-showcase > h2 { font-size:clamp(64px,7vw,106px); }
+.ministries-showcase > h2 { position:relative; z-index:1; width:fit-content; max-width:100%; margin-top:-.55em; margin-bottom:clamp(30px,3vw,52px); font-size:clamp(64px,7vw,106px); line-height:1; letter-spacing:-.09em; }
 .ministries-weekly-agenda { margin-bottom:clamp(40px,6vw,86px); }
 .ministries-weekly-agenda .schedule li { grid-template-columns:minmax(110px,.55fr) minmax(0,1.5fr) auto; padding-block:28px; }
 .ministries-weekly-agenda .schedule h3 { font-size:clamp(20px,2.5vw,31px); }

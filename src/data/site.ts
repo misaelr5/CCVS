@@ -113,7 +113,7 @@ export const site = {
     },
     gathering: {
       src: mainGathering,
-      alt: 'Vista general de la congregación reunida durante el encuentro principal',
+      alt: 'Vista general de la congregación reunida durante el encuentro general',
       position: '40% center',
       mobilePosition: '42% center',
     },

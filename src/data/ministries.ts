@@ -1,6 +1,7 @@
+import type { RegularGatheringId } from './schedule';
 interface MinistryBase { id: string; title: string; intro: string; activities: string[]; photo: 'children' | 'youth' | 'service' | 'community' | 'prayerWord'; }
 export type MinistryGroup =
-  | (MinistryBase & { periodicity: 'regular'; scheduleId: string })
+  | (MinistryBase & { periodicity: 'regular'; scheduleId: Exclude<RegularGatheringId, 'principal'> })
   | (MinistryBase & { periodicity: 'programada'; nextDate?: string });
 export type RegularMinistry = Extract<MinistryGroup, { periodicity: 'regular' }>;
 export type ProgrammedMinistry = Extract<MinistryGroup, { periodicity: 'programada' }>;

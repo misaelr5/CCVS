@@ -2,6 +2,23 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
+
+test('reuniones regulares y encuentros programados quedan separados', async ({ page }) => {
+  for (const route of ['/ministerios/', '/visitanos/']) {
+    await page.goto(route);
+    const weekly = route === '/ministerios/' ? page.locator('.ministries-weekly-agenda') : page.locator('.visit-layout');
+    await expect(weekly.locator('.schedule li')).toHaveCount(4);
+    await expect(weekly.locator('.schedule h3')).toHaveText(['Reunión general', 'Oración', 'Jóvenes', 'Niños']);
+    const programmed = page.locator('.programmed-meetings');
+    await expect(programmed.getByRole('heading', { name: 'Encuentros programados' })).toBeVisible();
+    await expect(programmed.locator('.programmed-item h3')).toHaveText(['Servir al prójimo.', 'Caminar juntos en la fe.']);
+    await expect(programmed.locator('.programmed-status')).toHaveText(['Fechas a anunciar', 'Fechas a anunciar']);
+    await expect(programmed.locator('time')).toHaveCount(0);
+  }
+  await page.locator('.programmed-item').first().getByRole('link', { name: 'Conocé el espacio' }).click();
+  await expect(page).toHaveURL(/\/ministerios\/#servicio$/);
+  await expect(page.locator('#servicio')).toBeVisible();
+});
 for (const width of [360, 375, 390, 430, 768, 1024, 1440]) {
   for (const route of routes) {
     test(`${route} · ${width}px: carga, layout y recursos`, async ({ page }) => {
