@@ -31,13 +31,14 @@ Fuentes reales: **Archivo Variable** (peso y ancho variables) + **Bodoni Moda Va
 | Ruta | Contenido |
 | --- | --- |
 | `/` | Hero, bienvenida, horarios, comunidad, actividades, servicio y visita |
-| `/nosotros/` | Portada editorial, historia, creencias e identidad |
+| `/nosotros/` | Portada editorial, historia e identidad |
+| `/lo-que-creemos/` | Creencias de la congregación y acordeón accesible |
 | `/ministerios/` | Reuniones locales en bloques alternados |
 | `/visitanos/` | Horarios, dirección y primera visita |
 | `/links/` | Enlaces propios para teléfonos |
 | `/terminos-y-condiciones/` | Borrador pendiente de revisión institucional y jurídica |
 
-Anclas: `/nosotros/#historia`, `/nosotros/#creencias`, `/visitanos/#horarios`, y reuniones en `/ministerios/`.
+Anclas: `/nosotros/#historia`, `/lo-que-creemos/#creencias`, `/visitanos/#horarios`, y reuniones en `/ministerios/`.
 
 ## Contenido editable
 

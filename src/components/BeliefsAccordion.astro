@@ -1,5 +1,12 @@
 ---
 import { beliefs, orientation } from '../data/beliefs';
 import ScrollAccent from './ScrollAccent.astro';
+interface Props { standalone?: boolean; }
+const { standalone = false } = Astro.props;
+const Heading = standalone ? 'h1' : 'h2';
+const ItemHeading = standalone ? 'h2' : 'h3';
 ---
-<section class="beliefs shell section-gap" id="creencias"><div class="beliefs-heading"><h2>Lo que creemos.</h2><ScrollAccent kind="circle" /></div><p class="beliefs-intro">La Biblia como única autoridad. Orientación cristiana: {orientation}.</p><div class="belief-list">{beliefs.map((item, index) => <article><h3><button class="belief-trigger" type="button" aria-expanded="true" aria-controls={`belief-panel-${index}`} id={`belief-button-${index}`}><span class="belief-number">0{index + 1}</span><span class="belief-title">{item.title}</span><span class="belief-symbol" aria-hidden="true">−</span></button></h3><div class="belief-panel" id={`belief-panel-${index}`} role="region" aria-labelledby={`belief-button-${index}`}><p>{item.text}</p></div></article>)}</div></section>
+<section class:list={['beliefs', 'shell', 'section-gap', { 'beliefs-page': standalone }]} id="creencias"><div class="beliefs-heading"><Heading>Lo que creemos.</Heading><ScrollAccent kind="circle" /></div><p class="beliefs-intro">La Biblia como única autoridad. Orientación cristiana: {orientation}.</p><div class="belief-list">{beliefs.map((item, index) => <article><ItemHeading><button class="belief-trigger" type="button" aria-expanded="true" aria-controls={`belief-panel-${index}`} id={`belief-button-${index}`}><span class="belief-number">0{index + 1}</span><span class="belief-title">{item.title}</span><span class="belief-symbol" aria-hidden="true">−</span></button></ItemHeading><div class="belief-panel" id={`belief-panel-${index}`} role="region" aria-labelledby={`belief-button-${index}`}><div class="belief-panel-inner"><p>{item.text}</p></div></div></article>)}</div></section>
+<style>
+  .beliefs-page { margin-top:clamp(32px,5vw,72px); }
+</style>

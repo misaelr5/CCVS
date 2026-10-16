@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import bible from '../assets/illustrations/biblia-grabado.png';
+import dove from '../assets/illustrations/paloma-grabado.png';
+import heart from '../assets/illustrations/corazon-cruz.png';
+interface Props { kind: 'bible' | 'dove' | 'heart'; class?: string; }
+const { kind, class: className = '' } = Astro.props;
+const illustrations = { bible, dove, heart };
+---
+<span class:list={['faith-sticker', className]} data-scroll-object aria-hidden="true">
+  <Image src={illustrations[kind]} alt="" aria-hidden="true" width={640} widths={[160, 280, 440, 640]} sizes="(max-width: 700px) 150px, 300px" format="webp" quality={85} loading="lazy" />
+</span>
+<style>
+  .faith-sticker { display:block; width:var(--sticker-size,clamp(120px,18vw,240px)); pointer-events:none; user-select:none; z-index:2; }
+  .faith-sticker img { width:100%; height:auto; }
+</style>

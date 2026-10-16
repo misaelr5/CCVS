@@ -10,7 +10,7 @@ const measurements = [];
 try {
   for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 }]) {
     const page = await browser.newPage({ viewport, reducedMotion: 'reduce' });
-    const routes = complete ? [['inicio', '/'], ['nosotros', '/nosotros/'], ['ministerios', '/ministerios/'], ['visitanos', '/visitanos/'], ['links', '/links/'], ['terminos','/terminos-y-condiciones/']] : [['inicio', '/'], ['nosotros', '/nosotros/']];
+    const routes = complete ? [['inicio', '/'], ['nosotros', '/nosotros/'], ['creencias', '/lo-que-creemos/'], ['ministerios', '/ministerios/'], ['visitanos', '/visitanos/'], ['links', '/links/'], ['terminos','/terminos-y-condiciones/']] : [['inicio', '/'], ['nosotros', '/nosotros/']];
     for (const [name, route] of routes) {
       const response = await page.goto(`${baseURL}${route}`);
       if (response?.status() !== 200) throw new Error(`${route}: ${response?.status()}`);
@@ -33,7 +33,7 @@ try {
       }, { name, width: viewport.width }));
     }
     if (complete) {
-      await page.goto(`${baseURL}/nosotros/#creencias`);
+      await page.goto(`${baseURL}/lo-que-creemos/`);
       await page.locator('.belief-trigger').first().click();
       await page.locator('.beliefs').screenshot({ path: `${directory}/creencias-${viewport.width}.png` });
       await page.goto(`${baseURL}/`);

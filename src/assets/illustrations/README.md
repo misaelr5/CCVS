@@ -1,0 +1,17 @@
+# Ilustraciones editoriales CCVS
+
+Generadas con la herramienta integrada image_gen, el 16/10/2026. Ilustraciones decorativas originales inspiradas en las referencias visuales del usuario; no son logos institucionales ni fotografías de la comunidad. PNG con transparencia conservados como fuentes; Astro genera WebP responsive para producción. No se usó la CLI ni una API externa.
+
+## Prompts
+
+### biblia-grabado.png
+
+Use case: illustration-story. Asset type: decorative cutout illustration for CCVS church editorial website. Create one original isolated illustration: An open Bible, seen in three quarter view, pages spreading naturally, hand-drawn etched woodcut and black ink stippling with imperfect fine crosshatching, an off-white irregular die-cut paper edge. Style guidance: the user supplied examples show tactile ink engravings, halftone black and white dove and Bible stickers and a painted heart with cross. Use that general handmade print sensibility, do not reproduce their exact composition. Composition: one complete subject centered with generous transparent margin, optimized to read at 180-300 CSS pixels. Flat print art, no 3D shadow. Background must be truly transparent, never include a checkerboard. No text, lettering, watermarks, brand logos, backdrop, captions or other objects. Black ink, warm off-white paper border. This is an illustration, not an institutional logo.
+
+### paloma-grabado.png
+
+Use case: illustration-story. Asset type: decorative cutout illustration for CCVS church editorial website. Create one original isolated illustration: A single dove in flight with wings spread upward, elegant recognizable anatomy, hand-drawn black ink woodcut, dense stippling and etched feather lines, off-white irregular die-cut paper edge. Style guidance: the user supplied examples show tactile ink engravings, halftone black and white dove and Bible stickers and a painted heart with cross. Use that general handmade print sensibility, do not reproduce their exact composition. Composition: one complete subject centered with generous transparent margin, optimized to read at 180-300 CSS pixels. Flat print art, no 3D shadow. Background must be truly transparent, never include a checkerboard. No text, lettering, watermarks, brand logos, backdrop, captions or other objects. Black ink, warm off-white paper border. This is an illustration, not an institutional logo.
+
+### corazon-cruz.png
+
+Use case: illustration-story. Asset type: decorative cutout illustration for CCVS church editorial website. Create one original isolated illustration: A heart painted with rough dry brush strokes in deep burgundy #631918, with an unpainted off-white simple Christian cross in its center. Visible handmade ink and paint texture, restrained distressed print, an irregular off-white paper cutout edge. Style guidance: the user supplied examples show tactile ink engravings, halftone black and white dove and Bible stickers and a painted heart with cross. Use that general handmade print sensibility, do not reproduce their exact composition. Composition: one complete subject centered with generous transparent margin, optimized to read at 180-300 CSS pixels. Flat print art, no 3D shadow. Background must be truly transparent, never include a checkerboard. No text, lettering, watermarks, brand logos, backdrop, captions or other objects. Black ink, warm off-white paper border, deep burgundy paint only. This is an illustration, not an institutional logo.

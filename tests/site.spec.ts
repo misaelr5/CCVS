@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
+const routes = ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
 
 test('reuniones regulares y encuentros programados quedan separados', async ({ page }) => {
   for (const route of ['/ministerios/', '/visitanos/']) {
@@ -81,13 +81,13 @@ for (const width of [390, 1440]) {
   expect(await page.evaluate(()=>scrollY)).toBe(600);
   await page.evaluate(()=>scrollTo(0,0));await trigger.click();
   await page.getByRole('dialog').getByRole('link',{name:'Qué creemos',exact:true}).click();
-  await expect(page).toHaveURL(/nosotros\/#creencias$/);
+  await expect(page).toHaveURL(/lo-que-creemos\/$/);
   await expect(page.getByRole('dialog')).not.toBeVisible();
  });
 }
 
 test('acordeón: teclado y estados ARIA', async ({ page }) => {
-  await page.goto('/nosotros/#creencias');
+  await page.goto('/lo-que-creemos/');
   const first = page.locator('.belief-trigger').first();
   const panel = page.locator('#belief-panel-0');
   await expect(panel).toBeHidden();
@@ -101,7 +101,7 @@ test('acordeón: teclado y estados ARIA', async ({ page }) => {
 test('sin JS: navegación y doctrina disponibles', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled:false, viewport:{width:390,height:844} });
   const page = await context.newPage();
-  await page.goto('/nosotros/');
+  await page.goto('/lo-que-creemos/');
   await expect(page.getByRole('navigation', {name:'Navegación sin JavaScript'})).toBeVisible();
   await expect(page.locator('.belief-panel')).toHaveCount(5);
   for (const panel of await page.locator('.belief-panel').all()) await expect(panel).toBeVisible();

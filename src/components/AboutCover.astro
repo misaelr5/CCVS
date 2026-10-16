@@ -3,4 +3,4 @@ import PhotoSection from './PhotoSection.astro';
 import { site, editorial } from '../data/site';
 import ScrollAccent from './ScrollAccent.astro';
 ---
-<section class="about-cover shell"><PhotoSection photo={site.photos.about} label="Vida de nuestra congregación" kind="about-media" eager /><div class="about-copy"><h1>Nosotros</h1><p class="editorial-statement">{editorial.about.map(line => <span>{line}</span>)}</p><p class="about-intro">{editorial.aboutIntro}</p><p class="scripture-note">Inspirado en Efesios 2:19–22</p><ScrollAccent kind="horizontal" /></div></section>
+<section class="about-cover shell"><PhotoSection photo={site.photos.aboutCover} label="Vida de nuestra congregación" kind="about-media" eager /><div class="about-copy"><h1>Nuestra<br /> historia</h1><p class="editorial-statement">{editorial.about.map(line => <span>{line}</span>)}</p><p class="about-intro">{editorial.aboutIntro}</p><ScrollAccent kind="horizontal" /></div></section>

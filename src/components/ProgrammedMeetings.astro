@@ -15,7 +15,6 @@ const { anchorIds = false } = Astro.props;
    <div class="programmed-copy">
     <h3>{meeting.title}</h3>
     <p>{meeting.intro}</p>
-    <ul class="programmed-activities">{meeting.activities.map(activity => <li>{activity}</li>)}</ul>
     <p class="programmed-status">{meeting.nextDate ?? 'Se anuncia por nuestros canales'}</p>
     <a class="ministry-card-link" href={anchorIds ? '/links/' : `/ministerios/#${meeting.id}`}>{anchorIds ? 'Canales oficiales' : 'Conocé el espacio'} <span aria-hidden="true">↗</span></a>
    </div>

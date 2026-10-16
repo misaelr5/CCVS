@@ -4,18 +4,20 @@ import welcomeCommunity from '../assets/photos/comunidad.jpg';
 import welcomePulpit from '../assets/photos/pulpito.jpg';
 import welcomeGathering from '../assets/photos/reunion.jpg';
 import mainGathering from '../assets/photos/general.jpg';
+import visitMeeting from '../assets/photos/visitanos-reunion-img-2764.jpg';
+import visitEntrancePortrait from '../assets/photos/IMG_2792.JPG.jpeg';
 import communityGroup from '../assets/photos/comunidad-grupo.jpg';
 import childrenGroup from '../assets/photos/ninios.jpg';
-import youthGroup from '../assets/photos/jovenes.jpg';
 import ministryChildren from '../assets/photos/niniosss.jpg';
-import youthReading from '../assets/photos/WhatsApp Image 2026-10-14 at 19.57.29.jpeg';
-import youthTeam from '../assets/photos/WhatsApp Image 2026-10-11 at 00.31.47.jpeg';
+import youthReading from '../assets/photos/jovenes-img-9947.jpg';
+import youthGroupLatest from '../assets/photos/WhatsApp Image 2026-10-16 at 02.52.23.jpeg';
 import youthPrayer from '../assets/photos/WhatsApp Image 20aaa26-10-14 at 19.57.29.jpeg';
-import aboutGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.20.07.jpeg';
-import communityGathering from '../assets/photos/WhatsApp Image 2026-10-14 at 20.18.40.jpeg';
-import historyCross from '../assets/photos/WhatsApp Image 2026-10-14 at 21.32.51.jpeg';
+import aboutHistory from '../assets/photos/WhatsApp Image 2026-10-14 at 20.56.07.jpeg';
+import historyCover from '../assets/photos/WhatsApp Image 2026-10-14 at 20.20.07.jpeg';
+import homeHistory from '../assets/photos/historia-oracion-fe.jpg';
+import communityGroupMeeting from '../assets/photos/564242379_2960663177654447_8435190360901970176_n.jpg';
 import prayerWord from '../assets/photos/Screenshot 2026-10-14 212933.jpg';
-import serviceActivity from '../assets/photos/WhatsApp Image 2026-10-03 at 22.18.52.jpeg';
+import serviceActivity from '../assets/photos/WhatsApp Image 2026-10-12 at 19.56.57.jpeg';
 import type { ImageMetadata } from 'astro';
 export interface Photo { src: ImageMetadata; alt: string; mobile?: ImageMetadata; position?: string; mobilePosition?: string; }
 export const ministryPhotos = {
@@ -27,13 +29,13 @@ export const ministryPhotos = {
   youth: [
     {
       src: youthReading,
-      alt: 'Jóvenes compartiendo la lectura de la Biblia en pequeños grupos',
-      position: 'center 72%',
+      alt: 'Jóvenes compartiendo un encuentro en pequeños grupos dentro de la iglesia',
+      position: 'center 55%',
     },
     {
-      src: youthTeam,
-      alt: 'Grupo de jóvenes con chalecos reflectantes al aire libre',
-      position: 'center',
+      src: youthGroupLatest,
+      alt: 'Grupo de jóvenes reunidos en el salón de la iglesia',
+      position: 'center center',
     },
     {
       src: youthPrayer,
@@ -42,7 +44,7 @@ export const ministryPhotos = {
     },
   ],
 } satisfies { children: Photo; youth: Photo[] };
-type PhotoKey = 'hero' | 'about' | 'community' | 'history' | 'prayerWord' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'banner';
+type PhotoKey = 'hero' | 'about' | 'aboutCover' | 'community' | 'communityMeetings' | 'prayerWord' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'visitMeeting' | 'visitEntrance' | 'banner';
 export const site = {
   name: 'Comunidad Cristiana Villa Sarmiento', shortName: 'CCVS',
   address: 'Vélez Sarsfield s/n, Villa Sarmiento, Córdoba, Argentina',
@@ -52,22 +54,28 @@ export const site = {
   photos: {
     hero: null,
     about: {
-      src: aboutGathering,
-      alt: 'La congregación reunida durante una celebración en el salón de Villa Sarmiento',
+      src: aboutHistory,
+      alt: 'Salón de la congregación preparado para una reunión, con filas de sillas y una cruz al frente',
+      position: 'center',
+      mobilePosition: 'center',
+    },
+    aboutCover: {
+      src: historyCover,
+      alt: 'La congregación reunida en el salón decorado con banderines',
       position: 'center 52%',
-      mobilePosition: 'center 58%',
+      mobilePosition: 'center 52%',
     },
     community: {
-      src: communityGathering,
-      alt: 'La comunidad reunida para adorar y compartir en el salón',
-      position: 'center 52%',
-      mobilePosition: 'center 55%',
+      src: homeHistory,
+      alt: 'La congregación reunida en oración frente a la cruz de la iglesia',
+      position: 'center',
+      mobilePosition: '55% center',
     },
-    history: {
-      src: historyCross,
-      alt: 'La cruz iluminada en el salón de la comunidad',
-      position: 'center 64%',
-      mobilePosition: 'center 63%',
+    communityMeetings: {
+      src: communityGroupMeeting,
+      alt: 'Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz',
+      position: 'center',
+      mobilePosition: 'center',
     },
     prayerWord: {
       src: prayerWord,
@@ -82,16 +90,16 @@ export const site = {
       mobilePosition: 'left center',
     },
     youth: {
-      src: youthGroup,
-      alt: 'Jóvenes reunidos durante una actividad en la iglesia',
-      position: 'center 52%',
-      mobilePosition: 'center 52%',
+      src: youthReading,
+      alt: 'Jóvenes reunidos durante una actividad con la cruz visible al fondo',
+      position: 'center 25%',
+      mobilePosition: 'center 25%',
     },
     service: {
       src: serviceActivity,
-      alt: 'Voluntarios acompañando a niños durante una actividad comunitaria',
-      position: 'center 48%',
-      mobilePosition: 'center 50%',
+      alt: 'Grupo de jóvenes al aire libre, varios con chalecos reflectantes',
+      position: 'center',
+      mobilePosition: 'center',
     },
     welcome: {
       src: welcomeCommunity,
@@ -117,6 +125,18 @@ export const site = {
       position: '40% center',
       mobilePosition: '42% center',
     },
+    visitMeeting: {
+      src: visitMeeting,
+      alt: 'La congregación reunida durante el encuentro general',
+      position: 'center 58%',
+      mobilePosition: 'center 58%',
+    },
+    visitEntrance: {
+      src: visitEntrancePortrait,
+      alt: 'Un miembro de la comunidad comparte un mensaje desde el púlpito',
+      position: 'center 30%',
+      mobilePosition: 'center 30%',
+    },
     banner: {
       src: communityGroup,
       alt: 'Foto grupal de la comunidad frente al púlpito de la iglesia',
@@ -130,7 +150,7 @@ export const site = {
 export const editorial = {
   hero: ['Jesucristo,', 'el camino', 'al Padre.'],
   heroIntro: 'Jesús nos llama a seguirlo. En Villa Sarmiento nos reunimos para aprender su Palabra, orar y acompañarnos en la fe.',
-  about: ['Jesús nos reúne.', 'Su Palabra nos guía.', 'Su amor nos mueve a servir.'],
+  about: ['La oración nos reunió.', 'El evangelio nos sigue convocando.'],
   aboutIntro: 'Somos Comunidad Cristiana Villa Sarmiento. Creemos en Jesucristo y buscamos crecer en el conocimiento de las Escrituras, la oración y el servicio a nuestros vecinos.',
   welcome: 'En Cristo, crecemos juntos.',
 };

@@ -41,7 +41,7 @@ test('navegación: detiene el video anterior y vuelve a Inicio sin sonido', asyn
  await page.getByRole('button', { name: 'Activar sonido', exact: true }).click();
  await page.evaluate(() => { (window as Window & { oldVideo?: HTMLVideoElement }).oldVideo = document.querySelector('video')!; });
  await page.locator('.hero-copy a').click();
- await expect(page).toHaveURL(/nosotros\/#creencias$/);
+ await expect(page).toHaveURL(/lo-que-creemos\/$/);
  expect(await page.evaluate(() => {
   const oldVideo = (window as Window & { oldVideo?: HTMLVideoElement }).oldVideo;
   return oldVideo ? oldVideo.paused && oldVideo.muted && !oldVideo.hasAttribute('src') : true;
@@ -50,7 +50,7 @@ test('navegación: detiene el video anterior y vuelve a Inicio sin sonido', asyn
  await expect(page.locator('[data-video-sound]')).toHaveText('Activar sonido');
  expect(await page.locator('video').evaluate(element => (element as HTMLVideoElement).muted)).toBe(true);
  await page.goForward();
- await expect(page).toHaveURL(/nosotros\/#creencias$/);
+ await expect(page).toHaveURL(/lo-que-creemos\/$/);
  await expect(page.locator('video')).toHaveCount(0);
  await page.goBack();
  await expect(page.locator('video')).toHaveCount(1);

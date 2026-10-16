@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FaithIllustration from '../components/FaithIllustration.astro';
 import ScrollAccent from '../components/ScrollAccent.astro';
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
 import { hubLinks, externalLinks, mapUrl, isHttpsUrl, type Link } from '../data/links';
 import SocialIcon from '../components/SocialIcon.astro';
-const links: Link[] = [...hubLinks.slice(0,2), ...(mapUrl ? [{label:'Cómo llegar — Google Maps',href:mapUrl,icon:'map' as const}] : []), ...externalLinks.filter(link=>isHttpsUrl(link.href)), ...hubLinks.slice(2)];
+const links: Link[] = [...hubLinks, ...(mapUrl ? [{label:'Cómo llegar — Google Maps',href:mapUrl,icon:'map' as const}] : []), ...externalLinks.filter(link=>isHttpsUrl(link.href))];
 ---
 <BaseLayout title="Enlaces de la congregación" description="Encontrá horarios, visita, historia, actividades y redes de Comunidad Cristiana Villa Sarmiento." compact>
-<section class="links-hub"><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana" width={106} height={106} format="webp" loading="eager" /><h1>Comunidad Cristiana<br /><span>Villa Sarmiento</span></h1><p>Queremos compartir con vos nuestra fe en Jesucristo.<br />Elegí por dónde empezar.</p><ScrollAccent kind="horizontal" /><nav aria-label="Enlaces de la iglesia">{links.map(link => <a href={link.href} class="link-button" target={isHttpsUrl(link.href)?'_blank':undefined} rel={isHttpsUrl(link.href)?'noopener noreferrer':undefined} data-astro-reload={isHttpsUrl(link.href)}><SocialIcon type={link.icon} /><span>{link.label}</span>{isHttpsUrl(link.href) && <span class="sr-only"> (abre en una pestaña nueva)</span>}</a>)}</nav><address>{site.address}</address><a class="hub-legal" href="/terminos-y-condiciones/">Términos y condiciones · borrador</a></section>
+<section class="links-hub"><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana" width={106} height={106} format="webp" loading="eager" /><h1>Comunidad Cristiana<br /><span>Villa Sarmiento</span></h1><p>Queremos compartir con vos nuestra fe en Jesucristo.<br />Elegí por dónde empezar.</p><ScrollAccent kind="horizontal" /><FaithIllustration kind="dove" class="links-faith-sticker" /><nav aria-label="Enlaces de la iglesia">{links.map(link => <a href={link.href} class="link-button" target={isHttpsUrl(link.href)?'_blank':undefined} rel={isHttpsUrl(link.href)?'noopener noreferrer':undefined} data-astro-reload={isHttpsUrl(link.href)}><SocialIcon type={link.icon} /><span>{link.label}</span>{isHttpsUrl(link.href) && <span class="sr-only"> (abre en una pestaña nueva)</span>}</a>)}</nav><address>{site.address}</address><a class="hub-legal" href="/terminos-y-condiciones/">Términos y condiciones · borrador</a></section>
 </BaseLayout>

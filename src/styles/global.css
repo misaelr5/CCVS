@@ -1,4 +1,29 @@
 @import "tailwindcss";
+/* Recortes decorativos: el movimiento se comparte con los acentos editoriales. */
+.illustrated-photo { position:relative; min-width:0; }
+.illustrated-photo > .faith-sticker { position:absolute; right:24px; top:24px; rotate:-9deg; }
+.beliefs-photo-slot { margin-top:64px; }
+.beliefs-photo-slot .photo-frame { aspect-ratio:16/7; border-radius:2px; }
+.beliefs-photo-slot > .faith-sticker { top:auto; bottom:-24px; --sticker-size:clamp(160px,23vw,300px); rotate:-8deg; }
+.home-faith-sticker { position:absolute; right:24px; bottom:-32px; --sticker-size:clamp(120px,17vw,220px); rotate:9deg; }
+.illustrated-heading { position:relative; }
+.page-heading.illustrated-heading h1 { max-width:calc(100% - 230px); }
+.heading-faith-sticker { position:absolute; right:24px; top:90px; --sticker-size:clamp(150px,20vw,250px); rotate:9deg; }
+.illustrated-invitation { position:relative; padding-right:280px; }
+.invitation-faith-sticker { position:absolute; right:24px; top:40px; rotate:-8deg; }
+.links-faith-sticker { --sticker-size:100px; margin:8px auto 24px; rotate:9deg; }
+@media(max-width:700px) {
+ .illustrated-photo > .faith-sticker { right:12px; top:16px; --sticker-size:115px; }
+ .beliefs-photo-slot { margin-top:40px; }
+ .beliefs-photo-slot .photo-frame { aspect-ratio:4/3; }
+ .beliefs-photo-slot > .faith-sticker { top:18px; bottom:auto; --sticker-size:150px; }
+ .home-faith-sticker { right:12px; bottom:-22px; --sticker-size:110px; }
+ .page-heading.illustrated-heading h1 { max-width:100%; }
+ .heading-faith-sticker { position:relative; top:auto; right:auto; margin:20px 12px 24px auto; --sticker-size:120px; }
+ .illustrated-invitation { padding-right:0; }
+ .invitation-faith-sticker { position:relative; right:auto; top:auto; margin:0 12px 30px auto; --sticker-size:115px; }
+ .links-faith-sticker { --sticker-size:80px; }
+}
 @theme { --font-sans: 'Archivo Variable', Arial, sans-serif; --font-editorial: 'Bodoni Moda Variable', Georgia, serif; --color-burgundy: #631918; --color-paper: #f7f6f3; }
 :root { --paper:#f7f6f3; --surface:#e8e5e1; --ink:#111; --accent:#631918; --line:#a7a39d; --font-sans:'Archivo Variable',Arial,sans-serif; --font-editorial:'Bodoni Moda Variable',Georgia,serif; color:var(--ink); background:var(--paper); font-family:var(--font-sans); font-synthesis:none; }
 * { box-sizing:border-box; }
@@ -75,7 +100,7 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .about-cover { display:grid; grid-template-columns:minmax(0,45fr) minmax(0,55fr); column-gap:52px; padding-top:18px; align-items:start; max-width:1120px; margin-left:max(72px,calc((100vw - 1296px)/2)); margin-right:auto; }
 .about-media { grid-column:2; grid-row:1; height:492px; aspect-ratio:auto; }
 .about-copy { grid-column:1; grid-row:1; padding-right:35px; }
-.about-copy h1 { font-size:clamp(70px,7.5vw,100px); font-stretch:80%; text-transform:uppercase; letter-spacing:-.075em; line-height:1; margin-bottom:42px; position:relative; z-index:1; }
+.about-copy h1 { font-size:clamp(70px,7.5vw,100px); font-stretch:80%; letter-spacing:-.075em; line-height:1; margin-bottom:42px; position:relative; z-index:1; }
 .editorial-statement { font-size:clamp(46px,4vw,58px); line-height:1.09; max-width:420px; }
 .editorial-statement span { display:block; }
 .editorial-statement span + span { margin-top:14px; }
@@ -111,15 +136,6 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .feature-pair h3 { display:flex; justify-content:space-between; font-size:30px; text-decoration:underline; text-underline-offset:5px; margin-block:20px 12px; }
 .visit-invitation h2 { max-width:800px; }
 .visit-invitation address { font-style:normal; margin-block:24px; }
-.history-heading { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-.history-heading .photo-frame { aspect-ratio:1.25; }
-.history-chapters { margin-top:70px; }
-.history-chapter { position:relative; display:grid; grid-template-columns:1fr 1.4fr 45px; gap:80px; padding-block:40px; border-top:1px solid var(--line); }
-.chapter-period { font-family:var(--font-editorial); font-size:40px; line-height:1.1; letter-spacing:-.055em; }
-.history-chapter h3 { font-size:32px; margin-bottom:22px; }
-.history-chapter p:not(.chapter-period) { font-size:16px; max-width:540px; }
-.history-chapter .chapter-note { font-size:13px; margin-top:14px; color:#595650; }
-.chapter-index { font-size:14px; }
 .beliefs { border-radius:14px; background:var(--surface); padding:40px; }
 .beliefs .serif-label { font-size:24px; margin-bottom:15px; }
 .beliefs-intro { font-size:14px; max-width:580px; margin-bottom:35px; }
@@ -130,7 +146,7 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .belief-title { font-size:22px; font-weight:650; letter-spacing:-.04em; line-height:1.15; }
 .belief-symbol { display:flex; align-items:center; justify-content:center; border:1px solid; border-radius:50%; width:23px; height:23px; font-size:24px; font-weight:400; line-height:1; letter-spacing:0; }
 .belief-trigger[aria-expanded=true] .belief-number,.belief-trigger[aria-expanded=true] .belief-symbol { color:var(--accent); }
-.belief-panel { padding:0 50px 38px 120px; max-width:800px; }
+.belief-panel { padding:0; max-width:800px; }
 .identity { display:grid; grid-template-columns:1.2fr 1fr; align-items:center; gap:80px; }
 .identity p { max-width:470px; margin-top:24px; }
 .identity-marks { display:flex; align-items:center; justify-content:center; padding:24px; gap:25px; background:var(--paper); }
@@ -142,8 +158,7 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .about-copy { padding-right:28px; }
 .about-copy h1 { font-size:8.1vw; }
 .editorial-statement { font-size:5.2vw; }
-.text-image,.welcome,.gatherings,.history-heading,.identity { gap:50px; }
-.history-chapter { gap:35px; }
+.text-image,.welcome,.gatherings,.identity { gap:50px; }
 }
 @media(max-width:700px) {
 .shell { width:calc(100% - 48px); }
@@ -172,7 +187,7 @@ h2 { font-size:44px; }
 .editorial-statement { font-size:clamp(40px,11.3vw,52px); line-height:1.1; max-width:350px; letter-spacing:-.07em; }
 .editorial-statement span + span { margin-top:12px; }
 .about-intro { font-size:16px; line-height:1.5; margin-top:28px; max-width:360px; }
-.welcome,.gatherings,.text-image,.history-heading,.identity { grid-template-columns:1fr; gap:32px; }
+.welcome,.gatherings,.text-image,.identity { grid-template-columns:1fr; gap:32px; }
 .large-serif { font-size:44px; }
 .welcome h2 { font-size:42px; }
 .sunday { padding:30px 24px; }
@@ -190,13 +205,6 @@ h2 { font-size:44px; }
 .feature-pair h3 { font-size:26px; margin-top:16px; }
 .community-features h2 { font-size:42px; }
 .photo-placeholder-label { left:20px; bottom:20px; font-size:12px; }
-.history-heading .photo-frame { aspect-ratio:1.3; }
-.history-chapters { margin-top:40px; }
-.history-chapter { grid-template-columns:1fr; gap:18px; padding-block:30px; }
-.chapter-period { font-size:34px; max-width:90%; }
-.history-chapter h3 { font-size:28px; margin-bottom:16px; }
-.history-chapter p:not(.chapter-period) { font-size:15px; }
-.chapter-index { position:absolute; right:0; top:35px; font-size:12px; }
 .beliefs { padding:30px 22px; }
 .beliefs-intro { font-size:13px; margin-bottom:28px; }
 .beliefs .serif-label { font-size:22px; }
@@ -204,7 +212,7 @@ h2 { font-size:44px; }
 .belief-number { grid-column:1; font-size:36px; line-height:1; }
 .belief-title { grid-column:1; grid-row:2; font-size:19px; }
 .belief-symbol { grid-column:2; grid-row:2; width:22px; height:22px; font-size:22px; }
-.belief-panel { padding:0 0 24px; font-size:14px; }
+ .belief-panel { padding:0; font-size:14px; }
 .identity-marks { gap:15px; }
 }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none !important; animation:none !important; scroll-behavior:auto !important; } }
@@ -511,9 +519,8 @@ h2 { font-size:44px; }
 .feature-pair > a:hover h3 span,.feature-pair > a:focus-visible h3 span { transform:translate(3px,-3px) rotate(12deg); }
 .menu-open,.menu-close { border-radius:50%; transition:background 220ms ease,transform 220ms ease; }
 .menu-open:hover,.menu-open:focus-visible,.menu-close:hover,.menu-close:focus-visible { background:var(--surface); transform:translateY(-3px); }
-.belief-trigger { transition:background 220ms ease; }
-.belief-trigger:hover,.belief-trigger:focus-visible { background:#6319180a; }
-.belief-title,.belief-symbol { transition:transform 220ms ease; }
+.belief-trigger { color:var(--ink); transition:color 240ms ease; }
+.belief-title,.belief-symbol { transition:transform 220ms ease,color 240ms ease; }
 .belief-trigger:hover .belief-title,.belief-trigger:focus-visible .belief-title { transform:translateX(4px); }
 .belief-trigger:hover .belief-symbol,.belief-trigger:focus-visible .belief-symbol { transform:rotate(12deg); }
 @media(prefers-reduced-motion:reduce) {
@@ -557,13 +564,10 @@ h2 { font-size:44px; }
 @media(min-width:701px) {
  .about-cover { column-gap:clamp(22px,3vw,44px); }
  .about-copy h1 { width:max-content; max-width:none; padding-right:.08em; font-size:clamp(90px,10.3vw,150px); letter-spacing:-.085em; }
- .history-heading { gap:clamp(22px,3vw,48px); }
- .history-heading > div:last-child { position:relative; z-index:1; }
- .history-heading h2 { width:calc(100% + clamp(30px,6vw,90px)); margin-left:calc(-1 * clamp(30px,6vw,90px)); font-size:clamp(52px,5.8vw,82px); line-height:1.01; }
  .text-image:not(.ministry-feature) .text-image-copy h2 { position:relative; z-index:1; width:calc(100% + 70px); margin-left:-70px; font-size:clamp(48px,5.2vw,76px); line-height:1.01; }
 }
-.about-media img,.history-heading .photo-frame img { transition:transform 850ms cubic-bezier(.16,1,.3,1); }
-.about-cover:hover .about-media img,.history-heading:hover .photo-frame img { transform:scale(1.035); }
+.about-media img { transition:transform 850ms cubic-bezier(.16,1,.3,1); }
+.about-cover:hover .about-media img { transform:scale(1.035); }
 
 .ministries-showcase { display:flow-root; position:relative; border-radius:22px; background:#e8e8df; padding:0 clamp(24px,4vw,62px) clamp(52px,6vw,90px); }
 .ministries-showcase > h2 { position:relative; z-index:1; width:fit-content; max-width:100%; margin-top:-.55em; margin-bottom:clamp(30px,3vw,52px); font-size:clamp(64px,7vw,106px); line-height:1; letter-spacing:-.09em; }
@@ -587,6 +591,7 @@ h2 { font-size:44px; }
 .ministry-card-link:hover span,.ministry-card-link:focus-visible span { transform:translate(3px,-3px); }
 .ministry-card-link:focus-visible { outline:3px solid currentColor; outline-offset:3px; }
 .ministries-showcase .ministry-feature > .photo-frame,.ministries-showcase .ministry-gallery .photo-frame { aspect-ratio:3/4; }
+@media(min-width:701px) { .ministries-showcase :is(#ninos,#vida-de-fe) > .photo-frame { align-self:center; } }
 .ministries-showcase .ministry-feature > .photo-frame img,.ministries-showcase .ministry-gallery img { transition:transform 800ms cubic-bezier(.16,1,.3,1); }
 .ministries-showcase .ministry-feature:hover > .photo-frame img,.ministries-showcase .ministry-feature:focus-within > .photo-frame img,.ministries-showcase .ministry-gallery .photo-frame:hover img { transform:scale(1.045); }
 @media(hover:hover) and (pointer:fine) {
@@ -612,19 +617,25 @@ h2 { font-size:44px; }
 
 .beliefs { padding:clamp(30px,5vw,72px); }
 .beliefs-heading { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:26px; }
-.beliefs-heading h2 { max-width:900px; font-size:clamp(64px,8.8vw,126px); line-height:.96; letter-spacing:-.085em; }
+.beliefs-heading :is(h1,h2) { max-width:900px; font-size:clamp(64px,8.8vw,126px); line-height:.96; letter-spacing:-.085em; }
 .beliefs-heading .scroll-accent { flex:none; width:clamp(70px,10vw,150px); height:clamp(70px,10vw,150px); margin:0; }
 .beliefs-intro { max-width:720px; font-size:17px; margin-bottom:clamp(40px,5vw,70px); }
 .belief-list article { position:relative; isolation:isolate; }
-.belief-list article::before { content:''; position:absolute; inset:0; z-index:-1; background:#6319180d; transform:scaleX(0); transform-origin:left; transition:transform 440ms cubic-bezier(.16,1,.3,1); }
-.belief-list article:hover::before,.belief-list article:focus-within::before { transform:scaleX(1); }
+.belief-list article:hover,.belief-list article:focus-within,.belief-list article.is-expanded { border-color:transparent; }
+.belief-list article::before { content:''; position:absolute; inset:0; z-index:-1; border-radius:20px; background:var(--accent); transform:scaleX(0); transform-origin:left center; transition:transform 480ms cubic-bezier(.22,1,.36,1); }
+.belief-list article:hover::before,.belief-list article:focus-within::before,.belief-list article.is-expanded::before { transform:scaleX(1); }
+.belief-list article:hover .belief-trigger,.belief-list article:focus-within .belief-trigger,.belief-list article.is-expanded .belief-trigger { color:white; }
+.belief-list article:hover .belief-number,.belief-list article:hover .belief-symbol,.belief-list article:focus-within .belief-number,.belief-list article:focus-within .belief-symbol,.belief-list article.is-expanded .belief-number,.belief-list article.is-expanded .belief-symbol { color:white; }
 .belief-trigger { min-height:116px; }
 .belief-title { font-size:clamp(22px,2.4vw,34px); }
-.belief-panel { font-size:17px; line-height:1.55; }
+.belief-panel { max-width:800px; overflow:hidden; font-size:17px; line-height:1.55; }
+.belief-panel-inner { padding:0 50px 38px 120px; opacity:1; transform:none; transition:opacity 300ms ease,transform 480ms cubic-bezier(.22,1,.36,1); }
+.belief-list article.is-collapsed:not(.is-expanded) .belief-panel-inner { opacity:0; transform:translateX(-14px); }
+.belief-list article.is-expanded .belief-panel-inner { opacity:1; transform:translateX(0); }
+.belief-list article.is-expanded .belief-panel { color:white; }
 @media(max-width:700px) {
  .about-media { margin-bottom:0; }
  .about-copy h1 { width:max-content; max-width:100%; margin-top:-.29em; margin-bottom:34px; font-size:clamp(62px,15.8vw,83px); letter-spacing:-.085em; }
- .history-heading h2 { font-size:clamp(41px,10.6vw,52px); }
  .ministries-showcase { width:calc(100% - 24px); border-radius:18px; margin-top:120px; padding:0 18px 44px; }
  .ministries-showcase > h2 { margin-top:-.55em; margin-bottom:22px; font-size:clamp(48px,12vw,70px); }
  .ministries-showcase .ministry-feature { grid-template-columns:1fr; gap:24px; padding-block:42px; }
@@ -644,17 +655,18 @@ h2 { font-size:44px; }
  .programmed-item > .photo-frame { aspect-ratio:1.35; margin-top:26px; }
  .beliefs { padding:28px 22px 34px; }
  .beliefs-heading { align-items:start; margin-bottom:20px; }
- .beliefs-heading h2 { font-size:clamp(48px,12vw,66px); }
+ .beliefs-heading :is(h1,h2) { font-size:clamp(48px,12vw,66px); }
  .beliefs-heading .scroll-accent { width:52px; height:52px; }
  .beliefs-intro { font-size:15px; margin-bottom:32px; }
  .belief-trigger { min-height:116px; }
  .belief-title { font-size:22px; }
  .belief-panel { font-size:15px; }
+ .belief-panel-inner { padding:0 0 24px; }
 }
 @media(prefers-reduced-motion:reduce) {
  .programmed-item { transition:none; }
  .programmed-item:hover,.programmed-item:focus-within { transform:none; }
- .about-cover:hover .about-media img,.history-heading:hover .photo-frame img,.ministries-showcase .ministry-feature:hover > .photo-frame img,.ministries-showcase .ministry-feature:focus-within > .photo-frame img,.ministries-showcase .ministry-gallery .photo-frame:hover img { transform:none; }
+ .about-cover:hover .about-media img,.ministries-showcase .ministry-feature:hover > .photo-frame img,.ministries-showcase .ministry-feature:focus-within > .photo-frame img,.ministries-showcase .ministry-gallery .photo-frame:hover img { transform:none; }
  .ministry-info-card,.ministry-card-link,.ministry-card-link span { transition:none; }
  .ministry-feature .ministry-info-card:hover { transform:none; }
  .belief-list article::before { transition:none; }

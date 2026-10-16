@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
+const routes = ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
 
 test('tarjeta: sin fades, scroll usable, cierre exterior y sin trampa de foco', async ({ page }) => {
  await page.goto('/');
@@ -55,11 +55,12 @@ test('navegación y retroceso empiezan arriba sin sumar una segunda entrada al t
 for (const route of routes) {
  test(`objetos al scroll ${route}: responden y respetan reduced motion`, async ({ page }) => {
   await page.goto(route);
-  const object = page.locator('[data-scroll-object]').first();
+  const object = page.locator('main [data-scroll-object], main svg.editorial-mark').first();
   await expect(object).toBeVisible();
+  await object.scrollIntoViewIfNeeded();
   await expect.poll(()=>object.evaluate(element=>element.style.transform)).not.toBe('');
   const before = await object.evaluate(element=>element.style.transform);
-  await page.evaluate(()=>scrollTo(0,160));
+  await page.evaluate(()=>scrollBy(0,160));
   await expect.poll(()=>object.evaluate(element=>element.style.transform)).not.toBe(before);
   await page.emulateMedia({reducedMotion:'reduce'});
   await expect.poll(()=>object.evaluate(element=>element.style.transform)).toBe('');

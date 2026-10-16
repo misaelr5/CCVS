@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BeliefsAccordion from '../components/BeliefsAccordion.astro';
+import ScrollAccent from '../components/ScrollAccent.astro';
+import PhotoSection from '../components/PhotoSection.astro';
+import FaithIllustration from '../components/FaithIllustration.astro';
+---
+<BaseLayout title="Lo que creemos" description="Conocé las creencias de Comunidad Cristiana Villa Sarmiento: la Biblia como autoridad, Jesucristo, la salvación por gracia y la vida de fe.">
+  <section class="page-heading shell">
+    <h1>Nuestra fe en Cristo.<br /><span class="serif">La Biblia nos guía.</span></h1>
+    <p>Creemos en Jesucristo y reconocemos la Biblia como única autoridad. Compartimos una vida de oración, adoración y fe.</p>
+    <ScrollAccent kind="horizontal" />
+  </section>
+  <section class="beliefs-photo-slot illustrated-photo shell section-gap" aria-label="Espacio para una fotografía de nuestra comunidad">
+    <PhotoSection label="Compartimos la fe" kind="beliefs-photo-reserve" />
+    <FaithIllustration kind="bible" />
+  </section>
+  <BeliefsAccordion />
+</BaseLayout>

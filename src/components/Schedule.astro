@@ -1,6 +1,6 @@
 ---
 import { schedule } from '../data/schedule';
-interface Props { interactive?: boolean; }
-const { interactive = false } = Astro.props;
+interface Props { interactive?: boolean; variant?: 'rows' | 'cards'; }
+const { interactive = false, variant = 'rows' } = Astro.props;
 ---
-<ul class:list={['schedule', { 'schedule--interactive': interactive }]}>{schedule.map(item => <li>{interactive ? <a href={item.href} aria-label={`${item.title}, ${item.day} a las ${item.time} horas. Ver detalles`}><span class="schedule-day">{item.day}</span><span class="schedule-row-copy"><strong>{item.title}</strong><small>Conocé la actividad <span aria-hidden="true">↗</span></small></span><span class="schedule-row-time">{item.time}<small> hs</small></span></a> : <><span>{item.day}</span><h3>{item.title}</h3><p>{item.time}<small> hs</small></p></>}</li>)}</ul>
+<ul class:list={['schedule', { 'schedule--interactive': interactive, 'schedule--cards': variant === 'cards' }]}>{schedule.map(item => <li>{interactive ? <a href={variant === 'cards' && item.id === 'principal' ? '#donde' : item.href} aria-label={`${item.title}, ${item.day} a las ${item.time} horas. Ver detalles`}><span class="schedule-day">{item.day}</span><span class="schedule-row-copy"><strong>{item.title}</strong><small>Conocé la actividad <span aria-hidden="true">↗</span></small></span><span class="schedule-row-time">{item.time}<small> hs</small></span></a> : <><span>{item.day}</span><h3>{item.title}</h3><p>{item.time}<small> hs</small></p></>}</li>)}</ul>

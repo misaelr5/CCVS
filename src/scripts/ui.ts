@@ -109,11 +109,26 @@ function initialize(force = false) {
  }
  document.querySelectorAll<HTMLButtonElement>('.belief-trigger').forEach(button => {
   const panel=document.getElementById(button.getAttribute('aria-controls')??''); if(!panel) return;
+  const article=button.closest('article');
   button.setAttribute('aria-expanded','false'); panel.hidden=true;
+  panel.inert=true;
+  article?.classList.remove('is-expanded');
+  article?.classList.add('is-collapsed');
   const symbol=button.querySelector('.belief-symbol'); if(symbol)symbol.textContent='+';
   button.addEventListener('click',()=>{
-   const expanded=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!expanded));panel.hidden=expanded;
-   if(symbol)symbol.textContent=expanded?'+':'−';
+   const expanded=button.getAttribute('aria-expanded')==='true';
+   const opening=!expanded;
+   button.setAttribute('aria-expanded',String(opening));
+   article?.classList.toggle('is-expanded',opening);
+   if(symbol)symbol.textContent=opening?'−':'+';
+   panel.getAnimations().forEach(animation=>animation.cancel());
+   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){panel.hidden=!opening;panel.inert=!opening;return;}
+   if(opening){panel.hidden=false;panel.inert=false;}
+   const from=opening?0:panel.getBoundingClientRect().height;
+   const to=opening?panel.scrollHeight:0;
+   const animation=panel.animate([{height:`${from}px`,opacity:opening?0:1},{height:`${to}px`,opacity:opening?1:0}],{duration:480,easing:'cubic-bezier(.22,1,.36,1)'});
+   if(!opening)panel.inert=true;
+   animation.onfinish=()=>{panel.hidden=!opening;panel.inert=!opening;};
   },{signal});
  });
  // Visibles por defecto: las animaciones no son necesarias para mostrar contenido.
@@ -143,8 +158,7 @@ function initialize(force = false) {
   if (element.matches('.links-hub')) return [...element.querySelectorAll<HTMLElement>(':scope > img, :scope > h1, :scope > p, :scope nav > a')];
   if (element.matches('.about-cover')) return [...element.querySelectorAll<HTMLElement>('.about-media, .about-copy > h1, .editorial-statement, .about-intro')];
   if (element.matches('.legal-page')) return [...element.querySelectorAll<HTMLElement>(':scope > .kicker, :scope > h1, :scope > .legal-notice, :scope > .legal-updated')];
-  if (element.matches('.history-section')) return [...element.querySelectorAll<HTMLElement>('.history-heading .photo-frame, .history-heading h2, .history-heading .kicker')];
-  if (element.matches('.beliefs')) return [...element.querySelectorAll<HTMLElement>(':scope > .beliefs-heading > h2, :scope > .beliefs-intro, :scope > .belief-list > article')];
+  if (element.matches('.beliefs')) return [...element.querySelectorAll<HTMLElement>(':scope > .beliefs-heading > :is(h1,h2), :scope > .beliefs-intro, :scope > .belief-list > article')];
   if (element.matches('.ministries-showcase')) return [...element.querySelectorAll<HTMLElement>(':scope > h2')];
   if (element.matches('.ministry-feature')) return [...element.querySelectorAll<HTMLElement>(':scope > .photo-frame, :scope > .text-image-copy > *')];
   if (element.matches('.home-schedule')) return [...element.querySelectorAll<HTMLElement>(':scope > h2, .schedule-feature, .schedule-showcase-intro, .schedule--interactive li')];

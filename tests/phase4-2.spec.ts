@@ -62,7 +62,7 @@ test('redes compactas y consistentes en footer; Links mantiene etiquetas',async(
  await expect(page.getByRole('link',{name:/Instagram — Jóvenes CCVS/})).toBeVisible();
 });
 
-for(const route of ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/']) {
+for(const route of ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/']) {
  test(`entrada propia ${route} y reduced motion`,async({page})=>{
   await page.goto(route);
   const heading=page.locator('h1');
@@ -79,7 +79,7 @@ test('menú sin animación con reduced motion y cierre al navegar',async({page})
  for(let index=0;index<3;index++) {
   await page.getByRole('button',{name:'Abrir menú'}).click();
   expect(await page.getByRole('dialog').evaluate(element=>element.getAnimations({subtree:true}).length)).toBe(0);
-  await page.getByRole('dialog').getByRole('link',{name:'Nosotros',exact:true}).click();
+  await page.getByRole('dialog').getByRole('link',{name:'Nuestra historia',exact:true}).click();
   await expect(page).toHaveURL(/nosotros\/$/);
   expect(await page.evaluate(()=>document.body.style.position)).toBe('');
   await page.getByRole('button',{name:'Abrir menú'}).click();

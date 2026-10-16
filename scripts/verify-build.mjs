@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 
 const root = resolve('dist');
-const routes = ['/', '/nosotros/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
+const routes = ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
 const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
 const pageFile = (pathname) => {
   const decoded = decodeURIComponent(pathname);
@@ -65,8 +65,10 @@ for (const route of routes) {
 const visit = await readFile(pageFile('/visitanos/'), 'utf8');
 for (const value of ['19:30', '21:00', '16:30', 'Vélez Sarsfield s/n']) assert.ok(visit.includes(value));
 const about = await readFile(pageFile('/nosotros/'), 'utf8');
-assert.equal((about.match(/class="belief-trigger"/g) ?? []).length, 5, 'cinco temas doctrinales');
-assert.ok(about.includes('id="creencias"'));
+const beliefsPage = await readFile(pageFile('/lo-que-creemos/'), 'utf8');
+assert.equal((beliefsPage.match(/class="belief-trigger"/g) ?? []).length, 5, 'cinco temas doctrinales');
+assert.doesNotMatch(about, /class="belief-trigger"/, 'creencias en su propia pagina');
+assert.ok(beliefsPage.includes('id="creencias"'));
 assert.ok(about.indexOf('Un terreno para la comunidad.') < about.indexOf('Crecimos como congregación.'));
 async function verifyDirectory(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {

@@ -1,16 +1,216 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ScrollAccent from '../components/ScrollAccent.astro';
+import FaithIllustration from '../components/FaithIllustration.astro';
+import PhotoSection from '../components/PhotoSection.astro';
+import Highlight from '../components/Highlight.astro';
 import Schedule from '../components/Schedule.astro';
 import ProgrammedMeetings from '../components/ProgrammedMeetings.astro';
 import { site } from '../data/site';
 import { schedule } from '../data/schedule';
 import { mapUrl, isHttpsUrl } from '../data/links';
+import { slide } from 'astro:transitions';
 const principal = schedule[0];
 ---
 <BaseLayout title="Vení a una reunión" description="Sumate a una reunión de Comunidad Cristiana Villa Sarmiento. Consultá horarios y dirección para tu primera visita.">
-<section class="page-heading shell visit-heading"><h1>Nos reunimos.<br /><span class="serif">Para buscar a Dios.</span></h1><p class="scripture-note">Inspirado en Mateo 6:33</p><div class="visit-essential"><p>{principal.title}<br /><strong>{principal.day} · {principal.time} hs</strong></p><address>{site.address}</address></div><ScrollAccent kind="diagonal" /></section>
-<section class="visit-layout shell section-gap" id="horarios"><div><h2>Reuniones semanales</h2><Schedule /></div><div class="first-visit"><p class="serif-label">Tu primera visita.</p><p>Podés venir a una de nuestras reuniones. Allí podrás conocernos y consultar sobre los espacios para orar, estudiar la Biblia y compartir la fe.</p><a class="pill" href="/links/">Canales de la congregación</a></div></section>
-<ProgrammedMeetings />
-<section class="location shell section-gap"><div><h2>Nos reunimos en<br /><span class="serif">Villa Sarmiento.</span></h2><address>{site.address}</address>{mapUrl && isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} rel="noopener noreferrer">Cómo llegar</a>}</div><div class="map-reserve"><p>Villa Sarmiento<br /><span>Córdoba, Argentina</span></p><small>El pin exacto de ubicación está pendiente de confirmación.</small></div></section>
+<section class="visit-introduction shell">
+  <div class="text-image-copy">
+    <p class="kicker">Visitarnos · Villa Sarmiento</p>
+    <h1>La fe se comparte.<br /><span class="serif">Vení a conocernos.</span></h1>
+  </div>
+  <div class="visit-layout-copy visit-introduction-copy">
+    <p>Nos reunimos para adorar a Dios, aprender su Palabra y compartir la fe. Encontrá acá los horarios y la información para tu primera visita.</p>
+    <nav class="visit-jump-links" aria-label="Organizá tu visita"><a href="#horarios">Horarios <span aria-hidden="true">↓</span></a><a href="#donde">Dónde estamos <span aria-hidden="true">↓</span></a><a href="#primera-visita">Primera visita <span aria-hidden="true">↓</span></a></nav>
+  </div>
+</section>
+<section class="visit-layout visit-meetings shell" id="horarios" aria-labelledby="weekly-title" transition:name="visit-weekly-meetings" transition:animate={slide({ duration: '300ms' })}>
+  <div class="visit-section-heading" data-reveal><p class="kicker">Reuniones semanales</p><h2 id="weekly-title">Nos encontramos <span class="serif">cada semana.</span></h2></div>
+  <div class="visit-meeting-grid">
+    <article class="visit-sunday-card" data-reveal>
+      <p class="kicker">{principal.title}</p>
+      <h3>{principal.day}</h3>
+      <p class="visit-feature-time">{principal.time}<small> hs</small></p>
+      <p class="visit-sunday-copy">Un tiempo para adorar a Dios y compartir la fe como congregación.</p>
+      <a class="visit-card-link" href="#donde">Conocé dónde nos reunimos <span aria-hidden="true">↗</span></a>
+      <FaithIllustration kind="heart" class="visit-card-sticker" />
+    </article>
+    <div class="visit-meeting-photo" data-reveal><PhotoSection photo={site.photos.visitMeeting} label="Nuestra congregación reunida" eager /></div>
+    <div class="visit-weekly" data-reveal><Schedule interactive variant="cards" /><a class="inline-link" href="/ministerios/">Conocé cada reunión <span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
+<section class="visit-plan shell" id="donde">
+  <div class="visit-address" data-reveal>
+    <p class="kicker">Dónde nos reunimos</p>
+    <h2>En <Highlight>Villa Sarmiento.</Highlight><br /><span class="serif">Hay lugar para vos.</span></h2>
+    <address>{site.address}</address>
+    {mapUrl && isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a>}
+    <div class="visit-first-time" id="primera-visita" data-reveal><h3>¿Es tu primera visita?</h3><p>Podés venir a una de nuestras reuniones. Allí podrás conocernos y consultar sobre los espacios para orar, estudiar la Biblia y compartir la fe.</p><a class="inline-link" href="/links/">Nuestros canales <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="visit-entrance" data-reveal><PhotoSection photo={site.photos.visitEntrance} label="Un miembro de la comunidad comparte un mensaje" /></div>
+</section>
+<div class="visit-programmed"><ProgrammedMeetings /></div>
+<section class="visit-closing shell"><p class="kicker">Seguimos en contacto</p><h2>Conocé la comunidad.<br /><span class="serif">Compartamos la fe.</span></h2><a class="pill" href="/links/">Canales de la congregación <span aria-hidden="true">↗</span></a></section>
 </BaseLayout>
+
+<style>
+  .visit-introduction { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,.7fr); align-items:end; gap:48px; padding-block:48px 50px; }
+  .visit-introduction .text-image-copy { max-width:none; }
+  .visit-introduction h1 { font-size:clamp(56px,6.3vw,92px); line-height:1; }
+  .visit-introduction .kicker { font-size:12px; }
+  .visit-introduction-copy > p { max-width:380px; font-size:16px; }
+  .visit-jump-links { display:flex; flex-wrap:wrap; gap:4px 20px; margin-top:22px; }
+  .visit-jump-links a { display:inline-flex; align-items:center; gap:10px; min-height:44px; font-size:13px; text-underline-offset:5px; }
+  .visit-layout.visit-meetings { display:block; margin-block:0 88px; padding-top:26px; border-top:1px solid var(--line); }
+  .visit-section-heading { margin-bottom:30px; }
+  .visit-section-heading .kicker { font-size:12px; margin-bottom:12px; }
+  .visit-section-heading h2 { font-size:clamp(36px,4.2vw,60px); margin:0; }
+  .visit-meeting-grid { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:20px; }
+  .visit-sunday-card { position:relative; display:flex; flex-direction:column; align-items:start; min-width:0; padding:clamp(28px,3vw,44px); background:var(--accent); color:var(--paper); border-radius:4px; }
+  .visit-sunday-card .kicker { font-size:14px; margin-bottom:20px; }
+  .visit-sunday-card h3 { font-family:var(--font-editorial); font-size:clamp(45px,4.5vw,64px); font-weight:400; line-height:1; letter-spacing:-.065em; }
+  .visit-feature-time { font-size:clamp(70px,6.6vw,96px); font-weight:650; letter-spacing:-.075em; line-height:1; margin-top:4px; }
+  .visit-feature-time small { font-size:24px; font-weight:400; letter-spacing:-.03em; }
+  .visit-sunday-copy { max-width:280px; font-size:15px; margin-top:24px; padding-right:35px; }
+  .visit-card-link { display:inline-flex; align-items:center; gap:12px; min-height:44px; font-size:14px; margin-top:26px; text-underline-offset:5px; }
+  .visit-sunday-card :global(.visit-card-sticker) { position:absolute; right:22px; top:16px; --sticker-size:56px; rotate:9deg; }
+  .visit-meeting-photo { min-width:0; }
+  .visit-meeting-photo :global(.photo-frame) { width:100%; height:100%; min-height:380px; aspect-ratio:auto; border-radius:4px; }
+  .visit-weekly { grid-column:1/-1; min-width:0; }
+  .visit-weekly :global(.schedule) { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+  .visit-weekly :global(.schedule li) { display:flex; flex-direction:column; align-items:start; gap:0; padding:24px; border:0; background:var(--surface); border-radius:4px; min-width:0; }
+  .visit-weekly :global(.schedule li > span) { font-size:13px; margin-bottom:18px; }
+  .visit-weekly :global(.schedule h3) { font-size:20px; margin:0 0 18px; }
+  .visit-weekly :global(.schedule li > p) { font-size:32px; margin-top:auto; line-height:1; letter-spacing:-.055em; }
+  .visit-weekly :global(.schedule small) { font-size:13px; letter-spacing:0; }
+  .visit-weekly .inline-link { gap:12px; font-size:14px; margin-top:12px; }
+  .visit-plan { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(36px,6vw,80px); margin-block:88px; padding-top:32px; border-top:1px solid var(--line); align-items:center; }
+  .visit-address { min-width:0; }
+  .visit-address h2 { font-size:clamp(38px,4vw,58px); }
+  .visit-address :global(.editorial-highlight) { text-decoration:none; }
+  .visit-address address { font-style:normal; margin-top:28px; max-width:430px; font-size:22px; letter-spacing:-.035em; line-height:1.45; }
+  .visit-first-time { border-top:1px solid var(--line); padding-top:24px; margin-top:30px; max-width:480px; }
+  .visit-first-time h3 { font-size:25px; margin-bottom:14px; }
+  .visit-first-time p { font-size:16px; }
+  .visit-first-time .inline-link { font-size:15px; gap:12px; margin-top:10px; }
+  .visit-entrance :global(.photo-frame) { aspect-ratio:4/5; border-radius:4px; }
+  .visit-programmed :global(.programmed-meetings) { padding:0; margin-block:88px; }
+  .visit-programmed :global(.programmed-heading) { grid-template-columns:1fr 1fr; gap:40px; align-items:center; border-color:var(--line); }
+  .visit-programmed :global(.programmed-heading h2) { font-size:clamp(40px,4.2vw,60px); }
+  .visit-programmed :global(.programmed-heading p) { font-size:15px; }
+  .visit-programmed :global(.programmed-list) { margin-top:30px; gap:24px; }
+  .visit-programmed :global(.programmed-item) { padding:0; background:var(--surface); border-radius:26px; overflow:hidden; }
+  .visit-programmed :global(.programmed-item > .photo-frame) { order:-1; margin:0; border-radius:0; aspect-ratio:16/9; }
+  .visit-programmed :global(.programmed-copy) { padding:28px; }
+  .visit-programmed :global(.programmed-item h3) { font-size:clamp(30px,3vw,42px); }
+  .visit-programmed :global(.programmed-copy > p:not(.programmed-status)) { font-size:15px; margin-top:16px; }
+  .visit-programmed :global(.programmed-copy .programmed-status) { font-family:var(--font-sans); font-size:13px; line-height:1.5; padding-top:18px; margin-top:24px; }
+  .visit-programmed :global(.programmed-copy .ministry-card-link) { font-size:14px; }
+  .visit-closing { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px; padding:34px 0; border-top:1px solid var(--line); margin-block:80px; }
+  .visit-closing .kicker { width:100%; margin:0; font-size:12px; }
+  .visit-closing h2 { font-size:clamp(36px,4vw,56px); }
+  .visit-closing .pill { gap:14px; }
+  @media(min-width:701px) and (max-width:1000px) {
+    .visit-introduction { grid-template-columns:1fr; gap:26px; }
+    .visit-introduction-copy { display:flex; justify-content:space-between; gap:30px; }
+    .visit-introduction-copy > p { max-width:340px; }
+    .visit-jump-links { margin-top:0; align-content:start; }
+    .visit-meeting-grid { grid-template-columns:1fr 1fr; }
+    .visit-sunday-card { padding:26px; }
+    .visit-weekly :global(.schedule li) { padding:20px 16px; }
+    .visit-weekly :global(.schedule h3) { font-size:18px; }
+    .visit-plan { grid-template-columns:1fr 1fr; gap:30px; }
+  }
+  @media(max-width:700px) {
+    .visit-introduction { grid-template-columns:1fr; gap:24px; padding-block:32px 28px; }
+    .visit-introduction h1 { font-size:clamp(46px,12.7vw,68px); }
+    .visit-introduction-copy > p { font-size:15px; }
+    .visit-jump-links { margin-top:18px; gap:4px 18px; }
+    .visit-layout.visit-meetings { margin-block:0 56px; padding-top:22px; }
+    .visit-section-heading { margin-bottom:24px; }
+    .visit-section-heading h2 { font-size:36px; max-width:330px; }
+    .visit-meeting-grid { grid-template-columns:1fr; gap:14px; }
+    .visit-sunday-card { padding:28px; }
+    .visit-sunday-card h3 { font-size:48px; }
+    .visit-feature-time { font-size:76px; }
+    .visit-sunday-copy { max-width:230px; padding-right:0; margin-top:18px; }
+    .visit-card-link { font-size:13px; margin-top:18px; }
+    .visit-meeting-photo { order:1; }
+    .visit-meeting-photo :global(.photo-frame) { min-height:0; height:auto; aspect-ratio:4/3; }
+    .visit-weekly { order:2; }
+    .visit-weekly :global(.schedule) { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .visit-weekly :global(.schedule li) { padding:20px 16px; }
+    .visit-weekly :global(.schedule li > span) { margin-bottom:14px; font-size:12px; }
+    .visit-weekly :global(.schedule h3) { font-size:18px; margin-bottom:20px; }
+    .visit-weekly :global(.schedule li > p) { font-size:30px; }
+    .visit-plan { grid-template-columns:1fr; gap:28px; margin-block:56px; padding-top:26px; }
+    .visit-address h2 { font-size:36px; }
+    .visit-address address { font-size:21px; margin-top:24px; }
+    .visit-first-time { margin-top:26px; }
+    .visit-first-time h3 { font-size:24px; }
+    .visit-first-time p { font-size:15px; }
+    .visit-entrance :global(.photo-frame) { aspect-ratio:4/5; }
+    .visit-programmed :global(.programmed-meetings) { margin-block:56px; }
+    .visit-programmed :global(.programmed-heading) { grid-template-columns:1fr; gap:22px; }
+    .visit-programmed :global(.programmed-heading h2) { font-size:40px; }
+    .visit-programmed :global(.programmed-list) { gap:24px; }
+    .visit-programmed :global(.programmed-copy) { padding:24px; }
+    .visit-programmed :global(.programmed-item) { border-radius:22px; }
+    .visit-programmed :global(.programmed-item h3) { font-size:32px; }
+    .visit-closing { margin-block:56px; gap:20px; }
+    .visit-closing h2 { font-size:38px; }
+  }
+  /* Card treatment stays local to the weekly meetings module. */
+  .visit-meetings { --meeting-radius:26px; scroll-margin-top:24px; }
+  .visit-section-heading h2 { max-width:1050px; line-height:1.05; text-wrap:balance; }
+  .visit-meeting-grid { gap:18px; }
+  .visit-sunday-card { min-height:440px; border-radius:var(--meeting-radius); overflow:hidden; }
+  .visit-sunday-card .kicker { padding-right:58px; }
+  .visit-sunday-copy { max-width:300px; padding-right:0; margin-bottom:28px; }
+  .visit-card-link { margin-top:auto; padding:12px 18px; border:1px solid #f7f6f34d; border-radius:999px; text-decoration:none; line-height:1.35; transition:background-color 200ms ease,border-color 200ms ease; }
+  .visit-card-link span { transition:translate 200ms ease; }
+  .visit-card-link:focus-visible { outline:3px solid var(--paper); outline-offset:5px; }
+  .visit-meeting-photo { overflow:hidden; border-radius:var(--meeting-radius); }
+  .visit-meeting-photo :global(.photo-frame) { border-radius:inherit; min-height:440px; }
+  .visit-meeting-photo :global(img) { transition:transform 700ms cubic-bezier(.22,1,.36,1); }
+  .visit-weekly :global(.schedule--cards) { gap:14px; }
+  .visit-weekly :global(.schedule--cards li) { display:block; padding:0; background:transparent; border:0; }
+  .visit-weekly :global(.schedule--cards li > a) { display:flex; flex-direction:column; align-items:stretch; gap:18px; min-height:204px; height:100%; padding:24px; border:1px solid transparent; border-radius:20px; background:var(--surface); color:var(--ink); transition:background-color 220ms ease,border-color 220ms ease,transform 220ms ease; }
+  .visit-weekly :global(.schedule--cards li > a::before) { display:none; }
+  .visit-weekly :global(.schedule--cards .schedule-day) { display:block; min-height:0; padding:0; background:none; border-radius:0; color:inherit; font-family:var(--font-sans); font-size:13px; font-weight:400; letter-spacing:0; text-align:left; }
+  .visit-weekly :global(.schedule--cards .schedule-row-copy) { gap:8px; }
+  .visit-weekly :global(.schedule--cards .schedule-row-copy strong) { font-size:21px; line-height:1.12; }
+  .visit-weekly :global(.schedule--cards .schedule-row-copy > small) { display:flex; justify-content:space-between; gap:6px; font-size:12px; line-height:1.4; }
+  .visit-weekly :global(.schedule--cards .schedule-row-time) { display:block; margin-top:auto; font-size:34px; line-height:1; }
+  .visit-weekly :global(.schedule--cards .schedule-row-time small) { font-size:12px; }
+  .visit-weekly :global(.schedule--cards li > a:focus-visible) { outline:3px solid var(--accent); outline-offset:4px; background:var(--paper); border-color:var(--accent); }
+  .visit-weekly > .inline-link { margin-top:18px; min-height:44px; }
+  @media(hover:hover) and (pointer:fine) {
+    .visit-card-link:hover { background:#f7f6f31a; border-color:var(--paper); }
+    .visit-card-link:hover span { translate:2px -2px; }
+    .visit-meeting-photo:hover :global(img) { transform:scale(1.025); }
+    .visit-weekly :global(.schedule--cards li > a:hover) { transform:translateY(-4px); background:var(--paper); border-color:var(--accent); color:var(--accent); }
+  }
+  @media(min-width:701px) and (max-width:1000px) {
+    .visit-weekly :global(.schedule--cards) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .visit-weekly :global(.schedule--cards li > a) { min-height:190px; }
+    .visit-feature-time { font-size:clamp(66px,9vw,90px); }
+  }
+  @media(max-width:700px) {
+    .visit-meetings { --meeting-radius:22px; }
+    .visit-meeting-grid { gap:12px; }
+    .visit-sunday-card { min-height:0; padding:28px 24px; }
+    .visit-sunday-copy { max-width:270px; margin-bottom:24px; }
+    .visit-card-link { font-size:13px; padding:12px 16px; }
+    .visit-meeting-photo :global(.photo-frame) { min-height:0; aspect-ratio:4/3; }
+    .visit-weekly :global(.schedule--cards) { gap:10px; }
+    .visit-weekly :global(.schedule--cards li > a) { min-height:192px; gap:16px; padding:20px 16px; border-radius:18px; }
+    .visit-weekly :global(.schedule--cards .schedule-day) { font-size:12px; }
+    .visit-weekly :global(.schedule--cards .schedule-row-copy strong) { font-size:18px; }
+    .visit-weekly :global(.schedule--cards .schedule-row-copy > small) { font-size:11px; }
+    .visit-weekly :global(.schedule--cards .schedule-row-time) { font-size:30px; }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    .visit-card-link,.visit-card-link span,.visit-meeting-photo :global(img),.visit-weekly :global(.schedule--cards li > a) { transition:none; }
+    .visit-card-link:hover span { translate:none; }
+    .visit-meeting-photo:hover :global(img),.visit-weekly :global(.schedule--cards li > a:hover) { transform:none; }
+  }
+</style>

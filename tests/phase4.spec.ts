@@ -12,7 +12,7 @@ test('ClientRouter: forward, back, forward y scripts sin duplicados', async ({ p
     });
   });
   await page.locator('.hero-copy a').click();
-  await expect(page).toHaveURL(/nosotros\/#creencias$/);
+  await expect(page).toHaveURL(/lo-que-creemos\/$/);
   expect(await page.evaluate(()=>(window as Window & {phase4Marker?:boolean}).phase4Marker)).toBe(true);
   expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('forward');
   await page.goBack();
@@ -22,7 +22,7 @@ test('ClientRouter: forward, back, forward y scripts sin duplicados', async ({ p
   await expect(page.locator('.editorial-hero')).toBeVisible();
   expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('back');
   await page.goForward();
-  await expect(page).toHaveURL(/nosotros\/#creencias$/);
+  await expect(page).toHaveURL(/lo-que-creemos\/$/);
   await expect(page.locator('#creencias')).toBeVisible();
   expect(await page.evaluate(()=>(window as Window & {phase4Marker?:boolean}).phase4Marker)).toBe(true);
   for(let index=0;index<3;index++) {
@@ -78,7 +78,7 @@ test('sin View Transition API: navegación completa y menú funcional',async({pa
  await page.addInitScript(()=>Object.defineProperty(document,'startViewTransition',{value:undefined,configurable:true}));
  await page.goto('/');
  await page.locator('.hero-copy a').click();
- await expect(page).toHaveURL(/nosotros\/#creencias$/);
+ await expect(page).toHaveURL(/lo-que-creemos\/$/);
  await page.getByRole('button',{name:'Abrir menú'}).click();
  await expect(page.getByRole('dialog')).toBeVisible();
  await page.keyboard.press('Escape');

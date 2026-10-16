@@ -1,5 +1,5 @@
 import type { RegularGatheringId } from './schedule';
-interface MinistryBase { id: string; title: string; photo: 'children' | 'youth' | 'service' | 'community' | 'prayerWord'; }
+interface MinistryBase { id: string; title: string; photo: 'children' | 'youth' | 'service' | 'community' | 'communityMeetings' | 'prayerWord'; }
 export type MinistryGroup =
   | (MinistryBase & { periodicity: 'regular'; scheduleId: Exclude<RegularGatheringId, 'principal'>; description: string[]; buttonLabel: string })
   | (MinistryBase & { periodicity: 'programada'; nextDate?: string; intro: string; activities: string[] });
@@ -20,7 +20,7 @@ export const ministries: MinistryGroup[] = [
     'Un tiempo de comunión en el que nos fortalecemos mutuamente en la fe y profundizamos nuestro conocimiento de la Palabra de Dios.',
   ] },
   { id: 'servicio', periodicity: 'programada', title: 'Servir al prójimo.', intro: 'Compartimos el evangelio y ayudamos a nuestros vecinos mediante las actividades de la congregación.', activities: ['Ropero solidario', 'Merendero y ayuda social', 'Evangelismo'], photo: 'service' },
-  { id: 'encuentros', periodicity: 'programada', title: 'Caminar juntos en la fe.', intro: 'También hay encuentros para matrimonios, varones y mujeres.', activities: ['Matrimonios', 'Varones', 'Mujeres'], photo: 'community' },
+  { id: 'encuentros', periodicity: 'programada', title: 'Caminar juntos en la fe.', intro: 'También hay encuentros para matrimonios, varones y mujeres.', activities: ['Matrimonios', 'Varones', 'Mujeres'], photo: 'communityMeetings' },
 ];
 export const regularMinistries = ministries.filter((item): item is RegularMinistry => item.periodicity === 'regular');
 export const programmedMinistries = ministries.filter((item): item is ProgrammedMinistry => item.periodicity === 'programada');

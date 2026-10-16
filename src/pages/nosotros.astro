@@ -1,15 +1,56 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FaithIllustration from '../components/FaithIllustration.astro';
 import AboutCover from '../components/AboutCover.astro';
 import PhotoSection from '../components/PhotoSection.astro';
-import BeliefsAccordion from '../components/BeliefsAccordion.astro';
+import Highlight from '../components/Highlight.astro';
+import EditorialMark from '../components/EditorialMark.astro';
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
 import { history } from '../data/history';
 ---
-<BaseLayout title="Nuestra fe en Jesucristo" description="Conocé la historia y las creencias de Comunidad Cristiana Villa Sarmiento, una congregación que sigue a Jesucristo.">
+<BaseLayout title="Nuestra historia" description="Conocé la historia de Comunidad Cristiana Villa Sarmiento, una congregación que sigue a Jesucristo.">
 <AboutCover />
-<section class="history-section shell section-gap" id="historia"><div class="history-heading"><PhotoSection photo={site.photos.history} label="Historia de nuestra comunidad" /><div><p class="kicker">Nuestra historia</p><h2>La oración nos reunió.<br /><span class="serif">El evangelio nos sigue convocando.</span></h2></div></div><div class="history-chapters">{history.map((chapter, index) => <article class="history-chapter"><p class="chapter-period">{chapter.period}</p><div><h3>{chapter.title}</h3><p>{chapter.text}</p>{chapter.note && <p class="chapter-note">{chapter.note}</p>}</div><span class="chapter-index" aria-hidden="true">0{index + 1}</span></article>)}</div></section>
-<BeliefsAccordion />
+<section class="history-photo-slot illustrated-photo shell section-gap" aria-label="Espacio reservado para una fotografía de nuestra historia">
+  <PhotoSection photo={site.photos.about} label="Nuestra historia" kind="history-photo-reserve" />
+  <FaithIllustration kind="dove" />
+</section>
+<section class="history-section shell section-gap" id="historia">
+  <header class="history-section-heading"><p class="kicker">Nuestra historia</p><h2>Un camino de <span class="serif">oración y fe.</span></h2></header>
+  <div class="history-chapters">
+    {history.map((chapter, index) => <article class="history-chapter">
+      <div class="chapter-date"><p class="chapter-period">{chapter.period}</p><EditorialMark kind={index % 2 === 0 ? 'horizontal' : 'curve'} class="chapter-arrow" /></div>
+      <div class="chapter-copy"><h3><Highlight variant={index % 2 === 0 ? 'underline' : 'marker'}>{chapter.title}</Highlight></h3><p>{chapter.text}</p>{chapter.note && <p class="chapter-note">{chapter.note}</p>}</div>
+    </article>)}
+  </div>
+</section>
 <section class="identity shell section-gap"><div><h2>Comunidad Cristiana.<br /><span class="serif">En Villa Sarmiento.</span></h2><p>Somos una congregación local de Comunidad Cristiana. Nos reunimos para seguir a Jesucristo, aprender su Palabra y servir a nuestros vecinos.</p><a class="inline-link" href="/visitanos/">Vení a una reunión</a></div><div class="identity-marks"><Image src={site.logos.mother} alt="Emblema madre de Comunidad Cristiana" width={200} height={200} format="webp" /><Image src={site.logos.local} alt="CCVS — congregación local" width={220} height={220} format="webp" /></div></section>
 </BaseLayout>
+
+<style>
+  .history-photo-slot :global(.history-photo-reserve) { aspect-ratio:16/9; border-radius:18px; }
+  .history-section-heading { padding-top:24px; border-top:1px solid var(--ink); }
+  .history-section-heading h2 { max-width:900px; margin-top:18px; font-size:clamp(58px,7vw,104px); line-height:.96; letter-spacing:-.075em; }
+  .history-chapters { margin-top:clamp(52px,7vw,96px); }
+  .history-chapter { position:relative; display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(35px,6vw,80px); padding-block:48px; border-top:1px solid var(--line); }
+  .chapter-date { position:relative; padding-right:48px; }
+  .chapter-period { position:relative; z-index:1; width:fit-content; max-width:100%; font-family:var(--font-editorial); font-size:40px; line-height:1.1; letter-spacing:-.055em; }
+  .history-chapter:nth-child(2n) .chapter-period { padding:10px 14px; background:var(--surface); rotate:-2deg; }
+  .chapter-date :global(.chapter-arrow) { display:block; width:100px; height:65px; margin:18px 0 0 auto; rotate:7deg; }
+  .history-chapter:nth-child(2n) :global(.chapter-arrow) { rotate:-12deg; }
+  .chapter-copy { min-width:0; }
+  .chapter-copy h3 { margin-bottom:28px; font-size:32px; }
+  .chapter-copy > p { max-width:540px; font-size:16px; }
+  .chapter-copy .chapter-note { margin-top:14px; color:#595650; font-size:13px; }
+  .history-section :global(.editorial-highlight) { max-width:100%; text-decoration:none; }
+  @media(max-width:700px) {
+    .history-photo-slot :global(.history-photo-reserve) { aspect-ratio:4/3; border-radius:14px; }
+    .history-section-heading h2 { font-size:clamp(48px,12vw,66px); }
+    .history-chapter { grid-template-columns:1fr; gap:22px; padding-block:32px; }
+    .chapter-date { padding-right:76px; min-height:55px; }
+    .chapter-period { max-width:90%; font-size:34px; }
+    .chapter-date :global(.chapter-arrow) { position:absolute; width:65px; height:55px; right:0; top:0; margin:0; }
+    .chapter-copy h3 { margin-bottom:24px; font-size:28px; }
+    .chapter-copy > p { font-size:15px; }
+  }
+</style>
