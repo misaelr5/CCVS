@@ -47,7 +47,7 @@ for (const route of routes) {
     checkedLinks++;
   }
   for (const tag of html.match(/<(?:img|script|link)\b[^>]*>/g) ?? []) {
-    const src = attribute(tag, 'src') ?? (['stylesheet', 'icon', 'apple-touch-icon'].includes(attribute(tag, 'rel')) ? attribute(tag, 'href') : null);
+    const src = attribute(tag, 'src') ?? (['stylesheet', 'icon', 'apple-touch-icon', 'manifest'].includes(attribute(tag, 'rel')) ? attribute(tag, 'href') : null);
     if (!src) continue;
     const url = new URL(src, `https://ccvs.invalid${route}`);
     if (url.origin !== 'https://ccvs.invalid') continue;
