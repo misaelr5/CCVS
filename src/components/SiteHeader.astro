@@ -11,7 +11,7 @@ import SocialLinks from './SocialLinks.astro';
  <div class="menu-inner">
   <div class="menu-top"><p id="menu-title">Comunidad Cristiana<br /><span>Villa Sarmiento</span></p><button class="menu-close" type="button" aria-label="Cerrar menú"><span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button></div>
   <nav aria-label="Navegación principal" class="menu-groups">{groups.map(group => <div><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</div>)}</nav>
-  <div class="menu-tail"><p class="menu-address">{site.address}</p><section class="menu-social" aria-labelledby="follow-title"><h2 id="follow-title">Seguinos</h2><SocialLinks label="Redes sociales del menú" /></section></div>
+  <div class="menu-tail"><div class="menu-social"><SocialLinks label="Redes sociales del menú" /></div></div>
  </div>
 </dialog>
 </header>
