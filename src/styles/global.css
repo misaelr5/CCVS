@@ -2,9 +2,9 @@
 /* Recortes decorativos: el movimiento se comparte con los acentos editoriales. */
 .illustrated-photo { position:relative; min-width:0; }
 .illustrated-photo > .faith-sticker { position:absolute; right:24px; top:24px; rotate:-9deg; }
-.beliefs-photo-slot { margin-top:64px; }
-.beliefs-photo-slot .photo-frame { aspect-ratio:16/7; border-radius:2px; }
-.beliefs-photo-slot > .faith-sticker { top:auto; bottom:-24px; --sticker-size:clamp(160px,23vw,300px); rotate:-8deg; }
+.beliefs-photo-slot.shell { max-width:900px; margin-top:64px; }
+.beliefs-photo-slot .photo-frame { aspect-ratio:4/3; border-radius:14px; }
+.beliefs-photo-slot > .faith-sticker { top:auto; right:-28px; bottom:-44px; --sticker-size:clamp(140px,15vw,190px); rotate:-8deg; }
 .home-faith-sticker { position:absolute; right:24px; bottom:-32px; --sticker-size:clamp(120px,17vw,220px); rotate:9deg; }
 .illustrated-heading { position:relative; }
 .page-heading.illustrated-heading h1 { max-width:calc(100% - 230px); }

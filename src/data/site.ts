@@ -15,6 +15,7 @@ import youthPrayer from '../assets/photos/WhatsApp Image 20aaa26-10-14 at 19.57.
 import aboutHistory from '../assets/photos/WhatsApp Image 2026-10-14 at 20.56.07.jpeg';
 import historyCover from '../assets/photos/WhatsApp Image 2026-10-14 at 20.20.07.jpeg';
 import homeHistory from '../assets/photos/historia-oracion-fe.jpg';
+import beliefsBibleStudy from '../assets/photos/WhatsApp Image 2026-10-14 at 19.57.29.jpeg';
 import communityGroupMeeting from '../assets/photos/564242379_2960663177654447_8435190360901970176_n.jpg';
 import prayerWord from '../assets/photos/Screenshot 2026-10-14 212933.jpg';
 import serviceActivity from '../assets/photos/WhatsApp Image 2026-10-12 at 19.56.57.jpeg';
@@ -78,9 +79,9 @@ export const site = {
       mobilePosition: 'center',
     },
     beliefs: {
-      src: homeHistory,
-      alt: 'La congregación reunida frente a la cruz durante un encuentro de oración',
-      position: 'center 8%',
+      src: beliefsBibleStudy,
+      alt: 'Jóvenes de la comunidad leyendo la Biblia en pequeños grupos, con la cruz al fondo',
+      position: 'center',
       mobilePosition: 'center',
     },
     prayerWord: {
