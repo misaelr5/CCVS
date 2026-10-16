@@ -157,7 +157,7 @@ function initialize(force = false) {
   if (element.matches('[data-reveal="collage"]')) return [...element.querySelectorAll<HTMLElement>('[data-layer]')];
   if (element.matches('.links-hub')) return [...element.querySelectorAll<HTMLElement>(':scope > img, :scope > h1, :scope > p, :scope nav > a')];
   if (element.matches('.about-cover')) return [...element.querySelectorAll<HTMLElement>('.about-media, .about-copy > h1, .editorial-statement, .about-intro')];
-  if (element.matches('.legal-page')) return [...element.querySelectorAll<HTMLElement>(':scope > .kicker, :scope > h1, :scope > .legal-notice, :scope > .legal-updated')];
+  if (element.matches('.legal-page')) return [...element.querySelectorAll<HTMLElement>(':scope > .kicker, :scope > h1, :scope > .legal-notice, :scope > .legal-updated, :scope > .legal-intro')];
   if (element.matches('.beliefs')) return [...element.querySelectorAll<HTMLElement>(':scope > .beliefs-heading > :is(h1,h2), :scope > .beliefs-intro, :scope > .belief-list > article')];
   if (element.matches('.ministries-showcase')) return [...element.querySelectorAll<HTMLElement>(':scope > h2')];
   if (element.matches('.ministry-feature')) return [...element.querySelectorAll<HTMLElement>(':scope > .photo-frame, :scope > .text-image-copy > *')];

@@ -44,7 +44,7 @@ export const ministryPhotos = {
     },
   ],
 } satisfies { children: Photo; youth: Photo[] };
-type PhotoKey = 'hero' | 'about' | 'aboutCover' | 'community' | 'communityMeetings' | 'prayerWord' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'visitMeeting' | 'visitEntrance' | 'banner';
+type PhotoKey = 'hero' | 'about' | 'aboutCover' | 'community' | 'communityMeetings' | 'beliefs' | 'prayerWord' | 'children' | 'youth' | 'service' | 'welcome' | 'welcomeSecondary' | 'welcomeDetail' | 'gathering' | 'visitMeeting' | 'visitEntrance' | 'banner';
 export const site = {
   name: 'Comunidad Cristiana Villa Sarmiento', shortName: 'CCVS',
   address: 'Vélez Sarsfield s/n, Villa Sarmiento, Córdoba, Argentina',
@@ -75,6 +75,12 @@ export const site = {
       src: communityGroupMeeting,
       alt: 'Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz',
       position: 'center',
+      mobilePosition: 'center',
+    },
+    beliefs: {
+      src: homeHistory,
+      alt: 'La congregación reunida frente a la cruz durante un encuentro de oración',
+      position: 'center 8%',
       mobilePosition: 'center',
     },
     prayerWord: {

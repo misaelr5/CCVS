@@ -27,6 +27,27 @@ const homeYouth = {
 <section class="home-banner shell section-gap" aria-label="La comunidad reunida"><PhotoSection photo={site.photos.banner} label="Un encuentro de nuestra congregación" kind="banner-photo" /><span class="banner-note">Cristo, cabeza de la iglesia · Colosenses 1:18</span><FaithIllustration kind="dove" class="home-faith-sticker" /></section>
 <section class="home-schedule shell section-gap" id="horarios"><h2>Reuniones.</h2><div class="schedule-showcase"><article class="schedule-feature"><PhotoSection photo={site.photos.gathering} label="Nuestra reunión general" kind="schedule-feature-photo" /><div class="schedule-feature-copy"><h3>{principal.title}</h3><p>{principal.day} · {principal.time} hs</p><a class="pill" href="/visitanos/">Cómo visitarnos</a></div></article><div class="schedule-showcase-list"><p class="schedule-showcase-intro">Compartimos la fe cada semana. Conocé los horarios regulares de nuestra congregación.</p><Schedule interactive /></div></div></section>
 <TextImageBlock title="Una historia de oración y fe." eyebrow="Desde 2005, en Villa Sarmiento" photo={site.photos.community}><p>En 2005 comenzamos a reunirnos para orar en la casa de Esther Mercado. Aquel deseo de crecer espiritualmente y compartir el evangelio sigue siendo parte de nuestra historia.</p><a class="inline-link" href="/nosotros/#historia">Conocé nuestra historia</a></TextImageBlock>
-<section class="community-features shell section-gap"><h2>La fe se comparte.<br /><span class="serif">De una generación a otra.</span></h2><div class="feature-pair"><a href="/ministerios/#ninos"><PhotoSection photo={site.photos.children} label="Niños" /><h3>Niños <span aria-hidden="true">↗</span></h3>{children && <p>{children.day} · {children.time} hs</p>}</a><a href="/ministerios/#jovenes"><PhotoSection photo={homeYouth} label="Jóvenes" /><h3>Jóvenes <span aria-hidden="true">↗</span></h3>{youth && <p>{youth.day} · {youth.time} hs</p>}</a></div><a class="inline-link" href="/ministerios/">Conocé las reuniones</a></section>
+<section class="community-features shell section-gap">
+  <h2>La fe se comparte.<br /><span class="serif">De una generación a otra.</span></h2>
+  <div class="feature-pair">
+    <a class="photo-top-card" href="/ministerios/#ninos">
+      <PhotoSection photo={site.photos.children} label="Niños" />
+      <div class="photo-top-card-copy">
+        <h3>Niños</h3>
+        {children && <p class="photo-top-card-status">{children.day} · {children.time} hs</p>}
+        <span class="feature-card-cta" aria-hidden="true">↗</span>
+      </div>
+    </a>
+    <a class="photo-top-card" href="/ministerios/#jovenes">
+      <PhotoSection photo={homeYouth} label="Jóvenes" />
+      <div class="photo-top-card-copy">
+        <h3>Jóvenes</h3>
+        {youth && <p class="photo-top-card-status">{youth.day} · {youth.time} hs</p>}
+        <span class="feature-card-cta" aria-hidden="true">↗</span>
+      </div>
+    </a>
+  </div>
+  <a class="inline-link" href="/ministerios/">Conocé las reuniones</a>
+</section>
 <section class="visit-invitation illustrated-invitation shell section-gap"><FaithIllustration kind="heart" class="invitation-faith-sticker" /><p class="kicker">Vení a una reunión</p><h2>Nos reunimos para adorar a Dios.<br /><span class="serif">Hay lugar para vos.</span></h2><address>{site.address}</address><a class="pill" href="/visitanos/">Horarios y primera visita</a></section>
 </BaseLayout>

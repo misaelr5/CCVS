@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 
 const root = resolve('dist');
-const routes = ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
+const routes = ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/', '/politica-de-privacidad/'];
 const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
 const pageFile = (pathname) => {
   const decoded = decodeURIComponent(pathname);
@@ -63,7 +63,11 @@ for (const route of routes) {
   }
 }
 const visit = await readFile(pageFile('/visitanos/'), 'utf8');
-for (const value of ['19:30', '21:00', '16:30', 'Vélez Sarsfield s/n']) assert.ok(visit.includes(value));
+for (const value of ['20:30', '21:00', '16:30', 'Vélez Sarsfield s/n']) assert.ok(visit.includes(value));
+const privacy = await readFile(pageFile('/politica-de-privacidad/'), 'utf8');
+assert.match(privacy, /Última actualización: 16 de octubre de 2026/);
+assert.match(privacy, /href="\/links\/">canales oficiales<\/a>/);
+assert.match(await readFile(pageFile('/'), 'utf8'), /href="\/politica-de-privacidad\/">Política de privacidad<\/a>/);
 const about = await readFile(pageFile('/nosotros/'), 'utf8');
 const beliefsPage = await readFile(pageFile('/lo-que-creemos/'), 'utf8');
 assert.equal((beliefsPage.match(/class="belief-trigger"/g) ?? []).length, 5, 'cinco temas doctrinales');

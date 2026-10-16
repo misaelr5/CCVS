@@ -100,13 +100,6 @@ const principal = schedule[0];
   .visit-programmed :global(.programmed-heading h2) { font-size:clamp(40px,4.2vw,60px); }
   .visit-programmed :global(.programmed-heading p) { font-size:15px; }
   .visit-programmed :global(.programmed-list) { margin-top:30px; gap:24px; }
-  .visit-programmed :global(.programmed-item) { padding:0; background:var(--surface); border-radius:26px; overflow:hidden; }
-  .visit-programmed :global(.programmed-item > .photo-frame) { order:-1; margin:0; border-radius:0; aspect-ratio:16/9; }
-  .visit-programmed :global(.programmed-copy) { padding:28px; }
-  .visit-programmed :global(.programmed-item h3) { font-size:clamp(30px,3vw,42px); }
-  .visit-programmed :global(.programmed-copy > p:not(.programmed-status)) { font-size:15px; margin-top:16px; }
-  .visit-programmed :global(.programmed-copy .programmed-status) { font-family:var(--font-sans); font-size:13px; line-height:1.5; padding-top:18px; margin-top:24px; }
-  .visit-programmed :global(.programmed-copy .ministry-card-link) { font-size:14px; }
   .visit-closing { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px; padding:34px 0; border-top:1px solid var(--line); margin-block:80px; }
   .visit-closing .kicker { width:100%; margin:0; font-size:12px; }
   .visit-closing h2 { font-size:clamp(36px,4vw,56px); }
@@ -155,9 +148,6 @@ const principal = schedule[0];
     .visit-programmed :global(.programmed-heading) { grid-template-columns:1fr; gap:22px; }
     .visit-programmed :global(.programmed-heading h2) { font-size:40px; }
     .visit-programmed :global(.programmed-list) { gap:24px; }
-    .visit-programmed :global(.programmed-copy) { padding:24px; }
-    .visit-programmed :global(.programmed-item) { border-radius:22px; }
-    .visit-programmed :global(.programmed-item h3) { font-size:32px; }
     .visit-closing { margin-block:56px; gap:20px; }
     .visit-closing h2 { font-size:38px; }
   }
