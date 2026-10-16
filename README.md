@@ -51,7 +51,7 @@ Datos tipados en `src/data/`:
 - `ministries.ts`: grupos de actividades, sin inventar estructuras formales.
 - `links.ts`: navegación y URLs oficiales. Las redes y el mapa faltantes no generan botones.
 
-Los mensajes de `editorial` son propuestas del prompt, no misión ni lemas oficiales. Deben aprobarse junto con la historia y doctrina. `legal.ts` contiene el borrador legal. Instagram de jóvenes, Facebook y YouTube están confirmados por el usuario; Maps conserva su URL facilitada pero no se habilita hasta verificar el pin.
+Los mensajes de `editorial` son propuestas del prompt, no misión ni lemas oficiales. Deben aprobarse junto con la historia y doctrina. `legal.ts` contiene el borrador legal. Instagram de jóvenes, Facebook y YouTube están confirmados por el usuario; el enlace de Maps provisto posteriormente abre la ficha de la iglesia y se usa para llegar desde Links y Visitarnos.
 
 ## Fotos y logos
 

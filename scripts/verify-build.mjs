@@ -64,6 +64,10 @@ for (const route of routes) {
 }
 const visit = await readFile(pageFile('/visitanos/'), 'utf8');
 for (const value of ['20:30', '21:00', '16:30', 'Vélez Sarsfield s/n']) assert.ok(visit.includes(value));
+assert.match(visit, /<iframe[^>]+title="Mapa de Comunidad Cristiana Villa Sarmiento"/);
+assert.match(visit, /https:\/\/www\.google\.com\/maps\?q=-31\.9309445%2C-65\.1925254/);
+assert.match(visit, /href="https:\/\/maps\.app\.goo\.gl\/YemN5zzZ2aumfGYy8"/);
+assert.match(await readFile(pageFile('/links/'), 'utf8'), /href="https:\/\/maps\.app\.goo\.gl\/YemN5zzZ2aumfGYy8"[^>]*>[^<]*<svg/);
 const privacy = await readFile(pageFile('/politica-de-privacidad/'), 'utf8');
 assert.match(privacy, /Última actualización: 16 de octubre de 2026/);
 assert.match(privacy, /href="\/links\/">canales oficiales<\/a>/);

@@ -7,7 +7,7 @@ import Schedule from '../components/Schedule.astro';
 import ProgrammedMeetings from '../components/ProgrammedMeetings.astro';
 import { site } from '../data/site';
 import { schedule } from '../data/schedule';
-import { mapUrl, isHttpsUrl } from '../data/links';
+import { mapUrl, mapEmbedUrl, isHttpsUrl } from '../data/links';
 import { slide } from 'astro:transitions';
 const principal = schedule[0];
 ---
@@ -42,10 +42,17 @@ const principal = schedule[0];
     <p class="kicker">Dónde nos reunimos</p>
     <h2>En <Highlight>Villa Sarmiento.</Highlight><br /><span class="serif">Hay lugar para vos.</span></h2>
     <address>{site.address}</address>
-    {mapUrl && isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a>}
+    {isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span><span class="sr-only"> (abre en una pestaña nueva)</span></a>}
     <div class="visit-first-time" id="primera-visita" data-reveal><h3>¿Es tu primera visita?</h3><p>Podés venir a una de nuestras reuniones. Allí podrás conocernos y consultar sobre los espacios para orar, estudiar la Biblia y compartir la fe.</p><a class="inline-link" href="/links/">Nuestros canales <span aria-hidden="true">↗</span></a></div>
   </div>
   <div class="visit-entrance" data-reveal="photo"><PhotoSection photo={site.photos.visitEntrance} label="La cruz iluminada durante una reunión" /></div>
+</section>
+<section class="visit-map shell" aria-labelledby="visit-map-title" data-reveal>
+  <div class="visit-map-heading">
+    <div><p class="kicker">Ubicación</p><h2 id="visit-map-title">Encontranos <span class="serif">en el mapa.</span></h2></div>
+    <a class="inline-link" href={mapUrl} target="_blank" rel="noopener noreferrer">Abrir en Google Maps <span aria-hidden="true">↗</span><span class="sr-only"> (abre en una pestaña nueva)</span></a>
+  </div>
+  <iframe src={mapEmbedUrl} title="Mapa de Comunidad Cristiana Villa Sarmiento" loading="lazy" referrerpolicy="no-referrer"></iframe>
 </section>
 <div class="visit-programmed"><ProgrammedMeetings /></div>
 <section class="visit-closing shell"><p class="kicker">Seguimos en contacto</p><h2>Conocé la comunidad.<br /><span class="serif">Compartamos la fe.</span></h2><a class="pill" href="/links/">Canales de la congregación <span aria-hidden="true">↗</span></a></section>
@@ -95,6 +102,12 @@ const principal = schedule[0];
   .visit-entrance :global(.photo-frame img) { transition:transform 650ms cubic-bezier(.16,1,.3,1); }
   @media(hover:hover) and (pointer:fine) { .visit-entrance:hover :global(.photo-frame img) { transform:scale(1.035); } }
   @media(hover:none) and (pointer:coarse) { .visit-entrance:active :global(.photo-frame) { transform:scale(.985); } .visit-entrance:active :global(.photo-frame img) { transform:scale(1.035); } }
+  .visit-map { margin-block:88px; padding-top:32px; border-top:1px solid var(--line); }
+  .visit-map-heading { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:26px; }
+  .visit-map-heading .kicker { font-size:12px; margin-bottom:12px; }
+  .visit-map-heading h2 { font-size:clamp(36px,4.2vw,60px); line-height:1.05; }
+  .visit-map-heading .inline-link { flex:none; min-height:44px; font-size:15px; }
+  .visit-map iframe { display:block; width:100%; aspect-ratio:16/8; border:0; border-radius:20px; background:var(--surface); }
   .visit-programmed :global(.programmed-meetings) { padding:0; margin-block:88px; }
   .visit-programmed :global(.programmed-heading) { grid-template-columns:1fr 1fr; gap:40px; align-items:center; border-color:var(--line); }
   .visit-programmed :global(.programmed-heading h2) { font-size:clamp(40px,4.2vw,60px); }
@@ -144,6 +157,11 @@ const principal = schedule[0];
     .visit-first-time h3 { font-size:24px; }
     .visit-first-time p { font-size:15px; }
     .visit-entrance :global(.photo-frame) { aspect-ratio:4/5; }
+    .visit-map { margin-block:56px; padding-top:26px; }
+    .visit-map-heading { display:block; margin-bottom:18px; }
+    .visit-map-heading h2 { font-size:36px; }
+    .visit-map-heading .inline-link { margin-top:14px; }
+    .visit-map iframe { aspect-ratio:4/5; border-radius:18px; }
     .visit-programmed :global(.programmed-meetings) { margin-block:56px; }
     .visit-programmed :global(.programmed-heading) { grid-template-columns:1fr; gap:22px; }
     .visit-programmed :global(.programmed-heading h2) { font-size:40px; }
