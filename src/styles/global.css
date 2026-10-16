@@ -100,7 +100,7 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .about-cover { display:grid; grid-template-columns:minmax(0,45fr) minmax(0,55fr); column-gap:52px; padding-top:18px; align-items:start; max-width:1120px; margin-left:max(72px,calc((100vw - 1296px)/2)); margin-right:auto; }
 .about-media { grid-column:2; grid-row:1; height:492px; aspect-ratio:auto; }
 .about-copy { grid-column:1; grid-row:1; padding-right:35px; }
-.about-copy h1 { font-size:clamp(70px,7.5vw,100px); font-stretch:80%; letter-spacing:-.075em; line-height:1; margin-bottom:42px; position:relative; z-index:1; }
+.about-copy h1 { font-size:clamp(70px,7.5vw,100px); font-stretch:100%; letter-spacing:-.075em; line-height:1; margin-bottom:42px; position:relative; z-index:1; }
 .editorial-statement { font-size:clamp(46px,4vw,58px); line-height:1.09; max-width:420px; }
 .editorial-statement span { display:block; }
 .editorial-statement span + span { margin-top:14px; }

@@ -2,10 +2,10 @@ import mother from '../../identidad/01_comunidad_cristiana_logo_madre_original.p
 import local from '../../identidad/02_ccvs_logo_limpio.png';
 import welcomeCommunity from '../assets/photos/comunidad.jpg';
 import welcomePulpit from '../assets/photos/pulpito.jpg';
-import welcomeGathering from '../assets/photos/reunion.jpg';
 import mainGathering from '../assets/photos/general.jpg';
 import visitMeeting from '../assets/photos/visitanos-reunion-img-2764.jpg';
 import visitEntrancePortrait from '../assets/photos/IMG_2792.JPG.jpeg';
+import visitEntranceCross from '../assets/photos/WhatsApp Image 2026-10-14 at 21.32.51.jpeg';
 import communityGroup from '../assets/photos/comunidad-grupo.jpg';
 import childrenGroup from '../assets/photos/ninios.jpg';
 import ministryChildren from '../assets/photos/niniosss.jpg';
@@ -114,8 +114,8 @@ export const site = {
       mobilePosition: 'center 48%',
     },
     welcomeDetail: {
-      src: welcomeGathering,
-      alt: 'Congregación reunida frente al escenario',
+      src: visitEntrancePortrait,
+      alt: 'Un miembro de la comunidad comparte un mensaje desde el púlpito',
       position: 'center 38%',
       mobilePosition: 'center 38%',
     },
@@ -132,10 +132,10 @@ export const site = {
       mobilePosition: 'center 58%',
     },
     visitEntrance: {
-      src: visitEntrancePortrait,
-      alt: 'Un miembro de la comunidad comparte un mensaje desde el púlpito',
-      position: 'center 30%',
-      mobilePosition: 'center 30%',
+      src: visitEntranceCross,
+      alt: 'La cruz iluminada durante una reunión de la comunidad',
+      position: 'center 52%',
+      mobilePosition: 'center 52%',
     },
     banner: {
       src: communityGroup,

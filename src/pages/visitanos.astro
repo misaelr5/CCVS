@@ -45,7 +45,7 @@ const principal = schedule[0];
     {mapUrl && isHttpsUrl(mapUrl) && <a class="pill" href={mapUrl} rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a>}
     <div class="visit-first-time" id="primera-visita" data-reveal><h3>¿Es tu primera visita?</h3><p>Podés venir a una de nuestras reuniones. Allí podrás conocernos y consultar sobre los espacios para orar, estudiar la Biblia y compartir la fe.</p><a class="inline-link" href="/links/">Nuestros canales <span aria-hidden="true">↗</span></a></div>
   </div>
-  <div class="visit-entrance" data-reveal><PhotoSection photo={site.photos.visitEntrance} label="Un miembro de la comunidad comparte un mensaje" /></div>
+  <div class="visit-entrance" data-reveal="photo"><PhotoSection photo={site.photos.visitEntrance} label="La cruz iluminada durante una reunión" /></div>
 </section>
 <div class="visit-programmed"><ProgrammedMeetings /></div>
 <section class="visit-closing shell"><p class="kicker">Seguimos en contacto</p><h2>Conocé la comunidad.<br /><span class="serif">Compartamos la fe.</span></h2><a class="pill" href="/links/">Canales de la congregación <span aria-hidden="true">↗</span></a></section>
@@ -91,7 +91,10 @@ const principal = schedule[0];
   .visit-first-time h3 { font-size:25px; margin-bottom:14px; }
   .visit-first-time p { font-size:16px; }
   .visit-first-time .inline-link { font-size:15px; gap:12px; margin-top:10px; }
-  .visit-entrance :global(.photo-frame) { aspect-ratio:4/5; border-radius:4px; }
+  .visit-entrance :global(.photo-frame) { aspect-ratio:4/5; border-radius:4px; transition:transform 360ms cubic-bezier(.16,1,.3,1); }
+  .visit-entrance :global(.photo-frame img) { transition:transform 650ms cubic-bezier(.16,1,.3,1); }
+  @media(hover:hover) and (pointer:fine) { .visit-entrance:hover :global(.photo-frame img) { transform:scale(1.035); } }
+  @media(hover:none) and (pointer:coarse) { .visit-entrance:active :global(.photo-frame) { transform:scale(.985); } .visit-entrance:active :global(.photo-frame img) { transform:scale(1.035); } }
   .visit-programmed :global(.programmed-meetings) { padding:0; margin-block:88px; }
   .visit-programmed :global(.programmed-heading) { grid-template-columns:1fr 1fr; gap:40px; align-items:center; border-color:var(--line); }
   .visit-programmed :global(.programmed-heading h2) { font-size:clamp(40px,4.2vw,60px); }
@@ -158,6 +161,7 @@ const principal = schedule[0];
     .visit-closing { margin-block:56px; gap:20px; }
     .visit-closing h2 { font-size:38px; }
   }
+  @media(prefers-reduced-motion:reduce) { .visit-entrance :global(.photo-frame),.visit-entrance :global(.photo-frame img) { transition:none; } .visit-entrance:hover :global(.photo-frame img),.visit-entrance:active :global(.photo-frame img) { transform:none; } .visit-entrance:active :global(.photo-frame) { transform:none; } }
   /* Card treatment stays local to the weekly meetings module. */
   .visit-meetings { --meeting-radius:26px; scroll-margin-top:24px; }
   .visit-section-heading h2 { max-width:1050px; line-height:1.05; text-wrap:balance; }
