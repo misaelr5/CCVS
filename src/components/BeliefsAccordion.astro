@@ -1,12 +1,24 @@
 ---
-import { beliefs, orientation } from '../data/beliefs';
-import ScrollAccent from './ScrollAccent.astro';
-interface Props { standalone?: boolean; }
-const { standalone = false } = Astro.props;
-const Heading = standalone ? 'h1' : 'h2';
-const ItemHeading = standalone ? 'h2' : 'h3';
+import { beliefs, beliefsClosing } from '../data/beliefs';
 ---
-<section class:list={['beliefs', 'shell', 'section-gap', { 'beliefs-page': standalone }]} id="creencias"><div class="beliefs-heading"><Heading>Lo que creemos.</Heading><ScrollAccent kind="circle" /></div><p class="beliefs-intro">La Biblia como única autoridad. Orientación cristiana: {orientation}.</p><div class="belief-list">{beliefs.map((item, index) => <article><ItemHeading><button class="belief-trigger" type="button" aria-expanded="true" aria-controls={`belief-panel-${index}`} id={`belief-button-${index}`}><span class="belief-number">0{index + 1}</span><span class="belief-title">{item.title}</span><span class="belief-symbol" aria-hidden="true">−</span></button></ItemHeading><div class="belief-panel" id={`belief-panel-${index}`} role="region" aria-labelledby={`belief-button-${index}`}><div class="belief-panel-inner"><p>{item.text}</p></div></div></article>)}</div></section>
-<style>
-  .beliefs-page { margin-top:clamp(32px,5vw,72px); }
-</style>
+<section class="beliefs shell section-gap" id="creencias" aria-label="Fundamentos doctrinales">
+  <div class="belief-list">
+    {beliefs.map((item, index) => (
+      <article>
+        <h2>
+          <button class="belief-trigger" type="button" aria-expanded="true" aria-controls={`belief-panel-${index}`} id={`belief-button-${index}`}>
+            <span class="belief-number">{String(index + 1).padStart(2, '0')}</span>
+            <span class="belief-title">{item.title}</span>
+            <span class="belief-symbol" aria-hidden="true">−</span>
+          </button>
+        </h2>
+        <div class="belief-panel" id={`belief-panel-${index}`} role="region" aria-labelledby={`belief-button-${index}`}>
+          <div class="belief-panel-inner">
+            {item.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+  <p class="beliefs-closing">{beliefsClosing}</p>
+</section>

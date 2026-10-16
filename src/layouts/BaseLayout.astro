@@ -8,6 +8,9 @@ import SiteFooter from '../components/SiteFooter.astro';
 import { ClientRouter } from 'astro:transitions';
 interface Props { title: string; description?: string; compact?: boolean; }
 const { title, description = site.description, compact = false } = Astro.props;
+const pageTitle = title === site.name ? `${site.name}, ${site.region}` : `${title} | ${site.name}, ${site.region}`;
+// Origen de revisión existente, solo para el recurso social; no activa canonical ni indexación.
+const socialImage = new URL('/brand/comunidad-cristiana-og.png', Astro.site ?? 'https://ccvs-sigma.vercel.app/').href;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : null;
 const schema = { '@context': 'https://schema.org', '@type': 'Church', name: site.name, address: { '@type': 'PostalAddress', streetAddress: 'Vélez Sarsfield s/n', addressLocality: site.locality, addressRegion: site.region, addressCountry: 'AR' }, ...(Astro.site ? { url: Astro.site.href } : {}) };
 const pageMotion = {
@@ -17,6 +20,35 @@ const pageMotion = {
 ---
 <!doctype html>
 <html lang="es-AR" transition:name="root" transition:animate={pageMotion}>
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>{title} | {site.name}</title><meta name="description" content={description} /><meta name="theme-color" content="#F7F6F3" /><meta name="robots" content={site.publicationApproved ? 'index, follow' : 'noindex, nofollow'} /><meta property="og:title" content={`${title} | ${site.name}`} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:locale" content="es_AR" /><meta property="og:site_name" content={site.name} />{canonical && <><link rel="canonical" href={canonical} /><meta property="og:url" content={canonical} /></>}<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} /><ClientRouter fallback="none" /></head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#F7F6F3" />
+  <meta name="robots" content={site.publicationApproved ? 'index, follow' : 'noindex, nofollow'} />
+  <link rel="icon" href="/favicon.ico" sizes="32x32 48x48" />
+  <link rel="icon" type="image/png" href="/brand/emblema-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/brand/emblema-192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/brand/emblema-180.png" sizes="180x180" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Emblema de Comunidad Cristiana: cruz y paloma" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={socialImage} />
+  <meta name="twitter:image:alt" content="Emblema de Comunidad Cristiana: cruz y paloma" />
+  {canonical && <><link rel="canonical" href={canonical} /><meta property="og:url" content={canonical} /></>}
+  <script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} />
+  <ClientRouter fallback="none" />
+</head>
 <body><a class="skip-link" href="#contenido">Saltar al contenido</a>{!compact && <SiteHeader />}<main id="contenido" tabindex="-1"><slot /></main>{!compact && <SiteFooter />}<script>import '../scripts/ui';</script></body>
 </html>

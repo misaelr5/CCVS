@@ -1,0 +1,48 @@
+{
+  "stats": {
+    "startTime": "2026-10-16T11:01:48.119Z",
+    "duration": 136954.577,
+    "expected": 84,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  },
+  "failed": [
+    {
+      "file": "phase4-2.spec.ts",
+      "line": 5,
+      "title": "menú 4.2 · 360: iconos al final, animación, teclado y scroll",
+      "error": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: /CCVS|Comunidad Cristiana/\nReceived string:  \"Instagram\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\n  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\n    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\n       - unexpected value \"Instagram\"\n"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "line": 5,
+      "title": "menú 4.2 · 390: iconos al final, animación, teclado y scroll",
+      "error": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: /CCVS|Comunidad Cristiana/\nReceived string:  \"Instagram\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\n  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\n    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\n       - unexpected value \"Instagram\"\n"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "line": 5,
+      "title": "menú 4.2 · 1440: iconos al final, animación, teclado y scroll",
+      "error": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: /CCVS|Comunidad Cristiana/\nReceived string:  \"Instagram\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\n  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\n    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\n       - unexpected value \"Instagram\"\n"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "line": 54,
+      "title": "redes compactas y consistentes en footer; Links mantiene etiquetas",
+      "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('link', { name: /Instagram — Jóvenes CCVS/ }) with timeout 5000ms\n  - waiting for getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\n"
+    },
+    {
+      "file": "phase4.spec.ts",
+      "line": 49,
+      "title": "Inicio: orden mobile, horarios y redes oficiales",
+      "error": "Error: expect(locator).toContainText(expected) failed\n\nLocator: locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\nExpected substring: \"Jóvenes CCVS\"\nReceived string:    \"Instagram (abre en una pestaña nueva)\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toContainText\" locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]') with timeout 5000ms\n  - waiting for locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\n    14 × locator resolved to <a target=\"_blank\" class=\"link-button\" data-astro-reload=\"true\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\n       - unexpected value \"Instagram (abre en una pestaña nueva)\"\n"
+    },
+    {
+      "file": "site.spec.ts",
+      "line": 6,
+      "title": "reuniones regulares y encuentros programados quedan separados",
+      "error": "Error: expect(locator).toHaveText(expected) failed\n\nLocator: locator('.visit-layout').locator('.schedule h3')\nTimeout: 5000ms\n- Expected  - 6\n+ Received  + 1\n\n- Array [\n-   \"Reunión general\",\n-   \"Oración\",\n-   \"Jóvenes\",\n-   \"Niños\",\n- ]\n+ Array []\n\nCall log:\n  - Expect \"toHaveText\" locator('.visit-layout').locator('.schedule h3') with timeout 5000ms\n  - waiting for locator('.visit-layout').locator('.schedule h3')\n    14 × locator resolved to 0 elements\n"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import { groups } from '../data/links';
 import SocialLinks from './SocialLinks.astro';
 ---
 <header class="site-header shell" transition:name="institution-header">
-  <a class="institution" href="/" aria-label={`${site.name} — Inicio`}><Image src={site.logos.mother} alt="Emblema de Comunidad Cristiana: cruz y paloma" width={58} height={58} format="webp" loading="eager" /><span>Comunidad Cristiana<small>Villa Sarmiento</small></span></a>
+  <a class="institution" href="/"><Image src={site.logos.mother} alt="" aria-hidden="true" width={58} height={58} densities={[1, 2, 3]} format="webp" loading="eager" /><span>Comunidad Cristiana{' '}<small>Villa Sarmiento</small></span><span class="sr-only"> — Inicio</span></a>
   <div class="header-actions"><a class="header-visit" href="/visitanos/">Visitarnos</a><button class="menu-open" type="button" aria-label="Abrir menú" aria-haspopup="dialog" aria-controls="navigation-dialog" aria-expanded="false"><span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button></div>
 <dialog id="navigation-dialog" class="navigation-dialog" aria-labelledby="menu-title">
  <div class="menu-inner">

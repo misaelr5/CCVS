@@ -1,0 +1,386 @@
+[
+  {
+    "width": 390,
+    "state": "menu",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": [
+          [
+            ".menu-open"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "button[data-video-sound=\"\"] > span"
+          ],
+          [
+            "button[data-video-play=\"\"] > span"
+          ],
+          [
+            ".hero-title-primary"
+          ],
+          [
+            ".hero-title-secondary"
+          ],
+          [
+            ".hero-copy > p"
+          ],
+          [
+            ".pill[href$=\"lo-que-creemos/\"]"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-time > small"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-time > small"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-time > small"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-time > small"
+          ],
+          [
+            ".footer-contact > address"
+          ],
+          [
+            ".footer-visit"
+          ],
+          [
+            ".footer-contact > a[href$=\"links/\"]"
+          ],
+          [
+            "a[href$=\"terminos-y-condiciones/\"]"
+          ]
+        ]
+      },
+      {
+        "id": "video-caption",
+        "nodes": [
+          [
+            "video"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "state": "accordion",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": [
+          [
+            ".menu-open"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "#belief-button-0 > .belief-number"
+          ],
+          [
+            "#belief-button-0 > .belief-title"
+          ],
+          [
+            "#belief-button-0 > .belief-symbol[aria-hidden=\"true\"]"
+          ],
+          [
+            "#belief-panel-0 > .belief-panel-inner > p"
+          ],
+          [
+            "#belief-button-1 > .belief-number"
+          ],
+          [
+            "#belief-button-1 > .belief-title"
+          ],
+          [
+            "#belief-button-2 > .belief-number"
+          ],
+          [
+            "#belief-button-2 > .belief-title"
+          ],
+          [
+            "#belief-button-3 > .belief-number"
+          ],
+          [
+            "#belief-button-3 > .belief-title"
+          ],
+          [
+            "#belief-button-4 > .belief-number"
+          ],
+          [
+            "#belief-button-4 > .belief-title"
+          ],
+          [
+            "address"
+          ],
+          [
+            ".footer-visit"
+          ],
+          [
+            ".footer-contact > a[href$=\"links/\"]"
+          ],
+          [
+            "a[href$=\"terminos-y-condiciones/\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "state": "menu",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": [
+          [
+            ".menu-open"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "button[data-video-sound=\"\"] > span"
+          ],
+          [
+            "button[data-video-play=\"\"] > span"
+          ],
+          [
+            ".hero-title-primary"
+          ],
+          [
+            ".hero-title-secondary"
+          ],
+          [
+            ".hero-copy > p"
+          ],
+          [
+            ".pill[href$=\"lo-que-creemos/\"]"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"visitanos/#horarios\"] > .schedule-row-time > small"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"ministerios/#vida-de-fe\"] > .schedule-row-time > small"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"ministerios/#jovenes\"] > .schedule-row-time > small"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-day"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-copy > strong"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-copy > small"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-time"
+          ],
+          [
+            "a[href$=\"ministerios/#ninos\"] > .schedule-row-time > small"
+          ],
+          [
+            ".footer-contact > h2"
+          ],
+          [
+            ".footer-contact > address"
+          ],
+          [
+            ".footer-visit"
+          ],
+          [
+            ".footer-contact > a[href$=\"links/\"]"
+          ],
+          [
+            "a[href$=\"politica-de-privacidad/\"]"
+          ],
+          [
+            ".footer-bottom > p:nth-child(4)"
+          ]
+        ]
+      },
+      {
+        "id": "video-caption",
+        "nodes": [
+          [
+            "video"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "state": "accordion",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": [
+          [
+            ".menu-open"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "#belief-button-0 > .belief-number"
+          ],
+          [
+            "#belief-button-0 > .belief-title"
+          ],
+          [
+            "#belief-button-0 > .belief-symbol[aria-hidden=\"true\"]"
+          ],
+          [
+            "#belief-panel-0 > .belief-panel-inner > p"
+          ],
+          [
+            "#belief-button-1 > .belief-number"
+          ],
+          [
+            "#belief-button-1 > .belief-title"
+          ],
+          [
+            "#belief-button-2 > .belief-number"
+          ],
+          [
+            "#belief-button-2 > .belief-title"
+          ],
+          [
+            "#belief-button-3 > .belief-number"
+          ],
+          [
+            "#belief-button-3 > .belief-title"
+          ],
+          [
+            "#belief-button-4 > .belief-number"
+          ],
+          [
+            "#belief-button-4 > .belief-title"
+          ],
+          [
+            ".footer-contact > h2"
+          ],
+          [
+            "address"
+          ],
+          [
+            ".footer-visit"
+          ],
+          [
+            ".footer-contact > a[href$=\"links/\"]"
+          ],
+          [
+            "a[href$=\"politica-de-privacidad/\"]"
+          ],
+          [
+            "p:nth-child(4)"
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const routes = ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
+import { routes } from './helpers/routes';
+import { beliefs, beliefsIntro, beliefsClosing } from '../src/data/beliefs';
 
 test('reuniones regulares y encuentros programados quedan separados', async ({ page }) => {
   for (const route of ['/ministerios/', '/visitanos/']) {
@@ -12,7 +13,22 @@ test('reuniones regulares y encuentros programados quedan separados', async ({ p
     } else {
       const weekly = page.locator('.visit-layout');
       await expect(weekly.locator('.schedule li')).toHaveCount(4);
-      await expect(weekly.locator('.schedule h3')).toHaveText(['Reunión general', 'Oración', 'Jóvenes', 'Niños']);
+      // Las tarjetas son enlaces, no encabezados. Comprobar contenido, nombre y destino reales.
+      const gatherings = [
+        { title: 'Reunión general', day: 'Domingo', time: '20:30', href: '#donde' },
+        { title: 'Oración', day: 'Miércoles', time: '21:00', href: '/ministerios/#vida-de-fe' },
+        { title: 'Jóvenes', day: 'Sábado', time: '21:00', href: '/ministerios/#jovenes' },
+        { title: 'Niños', day: 'Sábado', time: '16:30', href: '/ministerios/#ninos' },
+      ];
+      for (const gathering of gatherings) {
+        const link = weekly.getByRole('link', { name: new RegExp(gathering.title) });
+        await expect(link).toBeVisible();
+        for (const value of [gathering.title, gathering.day, gathering.time]) {
+          await expect(link).toContainText(value);
+          await expect(link).toHaveAccessibleName(new RegExp(value));
+        }
+        await expect(link).toHaveAttribute('href', gathering.href);
+      }
     }
     const programmed = page.locator('.programmed-meetings');
     await expect(programmed.getByRole('heading', { name: 'Encuentros programados' })).toBeVisible();
@@ -33,6 +49,7 @@ for (const width of [360, 375, 390, 430, 768, 1024, 1440]) {
       await page.emulateMedia({ reducedMotion:'reduce' });
       const failures: string[] = [];
       page.on('pageerror', error => failures.push(error.message));
+      page.on('console', message => { if (message.type() === 'error') failures.push(message.text()); });
       expect((await page.goto(route))?.status()).toBe(200);
       await page.evaluate(() => document.fonts.ready);
       await expect(page.locator('h1')).toHaveCount(1);
@@ -50,8 +67,10 @@ for (const width of [360, 375, 390, 430, 768, 1024, 1440]) {
       expect(images).toBe(0);
       await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
       if (width === 390 || width === 1440) {
-        const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+        const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
         expect(result.violations.map(item => ({ id:item.id, elements:item.nodes.map(node => node.target) }))).toEqual([]);
+        const labels = await new AxeBuilder({ page }).withRules(['label-content-name-mismatch', 'heading-order']).analyze();
+        expect(labels.violations.map(item => ({ id:item.id, elements:item.nodes.map(node => node.target) }))).toEqual([]);
       }
       expect(failures).toEqual([]);
     });
@@ -98,12 +117,39 @@ test('acordeón: teclado y estados ARIA', async ({ page }) => {
   await expect(panel).toBeHidden();
 });
 
+for (const width of [360, 390, 768, 1440]) {
+  test(`ocho fundamentos completos a ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/lo-que-creemos/');
+    await expect(page.locator('.beliefs-introduction p')).toHaveText(beliefsIntro);
+    await expect(page.locator('.beliefs-closing')).toHaveText(beliefsClosing);
+    const triggers = page.locator('.belief-trigger');
+    await expect(triggers).toHaveCount(8);
+    for (let index = 0; index < 8; index++) {
+      const trigger = triggers.nth(index);
+      const panel = page.locator(`#belief-panel-${index}`);
+      await expect(trigger.locator('.belief-number')).toHaveText(String(index + 1).padStart(2, '0'));
+      await expect(trigger.locator('.belief-title')).toHaveText(beliefs[index].title);
+      await expect(trigger).toHaveAttribute('aria-controls', `belief-panel-${index}`);
+      await trigger.click();
+      await expect(trigger).toHaveAttribute('aria-expanded', 'true');
+      await expect(panel).toBeVisible();
+      await expect(panel.locator('p')).toHaveText(beliefs[index].paragraphs);
+      await expect.poll(() => panel.evaluate(element => element.getBoundingClientRect().height)).toBeGreaterThan(0);
+      await trigger.click();
+      await expect(trigger).toHaveAttribute('aria-expanded', 'false');
+      await expect(panel).toBeHidden();
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+  });
+}
+
 test('sin JS: navegación y doctrina disponibles', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled:false, viewport:{width:390,height:844} });
   const page = await context.newPage();
   await page.goto('/lo-que-creemos/');
   await expect(page.getByRole('navigation', {name:'Navegación sin JavaScript'})).toBeVisible();
-  await expect(page.locator('.belief-panel')).toHaveCount(5);
+  await expect(page.locator('.belief-panel')).toHaveCount(8);
   for (const panel of await page.locator('.belief-panel').all()) await expect(panel).toBeVisible();
   await context.close();
 });

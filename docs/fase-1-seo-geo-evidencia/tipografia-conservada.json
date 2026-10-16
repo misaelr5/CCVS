@@ -1,0 +1,49 @@
+{
+  "viewport": 390,
+  "matchedBeforeAudit": true,
+  "headings": {
+    "/": [
+      {
+        "text": "Jesucristo, el camino al Padre.",
+        "font": "50.7px",
+        "line": "51.714px"
+      }
+    ],
+    "/visitanos/": [
+      {
+        "text": "La fe se comparte.Vení a conocernos.",
+        "font": "49.53px",
+        "line": "49.53px"
+      }
+    ],
+    "/ministerios/": [
+      {
+        "text": "Crecer en Cristo.Servir al prójimo.",
+        "font": "46px",
+        "line": "48.76px"
+      },
+      {
+        "text": "Escuela Bíblica Infantil",
+        "font": "42.9px",
+        "line": "43.758px"
+      },
+      {
+        "text": "Jóvenes y Adolescentes",
+        "font": "42.9px",
+        "line": "43.758px"
+      },
+      {
+        "text": "Oración y Palabra",
+        "font": "42.9px",
+        "line": "43.758px"
+      }
+    ],
+    "/politica-de-privacidad/": [
+      {
+        "text": "Política de privacidad.",
+        "font": "48px",
+        "line": "50.88px"
+      }
+    ]
+  }
+}

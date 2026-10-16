@@ -8,7 +8,7 @@ import SocialLinks from './SocialLinks.astro';
  <Image class="footer-wordmark" src={site.logos.local} alt="" width={900} height={900} format="webp" loading="lazy" aria-hidden="true" />
  <div class="shell footer-grid">
   <div class="footer-identity">
-   <Image src={site.logos.mother} alt="Comunidad Cristiana" width={64} height={64} format="webp" />
+   <Image src={site.logos.mother} alt="Comunidad Cristiana" width={64} height={64} densities={[1, 2, 3]} format="webp" />
    <p>Comunidad Cristiana<br /><span>Villa Sarmiento</span></p>
   </div>
   {groups.slice(0, 2).map(group => <nav aria-label={group.title}><h2>{group.title}</h2>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</nav>)}

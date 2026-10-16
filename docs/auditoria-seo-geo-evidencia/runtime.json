@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-16T11:13:23.082Z",
+  "map": {
+    "src": "https://www.google.com/maps?q=-31.9309445%2C-65.1925254&z=17&output=embed",
+    "loadedUrl": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s-31.9309445,-65.1925254!6i17",
+    "bodyText": "Keyboard shortcuts\nMap data ©2026\nTerms\nReport a map error"
+  },
+  "privacyLink": {
+    "href": "/links/",
+    "text": "canales oficiales",
+    "decoration": "none",
+    "color": "rgb(99, 25, 24)",
+    "parentColor": "rgb(17, 17, 17)"
+  }
+}

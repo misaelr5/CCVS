@@ -6,7 +6,7 @@ import MinistryFeature from '../components/MinistryFeature.astro';
 import ProgrammedMeetings from '../components/ProgrammedMeetings.astro';
 import { ministries, regularMinistries } from '../data/ministries';
 ---
-<BaseLayout title="Reuniones" description="Conocé las reuniones y espacios de Comunidad Cristiana Villa Sarmiento: oración, estudios bíblicos, niños, jóvenes, evangelismo y ayuda social.">
+<BaseLayout title="Reuniones" description="Reuniones de Comunidad Cristiana en Villa Sarmiento, Córdoba: oración y Palabra, Escuela Bíblica Infantil, jóvenes y adolescentes. Conocé días y horarios.">
 <section class="page-heading illustrated-heading shell"><h1>Crecer en Cristo.<br /><span class="serif">Servir al prójimo.</span></h1><p>Jesús llamó a sus seguidores a hacer discípulos. En nuestra congregación compartimos la fe mediante la oración, el estudio de la Biblia y el servicio a nuestros vecinos.</p><ScrollAccent kind="horizontal" /><FaithIllustration kind="heart" class="heading-faith-sticker" /><nav class="section-navigation" aria-label="Reuniones">{ministries.map(item => <a href={`#${item.id}`}>{item.title.replace(/\.$/, '')}</a>)}</nav></section>
 <div class="ministries-showcase shell section-gap"><h2>Reuniones semanales</h2><div class="ministries-showcase-list">{regularMinistries.map((ministry,index) => <MinistryFeature ministry={ministry} index={index} />)}</div></div>
 <ProgrammedMeetings anchorIds />

@@ -1,0 +1,637 @@
+{
+  "date": "2026-10-16T11:11:22.847Z",
+  "timeZone": "America/Montevideo",
+  "commit": "9c0c616495bd88297d94bb791c20d30df1c326df",
+  "node": "v24.15.0",
+  "base": "http://127.0.0.1:4323",
+  "live": "https://ccvs-sigma.vercel.app",
+  "responses": [
+    {
+      "url": "https://ccvs-sigma.vercel.app/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 27383,
+      "sha256": "a2a34433e55e5bc3c3231bcea53b277ca3ce8531c344b477caa3c4459c8862d1",
+      "title": "Jesucristo, el camino al Padre | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/nosotros/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/nosotros/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 24522,
+      "sha256": "dc8df174a5c034ef840a171f6a0b4942464eb4b0bb4f626c2553abbbb8c4788e",
+      "title": "Nuestra historia | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/lo-que-creemos/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/lo-que-creemos/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 19821,
+      "sha256": "ffd748081c2a419e5403bbfab5db632d68f4a914e42c68d410a22681f07d174f",
+      "title": "Lo que creemos | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/ministerios/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/ministerios/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 23040,
+      "sha256": "4ec5a4ac39a4a37496b32d6b2fa5d3ff6e2815e87f3957634a4837623669261c",
+      "title": "Reuniones | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/visitanos/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/visitanos/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 26801,
+      "sha256": "17f525b1be3a42b64b30069f990ef13eb1853fdffb5cf9b4c5dc1aa42f1f59a5",
+      "title": "Vení a una reunión | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/links/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/links/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 8704,
+      "sha256": "296130b5c84dd81eed2a607f01eecc7f59bc3d900247694120c440721b62da0b",
+      "title": "Enlaces de la congregación | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/terminos-y-condiciones/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/terminos-y-condiciones/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 16304,
+      "sha256": "46babf6bacb19b8a3c481fc13ac68ce742c2f00829eb7942f326e879f89e26dd",
+      "title": "Términos y condiciones — borrador | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/politica-de-privacidad/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/politica-de-privacidad/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 16028,
+      "sha256": "4bac06f52c7d344fdbd378b9e435199c24ab9f7d8c30da819c4fd13a1f081fae",
+      "title": "Política de privacidad | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/robots.txt",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/robots.txt",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-length": "26",
+            "content-type": "text/plain; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 26,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "canonical": null,
+      "html": "User-agent: *\nDisallow: /\n"
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/sitemap.xml",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/sitemap.xml",
+          "status": 404,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-length": "79",
+            "content-type": "text/plain; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 79,
+      "sha256": "3e9920f0483addb2c9aeb50ff0cea7303d390ddd69040b3ed0b9f5653101bcf8",
+      "canonical": null,
+      "html": "The page could not be found\n\nNOT_FOUND\n\ngru1::8ktmt-1792149082983-3255e2bf67df\n"
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/sitemap-index.xml",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/sitemap-index.xml",
+          "status": 404,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-length": "79",
+            "content-type": "text/plain; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 79,
+      "sha256": "99629a44d68347c681b462649029609897d875220bd66c8996d90f7623395e0a",
+      "canonical": null,
+      "html": "The page could not be found\n\nNOT_FOUND\n\ngru1::mq79x-1792149082985-4fb5e10f498d\n"
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/no-existe-auditoria-ccvs/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/no-existe-auditoria-ccvs/",
+          "status": 404,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-length": "79",
+            "content-type": "text/plain; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 79,
+      "sha256": "4f8f2ee3346c83b05fef08d18eb79e9aa2c719e9e7c35b5ca0edd5d9265226f1",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/horarios/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/horarios/",
+          "status": 404,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-length": "79",
+            "content-type": "text/plain; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 79,
+      "sha256": "bb2cc5ae979387f496fd54e2b3e29e88c8bec052c079358413e216deb7d865be",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/historia/",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/historia/",
+          "status": 404,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-length": "79",
+            "content-type": "text/plain; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 79,
+      "sha256": "a02ce35261c36b83b030b72089d20a30bb8db698693f5c92783e9244bdea9784",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/visitanos",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/visitanos",
+          "status": 308,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "text/plain",
+            "location": "/visitanos/",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
+          }
+        },
+        {
+          "url": "https://ccvs-sigma.vercel.app/visitanos/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 26801,
+      "sha256": "17f525b1be3a42b64b30069f990ef13eb1853fdffb5cf9b4c5dc1aa42f1f59a5",
+      "title": "Vení a una reunión | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/?utm_source=auditoria",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/?utm_source=auditoria",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 27383,
+      "sha256": "a2a34433e55e5bc3c3231bcea53b277ca3ce8531c344b477caa3c4459c8862d1",
+      "title": "Jesucristo, el camino al Padre | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/index.html",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/index.html",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 27383,
+      "sha256": "a2a34433e55e5bc3c3231bcea53b277ca3ce8531c344b477caa3c4459c8862d1",
+      "title": "Jesucristo, el camino al Padre | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/favicon.ico",
+      "chain": [
+        {
+          "url": "https://ccvs-sigma.vercel.app/favicon.ico",
+          "status": 404,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-length": "79",
+            "content-type": "text/plain; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 79,
+      "sha256": "ef4149b4aa091cd5432fba0dd50ee94d6559176df2e80850d1264c78c6d08a5d",
+      "canonical": null
+    },
+    {
+      "url": "http://ccvs-sigma.vercel.app/",
+      "chain": [
+        {
+          "url": "http://ccvs-sigma.vercel.app/",
+          "status": 308,
+          "headers": {
+            "content-type": "text/plain",
+            "location": "https://ccvs-sigma.vercel.app/",
+            "server": "Vercel"
+          }
+        },
+        {
+          "url": "https://ccvs-sigma.vercel.app/",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "server": "Vercel",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-vercel-cache": "HIT"
+          }
+        }
+      ],
+      "bodyBytes": 27383,
+      "sha256": "a2a34433e55e5bc3c3231bcea53b277ca3ce8531c344b477caa3c4459c8862d1",
+      "title": "Jesucristo, el camino al Padre | Comunidad Cristiana Villa Sarmiento",
+      "robots": "noindex, nofollow",
+      "canonical": null
+    },
+    {
+      "url": "https://maps.app.goo.gl/YemN5zzZ2aumfGYy8",
+      "chain": [
+        {
+          "url": "https://maps.app.goo.gl/YemN5zzZ2aumfGYy8",
+          "status": 302,
+          "headers": {
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "content-length": "0",
+            "content-type": "text/html; charset=utf-8",
+            "location": "https://www.google.com/maps/place/COMUNIDAD+CRISTIANA+VILLA+SARMIENTO/@-31.9309445,-65.1925254,17z/data=!3m1!4b1!4m6!3m5!1s0x942cd3ec70c829f3:0xee831bb7723fb1bf!8m2!3d-31.9309445!4d-65.1925254!16s%2Fg%2F11g2w747g4?entry=tts&g_ep=EgoyMDI2MTAxMy4wIPu8ASoASAFQAw%3D%3D&skid=c5007bc4-9d76-4002-a81d-a8ae252123fd",
+            "server": "ESF",
+            "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        },
+        {
+          "url": "https://www.google.com/maps/place/COMUNIDAD+CRISTIANA+VILLA+SARMIENTO/@-31.9309445,-65.1925254,17z/data=!3m1!4b1!4m6!3m5!1s0x942cd3ec70c829f3:0xee831bb7723fb1bf!8m2!3d-31.9309445!4d-65.1925254!16s%2Fg%2F11g2w747g4?entry=tts&g_ep=EgoyMDI2MTAxMy4wIPu8ASoASAFQAw%3D%3D&skid=c5007bc4-9d76-4002-a81d-a8ae252123fd",
+          "status": 200,
+          "headers": {
+            "cache-control": "private, max-age=0",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=UTF-8",
+            "server": "gws",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 219972,
+      "sha256": "bb931a78c2b570f9752372968e0c1086e674bfc54f06a878cad713dc5eadc86a",
+      "title": " Google Maps ",
+      "canonical": null
+    },
+    {
+      "url": "https://www.instagram.com/jovenesccvs/",
+      "chain": [
+        {
+          "url": "https://www.instagram.com/jovenesccvs/",
+          "status": 200,
+          "headers": {
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "vary": "Accept-Encoding",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        }
+      ],
+      "bodyBytes": 697433,
+      "sha256": "ef27e16c695d14ae6539fe9f5c385890b9bcaeb39ae2061f07b042ba9488e4a6",
+      "title": "𝘑𝘰́𝘷𝘦𝘯𝘦𝘴 𝘊𝘰𝘮𝘶𝘯𝘪𝘥𝘢𝘥 𝘊𝘳𝘪𝘴𝘵𝘪𝘢𝘯𝘢 (&#064;jovenesccvs) • Instagram photos and videos",
+      "robots": "noarchive, noimageindex",
+      "canonical": "https://www.instagram.com/jovenesccvs/"
+    },
+    {
+      "url": "https://www.facebook.com/comunidadcristiana.villasarmiento/",
+      "chain": [
+        {
+          "url": "https://www.facebook.com/comunidadcristiana.villasarmiento/",
+          "status": 200,
+          "headers": {
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "content-encoding": "br",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "strict-transport-security": "max-age=15552000; preload",
+            "vary": "Accept-Encoding",
+            "x-content-type-options": "nosniff"
+          }
+        }
+      ],
+      "bodyBytes": 483212,
+      "sha256": "689cb37c070b45ce188f1948a80254bf65d4dcdead767ae2d9b577ca4d08f2e5",
+      "title": "Comunidad Cristiana Villa Sarmiento (&#064;comunidadcristiana.villasarmiento) • Facebook, Connect with friends",
+      "robots": "noodp,noydir,noarchive",
+      "canonical": "https://www.facebook.com/comunidadcristiana.villasarmiento/"
+    },
+    {
+      "url": "https://www.youtube.com/@comunidadcristianavillasar9819/videos",
+      "chain": [
+        {
+          "url": "https://www.youtube.com/@comunidadcristianavillasar9819/videos",
+          "status": 200,
+          "headers": {
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "server": "ESF",
+            "strict-transport-security": "max-age=31536000",
+            "vary": "Sec-CH-Viewport-Width, Sec-CH-DPR, Device-Memory",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ],
+      "bodyBytes": 1078626,
+      "sha256": "76e4bde27887684c17cb5ffad630f43bf5eff8ea4c0452427da9cab515518ace",
+      "title": "Comunidad Cristiana Villa Sarmiento | CCVS | - YouTube",
+      "canonical": "https://www.youtube.com/channel/UCXlQiwpiPzATjP9XtdXBJSA"
+    }
+  ],
+  "assetHeaders": [
+    {
+      "url": "https://ccvs-sigma.vercel.app/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "content-encoding": "br",
+        "content-type": "application/javascript; charset=utf-8",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/_astro/BaseLayout.BTv4k-yy.css",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "content-encoding": "br",
+        "content-type": "text/css; charset=utf-8",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/_astro/BaseLayout.astro_astro_type_script_index_0_lang.C7B6Wn1X.js",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "content-encoding": "br",
+        "content-type": "application/javascript; charset=utf-8",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://ccvs-sigma.vercel.app/media/portada-ccvs-mobile.mp4",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-length": "8441049",
+        "content-type": "video/mp4",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "HIT"
+      }
+    }
+  ]
+}

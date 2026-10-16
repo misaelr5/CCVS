@@ -5,11 +5,15 @@ import ScrollAccent from '../components/ScrollAccent.astro';
 import PhotoSection from '../components/PhotoSection.astro';
 import FaithIllustration from '../components/FaithIllustration.astro';
 import { site } from '../data/site';
+import { beliefsIntro } from '../data/beliefs';
 ---
-<BaseLayout title="Lo que creemos" description="Conocé las creencias de Comunidad Cristiana Villa Sarmiento: la Biblia como autoridad, Jesucristo, la salvación por gracia y la vida de fe.">
+<BaseLayout title="Lo que creemos" description="Qué creemos en Comunidad Cristiana Villa Sarmiento, Córdoba: la Biblia como autoridad, Jesucristo, la salvación por gracia y la vida de fe.">
   <section class="page-heading shell">
-    <h1>Nuestra fe en Cristo.<br /><span class="serif">La Biblia nos guía.</span></h1>
-    <p>Creemos en Jesucristo y reconocemos la Biblia como única autoridad. Compartimos una vida de oración, adoración y fe.</p>
+    <h1>LO QUE CREEMOS</h1>
+    <p class="beliefs-subtitle">Nuestra fe, nuestro fundamento y nuestra manera de vivir</p>
+    <div class="beliefs-introduction">
+      {beliefsIntro.map(paragraph => <p>{paragraph}</p>)}
+    </div>
     <ScrollAccent kind="horizontal" />
   </section>
   <section class="beliefs-photo-slot illustrated-photo shell section-gap" aria-label="La comunidad estudia la Biblia">
@@ -18,3 +22,10 @@ import { site } from '../data/site';
   </section>
   <BeliefsAccordion />
 </BaseLayout>
+
+<style>
+  .page-heading h1 { max-width:100%; }
+  .page-heading > .beliefs-subtitle { max-width:760px; font-family:var(--font-editorial); font-size:clamp(25px,3vw,40px); line-height:1.2; }
+  .beliefs-introduction { max-width:760px; margin-top:clamp(32px,5vw,64px); font-size:clamp(16px,1.5vw,18px); line-height:1.65; }
+  .beliefs-introduction p + p { margin-top:1.25em; }
+</style>

@@ -1,0 +1,532 @@
+{
+  "date": "2026-10-16T11:52:23.147Z",
+  "base": "http://127.0.0.1:4323",
+  "stats": {
+    "startTime": "2026-10-16T11:50:16.217Z",
+    "duration": 117217.684,
+    "expected": 103,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "total": 103,
+  "failed": [],
+  "routeMatrix": 56,
+  "tests": [
+    {
+      "file": "hero-video.spec.ts",
+      "title": "portada 390: reproducción silenciosa, sonido y pausa por teclado",
+      "status": "expected"
+    },
+    {
+      "file": "hero-video.spec.ts",
+      "title": "portada 1440: reproducción silenciosa, sonido y pausa por teclado",
+      "status": "expected"
+    },
+    {
+      "file": "hero-video.spec.ts",
+      "title": "movimiento reducido: poster sin descargar video y reproducción manual",
+      "status": "expected"
+    },
+    {
+      "file": "hero-video.spec.ts",
+      "title": "navegación: detiene el video anterior y vuelve a Inicio sin sonido",
+      "status": "expected"
+    },
+    {
+      "file": "hero-video.spec.ts",
+      "title": "archivo no disponible: conserva poster y contenido",
+      "status": "expected"
+    },
+    {
+      "file": "hero-video.spec.ts",
+      "title": "sin JavaScript: poster y contenido de la portada disponibles",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "menú 4.2 · 360: iconos al final, animación, teclado y scroll",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "menú 4.2 · 390: iconos al final, animación, teclado y scroll",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "menú 4.2 · 1440: iconos al final, animación, teclado y scroll",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "redes compactas y consistentes en footer; Links mantiene etiquetas",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia / y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia /nosotros/ y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia /lo-que-creemos/ y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia /ministerios/ y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia /visitanos/ y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia /links/ y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia /terminos-y-condiciones/ y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "entrada propia /politica-de-privacidad/ y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4-2.spec.ts",
+      "title": "menú sin animación con reduced motion y cierre al navegar",
+      "status": "expected"
+    },
+    {
+      "file": "phase4.spec.ts",
+      "title": "ClientRouter: forward, back, forward y scripts sin duplicados",
+      "status": "expected"
+    },
+    {
+      "file": "phase4.spec.ts",
+      "title": "Inicio: orden mobile, horarios y redes oficiales",
+      "status": "expected"
+    },
+    {
+      "file": "phase4.spec.ts",
+      "title": "sin View Transition API: navegación completa y menú funcional",
+      "status": "expected"
+    },
+    {
+      "file": "phase4.spec.ts",
+      "title": "motion: reveal una vez, contenido visible y reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "phase4.spec.ts",
+      "title": "CCVS de fondo no desborda en mobile",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "tarjeta: sin fades, scroll usable, cierre exterior y sin trampa de foco",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "navegación y retroceso empiezan arriba sin sumar una segunda entrada al título",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /nosotros/: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /lo-que-creemos/: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /ministerios/: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /visitanos/: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /links/: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /terminos-y-condiciones/: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "objetos al scroll /politica-de-privacidad/: responden y respetan reduced motion",
+      "status": "expected"
+    },
+    {
+      "file": "refinements.spec.ts",
+      "title": "footer: CCVS de fondo, contenido encima y altura compacta",
+      "status": "expected"
+    },
+    {
+      "file": "seo-readiness.spec.ts",
+      "title": "privacidad: enlace distinguible sin color, foco y llegada desde el footer",
+      "status": "expected"
+    },
+    {
+      "file": "seo-readiness.spec.ts",
+      "title": "ocho rutas: identidad local, tarjetas sociales, recursos e indexación bloqueada",
+      "status": "expected"
+    },
+    {
+      "file": "seo-readiness.spec.ts",
+      "title": "redes: cuenta juvenil explícita y destinos originales en menú, footer y Links",
+      "status": "expected"
+    },
+    {
+      "file": "seo-readiness.spec.ts",
+      "title": "reuniones: los tres ministerios dependen del encabezado de reuniones semanales",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "reuniones regulares y encuentros programados quedan separados",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/nosotros/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/lo-que-creemos/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ministerios/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/visitanos/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/links/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/terminos-y-condiciones/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/politica-de-privacidad/ · 360px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/nosotros/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/lo-que-creemos/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ministerios/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/visitanos/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/links/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/terminos-y-condiciones/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/politica-de-privacidad/ · 375px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/nosotros/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/lo-que-creemos/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ministerios/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/visitanos/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/links/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/terminos-y-condiciones/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/politica-de-privacidad/ · 390px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/nosotros/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/lo-que-creemos/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ministerios/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/visitanos/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/links/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/terminos-y-condiciones/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/politica-de-privacidad/ · 430px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/nosotros/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/lo-que-creemos/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ministerios/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/visitanos/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/links/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/terminos-y-condiciones/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/politica-de-privacidad/ · 768px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/nosotros/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/lo-que-creemos/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ministerios/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/visitanos/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/links/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/terminos-y-condiciones/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/politica-de-privacidad/ · 1024px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/nosotros/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/lo-que-creemos/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/ministerios/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/visitanos/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/links/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/terminos-y-condiciones/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "/politica-de-privacidad/ · 1440px: carga, layout y recursos",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "menú tarjeta · 390px: página estable, Escape y anclas",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "menú tarjeta · 1440px: página estable, Escape y anclas",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "acordeón: teclado y estados ARIA",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "sin JS: navegación y doctrina disponibles",
+      "status": "expected"
+    },
+    {
+      "file": "site.spec.ts",
+      "title": "reducción de movimiento y orden mobile de Nosotros",
+      "status": "expected"
+    },
+    {
+      "file": "transitions.spec.ts",
+      "title": "transición lateral 390: continuidad, header estable e historial",
+      "status": "expected"
+    },
+    {
+      "file": "transitions.spec.ts",
+      "title": "transición lateral 1440: continuidad, header estable e historial",
+      "status": "expected"
+    }
+  ]
+}

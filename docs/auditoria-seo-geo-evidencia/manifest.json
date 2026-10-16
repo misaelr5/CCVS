@@ -1,0 +1,474 @@
+{
+  "date": "2026-10-16T11:11:22.847Z",
+  "timeZone": "America/Montevideo",
+  "commit": "9c0c616495bd88297d94bb791c20d30df1c326df",
+  "node": "v24.15.0",
+  "base": "http://127.0.0.1:4323",
+  "live": "https://ccvs-sigma.vercel.app",
+  "files": [
+    {
+      "path": "astro.config.mjs",
+      "sha256": "a333608f025799872e81aed4ed0302384c834ce2b26275ac01ce48a7b79eb86c"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "a43020fefc02d470fdbe4da44a5834d88405e21e74942f62710b0f26ae22503b"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5ced43bc658c8706f0b3e1ab9a233735b174ef4594f82ce14aabbbae657f83ea"
+    },
+    {
+      "path": "public/_headers",
+      "sha256": "a1603c17774ca1b772eeb42d509cfe1218d7a979063f97cc7d70dfe508358f60"
+    },
+    {
+      "path": "public/media/nuestra-historia-mobile.mp4",
+      "sha256": "d21efbcc8eb15911e809fdd469fb682325eba422a0529c5535d02ba4ac6ebc8d"
+    },
+    {
+      "path": "public/media/nuestra-historia.mp4",
+      "sha256": "907cf3c106a8216887744fde0d904ea4952f635a07c1508b5a8120352cbfca05"
+    },
+    {
+      "path": "public/media/portada-ccvs-mobile.mp4",
+      "sha256": "8c954bc78e5070adad8ec31d67fb92b89be149ed8296bd828fe5721ce593fa73"
+    },
+    {
+      "path": "public/media/portada-ccvs.mp4",
+      "sha256": "e1c600e78ed129ac948fe4997b130fa45d3e7bf80c504b2f8e1001186289c3c0"
+    },
+    {
+      "path": "scripts/capture.mjs",
+      "sha256": "51fc7c008ee37a845bd54bb4a3716d69e2ca12d7e5cffc1390a092fc19cce30c"
+    },
+    {
+      "path": "scripts/prepare-hero-video.ps1",
+      "sha256": "9c826cea69bf2a491a962809d4de629910fbf75293041bcc3001904773667c9a"
+    },
+    {
+      "path": "scripts/prepare-history-video.ps1",
+      "sha256": "e0cd6631e957c8018b9d33213a00b1db3a23eff374cb2589a5ad364ab242dbc0"
+    },
+    {
+      "path": "scripts/verify-build.mjs",
+      "sha256": "b9a7e7590b2492a8a89d8154dee52305c2779840efc0ac5a7248a6288ce09b14"
+    },
+    {
+      "path": "src/assets/illustrations/README.md",
+      "sha256": "4fb51d619b69e3aba1e460255e065b5ce29acf9f17b940afe89c44cfe0bee25e"
+    },
+    {
+      "path": "src/assets/illustrations/biblia-grabado.png",
+      "sha256": "5654a254f025151c2bff98b7c13f182d82d8d7c223144839401fd7018fc54e83"
+    },
+    {
+      "path": "src/assets/illustrations/corazon-cruz.png",
+      "sha256": "c844145d1b8240180dec9699a76a04e98736397bce7b799284b2e6a9beb56e5d"
+    },
+    {
+      "path": "src/assets/illustrations/paloma-grabado.png",
+      "sha256": "e128c177d0fae98ab91887ca4e3128cbe3c2d34480a2f6bc2adc1d437c899bf5"
+    },
+    {
+      "path": "src/assets/photos/564242379_2960663177654447_8435190360901970176_n.jpg",
+      "sha256": "80242666ecf3dcf3ca064b1cf451239d8ac1cfd00bd60c7feba6a71ec4e33280"
+    },
+    {
+      "path": "src/assets/photos/7631AE24-1048-425F-A825-526524F65905.PNG",
+      "sha256": "6d15a3c611e41823dc18eef707fd63486b5b06ebbdd37bcf839ed99404351139"
+    },
+    {
+      "path": "src/assets/photos/DD1650F0-80E4-4EAC-B745-76A7079D96E1.PNG",
+      "sha256": "8c3a12a6f6ddba9bf1245921bc91b04c3f2749d28421e010fcfaf43d775cfdb2"
+    },
+    {
+      "path": "src/assets/photos/IMG_0412.HEIC",
+      "sha256": "d793e06a6e37005bab59de90804876dfb35d91382e8f9de9da49af1da5419268"
+    },
+    {
+      "path": "src/assets/photos/IMG_2764.HEIC",
+      "sha256": "1bc570db175526fdb50e81b25a066b6e128558d837879642803afeb300a991f7"
+    },
+    {
+      "path": "src/assets/photos/IMG_2770.HEIC",
+      "sha256": "339ca725c23230d06041e99336589a3f42b5c29703909ad16f5c8d613a574d55"
+    },
+    {
+      "path": "src/assets/photos/IMG_2792.JPG.jpeg",
+      "sha256": "8dd0ef51e82766497d10fb9b6a974b66dda58339ed7893ffbf6951e366238baa"
+    },
+    {
+      "path": "src/assets/photos/IMG_2793.JPG.jpeg",
+      "sha256": "6091d74e1bf1be6ab46f5f25b3389053b759501c313f02aad12a894e12264ccf"
+    },
+    {
+      "path": "src/assets/photos/IMG_3098.JPG.jpeg",
+      "sha256": "c9a090a1265740d5257c3278f77c751bf77c8ae097619c138f88f093ebad5c59"
+    },
+    {
+      "path": "src/assets/photos/IMG_3100.JPG.jpeg",
+      "sha256": "faed77575b7c153118b1ccdc2bab17221b123a11f8485aabd633dfb43a904a40"
+    },
+    {
+      "path": "src/assets/photos/IMG_6140.PNG",
+      "sha256": "4da2820c111de0f9f364e3d30ec0687863c6531b78878fa9e0ec58a7d88b2f63"
+    },
+    {
+      "path": "src/assets/photos/IMG_6562.HEIC",
+      "sha256": "84382c83be786e1ba11549b81a52379cc3341dc09f17d107fcf74e7eff9b2319"
+    },
+    {
+      "path": "src/assets/photos/IMG_6579.HEIC",
+      "sha256": "c8e38a4752a944bbbec03b13774886dbd918d62fc85eaad9c808d4b50a4f0fa3"
+    },
+    {
+      "path": "src/assets/photos/IMG_6593.HEIC",
+      "sha256": "71c0b0a88ad20f1f2398fbaf6435e2f2844d7a1b104e21e2843f69aed6744113"
+    },
+    {
+      "path": "src/assets/photos/IMG_6595.HEIC",
+      "sha256": "e4d8e3b4c67474c6e38959cc19f4cd3f3e3eebadcebd1ace4da7311012c2e171"
+    },
+    {
+      "path": "src/assets/photos/IMG_6600.HEIC",
+      "sha256": "396b7c9a7aa886626fbd09860f468653317f367cb7ada334de8a266bd97c512a"
+    },
+    {
+      "path": "src/assets/photos/IMG_7495.JPG.jpeg",
+      "sha256": "71cdaec7c2661986a25224c224942ddf6583722df4349898aaa1f5be67e34fd8"
+    },
+    {
+      "path": "src/assets/photos/IMG_9814.HEIC",
+      "sha256": "993c05b0f85e9956a3fb008e1347386b73451381d87be0a04da0b39d1392a098"
+    },
+    {
+      "path": "src/assets/photos/IMG_9820.HEIC",
+      "sha256": "1a29a38feff545302636c74546e9211dbb6b893548e350516f2050eaf993b5f4"
+    },
+    {
+      "path": "src/assets/photos/IMG_9947.HEIC",
+      "sha256": "7d322187c5499e8f999db5237b976edb462a7082697cd648e6c4fb09b012b1d6"
+    },
+    {
+      "path": "src/assets/photos/Screenshot 2026-10-14 193321.png",
+      "sha256": "163f01eb9aee3e2cb16f2766800b76a8d0eb6bfd52cf4f28fb94df8b133ed2f2"
+    },
+    {
+      "path": "src/assets/photos/Screenshot 2026-10-14 212933.jpg",
+      "sha256": "ba8ac30c2b39777f91e46502d42a9ca3e11c5e8d269db1ab4f1db08120119d44"
+    },
+    {
+      "path": "src/assets/photos/Screenshot 2026-10-14 213021.jpg",
+      "sha256": "5c0a354d3a4778f4a22ad106fb3568fc181422f593dc437ad530ca5731962bb2"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-09-17 at 09.21.11.jpeg",
+      "sha256": "938af263a3eb79f7a0a79a46a8e9708a9b5c7750ab9e0d91597aaa6e0e0db1d3"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-03 at 22.18.52.jpeg",
+      "sha256": "acc945aeda5a8fad72ddd760b8fc56d70b9d5c581cadaacff5cca1bb46daca12"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-03 at 22.18.53.jpeg",
+      "sha256": "e4233f1c820cd73e80305cb57cf592147cb81817b0ff6a67966c175306cd97e1"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-03 at 2a2.18.52.jpeg",
+      "sha256": "1369a9638e14a8c74cccdceeb8459393fcd2b56302b71aeadb530adb52dfba13"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-11 at 00.31.47.jpeg",
+      "sha256": "6b9ee6b4e9f5ee129c5362e2ed1fc239587bcdb0a4675a7929d80b79b8004198"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-12 at 19.56.57.jpeg",
+      "sha256": "9885e39366fcf2ffe2456abfd7ceec2c6372a54ae70977ba4544af773aba94b6"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 19.57.29.jpeg",
+      "sha256": "1be696d2217658d160cdce8fde956e4513e8e62a185fc49d754f78870043ef59"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 19.aa57.29.jpeg",
+      "sha256": "815a0b8868e48cdb15934ae819cd80c2d53f59b6551255b70ad5663727280030"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 20.18.40.jpeg",
+      "sha256": "93cb7d2c524a346dc4b0c52679610181bdcc801ff5fdb973c14389d337c8bd0d"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 20.20.07.jpeg",
+      "sha256": "d450c71e3e3961e4a79b1640fb5ca590ce3e732af9c1cc55103449c66650037a"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 20.20.39.jpeg",
+      "sha256": "db78d012fee851595d3530abceb0725f931d1bf3ae3c9c7a88642db12176a407"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 20.56.07.jpeg",
+      "sha256": "426f3775181a2e853341600f8d2c23f6e4e56637bdc057df6dd0119c208acd8a"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 20.56.14.jpeg",
+      "sha256": "5365584fc0a880bc8cac3878b0f22fd7b4818f43bcf009a8fded9f94d5687164"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-14 at 21.32.51.jpeg",
+      "sha256": "9f1ac7f74d0e5a5ab284fb4e28d5309407fc2d09ad82a34ac3d64bcf8472cf94"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-16 at 02.35.34.jpeg",
+      "sha256": "a859860f2af8b7fe5c2720c5cf25ed1a2b512ac7b1b7f16b0511c1df17d8e601"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-16 at 02.52.23.jpeg",
+      "sha256": "d1f10260090bd57707bacbf92ea8be1393c0ec711ee7ffd476e9bf7deaa9ffb5"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 2026-10-aaat 22.18.52.jpeg",
+      "sha256": "d1fcb34669b64aac37baa4fe0e243a0dd115feb8bcb0c47563fe5f6e8a6600c0"
+    },
+    {
+      "path": "src/assets/photos/WhatsApp Image 20aaa26-10-14 at 19.57.29.jpeg",
+      "sha256": "f5fd552b0013edbbfff7b9a05d2ffed4208c5ee59f0db014d14b443107d750da"
+    },
+    {
+      "path": "src/assets/photos/comunidad-grupo.jpg",
+      "sha256": "73409c9fe7ebdf04a58fff432cb291ca9b2b343ee4a1557d71a4d15da11ad3a5"
+    },
+    {
+      "path": "src/assets/photos/comunidad.jpg",
+      "sha256": "cb5ee7b04e7e4d99bcb4ecb684d4b84082cfb9efd1408f1c16f49e6320d070c5"
+    },
+    {
+      "path": "src/assets/photos/general.jpg",
+      "sha256": "c36c2fe005edcbc929a7516e7f08eb8b1677f6411298283941d9f0772b341c29"
+    },
+    {
+      "path": "src/assets/photos/historia-oracion-fe.jpg",
+      "sha256": "90887e48a9938ad7f72efbfae2a186857d0fcd94a5263860326629b1c31e2915"
+    },
+    {
+      "path": "src/assets/photos/horita feliz.jpeg",
+      "sha256": "fc5ca81ee11b8c71342535956d9c3b51b8d7cc5aed04a70f3272044408f1b8f1"
+    },
+    {
+      "path": "src/assets/photos/horita felizz.jpeg",
+      "sha256": "405d20505484301953fc6c01eb63083edfe9cd99c91fb21b8ed91ae107650a16"
+    },
+    {
+      "path": "src/assets/photos/horita felizzzz.jpeg",
+      "sha256": "0a371c1ca85a1eca7026fea94414beaf8f653782cf212cc3f6407533810d88f9"
+    },
+    {
+      "path": "src/assets/photos/horita felizzzzz.jpeg",
+      "sha256": "1927e236c792056034efc4e73358929c526654a6a91916a3ac25ab3c2b5e0d45"
+    },
+    {
+      "path": "src/assets/photos/jovenes-img-9947.jpg",
+      "sha256": "689e44e71bfa71ef5b57dd10a535f0c69437da444deed9c35a68c394094c66ed"
+    },
+    {
+      "path": "src/assets/photos/jovenes.jpg",
+      "sha256": "411ee3273d51b79b8cd95fa32d6d673db29e9b7044b4a161e1f5e1ab9385018d"
+    },
+    {
+      "path": "src/assets/photos/ninios.jpg",
+      "sha256": "567fc26db59d4e0dfeb147276c3cf4ac2c8fd10bd23392624fd53e003f251aa0"
+    },
+    {
+      "path": "src/assets/photos/niniosss.jpg",
+      "sha256": "b80dac55e1ef6135dee5640ada108b57aad223405b6bd77f40c3b04ad0bba01d"
+    },
+    {
+      "path": "src/assets/photos/nuestra-historia-video.jpg",
+      "sha256": "07efcbaa5629cb27090f51c3595fd2244b36e59cd780cc64d4037f86320d4103"
+    },
+    {
+      "path": "src/assets/photos/portada-video.jpg",
+      "sha256": "16626e20d9746fe81e27990f75dcd428cfea61cb6266d10ae8af248fc31013d2"
+    },
+    {
+      "path": "src/assets/photos/pulpito.jpg",
+      "sha256": "cd59beda841fca6ecbce76440901c9126dc3e30c036db6b4ef169b5f9261a32d"
+    },
+    {
+      "path": "src/assets/photos/reunion.jpg",
+      "sha256": "3420a77a5e442fddd618a81d524f0d1bc1f8b00b425f7452734ccbc0a4b4928f"
+    },
+    {
+      "path": "src/assets/photos/visitanos-reunion-img-2764.jpg",
+      "sha256": "4b39d0031567356ac15302af244b70cf90ab2ff952e06eae80eca43bc071edd4"
+    },
+    {
+      "path": "src/components/AboutCover.astro",
+      "sha256": "98faf3761fba826e8f89ae49cf375e6daff207b840e8312a786cb2045fbee8d8"
+    },
+    {
+      "path": "src/components/BeliefsAccordion.astro",
+      "sha256": "171212674b1aa8c5738982844099aa98121c6537968f7e1db5fc635f4b191205"
+    },
+    {
+      "path": "src/components/EditorialHero.astro",
+      "sha256": "d69f548f629a913463de8a8357e967a48b0b5a3f7777239d39810958191df298"
+    },
+    {
+      "path": "src/components/EditorialMark.astro",
+      "sha256": "cf519e8ef7e30bc13a1a071cc3e1fef5b65a30facd2beaf735d8be05edb5c9c8"
+    },
+    {
+      "path": "src/components/FaithIllustration.astro",
+      "sha256": "a87d07000c51bf583fd644a47922f047b58ed7a9e419d63845374ef97baaa21b"
+    },
+    {
+      "path": "src/components/HeroVideo.astro",
+      "sha256": "0ae1040e59df939ecf839def33bc83476dc436ac954e1fd7b107fe647ab61105"
+    },
+    {
+      "path": "src/components/Highlight.astro",
+      "sha256": "0bf93e163a60c4e92b464700277faf7985b5377d42267cda8744cbfafaff04e7"
+    },
+    {
+      "path": "src/components/MinistryFeature.astro",
+      "sha256": "65ac6e66f52fc31187600cb1b7fd26a37b3d6d2a185bd4114630d1b140d486b8"
+    },
+    {
+      "path": "src/components/PhotoCollage.astro",
+      "sha256": "196566f9297bf66b8c702cd19acb658cf234a68bd1f9b1f9a23b8dbb3461da52"
+    },
+    {
+      "path": "src/components/PhotoSection.astro",
+      "sha256": "1dcd13ff5b493463a02711d00e7886154587c186b1472bb3ab8bc5f0ab5d971a"
+    },
+    {
+      "path": "src/components/ProgrammedMeetings.astro",
+      "sha256": "b314643895f817a0061fc85afdc0ac641ccd5a5fc7d52e2660976226d744ac4b"
+    },
+    {
+      "path": "src/components/Schedule.astro",
+      "sha256": "96abaa074fb35112246c801c88f0aacef327016b4bebae7de76828f8d2ca3545"
+    },
+    {
+      "path": "src/components/ScrollAccent.astro",
+      "sha256": "4484a28aca3f6ab2d226aa4c90577a8ab4c336e6c464bd91814cf98fcd936960"
+    },
+    {
+      "path": "src/components/SiteFooter.astro",
+      "sha256": "32b897d070cf9d17054d94c6e170ba8b06a6ec3bd353a23f1f082a2ab735e205"
+    },
+    {
+      "path": "src/components/SiteHeader.astro",
+      "sha256": "d30f11320aa6a7d7da81416b59d91d3c39ca71772f0ed7d1a826c8d717ffe362"
+    },
+    {
+      "path": "src/components/SocialIcon.astro",
+      "sha256": "35797151652b4d20169043cf9a150a97554e85f47d408d456233369609d7319b"
+    },
+    {
+      "path": "src/components/SocialLinks.astro",
+      "sha256": "3bbe94872cb5722e8e7f31b1d721ae31930c2e4b2f1edabc40bc65608ec94a16"
+    },
+    {
+      "path": "src/components/TextImageBlock.astro",
+      "sha256": "13439f92a88d886fe556415711d5c1cb1e31096aa5554467c178a184bfbabe6b"
+    },
+    {
+      "path": "src/data/beliefs.ts",
+      "sha256": "aea4b85a960330352a98a43c7c6085e4e1ef1022bef5170acaebb7997d00ff26"
+    },
+    {
+      "path": "src/data/history.ts",
+      "sha256": "380e26c68ba55f2f88778c49d3efc9d75c7a63ad08ce813b01600a81706ee1b7"
+    },
+    {
+      "path": "src/data/legal.ts",
+      "sha256": "079f75f38ea169eaee748c94049fc847da0cda063c0088e88307a242f6b5bbc5"
+    },
+    {
+      "path": "src/data/links.ts",
+      "sha256": "e103a85c91173e7f2bf45b07439c743dd8b53c20fa0ab625330fecd5a91da1fa"
+    },
+    {
+      "path": "src/data/ministries.ts",
+      "sha256": "074a8b850a3a1ce046b003ff37819622c4b825d47ce963f87dd19b723910f867"
+    },
+    {
+      "path": "src/data/schedule.ts",
+      "sha256": "a3723e87415c65c1c0be76dcb70978c59e2cf84a202a5d2fd7117ef79537aee6"
+    },
+    {
+      "path": "src/data/site.ts",
+      "sha256": "a91beb277cb13acf0ce8b2f6664716c99e0670b4bbe513aeabaa02cce72ccf1c"
+    },
+    {
+      "path": "src/layouts/BaseLayout.astro",
+      "sha256": "36e70f41567913432b4967c96543e23ff9a333ab964df07ac2ac66684bbd9080"
+    },
+    {
+      "path": "src/pages/[sitemap].xml.ts",
+      "sha256": "2bb17481ff814cce9751f56437d9637d5c16d375e45451070ab421fd089f9f6d"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "3f3e6179cd429fd7a4d9417a5947cf386ab4b324182bddd79dc8b093665cb68c"
+    },
+    {
+      "path": "src/pages/links.astro",
+      "sha256": "bb4889507fdd88e4ba6acbd026defbd8f75e03da082735df1a6c7c9723ed6b9f"
+    },
+    {
+      "path": "src/pages/lo-que-creemos.astro",
+      "sha256": "ef29421d96dbe2a66e0eecc4e49b79f2fac21f2de76bf1a2722e5eb5d882416a"
+    },
+    {
+      "path": "src/pages/ministerios.astro",
+      "sha256": "a0a13ef0d1fa78a2272dee0c41658507b70a33135036c2f588b1d8a4147c4764"
+    },
+    {
+      "path": "src/pages/nosotros.astro",
+      "sha256": "7cf1e6e4a03ec61362c719ed7574c4814353456a4d354a70eb96c31e8d7809b3"
+    },
+    {
+      "path": "src/pages/politica-de-privacidad.astro",
+      "sha256": "f0e53d1fe8c0a53b52ef55557b28a8d821f51cef77530ac471f0db10a8a63b73"
+    },
+    {
+      "path": "src/pages/robots.txt.ts",
+      "sha256": "a0e1c59fb9921db8a82d07126263bbc727d4ef318415748ede25110bc8495da6"
+    },
+    {
+      "path": "src/pages/terminos-y-condiciones.astro",
+      "sha256": "d8ab61eddeef789daf614faf1616aefc453e099db25b0e1c81965c579bff3c1a"
+    },
+    {
+      "path": "src/pages/visitanos.astro",
+      "sha256": "313d638adecd634e043d2c22a4dd415123340543fd843e5d96464322c8f47010"
+    },
+    {
+      "path": "src/scripts/hero-video.ts",
+      "sha256": "21568d074c1229c32aa0ae4e038755ea8e71a20478d54760a3e49e09e6501646"
+    },
+    {
+      "path": "src/scripts/scroll-motion.ts",
+      "sha256": "94a43955f4f4d2be1abd778b28c9ad43e72d3879935a71bf9a8158168e84d70e"
+    },
+    {
+      "path": "src/scripts/ui.ts",
+      "sha256": "27b69cb2064d86ccd42b9470b5a5eb0f747d49f57d3eab36e877ab57f480fa8d"
+    },
+    {
+      "path": "src/styles/global.css",
+      "sha256": "1d82b592aea6bf27bbe67765c8159b4f3b1de4faaead9bc4c886bf144082759a"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "dc9ab377cf2b9561b35f615a8fc674d7bf5fd4d6781a90d09e169344a501641e"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "ba7e6a722977b99a9e5b6d4b89b129592de7dec0a4c7033cc0b4fc2bcba7ff86"
+    }
+  ]
+}

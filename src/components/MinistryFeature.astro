@@ -16,7 +16,7 @@ const gathering = schedule.find(item => item.id === ministry.scheduleId);
   </div>
  ) : <PhotoSection photo={ministry.id === 'ninos' ? ministryPhotos.children : site.photos[ministry.photo]} label={ministry.title} />}
  <div class="text-image-copy">
-  <h2>{ministry.title}</h2>
+  <h3 class="ministry-title">{ministry.title}</h3>
   <div class="ministry-info-card">
    {gathering && <div class="ministry-info-when"><span class="ministry-info-day">{gathering.day}</span><time class="ministry-info-time" datetime={gathering.time}>{gathering.time}<small> hs</small></time></div>}
    {ministry.description.map(paragraph => <p class="ministry-info-intro">{paragraph}</p>)}

@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-16T11:08:14.452Z",
+  "browser": "156.0.8078.4",
+  "method": "390x844, reduced motion, DOMContentLoaded + 3s, sin clicks ni autenticacion; conteos son una muestra, no Core Web Vitals",
+  "rows": [
+    {
+      "url": "https://www.iglesialamision.com.ar/",
+      "finalUrl": "https://www.iglesialamision.com.ar/",
+      "status": 200,
+      "title": "Iglesia La Misión – Villa Allende – Sierras Chicas",
+      "canonical": "https://www.iglesialamision.com.ar/",
+      "h1": [
+        "Una iglesia para criar, crecer y confiar"
+      ],
+      "relevantLinks": [
+        {
+          "text": "Cómo llegar →",
+          "href": "https://www.google.com/maps/search/?api=1&query=Caseros+76%2C+Villa+Allende%2C+Villa+Allende%2C+C%C3%B3rdoba%2C+Argentina"
+        },
+        {
+          "text": "Reuniones",
+          "href": "https://www.iglesialamision.com.ar/#donde"
+        },
+        {
+          "text": "Cómo llegar",
+          "href": "https://www.iglesialamision.com.ar/#donde"
+        },
+        {
+          "text": "Cómo llegar",
+          "href": "https://www.iglesialamision.com.ar/sede-la-calera/"
+        }
+      ],
+      "images": 16,
+      "lazyImages": 10,
+      "videos": [],
+      "iframeCount": 0,
+      "scriptCount": 20,
+      "horizontalOverflow": false,
+      "requestCountInWindow": 27,
+      "thirdPartyOrigins": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://connect.facebook.net"
+      ]
+    },
+    {
+      "url": "https://reydereyes.com.ar/",
+      "finalUrl": "https://reydereyes.com.ar/",
+      "status": 200,
+      "title": "Iglesia Rey de Reyes, Belgrano, Buenos Aires, Argentina - Iglesia Rey de Reyes - Sitio Web Oficial",
+      "canonical": "https://reydereyes.com.ar/",
+      "h1": [
+        "¡Jesús es la respuesta a tu necesidad!",
+        "Radio Gospel fm88.1",
+        "¿Tenés un pedido de Oración?"
+      ],
+      "relevantLinks": [
+        {
+          "text": "Ver horarios",
+          "href": "https://reydereyes.com.ar/#horarios"
+        }
+      ],
+      "images": 18,
+      "lazyImages": 0,
+      "videos": [],
+      "iframeCount": 0,
+      "scriptCount": 49,
+      "horizontalOverflow": false,
+      "requestCountInWindow": 67,
+      "thirdPartyOrigins": [
+        "https://fonts.googleapis.com",
+        "https://www.googletagmanager.com",
+        "https://accounts.google.com",
+        "https://www.google.com",
+        "https://connect.facebook.net",
+        "https://fonts.gstatic.com",
+        "https://www.gstatic.com",
+        "https://www.google-analytics.com"
+      ]
+    },
+    {
+      "url": "https://passioncitychurch.com/",
+      "finalUrl": "https://passioncitychurch.com/",
+      "status": 200,
+      "title": "Passion City Church - For God. For people. For the city. For the world.",
+      "canonical": "https://passioncitychurch.com/",
+      "h1": [
+        "Our Leadership"
+      ],
+      "relevantLinks": [],
+      "images": 18,
+      "lazyImages": 0,
+      "videos": [
+        {
+          "autoplay": false,
+          "preload": "metadata"
+        },
+        {
+          "autoplay": true,
+          "preload": "metadata"
+        }
+      ],
+      "iframeCount": 4,
+      "scriptCount": 52,
+      "horizontalOverflow": false,
+      "requestCountInWindow": 90,
+      "thirdPartyOrigins": [
+        "https://use.typekit.net",
+        "https://cdn.plyr.io",
+        "https://cdn.jsdelivr.net",
+        "https://p.typekit.net",
+        "https://www.googletagmanager.com",
+        "https://consent.cookiebot.com",
+        "https://static.chartbeat.com",
+        "https://g10498469755.co",
+        "https://www.google.com",
+        "https://ad.doubleclick.net",
+        "https://consentcdn.cookiebot.com",
+        "https://ping.chartbeat.net",
+        "https://www.google-analytics.com",
+        "https://analytics.google.com",
+        "https://stats.g.doubleclick.net",
+        "https://www.google.com.ar",
+        "https://googleads.g.doubleclick.net",
+        "https://connect.facebook.net",
+        "https://edge.fullstory.com",
+        "https://js.hs-scripts.com",
+        "https://static.hotjar.com",
+        "https://js.hscollectedforms.net",
+        "https://js.hs-analytics.net",
+        "https://js.hs-banner.com",
+        "https://js.usemessages.com",
+        "https://js.hubspot.com",
+        "https://api.hubspot.com",
+        "https://rs.fullstory.com",
+        "https://forms.hscollectedforms.net",
+        "https://track.hubspot.com",
+        "https://forms.hsforms.com",
+        "https://cta-service-cms2.hubspot.com",
+        "https://perf-na1.hsforms.com"
+      ]
+    }
+  ],
+  "map": {
+    "url": "https://www.google.com/maps/place/COMUNIDAD+CRISTIANA+VILLA+SARMIENTO/@-31.9309445,-65.1925254,17z/data=!3m1!4b1!4m6!3m5!1s0x942cd3ec70c829f3:0xee831bb7723fb1bf!8m2!3d-31.9309445!4d-65.1925254!16s%2Fg%2F11g2w747g4?entry=tts&g_ep=EgoyMDI2MTAxMy4wIPu8ASoASAFQAw%3D%3D&skid=c5007bc4-9d76-4002-a81d-a8ae252123fd",
+    "title": "COMUNIDAD CRISTIANA VILLA SARMIENTO - Google Maps",
+    "heading": "COMUNIDAD CRISTIANA VILLA SARMIENTO",
+    "address": [
+      "Dirección: Vélez Sársfield, X5871 Villa Sarmiento, Córdoba "
+    ],
+    "website": [],
+    "hours": []
+  }
+}

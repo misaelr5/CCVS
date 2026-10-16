@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const routes = ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/'];
+import { routes } from './helpers/routes';
 
 test('tarjeta: sin fades, scroll usable, cierre exterior y sin trampa de foco', async ({ page }) => {
  await page.goto('/');

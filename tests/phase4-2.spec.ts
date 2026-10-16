@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { routes } from './helpers/routes';
 
 for (const width of [360, 390, 1440]) {
  test(`menú 4.2 · ${width}: iconos al final, animación, teclado y scroll`, async ({page})=> {
@@ -62,7 +63,7 @@ test('redes compactas y consistentes en footer; Links mantiene etiquetas',async(
  await expect(page.getByRole('link',{name:/Instagram — Jóvenes CCVS/})).toBeVisible();
 });
 
-for(const route of ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/']) {
+for(const route of routes) {
  test(`entrada propia ${route} y reduced motion`,async({page})=>{
   await page.goto(route);
   const heading=page.locator('h1');

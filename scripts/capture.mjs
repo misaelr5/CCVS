@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 const phase = process.argv[2] ?? 'final';
-const complete = phase === 'final' || phase === 'fase4';
+const complete = phase === 'final' || phase === 'fase4' || phase === 'fase1-seo';
 const directory = `qa-artifacts/${phase}`;
 const baseURL = process.env.CCVS_BASE_URL ?? 'http://127.0.0.1:4321';
 await mkdir(directory, { recursive: true });
@@ -10,7 +10,7 @@ const measurements = [];
 try {
   for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 }]) {
     const page = await browser.newPage({ viewport, reducedMotion: 'reduce' });
-    const routes = complete ? [['inicio', '/'], ['nosotros', '/nosotros/'], ['creencias', '/lo-que-creemos/'], ['ministerios', '/ministerios/'], ['visitanos', '/visitanos/'], ['links', '/links/'], ['terminos','/terminos-y-condiciones/']] : [['inicio', '/'], ['nosotros', '/nosotros/']];
+    const routes = complete ? [['inicio', '/'], ['nosotros', '/nosotros/'], ['creencias', '/lo-que-creemos/'], ['ministerios', '/ministerios/'], ['visitanos', '/visitanos/'], ['links', '/links/'], ['terminos','/terminos-y-condiciones/'], ['privacidad','/politica-de-privacidad/']] : [['inicio', '/'], ['nosotros', '/nosotros/']];
     for (const [name, route] of routes) {
       const response = await page.goto(`${baseURL}${route}`);
       if (response?.status() !== 200) throw new Error(`${route}: ${response?.status()}`);

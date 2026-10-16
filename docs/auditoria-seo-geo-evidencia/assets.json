@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-16T11:11:22.847Z",
+  "timeZone": "America/Montevideo",
+  "commit": "9c0c616495bd88297d94bb791c20d30df1c326df",
+  "node": "v24.15.0",
+  "base": "http://127.0.0.1:4323",
+  "live": "https://ccvs-sigma.vercel.app",
+  "totalBytes": 43392480,
+  "files": [
+    {
+      "path": "dist/media/portada-ccvs.mp4",
+      "bytes": 14839646
+    },
+    {
+      "path": "dist/media/portada-ccvs-mobile.mp4",
+      "bytes": 8441049
+    },
+    {
+      "path": "dist/media/nuestra-historia.mp4",
+      "bytes": 7343454
+    },
+    {
+      "path": "dist/media/nuestra-historia-mobile.mp4",
+      "bytes": 2022411
+    },
+    {
+      "path": "dist/_astro/archivo-latin-standard-normal.DY7AcnAa.woff2",
+      "bytes": 90104
+    },
+    {
+      "path": "dist/_astro/archivo-latin-ext-standard-normal.7khWdh9v.woff2",
+      "bytes": 86240
+    },
+    {
+      "path": "dist/_astro/BaseLayout.CGML-K2u.css",
+      "bytes": 61481,
+      "gzip": 13590,
+      "brotli": 11647
+    },
+    {
+      "path": "dist/_astro/archivo-vietnamese-standard-normal.rJmnGBSt.woff2",
+      "bytes": 34464
+    },
+    {
+      "path": "dist/_astro/bodoni-moda-latin-wght-normal.BIFT5Qnz.woff2",
+      "bytes": 25884
+    },
+    {
+      "path": "dist/_astro/bodoni-moda-math-wght-normal._TL2RCrf.woff2",
+      "bytes": 21552
+    },
+    {
+      "path": "dist/_astro/visitanos.Dltc2Emm.css",
+      "bytes": 16712,
+      "gzip": 2686,
+      "brotli": 2246
+    },
+    {
+      "path": "dist/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BDCjmQ8c.js",
+      "bytes": 16365,
+      "gzip": 5575,
+      "brotli": 4986
+    },
+    {
+      "path": "dist/_astro/bodoni-moda-latin-ext-wght-normal.BlIE6rrN.woff2",
+      "bytes": 14132
+    },
+    {
+      "path": "dist/_astro/bodoni-moda-symbols-wght-normal.DO7lZbk6.woff2",
+      "bytes": 14076
+    },
+    {
+      "path": "dist/_astro/BaseLayout.astro_astro_type_script_index_0_lang.C7B6Wn1X.js",
+      "bytes": 10222,
+      "gzip": 3594,
+      "brotli": 3170
+    },
+    {
+      "path": "dist/_astro/nosotros.Czl_zTor.css",
+      "bytes": 4690,
+      "gzip": 1236,
+      "brotli": 1021
+    }
+  ]
+}

@@ -1,0 +1,1140 @@
+{
+  "date": "2026-10-16T11:45:37.101Z",
+  "base": "http://127.0.0.1:4323",
+  "protectedFilesUnchanged": true,
+  "h1Unchanged": [
+    "src/components/AboutCover.astro",
+    "src/components/EditorialHero.astro",
+    "src/pages/links.astro",
+    "src/pages/lo-que-creemos.astro",
+    "src/pages/ministerios.astro",
+    "src/pages/politica-de-privacidad.astro",
+    "src/pages/terminos-y-condiciones.astro",
+    "src/pages/visitanos.astro"
+  ],
+  "schemaAndTransitionsUnchanged": true,
+  "modifiedAgainstAudit": [
+    "scripts/capture.mjs",
+    "scripts/verify-build.mjs",
+    "src/components/MinistryFeature.astro",
+    "src/components/Schedule.astro",
+    "src/components/SiteFooter.astro",
+    "src/components/SiteHeader.astro",
+    "src/data/links.ts",
+    "src/layouts/BaseLayout.astro",
+    "src/pages/index.astro",
+    "src/pages/links.astro",
+    "src/pages/lo-que-creemos.astro",
+    "src/pages/ministerios.astro",
+    "src/pages/nosotros.astro",
+    "src/pages/visitanos.astro",
+    "src/styles/global.css"
+  ],
+  "media": [
+    {
+      "file": "public/media/portada-ccvs-mobile.mp4",
+      "bytes": 8441049,
+      "sha256": "8c954bc78e5070adad8ec31d67fb92b89be149ed8296bd828fe5721ce593fa73"
+    },
+    {
+      "file": "public/media/portada-ccvs.mp4",
+      "bytes": 14839646,
+      "sha256": "e1c600e78ed129ac948fe4997b130fa45d3e7bf80c504b2f8e1001186289c3c0"
+    },
+    {
+      "file": "public/media/nuestra-historia-mobile.mp4",
+      "bytes": 2022411,
+      "sha256": "d21efbcc8eb15911e809fdd469fb682325eba422a0529c5535d02ba4ac6ebc8d"
+    },
+    {
+      "file": "public/media/nuestra-historia.mp4",
+      "bytes": 7343454,
+      "sha256": "907cf3c106a8216887744fde0d904ea4952f635a07c1508b5a8120352cbfca05"
+    }
+  ],
+  "samples": [
+    {
+      "route": "/",
+      "viewport": 390,
+      "dpr": 1,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 874,
+          "resourceWidth": 58,
+          "resourceHeight": 58
+        },
+        {
+          "alt": "Un encuentro de Comunidad Cristiana Villa Sarmiento",
+          "src": "http://127.0.0.1:4323/_astro/portada-video.CYlVN1M__3tCaS.webp",
+          "sizes": "100vw",
+          "renderedWidth": 342,
+          "renderedHeight": 575,
+          "bytes": 13504,
+          "resourceWidth": 480,
+          "resourceHeight": 270
+        },
+        {
+          "alt": "Persona con una gorra bordada durante un encuentro de la comunidad",
+          "src": "http://127.0.0.1:4323/_astro/comunidad.NEfj--m5_czfoI.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 335,
+          "renderedHeight": 405,
+          "bytes": 42502,
+          "resourceWidth": 480,
+          "resourceHeight": 642
+        },
+        {
+          "alt": "Púlpito de Comunidad Cristiana frente a una cruz de madera",
+          "src": "http://127.0.0.1:4323/_astro/pulpito.C34yb9Jc_Z1biXu6.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 148,
+          "renderedHeight": 159,
+          "bytes": 44328,
+          "resourceWidth": 480,
+          "resourceHeight": 858
+        },
+        {
+          "alt": "Un miembro de la comunidad comparte un mensaje desde el púlpito",
+          "src": "http://127.0.0.1:4323/_astro/IMG_2792.JPG.CzKRmNwJ_ZIN16l.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 133,
+          "renderedHeight": 131,
+          "bytes": 21252,
+          "resourceWidth": 480,
+          "resourceHeight": 640
+        },
+        {
+          "alt": "Vista general de la congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/general.Dj628B6V_AOfjh.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 366,
+          "renderedHeight": 275,
+          "bytes": 20410,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "Foto grupal de la comunidad frente al púlpito de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/comunidad-grupo.CLJJmu7N_Z1z05Ao.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 384,
+          "renderedHeight": 204,
+          "bytes": 37382,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/paloma-grabado.BwA4gsMb_1AGgCg.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 124,
+          "renderedHeight": 112,
+          "bytes": 10518,
+          "resourceWidth": 160,
+          "resourceHeight": 140
+        },
+        {
+          "alt": "Vista general de la congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/general.Dj628B6V_AOfjh.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 310,
+          "renderedHeight": 188,
+          "bytes": 20410,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "La congregación reunida en oración frente a la cruz de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/historia-oracion-fe.CgByn856_Z1ppgbc.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 326,
+          "bytes": 26106,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "Encuentro de niños con sus coordinadores en una actividad grupal",
+          "src": "http://127.0.0.1:4323/_astro/ninios.UdYQqqqg_2V8tM.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 37270,
+          "resourceWidth": 480,
+          "resourceHeight": 384
+        },
+        {
+          "alt": "Jóvenes conversando en ronda durante una reunión en el salón de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/jovenes.DlcjhKaJ_18VH9L.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 24734,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_lu59I.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 128,
+          "renderedHeight": 120,
+          "bytes": 10622,
+          "resourceWidth": 160,
+          "resourceHeight": 146
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 996,
+          "resourceWidth": 64,
+          "resourceHeight": 64
+        }
+      ]
+    },
+    {
+      "route": "/ministerios/",
+      "viewport": 390,
+      "dpr": 1,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 874,
+          "resourceWidth": 58,
+          "resourceHeight": 58
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_lu59I.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 136,
+          "renderedHeight": 127,
+          "bytes": 10622,
+          "resourceWidth": 160,
+          "resourceHeight": 146
+        },
+        {
+          "alt": "Niños compartiendo una actividad con cuadernos y lápices alrededor de una mesa",
+          "src": "http://127.0.0.1:4323/_astro/niniosss.CTgxIBiK_ZofjU6.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 65320,
+          "resourceWidth": 480,
+          "resourceHeight": 640
+        },
+        {
+          "alt": "Grupo de jóvenes reunidos en el salón de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-16%20at%2002.52.23.C1vNUgwU_Z1jljEV.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 38352,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "Jóvenes orando juntos alrededor de una mesa",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%2020aaa26-10-14%20at%2019.57.29.-OWO23YZ_1swuTC.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 30180,
+          "resourceWidth": 480,
+          "resourceHeight": 640
+        },
+        {
+          "alt": "Jóvenes compartiendo un encuentro en pequeños grupos dentro de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/jovenes-img-9947.D-mnENRZ_ZxuAEJ.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 40686,
+          "resourceWidth": 480,
+          "resourceHeight": 640
+        },
+        {
+          "alt": "Una mujer comparte la Palabra junto a la cruz iluminada",
+          "src": "http://127.0.0.1:4323/_astro/Screenshot%202026-10-14%20212933.N5A7pRaM_1udaMs.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 39792,
+          "resourceWidth": 480,
+          "resourceHeight": 643
+        },
+        {
+          "alt": "Grupo de jóvenes al aire libre, varios con chalecos reflectantes",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-12%20at%2019.56.57.lk5rzAj2_1vE6Yv.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 302,
+          "renderedHeight": 224,
+          "bytes": 49612,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz",
+          "src": "http://127.0.0.1:4323/_astro/564242379_2960663177654447_8435190360901970176_n.0ncXnbK4_mymtN.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 302,
+          "renderedHeight": 224,
+          "bytes": 35210,
+          "resourceWidth": 480,
+          "resourceHeight": 296
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 996,
+          "resourceWidth": 64,
+          "resourceHeight": 64
+        }
+      ]
+    },
+    {
+      "route": "/visitanos/",
+      "viewport": 390,
+      "dpr": 1,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZGC7G4.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 874,
+          "resourceWidth": 58,
+          "resourceHeight": 58
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_lu59I.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 63,
+          "renderedHeight": 59,
+          "bytes": 10622,
+          "resourceWidth": 160,
+          "resourceHeight": 146
+        },
+        {
+          "alt": "La congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/visitanos-reunion-img-2764.C2cYrlqx_WHBPh.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 26664,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "La cruz iluminada durante una reunión de la comunidad",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-14%20at%2021.32.51.Dtt_tu_6_Z25sEJn.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 428,
+          "bytes": 14286,
+          "resourceWidth": 480,
+          "resourceHeight": 891
+        },
+        {
+          "alt": "Grupo de jóvenes al aire libre, varios con chalecos reflectantes",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-12%20at%2019.56.57.lk5rzAj2_1vE6Yv.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 192,
+          "bytes": 49612,
+          "resourceWidth": 480,
+          "resourceHeight": 360
+        },
+        {
+          "alt": "Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz",
+          "src": "http://127.0.0.1:4323/_astro/564242379_2960663177654447_8435190360901970176_n.0ncXnbK4_mymtN.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 192,
+          "bytes": 35210,
+          "resourceWidth": 480,
+          "resourceHeight": 296
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_473IR.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 996,
+          "resourceWidth": 64,
+          "resourceHeight": 64
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": 390,
+      "dpr": 2,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_Z2uELFJ.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 1924,
+          "resourceWidth": 116,
+          "resourceHeight": 116
+        },
+        {
+          "alt": "Un encuentro de Comunidad Cristiana Villa Sarmiento",
+          "src": "http://127.0.0.1:4323/_astro/portada-video.CYlVN1M__1TRCIP.webp",
+          "sizes": "100vw",
+          "renderedWidth": 342,
+          "renderedHeight": 575,
+          "bytes": 23662,
+          "resourceWidth": 800,
+          "resourceHeight": 450
+        },
+        {
+          "alt": "Persona con una gorra bordada durante un encuentro de la comunidad",
+          "src": "http://127.0.0.1:4323/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 335,
+          "renderedHeight": 405,
+          "bytes": 101912,
+          "resourceWidth": 744,
+          "resourceHeight": 995
+        },
+        {
+          "alt": "Púlpito de Comunidad Cristiana frente a una cruz de madera",
+          "src": "http://127.0.0.1:4323/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 148,
+          "renderedHeight": 159,
+          "bytes": 58384,
+          "resourceWidth": 557,
+          "resourceHeight": 996
+        },
+        {
+          "alt": "Un miembro de la comunidad comparte un mensaje desde el púlpito",
+          "src": "http://127.0.0.1:4323/_astro/IMG_2792.JPG.CzKRmNwJ_Zd6RdO.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 133,
+          "renderedHeight": 131,
+          "bytes": 39958,
+          "resourceWidth": 800,
+          "resourceHeight": 1067
+        },
+        {
+          "alt": "Vista general de la congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/general.Dj628B6V_Z2bszH5.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 366,
+          "renderedHeight": 275,
+          "bytes": 45254,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "Foto grupal de la comunidad frente al púlpito de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/comunidad-grupo.CLJJmu7N_2tzA15.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 384,
+          "renderedHeight": 204,
+          "bytes": 95032,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/paloma-grabado.BwA4gsMb_2ojyRK.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 124,
+          "renderedHeight": 113,
+          "bytes": 54252,
+          "resourceWidth": 440,
+          "resourceHeight": 386
+        },
+        {
+          "alt": "Vista general de la congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/general.Dj628B6V_Z2bszH5.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 310,
+          "renderedHeight": 188,
+          "bytes": 45254,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "La congregación reunida en oración frente a la cruz de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/historia-oracion-fe.CgByn856_1AISff.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 326,
+          "bytes": 55342,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "Encuentro de niños con sus coordinadores en una actividad grupal",
+          "src": "http://127.0.0.1:4323/_astro/ninios.UdYQqqqg_Zus6Rg.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 90816,
+          "resourceWidth": 800,
+          "resourceHeight": 640
+        },
+        {
+          "alt": "Jóvenes conversando en ronda durante una reunión en el salón de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/jovenes.DlcjhKaJ_Z1Dl7QA.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 51976,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_2fPWuk.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 128,
+          "renderedHeight": 120,
+          "bytes": 61540,
+          "resourceWidth": 440,
+          "resourceHeight": 401
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_zIf3s.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 2116,
+          "resourceWidth": 128,
+          "resourceHeight": 128
+        }
+      ]
+    },
+    {
+      "route": "/ministerios/",
+      "viewport": 390,
+      "dpr": 2,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_Z2uELFJ.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 1924,
+          "resourceWidth": 116,
+          "resourceHeight": 116
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_2fPWuk.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 136,
+          "renderedHeight": 127,
+          "bytes": 61540,
+          "resourceWidth": 440,
+          "resourceHeight": 401
+        },
+        {
+          "alt": "Niños compartiendo una actividad con cuadernos y lápices alrededor de una mesa",
+          "src": "http://127.0.0.1:4323/_astro/niniosss.CTgxIBiK_1po8GC.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 131660,
+          "resourceWidth": 800,
+          "resourceHeight": 1067
+        },
+        {
+          "alt": "Grupo de jóvenes reunidos en el salón de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-16%20at%2002.52.23.C1vNUgwU_1524qs.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 91276,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "Jóvenes orando juntos alrededor de una mesa",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%2020aaa26-10-14%20at%2019.57.29.-OWO23YZ_Z1gfQOU.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 64350,
+          "resourceWidth": 800,
+          "resourceHeight": 1067
+        },
+        {
+          "alt": "Jóvenes compartiendo un encuentro en pequeños grupos dentro de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/jovenes-img-9947.D-mnENRZ_Z1au0SH.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 76528,
+          "resourceWidth": 800,
+          "resourceHeight": 1067
+        },
+        {
+          "alt": "Una mujer comparte la Palabra junto a la cruz iluminada",
+          "src": "http://127.0.0.1:4323/_astro/Screenshot%202026-10-14%20212933.N5A7pRaM_Z1k8qR8.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 64852,
+          "resourceWidth": 638,
+          "resourceHeight": 855
+        },
+        {
+          "alt": "Grupo de jóvenes al aire libre, varios con chalecos reflectantes",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-12%20at%2019.56.57.lk5rzAj2_Z1a9CI2.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 302,
+          "renderedHeight": 224,
+          "bytes": 126118,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz",
+          "src": "http://127.0.0.1:4323/_astro/564242379_2960663177654447_8435190360901970176_n.0ncXnbK4_56E75.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 302,
+          "renderedHeight": 224,
+          "bytes": 82380,
+          "resourceWidth": 800,
+          "resourceHeight": 493
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_zIf3s.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 2116,
+          "resourceWidth": 128,
+          "resourceHeight": 128
+        }
+      ]
+    },
+    {
+      "route": "/visitanos/",
+      "viewport": 390,
+      "dpr": 2,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_Z2uELFJ.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 1924,
+          "resourceWidth": 116,
+          "resourceHeight": 116
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_2fPWuk.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 63,
+          "renderedHeight": 59,
+          "bytes": 61540,
+          "resourceWidth": 440,
+          "resourceHeight": 401
+        },
+        {
+          "alt": "La congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/visitanos-reunion-img-2764.C2cYrlqx_45Ww4.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 59132,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "La cruz iluminada durante una reunión de la comunidad",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-14%20at%2021.32.51.Dtt_tu_6_A03L.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 428,
+          "bytes": 29616,
+          "resourceWidth": 800,
+          "resourceHeight": 1486
+        },
+        {
+          "alt": "Grupo de jóvenes al aire libre, varios con chalecos reflectantes",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-12%20at%2019.56.57.lk5rzAj2_Z1a9CI2.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 192,
+          "bytes": 126118,
+          "resourceWidth": 800,
+          "resourceHeight": 600
+        },
+        {
+          "alt": "Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz",
+          "src": "http://127.0.0.1:4323/_astro/564242379_2960663177654447_8435190360901970176_n.0ncXnbK4_56E75.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 192,
+          "bytes": 82380,
+          "resourceWidth": 800,
+          "resourceHeight": 493
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_zIf3s.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 2116,
+          "resourceWidth": 128,
+          "resourceHeight": 128
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": 390,
+      "dpr": 3,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZwOrsg.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 3040,
+          "resourceWidth": 174,
+          "resourceHeight": 174
+        },
+        {
+          "alt": "Un encuentro de Comunidad Cristiana Villa Sarmiento",
+          "src": "http://127.0.0.1:4323/_astro/portada-video.CYlVN1M__1LUo3Q.webp",
+          "sizes": "100vw",
+          "renderedWidth": 342,
+          "renderedHeight": 575,
+          "bytes": 39812,
+          "resourceWidth": 1280,
+          "resourceHeight": 720
+        },
+        {
+          "alt": "Persona con una gorra bordada durante un encuentro de la comunidad",
+          "src": "http://127.0.0.1:4323/_astro/comunidad.NEfj--m5_ZLoBOy.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 335,
+          "renderedHeight": 405,
+          "bytes": 101912,
+          "resourceWidth": 744,
+          "resourceHeight": 995
+        },
+        {
+          "alt": "Púlpito de Comunidad Cristiana frente a una cruz de madera",
+          "src": "http://127.0.0.1:4323/_astro/pulpito.C34yb9Jc_1rzIhL.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 148,
+          "renderedHeight": 159,
+          "bytes": 58384,
+          "resourceWidth": 557,
+          "resourceHeight": 996
+        },
+        {
+          "alt": "Un miembro de la comunidad comparte un mensaje desde el púlpito",
+          "src": "http://127.0.0.1:4323/_astro/IMG_2792.JPG.CzKRmNwJ_ZtYLED.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 133,
+          "renderedHeight": 131,
+          "bytes": 51338,
+          "resourceWidth": 960,
+          "resourceHeight": 1280
+        },
+        {
+          "alt": "Vista general de la congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 366,
+          "renderedHeight": 275,
+          "bytes": 94602,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "Foto grupal de la comunidad frente al púlpito de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/comunidad-grupo.CLJJmu7N_Z2umuix.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 384,
+          "renderedHeight": 204,
+          "bytes": 150810,
+          "resourceWidth": 1016,
+          "resourceHeight": 762
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/paloma-grabado.BwA4gsMb_158PhP.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 124,
+          "renderedHeight": 112,
+          "bytes": 108294,
+          "resourceWidth": 640,
+          "resourceHeight": 561
+        },
+        {
+          "alt": "Vista general de la congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/general.Dj628B6V_ZTRNG9.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 310,
+          "renderedHeight": 188,
+          "bytes": 94602,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "La congregación reunida en oración frente a la cruz de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/historia-oracion-fe.CgByn856_10toEV.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 326,
+          "bytes": 114876,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "Encuentro de niños con sus coordinadores en una actividad grupal",
+          "src": "http://127.0.0.1:4323/_astro/ninios.UdYQqqqg_Z1GzY4F.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 176330,
+          "resourceWidth": 1280,
+          "resourceHeight": 1024
+        },
+        {
+          "alt": "Jóvenes conversando en ronda durante una reunión en el salón de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/jovenes.DlcjhKaJ_EiT1i.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 104824,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_1IIJhI.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 128,
+          "renderedHeight": 120,
+          "bytes": 127232,
+          "resourceWidth": 640,
+          "resourceHeight": 583
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZtYPt.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 3416,
+          "resourceWidth": 192,
+          "resourceHeight": 192
+        }
+      ]
+    },
+    {
+      "route": "/ministerios/",
+      "viewport": 390,
+      "dpr": 3,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZwOrsg.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 3040,
+          "resourceWidth": 174,
+          "resourceHeight": 174
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_1IIJhI.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 136,
+          "renderedHeight": 127,
+          "bytes": 127232,
+          "resourceWidth": 640,
+          "resourceHeight": 583
+        },
+        {
+          "alt": "Niños compartiendo una actividad con cuadernos y lápices alrededor de una mesa",
+          "src": "http://127.0.0.1:4323/_astro/niniosss.CTgxIBiK_Z1G50NR.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 188802,
+          "resourceWidth": 1086,
+          "resourceHeight": 1448
+        },
+        {
+          "alt": "Grupo de jóvenes reunidos en el salón de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-16%20at%2002.52.23.C1vNUgwU_e8nE1.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 187330,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "Jóvenes orando juntos alrededor de una mesa",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%2020aaa26-10-14%20at%2019.57.29.-OWO23YZ_ZqTJ7t.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 86896,
+          "resourceWidth": 960,
+          "resourceHeight": 1280
+        },
+        {
+          "alt": "Jóvenes compartiendo un encuentro en pequeños grupos dentro de la iglesia",
+          "src": "http://127.0.0.1:4323/_astro/jovenes-img-9947.D-mnENRZ_Z1xwWcQ.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 125452,
+          "resourceWidth": 1200,
+          "resourceHeight": 1600
+        },
+        {
+          "alt": "Una mujer comparte la Palabra junto a la cruz iluminada",
+          "src": "http://127.0.0.1:4323/_astro/Screenshot%202026-10-14%20212933.N5A7pRaM_Z1k8qR8.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 330,
+          "renderedHeight": 440,
+          "bytes": 64852,
+          "resourceWidth": 638,
+          "resourceHeight": 855
+        },
+        {
+          "alt": "Grupo de jóvenes al aire libre, varios con chalecos reflectantes",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-12%20at%2019.56.57.lk5rzAj2_1GXthQ.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 302,
+          "renderedHeight": 224,
+          "bytes": 282278,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz",
+          "src": "http://127.0.0.1:4323/_astro/564242379_2960663177654447_8435190360901970176_n.0ncXnbK4_Z1NBE0T.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 302,
+          "renderedHeight": 224,
+          "bytes": 174030,
+          "resourceWidth": 1280,
+          "resourceHeight": 789
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZtYPt.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 3416,
+          "resourceWidth": 192,
+          "resourceHeight": 192
+        }
+      ]
+    },
+    {
+      "route": "/visitanos/",
+      "viewport": 390,
+      "dpr": 3,
+      "images": [
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZwOrsg.webp",
+          "sizes": "",
+          "renderedWidth": 46,
+          "renderedHeight": 46,
+          "bytes": 3040,
+          "resourceWidth": 174,
+          "resourceHeight": 174
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/corazon-cruz.D96yN2El_1IIJhI.webp",
+          "sizes": "(max-width: 700px) 150px, 300px",
+          "renderedWidth": 63,
+          "renderedHeight": 59,
+          "bytes": 127232,
+          "resourceWidth": 640,
+          "resourceHeight": 583
+        },
+        {
+          "alt": "La congregación reunida durante el encuentro general",
+          "src": "http://127.0.0.1:4323/_astro/visitanos-reunion-img-2764.C2cYrlqx_vucOI.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 257,
+          "bytes": 113208,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "La cruz iluminada durante una reunión de la comunidad",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-14%20at%2021.32.51.Dtt_tu_6_1HtpkT.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 428,
+          "bytes": 65084,
+          "resourceWidth": 1280,
+          "resourceHeight": 2377
+        },
+        {
+          "alt": "Grupo de jóvenes al aire libre, varios con chalecos reflectantes",
+          "src": "http://127.0.0.1:4323/_astro/WhatsApp%20Image%202026-10-12%20at%2019.56.57.lk5rzAj2_1GXthQ.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 192,
+          "bytes": 282278,
+          "resourceWidth": 1280,
+          "resourceHeight": 960
+        },
+        {
+          "alt": "Foto grupal de mujeres y niños en el salón de la iglesia, frente a la cruz",
+          "src": "http://127.0.0.1:4323/_astro/564242379_2960663177654447_8435190360901970176_n.0ncXnbK4_Z1NBE0T.webp",
+          "sizes": "(max-width: 700px) 100vw, 60vw",
+          "renderedWidth": 342,
+          "renderedHeight": 192,
+          "bytes": 174030,
+          "resourceWidth": 1280,
+          "resourceHeight": 789
+        },
+        {
+          "alt": "",
+          "src": "http://127.0.0.1:4323/_astro/02_ccvs_logo_limpio.C3hkErTy_Z1kTDou.webp",
+          "sizes": "",
+          "renderedWidth": 340,
+          "renderedHeight": 340,
+          "bytes": 19010,
+          "resourceWidth": 900,
+          "resourceHeight": 900
+        },
+        {
+          "alt": "Comunidad Cristiana",
+          "src": "http://127.0.0.1:4323/_astro/01_comunidad_cristiana_logo_madre_original.B7VQ85_k_ZtYPt.webp",
+          "sizes": "",
+          "renderedWidth": 56,
+          "renderedHeight": 56,
+          "bytes": 3416,
+          "resourceWidth": 192,
+          "resourceHeight": 192
+        }
+      ]
+    }
+  ]
+}

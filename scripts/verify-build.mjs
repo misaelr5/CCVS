@@ -19,6 +19,15 @@ for (const route of routes) {
   assert.doesNotMatch(html, /referencias\/|passioncitychurch|#08B9E5/i);
   assert.doesNotMatch(html, /Ã|Â|â€/);
   assert.match(html, /name="robots" content="noindex, nofollow"/);
+  const ogImage = html.match(/property="og:image" content="([^"]+)"/)?.[1];
+  assert.ok(ogImage, `${route}: imagen social declarada`);
+  const socialUrl = new URL(ogImage);
+  assert.equal(socialUrl.protocol, 'https:');
+  const socialPng = await readFile(pageFile(socialUrl.pathname));
+  assert.equal(socialPng.subarray(1, 4).toString(), 'PNG');
+  assert.equal(socialPng.readUInt32BE(16), 1200);
+  assert.equal(socialPng.readUInt32BE(20), 630);
+  assert.match(html, /name="twitter:card" content="summary_large_image"/);
   const schema = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
   assert.equal(JSON.parse(schema)['@type'], 'Church');
   if (route !== '/links/') {
@@ -38,7 +47,7 @@ for (const route of routes) {
     checkedLinks++;
   }
   for (const tag of html.match(/<(?:img|script|link)\b[^>]*>/g) ?? []) {
-    const src = attribute(tag, 'src') ?? (attribute(tag, 'rel') === 'stylesheet' ? attribute(tag, 'href') : null);
+    const src = attribute(tag, 'src') ?? (['stylesheet', 'icon', 'apple-touch-icon'].includes(attribute(tag, 'rel')) ? attribute(tag, 'href') : null);
     if (!src) continue;
     const url = new URL(src, `https://ccvs.invalid${route}`);
     if (url.origin !== 'https://ccvs.invalid') continue;
@@ -74,7 +83,7 @@ assert.match(privacy, /href="\/links\/">canales oficiales<\/a>/);
 assert.match(await readFile(pageFile('/'), 'utf8'), /href="\/politica-de-privacidad\/">Política de privacidad<\/a>/);
 const about = await readFile(pageFile('/nosotros/'), 'utf8');
 const beliefsPage = await readFile(pageFile('/lo-que-creemos/'), 'utf8');
-assert.equal((beliefsPage.match(/class="belief-trigger"/g) ?? []).length, 5, 'cinco temas doctrinales');
+assert.equal((beliefsPage.match(/class="belief-trigger"/g) ?? []).length, 8, 'ocho fundamentos doctrinales');
 assert.doesNotMatch(about, /class="belief-trigger"/, 'creencias en su propia pagina');
 assert.ok(beliefsPage.includes('id="creencias"'));
 assert.ok(about.indexOf('Un terreno para la comunidad.') < about.indexOf('Crecimos como congregación.'));

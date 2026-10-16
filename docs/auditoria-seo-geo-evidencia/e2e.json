@@ -1,0 +1,3387 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\CCVS\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=docs/auditoria-seo-geo-evidencia/playwright.config.mjs"
+    ],
+    "configFile": "D:\\CCVS\\docs\\auditoria-seo-geo-evidencia\\playwright.config.mjs",
+    "rootDir": "D:/CCVS/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/CCVS/test-results/seo-geo-audit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/CCVS/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\CCVS\\test-results\\seo-geo-audit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\CCVS\\tests",
+        "snapshotDir": "D:\\CCVS\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4323",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "docs/auditoria-seo-geo-evidencia/e2e.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "hero-video.spec.ts",
+      "file": "hero-video.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "portada 390: reproducción silenciosa, sonido y pausa por teclado",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1285,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:01:49.043Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "093ca89f7d05d3a05e79-0038f9a51026c5c27d6c",
+          "file": "hero-video.spec.ts",
+          "line": 4,
+          "column": 2
+        },
+        {
+          "title": "portada 1440: reproducción silenciosa, sonido y pausa por teclado",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 936,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:01:50.526Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "093ca89f7d05d3a05e79-f2b52bdcb26d31cfeb0d",
+          "file": "hero-video.spec.ts",
+          "line": 4,
+          "column": 2
+        },
+        {
+          "title": "movimiento reducido: poster sin descargar video y reproducción manual",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 666,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:01:51.490Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "093ca89f7d05d3a05e79-51a1d5c12e279b29fb0a",
+          "file": "hero-video.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "navegación: detiene el video anterior y vuelve a Inicio sin sonido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1902,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:01:52.175Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "093ca89f7d05d3a05e79-6c0059405dedac0ff97e",
+          "file": "hero-video.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "archivo no disponible: conserva poster y contenido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 457,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:01:54.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "093ca89f7d05d3a05e79-c496ffb0b3b476145af2",
+          "file": "hero-video.spec.ts",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "sin JavaScript: poster y contenido de la portada disponibles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:01:54.573Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "093ca89f7d05d3a05e79-c94b6ad3b91f60d5683d",
+          "file": "hero-video.spec.ts",
+          "line": 70,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "phase4-2.spec.ts",
+      "file": "phase4-2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "menú 4.2 · 360: iconos al final, animación, teclado y scroll",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6650,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:25:23",
+                    "location": {
+                      "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                      "column": 23,
+                      "line": 25
+                    },
+                    "snippet": "  23 |   const iconBoxes=[];\n  24 |   for (const link of await social.getByRole('link').all()) {\n> 25 |    await expect(link).toHaveAttribute('aria-label',/CCVS|Comunidad Cristiana/);\n     |                       ^\n  26 |    await expect(link).toHaveAttribute('rel','noopener noreferrer');\n  27 |    await expect(link).toHaveAttribute('target','_blank');\n  28 |    iconBoxes.push(await link.boundingBox());"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                        "column": 23,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n\n\n  23 |   const iconBoxes=[];\n  24 |   for (const link of await social.getByRole('link').all()) {\n> 25 |    await expect(link).toHaveAttribute('aria-label',/CCVS|Comunidad Cristiana/);\n     |                       ^\n  26 |    await expect(link).toHaveAttribute('rel','noopener noreferrer');\n  27 |    await expect(link).toHaveAttribute('target','_blank');\n  28 |    iconBoxes.push(await link.boundingBox());\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:25:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:01:55.140Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\CCVS\\test-results\\seo-geo-audit\\phase4-2-menú-4-2-·-360-ic-45174--animación-teclado-y-scroll\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                    "column": 23,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-2baa90b093c459dd1d53",
+          "file": "phase4-2.spec.ts",
+          "line": 5,
+          "column": 2
+        },
+        {
+          "title": "menú 4.2 · 390: iconos al final, animación, teclado y scroll",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6792,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:25:23",
+                    "location": {
+                      "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                      "column": 23,
+                      "line": 25
+                    },
+                    "snippet": "  23 |   const iconBoxes=[];\n  24 |   for (const link of await social.getByRole('link').all()) {\n> 25 |    await expect(link).toHaveAttribute('aria-label',/CCVS|Comunidad Cristiana/);\n     |                       ^\n  26 |    await expect(link).toHaveAttribute('rel','noopener noreferrer');\n  27 |    await expect(link).toHaveAttribute('target','_blank');\n  28 |    iconBoxes.push(await link.boundingBox());"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                        "column": 23,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n\n\n  23 |   const iconBoxes=[];\n  24 |   for (const link of await social.getByRole('link').all()) {\n> 25 |    await expect(link).toHaveAttribute('aria-label',/CCVS|Comunidad Cristiana/);\n     |                       ^\n  26 |    await expect(link).toHaveAttribute('rel','noopener noreferrer');\n  27 |    await expect(link).toHaveAttribute('target','_blank');\n  28 |    iconBoxes.push(await link.boundingBox());\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:25:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:02.685Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\CCVS\\test-results\\seo-geo-audit\\phase4-2-menú-4-2-·-390-ic-a5773--animación-teclado-y-scroll\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                    "column": 23,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-ae14ac6639b50c7c73ce",
+          "file": "phase4-2.spec.ts",
+          "line": 5,
+          "column": 2
+        },
+        {
+          "title": "menú 4.2 · 1440: iconos al final, animación, teclado y scroll",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6802,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:25:23",
+                    "location": {
+                      "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                      "column": 23,
+                      "line": 25
+                    },
+                    "snippet": "  23 |   const iconBoxes=[];\n  24 |   for (const link of await social.getByRole('link').all()) {\n> 25 |    await expect(link).toHaveAttribute('aria-label',/CCVS|Comunidad Cristiana/);\n     |                       ^\n  26 |    await expect(link).toHaveAttribute('rel','noopener noreferrer');\n  27 |    await expect(link).toHaveAttribute('target','_blank');\n  28 |    iconBoxes.push(await link.boundingBox());"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                        "column": 23,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\nExpected pattern: \u001b[32m/CCVS|Comunidad Cristiana/\u001b[39m\nReceived string:  \u001b[31m\"Instagram\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('navigation', { name: 'Redes sociales del menú' }).getByRole('link').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" title=\"Instagram\" data-astro-reload=\"\" aria-label=\"Instagram\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram\"\u001b[22m\n\n\n  23 |   const iconBoxes=[];\n  24 |   for (const link of await social.getByRole('link').all()) {\n> 25 |    await expect(link).toHaveAttribute('aria-label',/CCVS|Comunidad Cristiana/);\n     |                       ^\n  26 |    await expect(link).toHaveAttribute('rel','noopener noreferrer');\n  27 |    await expect(link).toHaveAttribute('target','_blank');\n  28 |    iconBoxes.push(await link.boundingBox());\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:25:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:10.511Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\CCVS\\test-results\\seo-geo-audit\\phase4-2-menú-4-2-·-1440-i-3db88--animación-teclado-y-scroll\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                    "column": 23,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-aecb0bae4775388093f2",
+          "file": "phase4-2.spec.ts",
+          "line": 5,
+          "column": 2
+        },
+        {
+          "title": "redes compactas y consistentes en footer; Links mantiene etiquetas",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5697,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: /Instagram — Jóvenes CCVS/ }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: /Instagram — Jóvenes CCVS/ }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\u001b[22m\n\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:62:73",
+                    "location": {
+                      "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                      "column": 73,
+                      "line": 62
+                    },
+                    "snippet": "  60 |  await expect(page.locator('.footer-social')).toHaveCount(0);\n  61 |  await page.goto('/links/');\n> 62 |  await expect(page.getByRole('link',{name:/Instagram — Jóvenes CCVS/})).toBeVisible();\n     |                                                                         ^\n  63 | });\n  64 |\n  65 | for(const route of ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/']) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                        "column": 73,
+                        "line": 62
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: /Instagram — Jóvenes CCVS/ }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /Instagram — Jóvenes CCVS/ })\u001b[22m\n\n\n  60 |  await expect(page.locator('.footer-social')).toHaveCount(0);\n  61 |  await page.goto('/links/');\n> 62 |  await expect(page.getByRole('link',{name:/Instagram — Jóvenes CCVS/})).toBeVisible();\n     |                                                                         ^\n  63 | });\n  64 |\n  65 | for(const route of ['/', '/nosotros/', '/lo-que-creemos/', '/ministerios/', '/visitanos/', '/links/', '/terminos-y-condiciones/']) {\n    at D:\\CCVS\\tests\\phase4-2.spec.ts:62:73"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:18.391Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\CCVS\\test-results\\seo-geo-audit\\phase4-2-redes-compactas-y-8f0ad-er-Links-mantiene-etiquetas\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\CCVS\\tests\\phase4-2.spec.ts",
+                    "column": 73,
+                    "line": 62
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-b18415c08e8abb3ecf21",
+          "file": "phase4-2.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "entrada propia / y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 764,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:25.111Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-9b3eb875f105f55dec1b",
+          "file": "phase4-2.spec.ts",
+          "line": 66,
+          "column": 2
+        },
+        {
+          "title": "entrada propia /nosotros/ y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:26.056Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-c881460d349509c9b488",
+          "file": "phase4-2.spec.ts",
+          "line": 66,
+          "column": 2
+        },
+        {
+          "title": "entrada propia /lo-que-creemos/ y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 375,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:26.548Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-d8d5ffdf85158b0ca156",
+          "file": "phase4-2.spec.ts",
+          "line": 66,
+          "column": 2
+        },
+        {
+          "title": "entrada propia /ministerios/ y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:26.950Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-4834b786413c90228968",
+          "file": "phase4-2.spec.ts",
+          "line": 66,
+          "column": 2
+        },
+        {
+          "title": "entrada propia /visitanos/ y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1604,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:27.403Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-2111b6b9afdd8e9628f3",
+          "file": "phase4-2.spec.ts",
+          "line": 66,
+          "column": 2
+        },
+        {
+          "title": "entrada propia /links/ y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:29.024Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-18618351e31297a1e150",
+          "file": "phase4-2.spec.ts",
+          "line": 66,
+          "column": 2
+        },
+        {
+          "title": "entrada propia /terminos-y-condiciones/ y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 371,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:29.330Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-22508439c8275c326724",
+          "file": "phase4-2.spec.ts",
+          "line": 66,
+          "column": 2
+        },
+        {
+          "title": "menú sin animación con reduced motion y cierre al navegar",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1380,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:29.720Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ed9562c427ec49e13bc-6a6adf66211963e2e448",
+          "file": "phase4-2.spec.ts",
+          "line": 77,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "phase4.spec.ts",
+      "file": "phase4.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ClientRouter: forward, back, forward y scripts sin duplicados",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11748,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:31.129Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "598377eb1f598f6a1945-2cd12e396f9e3c381f3e",
+          "file": "phase4.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Inicio: orden mobile, horarios y redes oficiales",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5730,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\nExpected substring: \u001b[32m\"Jóvenes CCVS\"\u001b[39m\nReceived string:    \u001b[31m\"Instagram (abre en una pestaña nueva)\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" class=\"link-button\" data-astro-reload=\"true\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram (abre en una pestaña nueva)\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\nExpected substring: \u001b[32m\"Jóvenes CCVS\"\u001b[39m\nReceived string:    \u001b[31m\"Instagram (abre en una pestaña nueva)\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" class=\"link-button\" data-astro-reload=\"true\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram (abre en una pestaña nueva)\"\u001b[22m\n\n    at D:\\CCVS\\tests\\phase4.spec.ts:71:81",
+                    "location": {
+                      "file": "D:\\CCVS\\tests\\phase4.spec.ts",
+                      "column": 81,
+                      "line": 71
+                    },
+                    "snippet": "  69 |  await expect(page.locator('.footer-wordmark')).toHaveAttribute('aria-hidden','true');\n  70 |  await page.goto('/links/');\n> 71 |  await expect(page.locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')).toContainText('Jóvenes CCVS');\n     |                                                                                 ^\n  72 |  await expect(page.locator('a[href^=\"https://www.facebook.com/\"]')).toHaveAttribute('rel','noopener noreferrer');\n  73 |  await expect(page.locator('a[href^=\"https://www.youtube.com/\"]')).toHaveAttribute('target','_blank');\n  74 |  await expect(page.locator('a[href*=\"wa.me\"]')).toHaveCount(0);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\CCVS\\tests\\phase4.spec.ts",
+                        "column": 81,
+                        "line": 71
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\nExpected substring: \u001b[32m\"Jóvenes CCVS\"\u001b[39m\nReceived string:    \u001b[31m\"Instagram (abre en una pestaña nueva)\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" class=\"link-button\" data-astro-reload=\"true\" rel=\"noopener noreferrer\" href=\"https://www.instagram.com/jovenesccvs/\">…</a>\u001b[22m\n\u001b[2m       - unexpected value \"Instagram (abre en una pestaña nueva)\"\u001b[22m\n\n\n  69 |  await expect(page.locator('.footer-wordmark')).toHaveAttribute('aria-hidden','true');\n  70 |  await page.goto('/links/');\n> 71 |  await expect(page.locator('a[href=\"https://www.instagram.com/jovenesccvs/\"]')).toContainText('Jóvenes CCVS');\n     |                                                                                 ^\n  72 |  await expect(page.locator('a[href^=\"https://www.facebook.com/\"]')).toHaveAttribute('rel','noopener noreferrer');\n  73 |  await expect(page.locator('a[href^=\"https://www.youtube.com/\"]')).toHaveAttribute('target','_blank');\n  74 |  await expect(page.locator('a[href*=\"wa.me\"]')).toHaveCount(0);\n    at D:\\CCVS\\tests\\phase4.spec.ts:71:81"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:42.898Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\CCVS\\test-results\\seo-geo-audit\\phase4-Inicio-orden-mobile-horarios-y-redes-oficiales\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\CCVS\\tests\\phase4.spec.ts",
+                    "column": 81,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "598377eb1f598f6a1945-3dd4f608037271b5ac09",
+          "file": "phase4.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "sin View Transition API: navegación completa y menú funcional",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2645,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:49.492Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "598377eb1f598f6a1945-fec21ae00b5ac9033fd0",
+          "file": "phase4.spec.ts",
+          "line": 77,
+          "column": 1
+        },
+        {
+          "title": "motion: reveal una vez, contenido visible y reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2081,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:52.337Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "598377eb1f598f6a1945-f0676061df4312a49459",
+          "file": "phase4.spec.ts",
+          "line": 88,
+          "column": 1
+        },
+        {
+          "title": "CCVS de fondo no desborda en mobile",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 797,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:54.438Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "598377eb1f598f6a1945-26b85aa29a6a2b5cc4e4",
+          "file": "phase4.spec.ts",
+          "line": 103,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "refinements.spec.ts",
+      "file": "refinements.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "tarjeta: sin fades, scroll usable, cierre exterior y sin trampa de foco",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3079,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:55.265Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-d6db52884ad3717362c4",
+          "file": "refinements.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "navegación y retroceso empiezan arriba sin sumar una segunda entrada al título",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:02:58.363Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-b9a9b973fba72b64f998",
+          "file": "refinements.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "objetos al scroll /: responden y respetan reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 608,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:00.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-e6225669b8984a972e0f",
+          "file": "refinements.spec.ts",
+          "line": 56,
+          "column": 2
+        },
+        {
+          "title": "objetos al scroll /nosotros/: responden y respetan reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 621,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:00.723Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-93487728965374f3b263",
+          "file": "refinements.spec.ts",
+          "line": 56,
+          "column": 2
+        },
+        {
+          "title": "objetos al scroll /lo-que-creemos/: responden y respetan reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 539,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:01.361Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-0c7ba3a91903e59a67bd",
+          "file": "refinements.spec.ts",
+          "line": 56,
+          "column": 2
+        },
+        {
+          "title": "objetos al scroll /ministerios/: responden y respetan reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 588,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:01.916Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-14be8b838cb08ea3cd8d",
+          "file": "refinements.spec.ts",
+          "line": 56,
+          "column": 2
+        },
+        {
+          "title": "objetos al scroll /visitanos/: responden y respetan reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1420,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:02.520Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-998c3d49495c07585c6e",
+          "file": "refinements.spec.ts",
+          "line": 56,
+          "column": 2
+        },
+        {
+          "title": "objetos al scroll /links/: responden y respetan reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 557,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:03.959Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-f7020dd6573387e33651",
+          "file": "refinements.spec.ts",
+          "line": 56,
+          "column": 2
+        },
+        {
+          "title": "objetos al scroll /terminos-y-condiciones/: responden y respetan reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 523,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:04.533Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-9e61afa729d9e0bb8be0",
+          "file": "refinements.spec.ts",
+          "line": 56,
+          "column": 2
+        },
+        {
+          "title": "footer: CCVS de fondo, contenido encima y altura compacta",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:05.074Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "05a4bf9a14ddc208aa73-604203affad6bcec27f6",
+          "file": "refinements.spec.ts",
+          "line": 71,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "site.spec.ts",
+      "file": "site.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "reuniones regulares y encuentros programados quedan separados",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6496,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.visit-layout').locator('.schedule h3')\nTimeout: 5000ms\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[32m- Array [\u001b[39m\n\u001b[32m-   \"Reunión general\",\u001b[39m\n\u001b[32m-   \"Oración\",\u001b[39m\n\u001b[32m-   \"Jóvenes\",\u001b[39m\n\u001b[32m-   \"Niños\",\u001b[39m\n\u001b[32m- ]\u001b[39m\n\u001b[31m+ Array []\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.visit-layout').locator('.schedule h3') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.visit-layout').locator('.schedule h3')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.visit-layout').locator('.schedule h3')\nTimeout: 5000ms\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[32m- Array [\u001b[39m\n\u001b[32m-   \"Reunión general\",\u001b[39m\n\u001b[32m-   \"Oración\",\u001b[39m\n\u001b[32m-   \"Jóvenes\",\u001b[39m\n\u001b[32m-   \"Niños\",\u001b[39m\n\u001b[32m- ]\u001b[39m\n\u001b[31m+ Array []\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.visit-layout').locator('.schedule h3') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.visit-layout').locator('.schedule h3')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\n    at D:\\CCVS\\tests\\site.spec.ts:15:52",
+                    "location": {
+                      "file": "D:\\CCVS\\tests\\site.spec.ts",
+                      "column": 52,
+                      "line": 15
+                    },
+                    "snippet": "  13 |       const weekly = page.locator('.visit-layout');\n  14 |       await expect(weekly.locator('.schedule li')).toHaveCount(4);\n> 15 |       await expect(weekly.locator('.schedule h3')).toHaveText(['Reunión general', 'Oración', 'Jóvenes', 'Niños']);\n     |                                                    ^\n  16 |     }\n  17 |     const programmed = page.locator('.programmed-meetings');\n  18 |     await expect(programmed.getByRole('heading', { name: 'Encuentros programados' })).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\CCVS\\tests\\site.spec.ts",
+                        "column": 52,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.visit-layout').locator('.schedule h3')\nTimeout: 5000ms\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[32m- Array [\u001b[39m\n\u001b[32m-   \"Reunión general\",\u001b[39m\n\u001b[32m-   \"Oración\",\u001b[39m\n\u001b[32m-   \"Jóvenes\",\u001b[39m\n\u001b[32m-   \"Niños\",\u001b[39m\n\u001b[32m- ]\u001b[39m\n\u001b[31m+ Array []\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.visit-layout').locator('.schedule h3') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.visit-layout').locator('.schedule h3')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\n\n  13 |       const weekly = page.locator('.visit-layout');\n  14 |       await expect(weekly.locator('.schedule li')).toHaveCount(4);\n> 15 |       await expect(weekly.locator('.schedule h3')).toHaveText(['Reunión general', 'Oración', 'Jóvenes', 'Niños']);\n     |                                                    ^\n  16 |     }\n  17 |     const programmed = page.locator('.programmed-meetings');\n  18 |     await expect(programmed.getByRole('heading', { name: 'Encuentros programados' })).toBeVisible();\n    at D:\\CCVS\\tests\\site.spec.ts:15:52"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:06.341Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\CCVS\\test-results\\seo-geo-audit\\site-reuniones-regulares-y-90ac7-rogramados-quedan-separados\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\CCVS\\tests\\site.spec.ts",
+                    "column": 52,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-d5cbcb9292bcd41d6346",
+          "file": "site.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "/ · 360px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:13.775Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f38f17bbf053044504f7",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/nosotros/ · 360px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:14.539Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-db18f9016c67cf48daf4",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/lo-que-creemos/ · 360px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:14.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-0b0116635a452d2ccec3",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ministerios/ · 360px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 413,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:15.379Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-8a3bd6338a918bc54e83",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/visitanos/ · 360px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1256,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:15.809Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-bb690f01d5e79ea7f2a1",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/links/ · 360px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 276,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:17.093Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-8eaf50bdfa1d246733cd",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/terminos-y-condiciones/ · 360px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 355,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:17.387Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-a4e62e5d0ceb6e819f33",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ · 375px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 468,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:17.761Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-03d54561e55237921f9f",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/nosotros/ · 375px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:18.260Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f2c2a470b622864fb258",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/lo-que-creemos/ · 375px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 364,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:18.678Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-a434093d21b87189230d",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ministerios/ · 375px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 392,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:19.060Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-7475bc0b3174bcecb068",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/visitanos/ · 375px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:19.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f67a21ba32437724b32e",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/links/ · 375px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 276,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:20.689Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-ede9f07cce7e80e2b0fc",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/terminos-y-condiciones/ · 375px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 353,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:20.981Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-4b9418d4e2b236bfadf7",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ · 390px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1562,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:21.350Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-ef0104574a49e0da06fc",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/nosotros/ · 390px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1280,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:22.929Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-91f7dba8b1193f601650",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/lo-que-creemos/ · 390px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1183,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:24.229Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-b3c399892ef8f0052669",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ministerios/ · 390px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1315,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:25.429Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-6cd0eb1307c043c0a56e",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/visitanos/ · 390px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2331,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:26.762Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f767947d0633ed923ceb",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/links/ · 390px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 917,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:29.109Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f135f8e096fdbb8d0f40",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/terminos-y-condiciones/ · 390px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1161,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:30.043Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-12b0273fce76acc0d33a",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ · 430px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:31.222Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-a27cd1051bf80b68898d",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/nosotros/ · 430px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:31.691Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-d46f3647a9cf01932a37",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/lo-que-creemos/ · 430px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 359,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:32.107Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f54af38cdacc08ee7a41",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ministerios/ · 430px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:32.482Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-4384d6bc05139f40be54",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/visitanos/ · 430px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:32.896Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-dd18145f86d55a2d604b",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/links/ · 430px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 286,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:34.134Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-65ee97ab1672c5dadc2a",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/terminos-y-condiciones/ · 430px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 355,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:34.436Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-203f40b1d3a61d0dd8f8",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ · 768px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:34.807Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-52fc59c5dd47843a6dd9",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/nosotros/ · 768px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:35.292Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-21f5b12f9965b157f72c",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/lo-que-creemos/ · 768px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:35.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-b20a3c00f5733c9217e4",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ministerios/ · 768px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 390,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:36.075Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-5636aca989465a655190",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/visitanos/ · 768px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1082,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:36.481Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-a16256e52347924bd3eb",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/links/ · 768px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 283,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:37.579Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-1d83bfa5fb54ab63e73c",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/terminos-y-condiciones/ · 768px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 356,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:37.881Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-3a97423479ec5422fdf3",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ · 1024px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 467,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:38.253Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-eba17a70207c6e6a7a1b",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/nosotros/ · 1024px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:38.738Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-b83ab2e7ad6e7f83c483",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/lo-que-creemos/ · 1024px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 365,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:39.166Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-c3b74652f9f9b2f816f6",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ministerios/ · 1024px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:39.550Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-0dc760ed4a3968d9fd84",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/visitanos/ · 1024px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1052,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:39.963Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-5a0dd791e2afed50dc9c",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/links/ · 1024px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 285,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:41.032Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-1607983b5f29fc769e3e",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/terminos-y-condiciones/ · 1024px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 352,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:41.334Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f5e1057fc6dbf0f73a4e",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ · 1440px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1504,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:41.702Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-eb5c80c34d47a1d27d42",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/nosotros/ · 1440px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:43.223Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f8f83b6d6d32d267dd28",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/lo-que-creemos/ · 1440px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1293,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:44.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-63c422097a2fe12c9015",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/ministerios/ · 1440px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1504,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:45.841Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-b0e8534b99e799a5567f",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/visitanos/ · 1440px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2254,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:47.361Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-fcbf222c97e91f0c63b5",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/links/ · 1440px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 909,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:49.632Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-07823b31474833ce45e9",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "/terminos-y-condiciones/ · 1440px: carga, layout y recursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:50.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-a4e06d81cc0e11edf23e",
+          "file": "site.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "menú tarjeta · 390px: página estable, Escape y anclas",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3339,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:51.709Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-ca0b742f48d4fdb83b82",
+          "file": "site.spec.ts",
+          "line": 62,
+          "column": 2
+        },
+        {
+          "title": "menú tarjeta · 1440px: página estable, Escape y anclas",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2894,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:55.066Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-dcecc584e724c9c59d50",
+          "file": "site.spec.ts",
+          "line": 62,
+          "column": 2
+        },
+        {
+          "title": "acordeón: teclado y estados ARIA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1201,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:57.979Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-d3d3778927eaf65c7d22",
+          "file": "site.spec.ts",
+          "line": 89,
+          "column": 1
+        },
+        {
+          "title": "sin JS: navegación y doctrina disponibles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 318,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:59.197Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f815d9224d5bfb4e8daa",
+          "file": "site.spec.ts",
+          "line": 101,
+          "column": 1
+        },
+        {
+          "title": "reducción de movimiento y orden mobile de Nosotros",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 429,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:59.530Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-4fa88ab22c89d4146aec",
+          "file": "site.spec.ts",
+          "line": 111,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "transitions.spec.ts",
+      "file": "transitions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "transición lateral 390: continuidad, header estable e historial",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2236,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:03:59.985Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eb6dcbf6540c9717c6fe-6faf8e81f99cf5e90541",
+          "file": "transitions.spec.ts",
+          "line": 4,
+          "column": 2
+        },
+        {
+          "title": "transición lateral 1440: continuidad, header estable e historial",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2621,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:04:02.238Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eb6dcbf6540c9717c6fe-aabdc23727f730b88480",
+          "file": "transitions.spec.ts",
+          "line": 4,
+          "column": 2
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-16T11:01:48.119Z",
+    "duration": 136954.577,
+    "expected": 84,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}
