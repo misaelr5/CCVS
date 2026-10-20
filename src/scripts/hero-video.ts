@@ -7,7 +7,11 @@ export function initializeHeroVideo(signal: AbortSignal, reducedMotion: boolean)
  const playback = controls?.querySelector<HTMLButtonElement>('[data-video-play]');
  const status = document.querySelector<HTMLElement>('[data-video-status]');
  if (!frame || !video || !controls || !sound || !playback) return;
- let userPaused = reducedMotion;
+ const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+ // Conservar el video completo, pero permitir que la imagen y el texto carguen primero.
+ let userPaused = reducedMotion || connection?.saveData === true || ['slow-2g', '2g'].includes(connection?.effectiveType ?? '');
+ let autoplayReady = false;
+ let paintFrame = 0;
  let failed = false;
  const initialRect = frame.getBoundingClientRect();
  let inView = initialRect.bottom > 0 && initialRect.top < innerHeight;
@@ -25,6 +29,7 @@ export function initializeHeroVideo(signal: AbortSignal, reducedMotion: boolean)
  };
  const play = (manual = false) => {
   if (failed || signal.aborted) return;
+  if (!manual && !autoplayReady) return;
   load();
   void video.play().then(() => { if (signal.aborted) video.pause(); }).catch(() => {
    if (manual && status && !signal.aborted) status.textContent = 'No se pudo iniciar el video. Intentá reproducirlo nuevamente.';
@@ -63,6 +68,7 @@ export function initializeHeroVideo(signal: AbortSignal, reducedMotion: boolean)
   else if (inView && !userPaused) play();
  }, { signal });
  signal.addEventListener('abort', () => {
+  cancelAnimationFrame(paintFrame);
   observer?.disconnect();
   quietPause();
   video.removeAttribute('src');
@@ -70,5 +76,16 @@ export function initializeHeroVideo(signal: AbortSignal, reducedMotion: boolean)
   frame.classList.remove('is-ready');
  }, { once: true });
  sync();
- if (!reducedMotion && !document.hidden && inView) play();
+ const poster = frame.querySelector('img');
+ // Dos frames dan al navegador una oportunidad de pintar antes de descargar el MP4.
+ void Promise.all([poster?.decode().catch(() => {}), document.fonts.ready]).then(() => {
+  if (signal.aborted) return;
+  paintFrame = requestAnimationFrame(() => {
+   paintFrame = requestAnimationFrame(() => {
+    if (signal.aborted) return;
+    autoplayReady = true;
+    if (!userPaused && !document.hidden && inView) play();
+   });
+  });
+ });
 }

@@ -1,0 +1,40 @@
+---
+import { schedule } from '../data/schedule';
+import { site } from '../data/site';
+import { externalLinks, mapUrl } from '../data/links';
+import SocialIcon from './SocialIcon.astro';
+const principal = schedule[0];
+const youtube = externalLinks.find(link => link.icon === 'youtube');
+---
+<nav class="visit-quick-links shell" aria-label="Información para tu visita">
+ <a href="/visitanos/#horarios">
+  <span class="quick-label">{principal.title}</span>
+  <strong>{principal.day} · {principal.time} hs</strong>
+  <span class="quick-action">Todos los horarios <span aria-hidden="true">↗</span></span>
+ </a>
+ <a href={mapUrl} target="_blank" rel="noopener noreferrer">
+  <span class="quick-label">{site.locality}, {site.region}</span>
+  <strong>Cómo llegar</strong>
+  <span class="quick-action">Vélez Sarsfield s/n <span aria-hidden="true">↗</span></span>
+  <span class="sr-only"> (abre en una pestaña nueva)</span>
+ </a>
+ {youtube && <a href={youtube.href} target="_blank" rel="noopener noreferrer">
+  <span class="quick-label"><SocialIcon type="youtube" /> Canal de la comunidad</span>
+  <strong>Videos en YouTube</strong>
+  <span class="quick-action">Visitá nuestro canal <span aria-hidden="true">↗</span></span>
+  <span class="sr-only"> (abre en una pestaña nueva)</span>
+ </a>}
+</nav>
+
+<style>
+ .visit-quick-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-block:24px 0; }
+ .visit-quick-links > a { display:flex; flex-direction:column; gap:12px; padding:26px; border:1px solid var(--line); border-radius:16px; text-decoration:none; min-width:0; transition:background-color 180ms ease,border-color 180ms ease; }
+ .quick-label { display:flex; align-items:center; gap:8px; font-size:13px; line-height:1.4; }
+ .quick-label :global(svg) { width:20px; height:20px; }
+ strong { font-size:clamp(20px,2vw,28px); line-height:1.15; letter-spacing:-.04em; }
+ .quick-action { display:flex; justify-content:space-between; gap:12px; font-size:14px; line-height:1.5; margin-top:auto; text-decoration:underline; text-underline-offset:4px; }
+ .visit-quick-links > a:hover,.visit-quick-links > a:focus-visible { background:var(--surface); border-color:var(--accent); }
+ @media(max-width:1000px) { .visit-quick-links { gap:12px; } .visit-quick-links > a { padding:20px; } }
+ @media(max-width:700px) { .visit-quick-links { grid-template-columns:1fr; } .visit-quick-links > a { gap:8px; } }
+ @media(prefers-reduced-motion:reduce) { .visit-quick-links > a { transition:none; } }
+</style>

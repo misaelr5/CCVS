@@ -61,7 +61,7 @@ for (const route of routes) {
     checkedAssets++;
   }
   for (const tag of html.match(/<video\b[^>]*>/g) ?? []) {
-    for (const name of ['poster', 'data-video-src', 'data-video-mobile']) {
+    for (const name of ['data-video-src', 'data-video-mobile']) {
       const src = attribute(tag, name);
       assert.ok(src, `${route}: video sin ${name}`);
       assert.ok((await stat(pageFile(new URL(src, 'https://ccvs.invalid').pathname))).size > 0, `${route}: recurso de video ausente ${src}`);

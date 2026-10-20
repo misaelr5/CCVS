@@ -2,7 +2,10 @@
 import '@fontsource-variable/archivo/standard.css';
 import '@fontsource-variable/bodoni-moda';
 import '../styles/global.css';
+import archivoFont from '@fontsource-variable/archivo/files/archivo-latin-standard-normal.woff2?url';
+import bodoniFont from '@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-wght-normal.woff2?url';
 import { site } from '../data/site';
+import { externalLinks, mapUrl } from '../data/links';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { ClientRouter } from 'astro:transitions';
@@ -12,7 +15,15 @@ const pageTitle = title === site.name ? `${site.name}, ${site.region}` : `${titl
 // Origen de revisión existente, solo para el recurso social; no activa canonical ni indexación.
 const socialImage = new URL('/brand/comunidad-cristiana-og.png', Astro.site ?? 'https://ccvs-sigma.vercel.app/').href;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : null;
-const schema = { '@context': 'https://schema.org', '@type': 'Church', name: site.name, address: { '@type': 'PostalAddress', streetAddress: 'Vélez Sarsfield s/n', addressLocality: site.locality, addressRegion: site.region, addressCountry: 'AR' }, ...(Astro.site ? { url: Astro.site.href } : {}) };
+const schema = {
+  '@context': 'https://schema.org', '@type': 'Church', name: site.name,
+  alternateName: site.shortName, description: site.description,
+  address: { '@type': 'PostalAddress', streetAddress: 'Vélez Sarsfield s/n', addressLocality: site.locality, addressRegion: site.region, addressCountry: 'AR' },
+  hasMap: mapUrl,
+  // Instagram pertenece a Jóvenes; no representa a toda la congregación.
+  sameAs: externalLinks.filter(link => link.icon === 'facebook' || link.icon === 'youtube').map(link => link.href),
+  ...(Astro.site ? { url: Astro.site.href, logo: new URL('/brand/emblema-512.png', Astro.site).href } : {}),
+};
 const pageMotion = {
   forwards: { old: { name: 'page-slide-out', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' }, new: { name: 'page-slide-in', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' } },
   backwards: { old: { name: 'page-slide-out-back', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' }, new: { name: 'page-slide-in-back', duration: '380ms', easing: 'cubic-bezier(.22,1,.36,1)' } },
@@ -23,6 +34,8 @@ const pageMotion = {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" href={archivoFont} as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href={bodoniFont} as="font" type="font/woff2" crossorigin />
   <title>{pageTitle}</title>
   <meta name="description" content={description} />
   <meta name="theme-color" content="#F7F6F3" />

@@ -30,6 +30,23 @@ function initialize(force = false) {
  pageController = new AbortController();
  const { signal } = pageController;
  initializeHeroVideo(signal, motion.matches);
+ // El lazy loading nativo puede anticipar iframes a varios viewports de distancia.
+ // Limitar Maps a la cercanía real del mapa evita trabajo externo en la primera vista.
+ const maps = document.querySelectorAll<HTMLIFrameElement>('iframe[data-map-src]');
+ maps.forEach(frame => { frame.hidden = false; });
+ const loadMap = (frame: HTMLIFrameElement) => {
+  if (frame.dataset.mapSrc) frame.src = frame.dataset.mapSrc;
+ };
+ if (maps.length && 'IntersectionObserver' in window) {
+  const mapObserver = new IntersectionObserver(entries => {
+   for (const entry of entries) if (entry.isIntersecting) {
+    loadMap(entry.target as HTMLIFrameElement);
+    mapObserver.unobserve(entry.target);
+   }
+  }, { rootMargin:'200px' });
+  maps.forEach(frame => mapObserver.observe(frame));
+  signal.addEventListener('abort', () => mapObserver.disconnect(), { once:true });
+ } else maps.forEach(loadMap);
  const dialog = document.querySelector<HTMLDialogElement>('#navigation-dialog');
  const open = document.querySelector<HTMLButtonElement>('.menu-open');
  const closeButton = document.querySelector<HTMLButtonElement>('.menu-close');
@@ -171,7 +188,7 @@ function initialize(force = false) {
   const hero=document.querySelector<HTMLElement>('.hero-copy');
   if(hero && !hero.dataset.revealed) {
    hero.dataset.revealed='true';
-   [...hero.querySelectorAll<HTMLElement>(':scope > h1, :scope > p, :scope > a')].forEach((item,index)=>animateItem(item,index));
+   [...hero.querySelectorAll<HTMLElement>(':scope > h1, :scope > p, :scope > .hero-actions')].forEach((item,index)=>animateItem(item,index));
   }
   observer=new IntersectionObserver(entries=>{
    entries.forEach(entry=>{

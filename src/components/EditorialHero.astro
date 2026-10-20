@@ -3,4 +3,11 @@ import HeroVideo from './HeroVideo.astro';
 import { editorial } from '../data/site';
 import ScrollAccent from './ScrollAccent.astro';
 ---
-<section class="editorial-hero shell"><HeroVideo /><div class="hero-copy"><h1><span class="hero-title-primary">{editorial.hero[0]}</span>{' '}<span class="hero-title-secondary">{editorial.hero.slice(1).join(' ')}</span></h1><p>{editorial.heroIntro}</p><a class="pill" href="/lo-que-creemos/">Conocé nuestra fe</a><ScrollAccent kind="diagonal" class="hero-accent" /></div></section>
+<section class="editorial-hero shell"><HeroVideo /><div class="hero-copy"><h1><span class="hero-title-primary">{editorial.hero[0]}</span>{' '}<span class="hero-title-secondary">{editorial.hero.slice(1).join(' ')}</span></h1><p>{editorial.heroIntro}</p><div class="hero-actions"><a class="pill" href="/visitanos/">Planificá tu visita</a><a class="hero-faith-link" href="/lo-que-creemos/">Conocé nuestra fe</a></div><ScrollAccent kind="diagonal" class="hero-accent" /></div></section>
+
+<style>
+ .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px 24px; margin-top:28px; }
+ .hero-actions .pill { margin:0; }
+ .hero-faith-link { display:inline-flex; align-items:center; min-height:48px; font-size:14px; text-underline-offset:5px; }
+ @media(max-width:700px) { .hero-actions { margin-top:26px; gap:8px 18px; } }
+</style>

@@ -40,7 +40,7 @@ test('navegación: detiene el video anterior y vuelve a Inicio sin sonido', asyn
  await page.goto('/');
  await page.getByRole('button', { name: 'Activar sonido', exact: true }).click();
  await page.evaluate(() => { (window as Window & { oldVideo?: HTMLVideoElement }).oldVideo = document.querySelector('video')!; });
- await page.locator('.hero-copy a').click();
+ await page.getByRole('link', { name: 'Conocé nuestra fe', exact: true }).click();
  await expect(page).toHaveURL(/lo-que-creemos\/$/);
  expect(await page.evaluate(() => {
   const oldVideo = (window as Window & { oldVideo?: HTMLVideoElement }).oldVideo;
@@ -73,6 +73,6 @@ test('sin JavaScript: poster y contenido de la portada disponibles', async ({ br
  await page.goto('/');
  await expect(page.locator('.hero-video-poster')).toBeVisible();
  await expect(page.locator('[data-video-controls]')).toBeHidden();
- await expect(page.locator('.hero-copy a')).toBeVisible();
+ await expect(page.getByRole('link', { name: 'Conocé nuestra fe', exact: true })).toBeVisible();
  await context.close();
 });

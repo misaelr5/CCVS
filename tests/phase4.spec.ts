@@ -11,7 +11,7 @@ test('ClientRouter: forward, back, forward y scripts sin duplicados', async ({ p
       sessionStorage.setItem('phase4-direction',direction);
     });
   });
-  await page.locator('.hero-copy a').click();
+  await page.getByRole('link', { name: 'Conocé nuestra fe', exact: true }).click();
   await expect(page).toHaveURL(/lo-que-creemos\/$/);
   expect(await page.evaluate(()=>(window as Window & {phase4Marker?:boolean}).phase4Marker)).toBe(true);
   expect(await page.evaluate(()=>sessionStorage.getItem('phase4-direction'))).toBe('forward');
@@ -29,7 +29,7 @@ test('ClientRouter: forward, back, forward y scripts sin duplicados', async ({ p
     await page.getByRole('button',{name:'Abrir menú'}).click();
     await page.getByRole('dialog').getByRole('link',{name:'Inicio',exact:true}).click();
     await expect(page.locator('body')).not.toHaveCSS('position','fixed');
-    await page.locator('.hero-copy a').click();
+    await page.getByRole('link', { name: 'Conocé nuestra fe', exact: true }).click();
     const belief=page.locator('.belief-trigger').first();
     await belief.click();
     await expect(belief).toHaveAttribute('aria-expanded','true');
@@ -77,7 +77,7 @@ test('Inicio: orden mobile, horarios y redes oficiales', async ({ page })=> {
 test('sin View Transition API: navegación completa y menú funcional',async({page})=>{
  await page.addInitScript(()=>Object.defineProperty(document,'startViewTransition',{value:undefined,configurable:true}));
  await page.goto('/');
- await page.locator('.hero-copy a').click();
+ await page.getByRole('link', { name: 'Conocé nuestra fe', exact: true }).click();
  await expect(page).toHaveURL(/lo-que-creemos\/$/);
  await page.getByRole('button',{name:'Abrir menú'}).click();
  await expect(page.getByRole('dialog')).toBeVisible();

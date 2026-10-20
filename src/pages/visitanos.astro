@@ -52,7 +52,8 @@ const principal = schedule[0];
     <div><p class="kicker">Ubicación</p><h2 id="visit-map-title">Encontranos <span class="serif">en el mapa.</span></h2></div>
     <a class="inline-link" href={mapUrl} target="_blank" rel="noopener noreferrer">Abrir en Google Maps <span aria-hidden="true">↗</span><span class="sr-only"> (abre en una pestaña nueva)</span></a>
   </div>
-  <iframe src={mapEmbedUrl} title="Mapa de Comunidad Cristiana Villa Sarmiento" loading="lazy" referrerpolicy="no-referrer"></iframe>
+  <iframe data-map-src={mapEmbedUrl} title="Mapa de Comunidad Cristiana Villa Sarmiento" loading="lazy" referrerpolicy="no-referrer" hidden></iframe>
+  <noscript><iframe src={mapEmbedUrl} title="Mapa de Comunidad Cristiana Villa Sarmiento" loading="lazy" referrerpolicy="no-referrer"></iframe></noscript>
 </section>
 <div class="visit-programmed"><ProgrammedMeetings /></div>
 <section class="visit-closing shell"><p class="kicker">Seguimos en contacto</p><h2>Conocé la comunidad.<br /><span class="serif">Compartamos la fe.</span></h2><a class="pill" href="/links/">Canales de la congregación <span aria-hidden="true">↗</span></a></section>

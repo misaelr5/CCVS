@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FaithIllustration from '../components/FaithIllustration.astro';
 import EditorialHero from '../components/EditorialHero.astro';
+import VisitQuickLinks from '../components/VisitQuickLinks.astro';
 import TextImageBlock from '../components/TextImageBlock.astro';
 import PhotoSection from '../components/PhotoSection.astro';
 import Schedule from '../components/Schedule.astro';
@@ -22,6 +23,7 @@ const homeYouth = {
 ---
 <BaseLayout title={site.name} description="Iglesia cristiana en Villa Sarmiento, Córdoba. Seguimos a Jesucristo y nos reunimos para estudiar la Biblia, orar y servir. Domingo a las 20:30 hs.">
 <EditorialHero />
+<VisitQuickLinks />
 <section class="home-welcome shell section-gap"><div class="welcome-collage"><PhotoCollage photos={[site.photos.welcome, site.photos.welcomeSecondary, site.photos.welcomeDetail]} label="La comunidad de Villa Sarmiento" /></div><div class="welcome-copy"><h2>En Cristo, <Highlight>crecemos juntos.</Highlight></h2><p class="large-serif">Aprender su Palabra.<br />Caminar en la fe.</p><p>Desde 2005, nuestra congregación comparte el evangelio y sirve a sus vecinos en Villa Sarmiento. Nos reunimos para orar y acompañarnos mientras seguimos a Jesús.</p><a class="inline-link" href="/nosotros/">Conocé nuestra historia</a><EditorialMark kind="horizontal" class="welcome-pointer" /></div></section>
 <section class="home-principal shell section-gap"><div class="principal-copy"><p class="kicker">ADORACIÓN Y COMUNIÓN</p><h2>{principal.title}</h2><p class="principal-day">{principal.day}</p><p class="principal-time">{principal.time} <small>hs</small></p><a class="pill" href="/visitanos/">Sumate a la reunión</a></div><PhotoSection photo={site.photos.gathering} label="Nuestra reunión general" kind="principal-photo" /></section>
 <section class="home-banner shell section-gap" aria-label="La comunidad reunida"><PhotoSection photo={site.photos.banner} label="Un encuentro de nuestra congregación" kind="banner-photo" /><span class="banner-note">Cristo, cabeza de la iglesia · Colosenses 1:18</span><FaithIllustration kind="dove" class="home-faith-sticker" /></section>

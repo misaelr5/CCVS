@@ -1,11 +1,11 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import poster from '../assets/photos/portada-video.jpg';
-const optimizedPoster = await getImage({ src: poster, width: 1280, format: 'webp' });
 ---
 <div class="hero-media hero-video-media" data-hero-video>
  <Image src={poster} alt="Un encuentro de Comunidad Cristiana Villa Sarmiento" widths={[480,800,1280]} sizes="100vw" format="webp" loading="eager" fetchpriority="high" class="hero-video-poster" />
- <video muted loop playsinline preload="none" poster={optimizedPoster.src} width="1280" height="720" data-video-src="/media/portada-ccvs.mp4" data-video-mobile="/media/portada-ccvs-mobile.mp4" aria-label="Video de nuestra comunidad"></video>
+ <!-- La imagen responsive ya funciona como poster; evita otra descarga fija a 1280px. -->
+ <video muted loop playsinline preload="none" width="1280" height="720" data-video-src="/media/portada-ccvs.mp4" data-video-mobile="/media/portada-ccvs-mobile.mp4" aria-label="Video de nuestra comunidad"></video>
 </div>
 <div class="hero-video-controls" data-video-controls role="group" aria-label="Controles del video de portada" hidden>
  <button type="button" data-video-sound>

@@ -4,18 +4,17 @@ import FaithIllustration from '../components/FaithIllustration.astro';
 import AboutCover from '../components/AboutCover.astro';
 import Highlight from '../components/Highlight.astro';
 import EditorialMark from '../components/EditorialMark.astro';
-import { Image, getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import historyVideoPoster from '../assets/photos/nuestra-historia-video.jpg';
 import { site } from '../data/site';
 import { history } from '../data/history';
-const optimizedVideoPoster = await getImage({ src: historyVideoPoster, width: 1280, format: 'webp' });
 ---
 <BaseLayout title="Nuestra historia" description="Conocé nuestra historia en Villa Sarmiento, Córdoba. Desde 2005 compartimos el evangelio, la oración y el servicio a nuestros vecinos mientras seguimos a Jesús.">
 <AboutCover />
 <section class="history-photo-slot illustrated-photo shell section-gap" aria-label="Video de nuestra congregación reunida">
   <div class="history-video-frame hero-video-media" data-hero-video>
     <Image src={historyVideoPoster} alt="La congregación reunida en el salón" widths={[480,800,1280]} sizes="(max-width: 700px) 100vw, 90vw" format="webp" loading="lazy" />
-    <video muted loop playsinline preload="none" poster={optimizedVideoPoster.src} width="1280" height="720" data-video-src="/media/nuestra-historia.mp4" data-video-mobile="/media/nuestra-historia-mobile.mp4" aria-label="Video de un encuentro de la congregación"></video>
+    <video muted loop playsinline preload="none" width="1280" height="720" data-video-src="/media/nuestra-historia.mp4" data-video-mobile="/media/nuestra-historia-mobile.mp4" aria-label="Video de un encuentro de la congregación"></video>
     <div class="hero-video-controls" data-video-controls role="group" aria-label="Controles del video de nuestra historia" hidden>
       <button type="button" data-video-sound><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-off" d="m16 9 5 6m0-6-5 6"/></svg><span>Activar sonido</span></button>
       <button type="button" data-video-play><span>Reproducir video</span></button>
