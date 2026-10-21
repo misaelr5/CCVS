@@ -6,6 +6,7 @@ import VisitQuickLinks from '../components/VisitQuickLinks.astro';
 import TextImageBlock from '../components/TextImageBlock.astro';
 import PhotoSection from '../components/PhotoSection.astro';
 import Schedule from '../components/Schedule.astro';
+import NextSteps from '../components/NextSteps.astro';
 import { site } from '../data/site';
 import PhotoCollage from '../components/PhotoCollage.astro';
 import EditorialMark from '../components/EditorialMark.astro';
@@ -25,6 +26,7 @@ const homeYouth = {
 <EditorialHero />
 <VisitQuickLinks />
 <section class="home-welcome shell section-gap"><div class="welcome-collage"><PhotoCollage photos={[site.photos.welcome, site.photos.welcomeSecondary, site.photos.welcomeDetail]} label="La comunidad de Villa Sarmiento" /></div><div class="welcome-copy"><h2>En Cristo, <Highlight>crecemos juntos.</Highlight></h2><p class="large-serif">Aprender su Palabra.<br />Caminar en la fe.</p><p>Desde 2005, nuestra congregación comparte el evangelio y sirve a sus vecinos en Villa Sarmiento. Nos reunimos para orar y acompañarnos mientras seguimos a Jesús.</p><a class="inline-link" href="/nosotros/">Conocé nuestra historia</a><EditorialMark kind="horizontal" class="welcome-pointer" /></div></section>
+<NextSteps />
 <section class="home-principal shell section-gap"><div class="principal-copy"><p class="kicker">ADORACIÓN Y COMUNIÓN</p><h2>{principal.title}</h2><p class="principal-day">{principal.day}</p><p class="principal-time">{principal.time} <small>hs</small></p><a class="pill" href="/visitanos/">Sumate a la reunión</a></div><PhotoSection photo={site.photos.gathering} label="Nuestra reunión general" kind="principal-photo" /></section>
 <section class="home-banner shell section-gap" aria-label="La comunidad reunida"><PhotoSection photo={site.photos.banner} label="Un encuentro de nuestra congregación" kind="banner-photo" /><span class="banner-note">Cristo, cabeza de la iglesia · Colosenses 1:18</span><FaithIllustration kind="dove" class="home-faith-sticker" /></section>
 <section class="home-schedule shell section-gap" id="horarios"><h2>Reuniones.</h2><div class="schedule-showcase"><article class="schedule-feature"><PhotoSection photo={site.photos.gathering} label="Nuestra reunión general" kind="schedule-feature-photo" /><div class="schedule-feature-copy"><h3>{principal.title}</h3><p>{principal.day} · {principal.time} hs</p><a class="pill" href="/visitanos/">Cómo visitarnos</a></div></article><div class="schedule-showcase-list"><p class="schedule-showcase-intro">Compartimos la fe cada semana. Conocé los horarios regulares de nuestra congregación.</p><Schedule interactive /></div></div></section>

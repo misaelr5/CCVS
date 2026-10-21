@@ -1,13 +1,13 @@
 ---
 import { Image, getImage } from 'astro:assets';
 import type { Photo } from '../data/site';
-interface Props { photo?: Photo | null; label: string; kind?: string; eager?: boolean; }
-const { photo = null, label, kind = '', eager = false } = Astro.props;
+interface Props { photo?: Photo | null; label: string; kind?: string; eager?: boolean; sizes?: string; }
+const { photo = null, label, kind = '', eager = false, sizes } = Astro.props;
 const mobileImage = photo?.mobile ? await getImage({ src: photo.mobile, width: 860, format: 'webp' }) : null;
 ---
 <div class:list={['photo-frame', kind, { 'is-placeholder': !photo }]}>
   {photo ? <picture>
     {mobileImage && <source media="(max-width: 700px)" srcset={mobileImage.src} />}
-    <Image src={photo.src} alt={photo.alt} widths={[240, 480, 800, 1280, 1920]} sizes={eager ? '(max-width: 700px) 100vw, 60vw' : 'auto, (max-width: 700px) calc(100vw - 48px), 60vw'} format="webp" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} style={`--photo-position:${photo.position ?? 'center'};--mobile-photo-position:${photo.mobilePosition ?? photo.position ?? 'center'}`} />
+    <Image src={photo.src} alt={photo.alt} widths={[240, 480, 800, 1280, 1920]} sizes={sizes ?? (eager ? '(max-width: 700px) 100vw, 60vw' : 'auto, (max-width: 700px) calc(100vw - 48px), 60vw')} format="webp" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} style={`--photo-position:${photo.position ?? 'center'};--mobile-photo-position:${photo.mobilePosition ?? photo.position ?? 'center'}`} />
   </picture> : <span class="photo-placeholder-label">{label}<small>Fotografía propia pendiente</small></span>}
 </div>

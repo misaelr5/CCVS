@@ -29,6 +29,21 @@ function initialize(force = false) {
  initializedBody = document.body;
  pageController = new AbortController();
  const { signal } = pageController;
+ // Feedback táctil para tarjetas editoriales; no convierte toda la tarjeta en enlace.
+ if (document.querySelector('[data-reveal="card"]')) {
+  let pressedCard: HTMLElement | null = null;
+  const releaseCard = () => { if (pressedCard) delete pressedCard.dataset.pressed; pressedCard = null; };
+  document.addEventListener('pointerdown', event => {
+   releaseCard();
+   if (event.pointerType !== 'touch' || !(event.target instanceof Element)) return;
+   pressedCard = event.target.closest<HTMLElement>('[data-reveal="card"]');
+   if (pressedCard) pressedCard.dataset.pressed = 'true';
+  }, { signal, passive:true });
+  for (const event of ['pointerup', 'pointercancel', 'pointermove', 'scroll']) {
+   document.addEventListener(event, releaseCard, { signal, passive:true, capture:true });
+  }
+  signal.addEventListener('abort', releaseCard, { once:true });
+ }
  initializeHeroVideo(signal, motion.matches);
  // El lazy loading nativo puede anticipar iframes a varios viewports de distancia.
  // Limitar Maps a la cercanía real del mapa evita trabajo externo en la primera vista.
@@ -171,6 +186,8 @@ function initialize(force = false) {
   signal.addEventListener('abort',()=>animation.cancel(),{once:true});
  };
  const entranceItems = (element: HTMLElement) => {
+  if (element.matches('.next-steps')) return [...element.querySelectorAll<HTMLElement>(':scope > .next-steps-heading')];
+  if (element.matches('[data-reveal="card"]')) return [element];
   if (element.matches('[data-reveal="collage"]')) return [...element.querySelectorAll<HTMLElement>('[data-layer]')];
   if (element.matches('.links-hub')) return [...element.querySelectorAll<HTMLElement>(':scope > img, :scope > h1, :scope > p, :scope nav > a')];
   if (element.matches('.about-cover')) return [...element.querySelectorAll<HTMLElement>('.about-media, .about-copy > h1, .editorial-statement, .about-intro')];

@@ -511,7 +511,7 @@ h2 { font-size:44px; }
 .inline-link::after { content:'↗'; display:inline-block; font-size:16px; clip-path:inset(0 100% 0 0); transform:translate(-6px,3px); transition:clip-path 220ms ease,transform 220ms ease; }
 .inline-link:hover,.inline-link:focus-visible { color:var(--accent); transform:translateX(4px); }
 .inline-link:hover::after,.inline-link:focus-visible::after { clip-path:inset(0); transform:translate(0,0); }
-.feature-pair > a { transition:transform 340ms cubic-bezier(.22,1,.36,1); }
+.feature-pair > a,.next-step { transition:transform 340ms cubic-bezier(.22,1,.36,1); }
 .feature-pair > a:hover,.feature-pair > a:focus-visible { transform:translateY(-5px); }
 .feature-pair > a:hover .feature-card-cta,.feature-pair > a:focus-visible .feature-card-cta { background:#812725; }
 .menu-open,.menu-close { border-radius:50%; transition:background 220ms ease,transform 220ms ease; }
@@ -590,7 +590,7 @@ h2 { font-size:44px; }
 .ministry-card-link:focus-visible { outline:3px solid currentColor; outline-offset:3px; }
 .ministries-showcase .ministry-feature > .photo-frame,.ministries-showcase .ministry-gallery .photo-frame { aspect-ratio:3/4; }
 @media(min-width:701px) { .ministries-showcase :is(#ninos,#vida-de-fe) > .photo-frame { align-self:center; } }
-.ministries-showcase .ministry-feature > .photo-frame img,.ministries-showcase .ministry-gallery img { transition:transform 800ms cubic-bezier(.16,1,.3,1); }
+.ministries-showcase .ministry-feature > .photo-frame img,.ministries-showcase .ministry-gallery img,.next-step .photo-frame img { transition:transform 800ms cubic-bezier(.16,1,.3,1); }
 .ministries-showcase .ministry-feature:hover > .photo-frame img,.ministries-showcase .ministry-feature:focus-within > .photo-frame img,.ministries-showcase .ministry-gallery .photo-frame:hover img { transform:scale(1.045); }
 @media(hover:hover) and (pointer:fine) {
  .ministry-feature .ministry-info-card:hover { background:var(--accent); color:white; transform:translateY(-4px); }

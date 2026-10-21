@@ -1,0 +1,103 @@
+---
+import PhotoSection from './PhotoSection.astro';
+import { ministryPhotos, site, type Photo } from '../data/site';
+
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+  cta: string;
+  href: string;
+  photo: Photo;
+}
+
+const steps = [
+  {
+    number: '01',
+    title: 'Conectate',
+    description: 'Vení a conocernos y compartí una reunión con nosotros.',
+    cta: 'Planificá tu visita',
+    href: '/visitanos/',
+    photo: site.photos.visitMeeting,
+  },
+  {
+    number: '02',
+    title: 'Participá',
+    description: 'Conocé nuestros encuentros y espacios para compartir la fe.',
+    cta: 'Ver reuniones',
+    href: '/ministerios/',
+    photo: { ...ministryPhotos.youth[1], position: 'center 65%' },
+  },
+  {
+    number: '03',
+    title: 'Crecé en la fe',
+    description: 'Profundizá en la Palabra de Dios y en nuestro camino con Jesús.',
+    cta: 'Conocé nuestra fe',
+    href: '/lo-que-creemos/',
+    photo: { ...site.photos.beliefs, position: 'center 72%', mobilePosition: 'center 72%' },
+  },
+] satisfies Step[];
+---
+
+<section class="next-steps shell section-gap" aria-labelledby="next-steps-title">
+  <header class="next-steps-heading">
+    <p class="kicker">UN LUGAR PARA VOS</p>
+    <h2 id="next-steps-title">Tu próximo paso <span class="serif">en comunidad.</span></h2>
+    <p class="next-steps-intro">Si es tu primera vez en Comunidad Cristiana Villa Sarmiento, o querés acercarte más, podés empezar por acá.</p>
+  </header>
+  <ol class="next-steps-list" role="list">
+    {steps.map(step => (
+      <li class="next-step" data-reveal="card">
+        <PhotoSection
+          photo={step.photo}
+          label={step.title}
+          sizes="auto, (max-width: 700px) calc(100vw - 48px), (max-width: 1100px) calc((100vw - 128px) / 3), (max-width: 1440px) calc((100vw - 192px) / 3), 416px"
+        />
+        <div class="next-step-copy">
+          <span class="next-step-number" aria-hidden="true">{step.number}</span>
+          <h3>{step.title}</h3>
+          <p>{step.description}</p>
+          <a class="inline-link" href={step.href}>{step.cta}</a>
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .next-steps { overflow-wrap:anywhere; }
+  .next-steps-heading { max-width:760px; margin-inline:auto; text-align:center; }
+  .next-steps-heading .kicker { color:var(--accent); }
+  .next-steps-heading h2 { text-wrap:balance; }
+  .next-steps-intro { max-width:600px; margin:24px auto 0; font-size:18px; }
+  .next-steps-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding:0; margin:48px 0 0; list-style:none; }
+  .next-step { display:flex; flex-direction:column; min-width:0; background:var(--surface); border-radius:14px; }
+  .next-step :global(.photo-frame) { width:100%; aspect-ratio:16/10; border-radius:14px 14px 0 0; }
+  .next-step-copy { display:flex; flex:1; flex-direction:column; align-items:flex-start; padding:24px; }
+  .next-step-number { color:var(--accent); font-family:var(--font-editorial); font-size:48px; line-height:1; margin-bottom:20px; }
+  .next-step h3 { font-size:clamp(28px,2.8vw,40px); line-height:1.12; }
+  .next-step-copy > p { margin:16px 0 24px; font-size:16px; }
+  .next-step .inline-link { margin-top:auto; font-size:16px; }
+  .next-step:focus-within { transform:translateY(-5px); }
+  .next-step:focus-within :global(.photo-frame img) { transform:scale(1.045); }
+  @media (hover:hover) and (pointer:fine) {
+    .next-step:hover { transform:translateY(-5px); }
+    .next-step:hover :global(.photo-frame img) { transform:scale(1.045); }
+  }
+  @media (hover:none) and (pointer:coarse) {
+    .next-step[data-pressed] { transform:scale(.98); }
+    .next-step[data-pressed] :global(.photo-frame img) { transform:scale(1.045); }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .next-step:is(:hover,:focus-within,[data-pressed]),
+    .next-step:is(:hover,:focus-within,[data-pressed]) :global(.photo-frame img) { transform:none; }
+  }
+  @media (min-width:701px) and (max-width:1100px) {
+    .next-step-copy { padding:20px; }
+  }
+  @media (max-width:700px) {
+    .next-steps-list { grid-template-columns:minmax(0,1fr); gap:28px; margin-top:36px; }
+    .next-steps-intro { font-size:16px; }
+    .next-step h3 { font-size:32px; }
+  }
+</style>
