@@ -36,9 +36,10 @@ test('ClientRouter: forward, back, forward y scripts sin duplicados', async ({ p
     await belief.click();
     await expect(belief).toHaveAttribute('aria-expanded','false');
   }
-  await page.locator('.site-footer').getByRole('link',{name:'Términos y condiciones · borrador'}).click();
+  await page.locator('.site-footer').getByRole('link',{name:'Términos y condiciones', exact:true}).click();
   await expect(page).toHaveURL(/terminos-y-condiciones\/$/);
-  await expect(page.locator('.legal-notice')).toContainText('Borrador');
+  await expect(page.locator('.legal-page')).not.toContainText(/borrador|pendiente de revisión/i);
+  await expect(page.locator('.legal-page').getByRole('link', {name:'Leer la Política de privacidad'})).toHaveAttribute('href', '/politica-de-privacidad/');
   await page.locator('.legal-page').getByRole('link',{name:'Canales de la comunidad'}).click();
   await expect(page).toHaveURL(/links\/$/);
   await page.getByRole('link',{name:'Conocé nuestra historia',exact:true}).click();
