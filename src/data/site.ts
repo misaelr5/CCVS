@@ -3,7 +3,7 @@ import local from '../../identidad/02_ccvs_logo_limpio.png';
 import welcomeCommunity from '../assets/photos/comunidad.jpg';
 import welcomePulpit from '../assets/photos/pulpito.jpg';
 import mainGathering from '../assets/photos/general.jpg';
-import visitMeeting from '../assets/photos/visitanos-reunion-img-2764.jpg';
+import visitMeeting from '../assets/photos/visitanos-comunidad-saludando.png';
 import visitEntrancePortrait from '../assets/photos/IMG_2792.JPG.jpeg';
 import visitEntranceCross from '../assets/photos/WhatsApp Image 2026-10-14 at 21.32.51.jpeg';
 import communityGroup from '../assets/photos/comunidad-grupo.jpg';
@@ -134,9 +134,9 @@ export const site = {
     },
     visitMeeting: {
       src: visitMeeting,
-      alt: 'La congregación reunida durante el encuentro general',
-      position: 'center 58%',
-      mobilePosition: 'center 58%',
+      alt: 'Foto grupal de la congregación saludando a la cámara en el salón de la iglesia',
+      position: 'center',
+      mobilePosition: 'center',
     },
     visitEntrance: {
       src: visitEntranceCross,
