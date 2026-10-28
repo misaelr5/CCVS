@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { site } from '../data/site';
 import { groups } from '../data/links';
 import SocialLinks from './SocialLinks.astro';
+import ReacSignature from './reac/ReacSignature.astro';
 ---
 <footer class="site-footer">
  <Image class="footer-wordmark" src={site.logos.local} alt="" width={900} height={900} format="webp" loading="lazy" aria-hidden="true" />
@@ -15,4 +16,5 @@ import SocialLinks from './SocialLinks.astro';
   <div class="footer-contact"><h2>Encontranos</h2><address>{site.address}</address><a class="footer-visit" href="/visitanos/">Vení a una reunión <span aria-hidden="true">↗</span></a><a href="/links/">Canales de la congregación</a><SocialLinks label="Redes sociales del footer" /></div>
  </div>
  <div class="shell footer-bottom"><p>© {new Date().getFullYear()} CCVS</p><a href="/terminos-y-condiciones/">Términos y condiciones</a><a href="/politica-de-privacidad/">Política de privacidad</a><p>Villa Sarmiento · Córdoba, Argentina</p></div>
+ <div class="shell"><ReacSignature theme="inherit" /></div>
 </footer>
