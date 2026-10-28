@@ -155,8 +155,9 @@ export const site = {
 };
 // Propuestas del encargo V3: no constituyen misión o lemas oficiales.
 export const editorial = {
-  hero: ['Jesucristo,', 'el camino', 'al Padre.'],
-  heroIntro: 'Jesús nos llama a seguirlo. En Villa Sarmiento nos reunimos para aprender su Palabra, orar y acompañarnos en la fe.',
+  hero: ['Jesucristo', 'es el Señor'],
+  heroWelcome: 'Bienvenido a',
+  heroTagline: 'Una iglesia familia, para bendecir familias.',
   about: ['La oración nos reunió.', 'El evangelio nos sigue convocando.'],
   aboutIntro: 'Somos Comunidad Cristiana Villa Sarmiento. Creemos en Jesucristo y buscamos crecer en el conocimiento de las Escrituras, la oración y el servicio a nuestros vecinos.',
   welcome: 'En Cristo, crecemos juntos.',
